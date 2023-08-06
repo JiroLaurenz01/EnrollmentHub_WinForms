@@ -29,6 +29,8 @@ namespace SchoolTracker
                 );
         }
 
+        #region OTHER FEATURES
+
         private void facultyBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -36,5 +38,7 @@ namespace SchoolTracker
             FLoginForm.FormClosed += (s, args) => this.Close();
             FLoginForm.Show();
         }
+
+        #endregion
     }
 }
