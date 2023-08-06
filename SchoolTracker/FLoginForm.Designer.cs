@@ -107,6 +107,7 @@ namespace SchoolTracker
             this.resetBtn.UseAccentColor = true;
             this.resetBtn.UseMnemonic = false;
             this.resetBtn.UseVisualStyleBackColor = false;
+            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
             // 
             // signInBtn
             // 

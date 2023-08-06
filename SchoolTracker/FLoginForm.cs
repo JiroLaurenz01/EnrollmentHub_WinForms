@@ -31,29 +31,7 @@ namespace SchoolTracker
                 );
         }
 
-        private void backBtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var FrontForm = new FrontForm();
-            FrontForm.FormClosed += (s, args) => this.Close();
-            FrontForm.Show();
-        }
-
-        private void facPassBox_TrailingIconClick(object sender, EventArgs e)
-        {
-            if (!ifShow)
-            {
-                facPassBox.TrailingIcon = Properties.Resources.hide;
-                facPassBox.Password = true;
-                ifShow = true;
-            }
-            else
-            {
-                facPassBox.TrailingIcon = Properties.Resources.show;
-                facPassBox.Password = false;
-                ifShow = false;
-            }
-        }
+        #region SIGN-IN VALIDATIONS
 
         private void signInBtn_Click(object sender, EventArgs e)
         {
@@ -138,5 +116,44 @@ namespace SchoolTracker
             this.MaximumSize = new Size(this.Size.Width, this.Size.Height + 27);
             this.Size = new Size(this.Size.Width, this.Size.Height + 27);
         }
+
+        #endregion
+
+        #region OTHER FEATURES
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var FrontForm = new FrontForm();
+            FrontForm.FormClosed += (s, args) => this.Close();
+            FrontForm.Show();
+        }
+
+        private void facPassBox_TrailingIconClick(object sender, EventArgs e)
+        {
+            if (!ifShow)
+            {
+                facPassBox.TrailingIcon = Properties.Resources.hide;
+                facPassBox.Password = true;
+                ifShow = true;
+            }
+            else
+            {
+                facPassBox.TrailingIcon = Properties.Resources.show;
+                facPassBox.Password = false;
+                ifShow = false;
+            }
+        }
+
+        private void resetBtn_Click(object sender, EventArgs e)
+        {
+            facNumBox.Text = "";
+            facPassBox.Text = "";
+            bMonthComBox.SelectedIndex = 0;
+            bDayComBox.SelectedIndex = 0;
+            bYearComBox.SelectedIndex = 0;
+        }
+
+        #endregion
     }
 }
