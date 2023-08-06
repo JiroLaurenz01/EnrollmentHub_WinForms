@@ -61,6 +61,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLoginForm.Designer.cs">
+      <DependentUpon>FLoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FLoginForm.resx">
+      <DependentUpon>FLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontForm.resx">
       <DependentUpon>FrontForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,7 +106,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pngkey.com-phillies-logo-png-528919.png" />
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

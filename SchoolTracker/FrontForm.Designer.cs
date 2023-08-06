@@ -29,28 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrontForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userLabel = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.facultyBtn = new MaterialSkin.Controls.MaterialButton();
             this.enroleeBtn = new MaterialSkin.Controls.MaterialButton();
+            this.facultyBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.WebsiteVisitBtn = new MaterialSkin.Controls.MaterialButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialCard1.SuspendLayout();
             this.materialCard2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SchoolTracker.Properties.Resources.pngkey_com_phillies_logo_png_528919;
-            this.pictureBox1.Location = new System.Drawing.Point(87, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // userLabel
             // 
@@ -83,7 +73,7 @@
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.materialCard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.materialCard1.Controls.Add(this.enroleeBtn);
             this.materialCard1.Controls.Add(this.materialLabel1);
             this.materialCard1.Controls.Add(this.facultyBtn);
@@ -91,32 +81,13 @@
             this.materialCard1.Controls.Add(this.pictureBox1);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(17, 42);
+            this.materialCard1.Location = new System.Drawing.Point(17, 41);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(298, 282);
             this.materialCard1.TabIndex = 7;
-            // 
-            // facultyBtn
-            // 
-            this.facultyBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.facultyBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.facultyBtn.Depth = 0;
-            this.facultyBtn.HighEmphasis = true;
-            this.facultyBtn.Icon = null;
-            this.facultyBtn.Location = new System.Drawing.Point(160, 227);
-            this.facultyBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.facultyBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.facultyBtn.Name = "facultyBtn";
-            this.facultyBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.facultyBtn.Size = new System.Drawing.Size(84, 36);
-            this.facultyBtn.TabIndex = 0;
-            this.facultyBtn.Text = "FACULTY";
-            this.facultyBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.facultyBtn.UseAccentColor = false;
-            this.facultyBtn.UseVisualStyleBackColor = true;
             // 
             // enroleeBtn
             // 
@@ -137,9 +108,30 @@
             this.enroleeBtn.UseAccentColor = false;
             this.enroleeBtn.UseVisualStyleBackColor = true;
             // 
+            // facultyBtn
+            // 
+            this.facultyBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.facultyBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.facultyBtn.Depth = 0;
+            this.facultyBtn.HighEmphasis = true;
+            this.facultyBtn.Icon = null;
+            this.facultyBtn.Location = new System.Drawing.Point(160, 227);
+            this.facultyBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.facultyBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.facultyBtn.Name = "facultyBtn";
+            this.facultyBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.facultyBtn.Size = new System.Drawing.Size(84, 36);
+            this.facultyBtn.TabIndex = 0;
+            this.facultyBtn.Text = "FACULTY";
+            this.facultyBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.facultyBtn.UseAccentColor = false;
+            this.facultyBtn.UseVisualStyleBackColor = true;
+            this.facultyBtn.Click += new System.EventHandler(this.facultyBtn_Click);
+            // 
             // materialCard2
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.materialCard2.Controls.Add(this.WebsiteVisitBtn);
             this.materialCard2.Depth = 0;
             this.materialCard2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -171,6 +163,16 @@
             this.WebsiteVisitBtn.UseAccentColor = true;
             this.WebsiteVisitBtn.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SchoolTracker.Properties.Resources.pngkey_com_phillies_logo_png_528919;
+            this.pictureBox1.Location = new System.Drawing.Point(87, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrontForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,11 +188,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "School Tracker";
             this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

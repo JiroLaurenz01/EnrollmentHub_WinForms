@@ -12,9 +12,11 @@ using System.Windows.Forms;
 
 namespace SchoolTracker
 {
-    public partial class FrontForm : MaterialForm
+    public partial class FLoginForm : MaterialForm
     {
-        public FrontForm()
+        bool ifShow = false;
+
+        public FLoginForm()
         {
             InitializeComponent();
             var skin = MaterialSkinManager.Instance;
@@ -29,12 +31,28 @@ namespace SchoolTracker
                 );
         }
 
-        private void facultyBtn_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var FLoginForm = new FLoginForm();
-            FLoginForm.FormClosed += (s, args) => this.Close();
-            FLoginForm.Show();
+            var FrontForm = new FrontForm();
+            FrontForm.FormClosed += (s, args) => this.Close();
+            FrontForm.Show();
+        }
+
+        private void facPassBox_TrailingIconClick(object sender, EventArgs e)
+        {
+            if (!ifShow)
+            {
+                facPassBox.TrailingIcon = Properties.Resources.hide;
+                facPassBox.Password = true;
+                ifShow = true;
+            }
+            else
+            {
+                facPassBox.TrailingIcon = Properties.Resources.show;
+                facPassBox.Password = false;
+                ifShow = false;
+            }
         }
     }
 }
