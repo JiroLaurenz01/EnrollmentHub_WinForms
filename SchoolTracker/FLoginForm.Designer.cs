@@ -128,6 +128,7 @@ namespace SchoolTracker
             this.signInBtn.UseAccentColor = false;
             this.signInBtn.UseMnemonic = false;
             this.signInBtn.UseVisualStyleBackColor = false;
+            this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
             // 
             // passWarning
             // 
