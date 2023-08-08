@@ -39,6 +39,14 @@ namespace SchoolTracker
             FLoginForm.Show();
         }
 
+        private void enroleeBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var EnrollmentForm = new EnrollmentForm();
+            EnrollmentForm.FormClosed += (s, args) => this.Close();
+            EnrollmentForm.Show();
+        }
+
         #endregion
     }
 }

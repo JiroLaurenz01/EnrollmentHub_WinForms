@@ -34,12 +34,12 @@
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.enroleeBtn = new MaterialSkin.Controls.MaterialButton();
             this.facultyBtn = new MaterialSkin.Controls.MaterialButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.WebsiteVisitBtn = new MaterialSkin.Controls.MaterialButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialCard1.SuspendLayout();
-            this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.materialCard2.SuspendLayout();
             this.SuspendLayout();
             // 
             // userLabel
@@ -107,6 +107,7 @@
             this.enroleeBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.enroleeBtn.UseAccentColor = false;
             this.enroleeBtn.UseVisualStyleBackColor = true;
+            this.enroleeBtn.Click += new System.EventHandler(this.enroleeBtn_Click);
             // 
             // facultyBtn
             // 
@@ -127,6 +128,16 @@
             this.facultyBtn.UseAccentColor = false;
             this.facultyBtn.UseVisualStyleBackColor = true;
             this.facultyBtn.Click += new System.EventHandler(this.facultyBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SchoolTracker.Properties.Resources.pngkey_com_phillies_logo_png_528919;
+            this.pictureBox1.Location = new System.Drawing.Point(87, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // materialCard2
             // 
@@ -163,16 +174,6 @@
             this.WebsiteVisitBtn.UseAccentColor = true;
             this.WebsiteVisitBtn.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SchoolTracker.Properties.Resources.pngkey_com_phillies_logo_png_528919;
-            this.pictureBox1.Location = new System.Drawing.Point(87, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrontForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,9 +191,9 @@
             this.TopMost = true;
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
