@@ -40,10 +40,10 @@ namespace SchoolTracker
             this.bYearComBox = new MaterialSkin.Controls.MaterialComboBox();
             this.bDayComBox = new MaterialSkin.Controls.MaterialComboBox();
             this.bMonthComBox = new MaterialSkin.Controls.MaterialComboBox();
-            this.forgotPassBtn = new MaterialSkin.Controls.MaterialButton();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.facPassBox = new MaterialSkin.Controls.MaterialTextBox();
             this.facNumBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.forgotPassBtn = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backBtn = new MaterialSkin.Controls.MaterialButton();
             this.studentCard.SuspendLayout();
@@ -336,41 +336,6 @@ namespace SchoolTracker
             this.bMonthComBox.StartIndex = 0;
             this.bMonthComBox.TabIndex = 1;
             // 
-            // forgotPassBtn
-            // 
-            this.forgotPassBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.forgotPassBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.forgotPassBtn.Depth = 0;
-            this.forgotPassBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.forgotPassBtn.HighEmphasis = true;
-            this.forgotPassBtn.Icon = null;
-            this.forgotPassBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.forgotPassBtn.Location = new System.Drawing.Point(116, 606);
-            this.forgotPassBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.forgotPassBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.forgotPassBtn.Name = "forgotPassBtn";
-            this.forgotPassBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.forgotPassBtn.Size = new System.Drawing.Size(194, 36);
-            this.forgotPassBtn.TabIndex = 3;
-            this.forgotPassBtn.Text = "I forgot my password";
-            this.forgotPassBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.forgotPassBtn.UseAccentColor = true;
-            this.forgotPassBtn.UseMnemonic = false;
-            this.forgotPassBtn.UseVisualStyleBackColor = false;
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
-            this.materialLabel3.Location = new System.Drawing.Point(115, 283);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(197, 19);
-            this.materialLabel3.TabIndex = 7;
-            this.materialLabel3.Text = "Sign in to start your session";
-            // 
             // facPassBox
             // 
             this.facPassBox.AnimateReadOnly = false;
@@ -408,6 +373,41 @@ namespace SchoolTracker
             this.facNumBox.TabIndex = 0;
             this.facNumBox.Text = "";
             this.facNumBox.TrailingIcon = global::SchoolTracker.Properties.Resources.user;
+            // 
+            // forgotPassBtn
+            // 
+            this.forgotPassBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.forgotPassBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.forgotPassBtn.Depth = 0;
+            this.forgotPassBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.forgotPassBtn.HighEmphasis = true;
+            this.forgotPassBtn.Icon = null;
+            this.forgotPassBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.forgotPassBtn.Location = new System.Drawing.Point(116, 606);
+            this.forgotPassBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.forgotPassBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.forgotPassBtn.Name = "forgotPassBtn";
+            this.forgotPassBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.forgotPassBtn.Size = new System.Drawing.Size(194, 36);
+            this.forgotPassBtn.TabIndex = 3;
+            this.forgotPassBtn.Text = "I forgot my password";
+            this.forgotPassBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.forgotPassBtn.UseAccentColor = true;
+            this.forgotPassBtn.UseMnemonic = false;
+            this.forgotPassBtn.UseVisualStyleBackColor = false;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
+            this.materialLabel3.Location = new System.Drawing.Point(115, 283);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(197, 19);
+            this.materialLabel3.TabIndex = 7;
+            this.materialLabel3.Text = "Sign in to start your session";
             // 
             // pictureBox1
             // 
