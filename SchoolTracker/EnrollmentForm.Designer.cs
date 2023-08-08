@@ -903,7 +903,7 @@
             this.materialDivider16.Location = new System.Drawing.Point(1142, 227);
             this.materialDivider16.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider16.Name = "materialDivider16";
-            this.materialDivider16.Size = new System.Drawing.Size(482, 10);
+            this.materialDivider16.Size = new System.Drawing.Size(478, 10);
             this.materialDivider16.TabIndex = 249;
             this.materialDivider16.Text = "materialDivider16";
             // 
@@ -924,7 +924,7 @@
             // 
             this.permaAddSwitch.AutoSize = true;
             this.permaAddSwitch.Depth = 0;
-            this.permaAddSwitch.Location = new System.Drawing.Point(1627, 213);
+            this.permaAddSwitch.Location = new System.Drawing.Point(1624, 213);
             this.permaAddSwitch.Margin = new System.Windows.Forms.Padding(0);
             this.permaAddSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
             this.permaAddSwitch.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1334,7 +1334,7 @@
             this.thSwitch.AutoSize = true;
             this.thSwitch.BackColor = System.Drawing.Color.Transparent;
             this.thSwitch.Depth = 0;
-            this.thSwitch.Location = new System.Drawing.Point(1555, 7);
+            this.thSwitch.Location = new System.Drawing.Point(1552, 7);
             this.thSwitch.Margin = new System.Windows.Forms.Padding(0);
             this.thSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
             this.thSwitch.MouseState = MaterialSkin.MouseState.HOVER;
