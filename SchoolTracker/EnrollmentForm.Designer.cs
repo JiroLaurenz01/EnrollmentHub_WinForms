@@ -132,6 +132,12 @@
             this.materialCheckbox6 = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialCheckbox7 = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialCheckbox8 = new MaterialSkin.Controls.MaterialCheckbox();
+            this.materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialDivider5 = new MaterialSkin.Controls.MaterialDivider();
+            this.eSchoolName = new MaterialSkin.Controls.MaterialTextBox();
+            this.hSchoolName = new MaterialSkin.Controls.MaterialTextBox();
+            this.shSchoolName = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
             this.enrollmentTab.SuspendLayout();
             this.basicInfoTab.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -159,6 +165,12 @@
             // basicInfoTab
             // 
             this.basicInfoTab.BackColor = System.Drawing.Color.White;
+            this.basicInfoTab.Controls.Add(this.materialDivider5);
+            this.basicInfoTab.Controls.Add(this.eSchoolName);
+            this.basicInfoTab.Controls.Add(this.hSchoolName);
+            this.basicInfoTab.Controls.Add(this.shSchoolName);
+            this.basicInfoTab.Controls.Add(this.materialLabel11);
+            this.basicInfoTab.Controls.Add(this.materialDivider4);
             this.basicInfoTab.Controls.Add(this.materialCheckbox6);
             this.basicInfoTab.Controls.Add(this.materialCheckbox7);
             this.basicInfoTab.Controls.Add(this.materialCheckbox8);
@@ -2065,6 +2077,97 @@
             this.materialCheckbox8.Text = "None";
             this.materialCheckbox8.UseVisualStyleBackColor = true;
             // 
+            // materialDivider4
+            // 
+            this.materialDivider4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider4.Depth = 0;
+            this.materialDivider4.Location = new System.Drawing.Point(186, 667);
+            this.materialDivider4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider4.Name = "materialDivider4";
+            this.materialDivider4.Size = new System.Drawing.Size(1521, 10);
+            this.materialDivider4.TabIndex = 323;
+            this.materialDivider4.Text = "materialDivider4";
+            // 
+            // materialDivider5
+            // 
+            this.materialDivider5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider5.Depth = 0;
+            this.materialDivider5.Location = new System.Drawing.Point(186, 791);
+            this.materialDivider5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider5.Name = "materialDivider5";
+            this.materialDivider5.Size = new System.Drawing.Size(1521, 10);
+            this.materialDivider5.TabIndex = 339;
+            this.materialDivider5.Text = "materialDivider5";
+            // 
+            // eSchoolName
+            // 
+            this.eSchoolName.AnimateReadOnly = false;
+            this.eSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eSchoolName.Depth = 0;
+            this.eSchoolName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.eSchoolName.Hint = "Name of  Elementary School";
+            this.eSchoolName.LeadingIcon = null;
+            this.eSchoolName.Location = new System.Drawing.Point(186, 725);
+            this.eSchoolName.MaxLength = 50;
+            this.eSchoolName.MouseState = MaterialSkin.MouseState.OUT;
+            this.eSchoolName.Multiline = false;
+            this.eSchoolName.Name = "eSchoolName";
+            this.eSchoolName.Size = new System.Drawing.Size(489, 50);
+            this.eSchoolName.TabIndex = 338;
+            this.eSchoolName.Text = "";
+            this.eSchoolName.TrailingIcon = null;
+            // 
+            // hSchoolName
+            // 
+            this.hSchoolName.AnimateReadOnly = false;
+            this.hSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.hSchoolName.Depth = 0;
+            this.hSchoolName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.hSchoolName.Hint = "Name of  High School";
+            this.hSchoolName.LeadingIcon = null;
+            this.hSchoolName.Location = new System.Drawing.Point(704, 725);
+            this.hSchoolName.MaxLength = 50;
+            this.hSchoolName.MouseState = MaterialSkin.MouseState.OUT;
+            this.hSchoolName.Multiline = false;
+            this.hSchoolName.Name = "hSchoolName";
+            this.hSchoolName.Size = new System.Drawing.Size(490, 50);
+            this.hSchoolName.TabIndex = 337;
+            this.hSchoolName.Text = "";
+            this.hSchoolName.TrailingIcon = null;
+            // 
+            // shSchoolName
+            // 
+            this.shSchoolName.AnimateReadOnly = false;
+            this.shSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.shSchoolName.Depth = 0;
+            this.shSchoolName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.shSchoolName.Hint = "Name of Senior High School";
+            this.shSchoolName.LeadingIcon = null;
+            this.shSchoolName.Location = new System.Drawing.Point(1217, 725);
+            this.shSchoolName.MaxLength = 50;
+            this.shSchoolName.MouseState = MaterialSkin.MouseState.OUT;
+            this.shSchoolName.Multiline = false;
+            this.shSchoolName.Name = "shSchoolName";
+            this.shSchoolName.Size = new System.Drawing.Size(490, 50);
+            this.shSchoolName.TabIndex = 336;
+            this.shSchoolName.Text = "";
+            this.shSchoolName.TrailingIcon = null;
+            // 
+            // materialLabel11
+            // 
+            this.materialLabel11.AutoSize = true;
+            this.materialLabel11.Depth = 0;
+            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel11.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
+            this.materialLabel11.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel11.Location = new System.Drawing.Point(811, 693);
+            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel11.Name = "materialLabel11";
+            this.materialLabel11.Size = new System.Drawing.Size(270, 19);
+            this.materialLabel11.TabIndex = 335;
+            this.materialLabel11.Text = "SCHOOL\'S ATTENDED INFORMATION";
+            this.materialLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // EnrollmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2202,5 +2305,11 @@
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox6;
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox7;
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox8;
+        private MaterialSkin.Controls.MaterialDivider materialDivider4;
+        private MaterialSkin.Controls.MaterialDivider materialDivider5;
+        private MaterialSkin.Controls.MaterialTextBox eSchoolName;
+        private MaterialSkin.Controls.MaterialTextBox hSchoolName;
+        private MaterialSkin.Controls.MaterialTextBox shSchoolName;
+        private MaterialSkin.Controls.MaterialLabel materialLabel11;
     }
 }
