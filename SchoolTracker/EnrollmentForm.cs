@@ -19,7 +19,7 @@ namespace SchoolTracker
             InitializeComponent();
             var skin = MaterialSkinManager.Instance;
             skin.AddFormToManage(this);
-            skin.Theme = MaterialSkinManager.Themes.LIGHT;
+            skin.Theme = MaterialSkinManager.Themes.DARK;
             skin.ColorScheme = new ColorScheme(
                     Primary.Red800,
                     Primary.Red900,
