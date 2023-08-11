@@ -87,7 +87,6 @@
             this.materialTextBox17 = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel26 = new MaterialSkin.Controls.MaterialLabel();
             this.materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
-            this.thSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTextBox4 = new MaterialSkin.Controls.MaterialTextBox();
@@ -158,6 +157,8 @@
             this.pupBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel44 = new MaterialSkin.Controls.MaterialLabel();
             this.openWebBtn = new MaterialSkin.Controls.MaterialButton();
+            this.thSwitch = new MaterialSkin.Controls.MaterialSwitch();
+            this.backBtn = new System.Windows.Forms.TabPage();
             this.enrollmentTab.SuspendLayout();
             this.basicInfoTab.SuspendLayout();
             this.ipBorderBox.SuspendLayout();
@@ -176,6 +177,7 @@
             this.enrollmentTab.Controls.Add(this.coursesTab);
             this.enrollmentTab.Controls.Add(this.coursesRevTab);
             this.enrollmentTab.Controls.Add(this.finalizationTab);
+            this.enrollmentTab.Controls.Add(this.backBtn);
             this.enrollmentTab.Depth = 0;
             this.enrollmentTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.enrollmentTab.Location = new System.Drawing.Point(3, 24);
@@ -238,7 +240,6 @@
             this.basicInfoTab.Controls.Add(this.materialTextBox17);
             this.basicInfoTab.Controls.Add(this.materialLabel26);
             this.basicInfoTab.Controls.Add(this.materialDivider3);
-            this.basicInfoTab.Controls.Add(this.thSwitch);
             this.basicInfoTab.Controls.Add(this.materialLabel8);
             this.basicInfoTab.Controls.Add(this.materialLabel9);
             this.basicInfoTab.Controls.Add(this.materialTextBox4);
@@ -1195,22 +1196,6 @@
             this.materialDivider3.Size = new System.Drawing.Size(411, 10);
             this.materialDivider3.TabIndex = 273;
             this.materialDivider3.Text = "materialDivider3";
-            // 
-            // thSwitch
-            // 
-            this.thSwitch.AutoSize = true;
-            this.thSwitch.BackColor = System.Drawing.Color.Transparent;
-            this.thSwitch.Depth = 0;
-            this.thSwitch.Location = new System.Drawing.Point(1552, 10);
-            this.thSwitch.Margin = new System.Windows.Forms.Padding(0);
-            this.thSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.thSwitch.MouseState = MaterialSkin.MouseState.HOVER;
-            this.thSwitch.Name = "thSwitch";
-            this.thSwitch.Ripple = true;
-            this.thSwitch.Size = new System.Drawing.Size(152, 37);
-            this.thSwitch.TabIndex = 272;
-            this.thSwitch.Text = "LIGHT MODE";
-            this.thSwitch.UseVisualStyleBackColor = false;
             // 
             // materialLabel8
             // 
@@ -2376,6 +2361,8 @@
             this.materialCard29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard29.Location = new System.Drawing.Point(3, 947);
             this.materialCard29.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard29.MaximumSize = new System.Drawing.Size(1784, 30);
+            this.materialCard29.MinimumSize = new System.Drawing.Size(1784, 30);
             this.materialCard29.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard29.Name = "materialCard29";
             this.materialCard29.Padding = new System.Windows.Forms.Padding(14);
@@ -2508,11 +2495,37 @@
             this.openWebBtn.UseAccentColor = true;
             this.openWebBtn.UseVisualStyleBackColor = true;
             // 
+            // thSwitch
+            // 
+            this.thSwitch.AutoSize = true;
+            this.thSwitch.BackColor = System.Drawing.Color.Transparent;
+            this.thSwitch.Depth = 0;
+            this.thSwitch.Location = new System.Drawing.Point(1551, 37);
+            this.thSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.thSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.thSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.thSwitch.Name = "thSwitch";
+            this.thSwitch.Ripple = true;
+            this.thSwitch.Size = new System.Drawing.Size(152, 37);
+            this.thSwitch.TabIndex = 346;
+            this.thSwitch.Text = "LIGHT MODE";
+            this.thSwitch.UseVisualStyleBackColor = false;
+            // 
+            // backBtn
+            // 
+            this.backBtn.Location = new System.Drawing.Point(4, 22);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(1776, 927);
+            this.backBtn.TabIndex = 5;
+            this.backBtn.Text = "BACK TO FRONT PAGE";
+            this.backBtn.UseVisualStyleBackColor = true;
+            // 
             // EnrollmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1790, 980);
+            this.Controls.Add(this.thSwitch);
             this.Controls.Add(this.materialCard29);
             this.Controls.Add(this.enrollmentTab);
             this.DrawerAutoHide = false;
@@ -2546,6 +2559,7 @@
             this.materialCard29.ResumeLayout(false);
             this.materialCard29.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -2614,7 +2628,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel96;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private System.Windows.Forms.PictureBox studentPicture;
-        private MaterialSkin.Controls.MaterialSwitch thSwitch;
         private MaterialSkin.Controls.MaterialDivider materialDivider3;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
@@ -2680,5 +2693,7 @@
         private MaterialSkin.Controls.MaterialButton pupBtn;
         private MaterialSkin.Controls.MaterialLabel materialLabel44;
         private MaterialSkin.Controls.MaterialButton openWebBtn;
+        private MaterialSkin.Controls.MaterialSwitch thSwitch;
+        private System.Windows.Forms.TabPage backBtn;
     }
 }
