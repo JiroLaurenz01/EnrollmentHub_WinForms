@@ -31,16 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnrollmentForm));
             this.enrollmentTab = new MaterialSkin.Controls.MaterialTabControl();
             this.basicInfoTab = new System.Windows.Forms.TabPage();
-            this.ipBorderBox = new MaterialSkin.Controls.MaterialCheckedListBox();
-            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
-            this.ipSwitch = new MaterialSkin.Controls.MaterialSwitch();
-            this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialCheckedListBox2 = new MaterialSkin.Controls.MaterialCheckedListBox();
-            this.lrnSwitch = new MaterialSkin.Controls.MaterialSwitch();
-            this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialCheckedListBox3 = new MaterialSkin.Controls.MaterialCheckedListBox();
-            this.fourPsSwitch = new MaterialSkin.Controls.MaterialSwitch();
-            this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
             this.materialDivider5 = new MaterialSkin.Controls.MaterialDivider();
             this.eSchoolName = new MaterialSkin.Controls.MaterialTextBox();
@@ -148,6 +138,7 @@
             this.coursesTab = new System.Windows.Forms.TabPage();
             this.coursesRevTab = new System.Windows.Forms.TabPage();
             this.finalizationTab = new System.Windows.Forms.TabPage();
+            this.backBtn = new System.Windows.Forms.TabPage();
             this.materialCard29 = new MaterialSkin.Controls.MaterialCard();
             this.materialLabel178 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel177 = new MaterialSkin.Controls.MaterialLabel();
@@ -158,12 +149,20 @@
             this.materialLabel44 = new MaterialSkin.Controls.MaterialLabel();
             this.openWebBtn = new MaterialSkin.Controls.MaterialButton();
             this.thSwitch = new MaterialSkin.Controls.MaterialSwitch();
-            this.backBtn = new System.Windows.Forms.TabPage();
+            this.materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialTextBox6 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialTextBox7 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialTextBox8 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialSwitch1 = new MaterialSkin.Controls.MaterialSwitch();
+            this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialSwitch2 = new MaterialSkin.Controls.MaterialSwitch();
             this.enrollmentTab.SuspendLayout();
             this.basicInfoTab.SuspendLayout();
-            this.ipBorderBox.SuspendLayout();
-            this.materialCheckedListBox2.SuspendLayout();
-            this.materialCheckedListBox3.SuspendLayout();
             this.materialCard2.SuspendLayout();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentPicture)).BeginInit();
@@ -185,15 +184,24 @@
             this.enrollmentTab.Multiline = true;
             this.enrollmentTab.Name = "enrollmentTab";
             this.enrollmentTab.SelectedIndex = 0;
-            this.enrollmentTab.Size = new System.Drawing.Size(1784, 953);
+            this.enrollmentTab.Size = new System.Drawing.Size(1784, 983);
             this.enrollmentTab.TabIndex = 0;
             // 
             // basicInfoTab
             // 
             this.basicInfoTab.BackColor = System.Drawing.Color.White;
-            this.basicInfoTab.Controls.Add(this.ipBorderBox);
-            this.basicInfoTab.Controls.Add(this.materialCheckedListBox2);
-            this.basicInfoTab.Controls.Add(this.materialCheckedListBox3);
+            this.basicInfoTab.Controls.Add(this.materialSwitch2);
+            this.basicInfoTab.Controls.Add(this.materialLabel16);
+            this.basicInfoTab.Controls.Add(this.materialSwitch1);
+            this.basicInfoTab.Controls.Add(this.materialLabel10);
+            this.basicInfoTab.Controls.Add(this.materialLabel14);
+            this.basicInfoTab.Controls.Add(this.materialTextBox7);
+            this.basicInfoTab.Controls.Add(this.materialTextBox8);
+            this.basicInfoTab.Controls.Add(this.materialLabel15);
+            this.basicInfoTab.Controls.Add(this.materialTextBox6);
+            this.basicInfoTab.Controls.Add(this.materialLabel19);
+            this.basicInfoTab.Controls.Add(this.materialLabel18);
+            this.basicInfoTab.Controls.Add(this.materialLabel17);
             this.basicInfoTab.Controls.Add(this.materialLabel13);
             this.basicInfoTab.Controls.Add(this.materialDivider5);
             this.basicInfoTab.Controls.Add(this.eSchoolName);
@@ -296,158 +304,9 @@
             this.basicInfoTab.Location = new System.Drawing.Point(4, 22);
             this.basicInfoTab.Name = "basicInfoTab";
             this.basicInfoTab.Padding = new System.Windows.Forms.Padding(3);
-            this.basicInfoTab.Size = new System.Drawing.Size(1776, 927);
+            this.basicInfoTab.Size = new System.Drawing.Size(1776, 957);
             this.basicInfoTab.TabIndex = 0;
             this.basicInfoTab.Text = "BASIC INFORMATION";
-            // 
-            // ipBorderBox
-            // 
-            this.ipBorderBox.AutoScroll = true;
-            this.ipBorderBox.BackColor = System.Drawing.Color.White;
-            this.ipBorderBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ipBorderBox.Controls.Add(this.materialLabel10);
-            this.ipBorderBox.Controls.Add(this.ipSwitch);
-            this.ipBorderBox.Controls.Add(this.materialLabel14);
-            this.ipBorderBox.Depth = 0;
-            this.ipBorderBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ipBorderBox.Location = new System.Drawing.Point(1217, 847);
-            this.ipBorderBox.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ipBorderBox.Name = "ipBorderBox";
-            this.ipBorderBox.Size = new System.Drawing.Size(490, 48);
-            this.ipBorderBox.Striped = false;
-            this.ipBorderBox.StripeDarkColor = System.Drawing.Color.Empty;
-            this.ipBorderBox.TabIndex = 343;
-            // 
-            // materialLabel10
-            // 
-            this.materialLabel10.AutoSize = true;
-            this.materialLabel10.Depth = 0;
-            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel10.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel10.Location = new System.Drawing.Point(10, 22);
-            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel10.Name = "materialLabel10";
-            this.materialLabel10.Size = new System.Drawing.Size(288, 17);
-            this.materialLabel10.TabIndex = 15;
-            this.materialLabel10.Text = "Community/Indigenous Cultural Community?";
-            // 
-            // ipSwitch
-            // 
-            this.ipSwitch.AutoSize = true;
-            this.ipSwitch.Depth = 0;
-            this.ipSwitch.Location = new System.Drawing.Point(397, 3);
-            this.ipSwitch.Margin = new System.Windows.Forms.Padding(0);
-            this.ipSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.ipSwitch.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ipSwitch.Name = "ipSwitch";
-            this.ipSwitch.Ripple = true;
-            this.ipSwitch.Size = new System.Drawing.Size(80, 37);
-            this.ipSwitch.TabIndex = 0;
-            this.ipSwitch.Text = "NO";
-            this.ipSwitch.UseVisualStyleBackColor = true;
-            // 
-            // materialLabel14
-            // 
-            this.materialLabel14.AutoSize = true;
-            this.materialLabel14.Depth = 0;
-            this.materialLabel14.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel14.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel14.Location = new System.Drawing.Point(10, 4);
-            this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel14.Name = "materialLabel14";
-            this.materialLabel14.Size = new System.Drawing.Size(263, 17);
-            this.materialLabel14.TabIndex = 10;
-            this.materialLabel14.Text = "Belonging to any Indigenous Peoples (IP)";
-            // 
-            // materialCheckedListBox2
-            // 
-            this.materialCheckedListBox2.AutoScroll = true;
-            this.materialCheckedListBox2.BackColor = System.Drawing.Color.White;
-            this.materialCheckedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.materialCheckedListBox2.Controls.Add(this.lrnSwitch);
-            this.materialCheckedListBox2.Controls.Add(this.materialLabel15);
-            this.materialCheckedListBox2.Depth = 0;
-            this.materialCheckedListBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialCheckedListBox2.Location = new System.Drawing.Point(186, 847);
-            this.materialCheckedListBox2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckedListBox2.Name = "materialCheckedListBox2";
-            this.materialCheckedListBox2.Size = new System.Drawing.Size(489, 48);
-            this.materialCheckedListBox2.Striped = false;
-            this.materialCheckedListBox2.StripeDarkColor = System.Drawing.Color.Empty;
-            this.materialCheckedListBox2.TabIndex = 341;
-            // 
-            // lrnSwitch
-            // 
-            this.lrnSwitch.AutoSize = true;
-            this.lrnSwitch.Depth = 0;
-            this.lrnSwitch.Location = new System.Drawing.Point(399, 3);
-            this.lrnSwitch.Margin = new System.Windows.Forms.Padding(0);
-            this.lrnSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.lrnSwitch.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lrnSwitch.Name = "lrnSwitch";
-            this.lrnSwitch.Ripple = true;
-            this.lrnSwitch.Size = new System.Drawing.Size(80, 37);
-            this.lrnSwitch.TabIndex = 0;
-            this.lrnSwitch.Text = "NO";
-            this.lrnSwitch.UseVisualStyleBackColor = true;
-            // 
-            // materialLabel15
-            // 
-            this.materialLabel15.AutoSize = true;
-            this.materialLabel15.Depth = 0;
-            this.materialLabel15.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel15.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel15.Location = new System.Drawing.Point(7, 11);
-            this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel15.Name = "materialLabel15";
-            this.materialLabel15.Size = new System.Drawing.Size(94, 24);
-            this.materialLabel15.TabIndex = 10;
-            this.materialLabel15.Text = "With LRN?";
-            // 
-            // materialCheckedListBox3
-            // 
-            this.materialCheckedListBox3.AutoScroll = true;
-            this.materialCheckedListBox3.BackColor = System.Drawing.Color.White;
-            this.materialCheckedListBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.materialCheckedListBox3.Controls.Add(this.fourPsSwitch);
-            this.materialCheckedListBox3.Controls.Add(this.materialLabel16);
-            this.materialCheckedListBox3.Depth = 0;
-            this.materialCheckedListBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialCheckedListBox3.Location = new System.Drawing.Point(704, 847);
-            this.materialCheckedListBox3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckedListBox3.Name = "materialCheckedListBox3";
-            this.materialCheckedListBox3.Size = new System.Drawing.Size(490, 48);
-            this.materialCheckedListBox3.Striped = false;
-            this.materialCheckedListBox3.StripeDarkColor = System.Drawing.Color.Empty;
-            this.materialCheckedListBox3.TabIndex = 342;
-            // 
-            // fourPsSwitch
-            // 
-            this.fourPsSwitch.AutoSize = true;
-            this.fourPsSwitch.Depth = 0;
-            this.fourPsSwitch.Location = new System.Drawing.Point(399, 3);
-            this.fourPsSwitch.Margin = new System.Windows.Forms.Padding(0);
-            this.fourPsSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.fourPsSwitch.MouseState = MaterialSkin.MouseState.HOVER;
-            this.fourPsSwitch.Name = "fourPsSwitch";
-            this.fourPsSwitch.Ripple = true;
-            this.fourPsSwitch.Size = new System.Drawing.Size(80, 37);
-            this.fourPsSwitch.TabIndex = 0;
-            this.fourPsSwitch.Text = "NO";
-            this.fourPsSwitch.UseVisualStyleBackColor = true;
-            // 
-            // materialLabel16
-            // 
-            this.materialLabel16.AutoSize = true;
-            this.materialLabel16.Depth = 0;
-            this.materialLabel16.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel16.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel16.Location = new System.Drawing.Point(7, 11);
-            this.materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel16.Name = "materialLabel16";
-            this.materialLabel16.Size = new System.Drawing.Size(174, 24);
-            this.materialLabel16.TabIndex = 10;
-            this.materialLabel16.Text = "Beneficiary of 4Ps?";
             // 
             // materialLabel13
             // 
@@ -456,7 +315,7 @@
             this.materialLabel13.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel13.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
             this.materialLabel13.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.materialLabel13.Location = new System.Drawing.Point(868, 814);
+            this.materialLabel13.Location = new System.Drawing.Point(868, 829);
             this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel13.Name = "materialLabel13";
             this.materialLabel13.Size = new System.Drawing.Size(159, 19);
@@ -468,7 +327,7 @@
             // 
             this.materialDivider5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider5.Depth = 0;
-            this.materialDivider5.Location = new System.Drawing.Point(186, 791);
+            this.materialDivider5.Location = new System.Drawing.Point(186, 804);
             this.materialDivider5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider5.Name = "materialDivider5";
             this.materialDivider5.Size = new System.Drawing.Size(1521, 10);
@@ -483,7 +342,7 @@
             this.eSchoolName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.eSchoolName.Hint = "Name of  Elementary School";
             this.eSchoolName.LeadingIcon = null;
-            this.eSchoolName.Location = new System.Drawing.Point(186, 725);
+            this.eSchoolName.Location = new System.Drawing.Point(186, 738);
             this.eSchoolName.MaxLength = 50;
             this.eSchoolName.MouseState = MaterialSkin.MouseState.OUT;
             this.eSchoolName.Multiline = false;
@@ -501,7 +360,7 @@
             this.hSchoolName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.hSchoolName.Hint = "Name of  High School";
             this.hSchoolName.LeadingIcon = null;
-            this.hSchoolName.Location = new System.Drawing.Point(704, 725);
+            this.hSchoolName.Location = new System.Drawing.Point(704, 738);
             this.hSchoolName.MaxLength = 50;
             this.hSchoolName.MouseState = MaterialSkin.MouseState.OUT;
             this.hSchoolName.Multiline = false;
@@ -519,7 +378,7 @@
             this.shSchoolName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.shSchoolName.Hint = "Name of Senior High School";
             this.shSchoolName.LeadingIcon = null;
-            this.shSchoolName.Location = new System.Drawing.Point(1217, 725);
+            this.shSchoolName.Location = new System.Drawing.Point(1217, 738);
             this.shSchoolName.MaxLength = 50;
             this.shSchoolName.MouseState = MaterialSkin.MouseState.OUT;
             this.shSchoolName.Multiline = false;
@@ -1037,6 +896,7 @@
             this.materialCheckbox4.Size = new System.Drawing.Size(72, 37);
             this.materialCheckbox4.TabIndex = 288;
             this.materialCheckbox4.Text = "None";
+            this.materialCheckbox4.ThreeState = true;
             this.materialCheckbox4.UseVisualStyleBackColor = true;
             // 
             // materialLabel22
@@ -2345,6 +2205,15 @@
             this.finalizationTab.Text = "FINALIZATION";
             this.finalizationTab.UseVisualStyleBackColor = true;
             // 
+            // backBtn
+            // 
+            this.backBtn.Location = new System.Drawing.Point(4, 22);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(1776, 927);
+            this.backBtn.TabIndex = 5;
+            this.backBtn.Text = "BACK TO FRONT PAGE";
+            this.backBtn.UseVisualStyleBackColor = true;
+            // 
             // materialCard29
             // 
             this.materialCard29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -2359,7 +2228,7 @@
             this.materialCard29.Depth = 0;
             this.materialCard29.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.materialCard29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard29.Location = new System.Drawing.Point(3, 947);
+            this.materialCard29.Location = new System.Drawing.Point(3, 977);
             this.materialCard29.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard29.MaximumSize = new System.Drawing.Size(1784, 30);
             this.materialCard29.MinimumSize = new System.Drawing.Size(1784, 30);
@@ -2511,20 +2380,203 @@
             this.thSwitch.Text = "LIGHT MODE";
             this.thSwitch.UseVisualStyleBackColor = false;
             // 
-            // backBtn
+            // materialLabel17
             // 
-            this.backBtn.Location = new System.Drawing.Point(4, 22);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(1776, 927);
-            this.backBtn.TabIndex = 5;
-            this.backBtn.Text = "BACK TO FRONT PAGE";
-            this.backBtn.UseVisualStyleBackColor = true;
+            this.materialLabel17.AutoSize = true;
+            this.materialLabel17.Depth = 0;
+            this.materialLabel17.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel17.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel17.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel17.Location = new System.Drawing.Point(189, 718);
+            this.materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel17.Name = "materialLabel17";
+            this.materialLabel17.Size = new System.Drawing.Size(149, 17);
+            this.materialLabel17.TabIndex = 344;
+            this.materialLabel17.Text = "ELEMENTARY SCHOOL";
+            this.materialLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialLabel18
+            // 
+            this.materialLabel18.AutoSize = true;
+            this.materialLabel18.Depth = 0;
+            this.materialLabel18.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel18.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel18.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel18.Location = new System.Drawing.Point(707, 719);
+            this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel18.Name = "materialLabel18";
+            this.materialLabel18.Size = new System.Drawing.Size(93, 17);
+            this.materialLabel18.TabIndex = 345;
+            this.materialLabel18.Text = "HIGH SCHOOL";
+            this.materialLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialLabel19
+            // 
+            this.materialLabel19.AutoSize = true;
+            this.materialLabel19.Depth = 0;
+            this.materialLabel19.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel19.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel19.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel19.Location = new System.Drawing.Point(1220, 719);
+            this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel19.Name = "materialLabel19";
+            this.materialLabel19.Size = new System.Drawing.Size(145, 17);
+            this.materialLabel19.TabIndex = 346;
+            this.materialLabel19.Text = "SENIOR HIGH SCHOOL";
+            this.materialLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialLabel15
+            // 
+            this.materialLabel15.AutoSize = true;
+            this.materialLabel15.Depth = 0;
+            this.materialLabel15.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel15.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel15.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel15.Location = new System.Drawing.Point(189, 861);
+            this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel15.Name = "materialLabel15";
+            this.materialLabel15.Size = new System.Drawing.Size(242, 17);
+            this.materialLabel15.TabIndex = 348;
+            this.materialLabel15.Text = "LEARNER REFERENCE NUMBER (LRN)";
+            this.materialLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialTextBox6
+            // 
+            this.materialTextBox6.AnimateReadOnly = false;
+            this.materialTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialTextBox6.Depth = 0;
+            this.materialTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox6.Hint = "LRN";
+            this.materialTextBox6.LeadingIcon = null;
+            this.materialTextBox6.Location = new System.Drawing.Point(186, 881);
+            this.materialTextBox6.MaxLength = 50;
+            this.materialTextBox6.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox6.Multiline = false;
+            this.materialTextBox6.Name = "materialTextBox6";
+            this.materialTextBox6.Size = new System.Drawing.Size(489, 50);
+            this.materialTextBox6.TabIndex = 347;
+            this.materialTextBox6.Text = "";
+            this.materialTextBox6.TrailingIcon = null;
+            // 
+            // materialLabel14
+            // 
+            this.materialLabel14.AutoSize = true;
+            this.materialLabel14.Depth = 0;
+            this.materialLabel14.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel14.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel14.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel14.Location = new System.Drawing.Point(708, 862);
+            this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel14.Name = "materialLabel14";
+            this.materialLabel14.Size = new System.Drawing.Size(187, 17);
+            this.materialLabel14.TabIndex = 351;
+            this.materialLabel14.Text = "4PS HOUSEHOLD ID NUMBER";
+            this.materialLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialTextBox7
+            // 
+            this.materialTextBox7.AnimateReadOnly = false;
+            this.materialTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialTextBox7.Depth = 0;
+            this.materialTextBox7.Enabled = false;
+            this.materialTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox7.Hint = "4Ps Household ID Number";
+            this.materialTextBox7.LeadingIcon = null;
+            this.materialTextBox7.Location = new System.Drawing.Point(704, 881);
+            this.materialTextBox7.MaxLength = 50;
+            this.materialTextBox7.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox7.Multiline = false;
+            this.materialTextBox7.Name = "materialTextBox7";
+            this.materialTextBox7.Size = new System.Drawing.Size(400, 50);
+            this.materialTextBox7.TabIndex = 350;
+            this.materialTextBox7.Text = "";
+            this.materialTextBox7.TrailingIcon = null;
+            // 
+            // materialTextBox8
+            // 
+            this.materialTextBox8.AnimateReadOnly = false;
+            this.materialTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialTextBox8.Depth = 0;
+            this.materialTextBox8.Enabled = false;
+            this.materialTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox8.Hint = "Specify";
+            this.materialTextBox8.LeadingIcon = null;
+            this.materialTextBox8.Location = new System.Drawing.Point(1217, 881);
+            this.materialTextBox8.MaxLength = 50;
+            this.materialTextBox8.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox8.Multiline = false;
+            this.materialTextBox8.Name = "materialTextBox8";
+            this.materialTextBox8.Size = new System.Drawing.Size(400, 50);
+            this.materialTextBox8.TabIndex = 349;
+            this.materialTextBox8.Text = "";
+            this.materialTextBox8.TrailingIcon = null;
+            // 
+            // materialLabel10
+            // 
+            this.materialLabel10.AutoSize = true;
+            this.materialLabel10.Depth = 0;
+            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel10.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
+            this.materialLabel10.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel10.Location = new System.Drawing.Point(1083, 859);
+            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel10.Name = "materialLabel10";
+            this.materialLabel10.Size = new System.Drawing.Size(104, 14);
+            this.materialLabel10.TabIndex = 352;
+            this.materialLabel10.Text = "Beneficiary of 4Ps?";
+            this.materialLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialSwitch1
+            // 
+            this.materialSwitch1.AutoSize = true;
+            this.materialSwitch1.Depth = 0;
+            this.materialSwitch1.Location = new System.Drawing.Point(1107, 886);
+            this.materialSwitch1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialSwitch1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialSwitch1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSwitch1.Name = "materialSwitch1";
+            this.materialSwitch1.Ripple = true;
+            this.materialSwitch1.Size = new System.Drawing.Size(80, 37);
+            this.materialSwitch1.TabIndex = 353;
+            this.materialSwitch1.Text = "NO";
+            this.materialSwitch1.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel16
+            // 
+            this.materialLabel16.AutoSize = true;
+            this.materialLabel16.Depth = 0;
+            this.materialLabel16.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel16.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
+            this.materialLabel16.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel16.Location = new System.Drawing.Point(1220, 860);
+            this.materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel16.Name = "materialLabel16";
+            this.materialLabel16.Size = new System.Drawing.Size(474, 14);
+            this.materialLabel16.TabIndex = 354;
+            this.materialLabel16.Text = "Belonging to any Indigenous Peoples (IP) Community/Indigenous Cultural Community?" +
+    "";
+            this.materialLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialSwitch2
+            // 
+            this.materialSwitch2.AutoSize = true;
+            this.materialSwitch2.Depth = 0;
+            this.materialSwitch2.Location = new System.Drawing.Point(1624, 886);
+            this.materialSwitch2.Margin = new System.Windows.Forms.Padding(0);
+            this.materialSwitch2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialSwitch2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSwitch2.Name = "materialSwitch2";
+            this.materialSwitch2.Ripple = true;
+            this.materialSwitch2.Size = new System.Drawing.Size(80, 37);
+            this.materialSwitch2.TabIndex = 355;
+            this.materialSwitch2.Text = "NO";
+            this.materialSwitch2.UseVisualStyleBackColor = true;
             // 
             // EnrollmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1790, 980);
+            this.ClientSize = new System.Drawing.Size(1790, 1010);
             this.Controls.Add(this.thSwitch);
             this.Controls.Add(this.materialCard29);
             this.Controls.Add(this.enrollmentTab);
@@ -2537,7 +2589,6 @@
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1790, 980);
             this.MinimumSize = new System.Drawing.Size(1790, 980);
             this.Name = "EnrollmentForm";
             this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
@@ -2546,12 +2597,6 @@
             this.enrollmentTab.ResumeLayout(false);
             this.basicInfoTab.ResumeLayout(false);
             this.basicInfoTab.PerformLayout();
-            this.ipBorderBox.ResumeLayout(false);
-            this.ipBorderBox.PerformLayout();
-            this.materialCheckedListBox2.ResumeLayout(false);
-            this.materialCheckedListBox2.PerformLayout();
-            this.materialCheckedListBox3.ResumeLayout(false);
-            this.materialCheckedListBox3.PerformLayout();
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
             this.materialCard1.ResumeLayout(false);
@@ -2673,16 +2718,6 @@
         private MaterialSkin.Controls.MaterialTextBox hSchoolName;
         private MaterialSkin.Controls.MaterialTextBox shSchoolName;
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
-        private MaterialSkin.Controls.MaterialCheckedListBox ipBorderBox;
-        private MaterialSkin.Controls.MaterialLabel materialLabel10;
-        private MaterialSkin.Controls.MaterialSwitch ipSwitch;
-        private MaterialSkin.Controls.MaterialLabel materialLabel14;
-        private MaterialSkin.Controls.MaterialCheckedListBox materialCheckedListBox2;
-        private MaterialSkin.Controls.MaterialSwitch lrnSwitch;
-        private MaterialSkin.Controls.MaterialLabel materialLabel15;
-        private MaterialSkin.Controls.MaterialCheckedListBox materialCheckedListBox3;
-        private MaterialSkin.Controls.MaterialSwitch fourPsSwitch;
-        private MaterialSkin.Controls.MaterialLabel materialLabel16;
         private MaterialSkin.Controls.MaterialLabel materialLabel13;
         private MaterialSkin.Controls.MaterialCard materialCard29;
         private MaterialSkin.Controls.MaterialLabel materialLabel178;
@@ -2695,5 +2730,17 @@
         private MaterialSkin.Controls.MaterialButton openWebBtn;
         private MaterialSkin.Controls.MaterialSwitch thSwitch;
         private System.Windows.Forms.TabPage backBtn;
+        private MaterialSkin.Controls.MaterialLabel materialLabel17;
+        private MaterialSkin.Controls.MaterialLabel materialLabel15;
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox6;
+        private MaterialSkin.Controls.MaterialLabel materialLabel19;
+        private MaterialSkin.Controls.MaterialLabel materialLabel18;
+        private MaterialSkin.Controls.MaterialLabel materialLabel14;
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox7;
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox8;
+        private MaterialSkin.Controls.MaterialSwitch materialSwitch2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel16;
+        private MaterialSkin.Controls.MaterialSwitch materialSwitch1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel10;
     }
 }
