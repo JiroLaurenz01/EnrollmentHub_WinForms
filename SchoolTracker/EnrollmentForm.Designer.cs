@@ -297,6 +297,8 @@
             this.materialLabel111 = new MaterialSkin.Controls.MaterialLabel();
             this.userLabel = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
             this.enrollmentTab.SuspendLayout();
             this.basicInfoTab.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -4388,6 +4390,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.materialButton3);
+            this.panel1.Controls.Add(this.materialButton4);
             this.panel1.Controls.Add(this.materialCard3);
             this.panel1.Controls.Add(this.materialLabel111);
             this.panel1.Controls.Add(this.userLabel);
@@ -4902,6 +4906,48 @@
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
+            // materialButton3
+            // 
+            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton3.Depth = 0;
+            this.materialButton3.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.materialButton3.HighEmphasis = true;
+            this.materialButton3.Icon = null;
+            this.materialButton3.Location = new System.Drawing.Point(1490, 892);
+            this.materialButton3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton3.Name = "materialButton3";
+            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton3.Size = new System.Drawing.Size(65, 36);
+            this.materialButton3.TabIndex = 22;
+            this.materialButton3.Text = "Reset";
+            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.materialButton3.UseAccentColor = true;
+            this.materialButton3.UseMnemonic = false;
+            this.materialButton3.UseVisualStyleBackColor = false;
+            // 
+            // materialButton4
+            // 
+            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton4.Depth = 0;
+            this.materialButton4.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.materialButton4.HighEmphasis = true;
+            this.materialButton4.Icon = null;
+            this.materialButton4.Location = new System.Drawing.Point(1400, 892);
+            this.materialButton4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton4.Name = "materialButton4";
+            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton4.Size = new System.Drawing.Size(75, 36);
+            this.materialButton4.TabIndex = 21;
+            this.materialButton4.Text = "SUBMIT";
+            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton4.UseAccentColor = false;
+            this.materialButton4.UseMnemonic = false;
+            this.materialButton4.UseVisualStyleBackColor = false;
+            // 
             // EnrollmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5232,5 +5278,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel111;
         private MaterialSkin.Controls.MaterialLabel userLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private MaterialSkin.Controls.MaterialButton materialButton3;
+        private MaterialSkin.Controls.MaterialButton materialButton4;
     }
 }
