@@ -287,6 +287,25 @@
             this.userLabel = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.coursesRevTab = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.materialLabel118 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
+            this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
+            this.fifthCourseBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel112 = new MaterialSkin.Controls.MaterialLabel();
+            this.fourthCourseBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel113 = new MaterialSkin.Controls.MaterialLabel();
+            this.thirdCourseBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel114 = new MaterialSkin.Controls.MaterialLabel();
+            this.secondCourseBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel115 = new MaterialSkin.Controls.MaterialLabel();
+            this.firstCourseBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel116 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel117 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialDivider19 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialLabel119 = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.finalizationTab = new System.Windows.Forms.TabPage();
             this.backBtn = new System.Windows.Forms.TabPage();
             this.materialCard29 = new MaterialSkin.Controls.MaterialCard();
@@ -299,25 +318,6 @@
             this.materialLabel44 = new MaterialSkin.Controls.MaterialLabel();
             this.openWebBtn = new MaterialSkin.Controls.MaterialButton();
             this.thSwitch = new MaterialSkin.Controls.MaterialSwitch();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
-            this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
-            this.materialLabel117 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialDivider19 = new MaterialSkin.Controls.MaterialDivider();
-            this.materialLabel119 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.materialLabel118 = new MaterialSkin.Controls.MaterialLabel();
-            this.fifthCourseBox = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel112 = new MaterialSkin.Controls.MaterialLabel();
-            this.fourthCourseBox = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel113 = new MaterialSkin.Controls.MaterialLabel();
-            this.thirdCourseBox = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel114 = new MaterialSkin.Controls.MaterialLabel();
-            this.secondCourseBox = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel115 = new MaterialSkin.Controls.MaterialLabel();
-            this.firstCourseBox = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel116 = new MaterialSkin.Controls.MaterialLabel();
             this.enrollmentTab.SuspendLayout();
             this.basicInfoTab.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -338,10 +338,10 @@
             this.departmentBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.coursesRevTab.SuspendLayout();
-            this.materialCard29.SuspendLayout();
             this.panel2.SuspendLayout();
             this.materialCard5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.materialCard29.SuspendLayout();
             this.SuspendLayout();
             // 
             // enrollmentTab
@@ -4788,6 +4788,308 @@
             this.coursesRevTab.Text = "COURSES REVIEW";
             this.coursesRevTab.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.materialLabel118);
+            this.panel2.Controls.Add(this.materialButton5);
+            this.panel2.Controls.Add(this.materialButton6);
+            this.panel2.Controls.Add(this.materialCard5);
+            this.panel2.Controls.Add(this.materialLabel119);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(207, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1569, 957);
+            this.panel2.TabIndex = 1;
+            // 
+            // materialLabel118
+            // 
+            this.materialLabel118.AutoSize = true;
+            this.materialLabel118.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabel118.Depth = 0;
+            this.materialLabel118.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel118.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
+            this.materialLabel118.Location = new System.Drawing.Point(639, 232);
+            this.materialLabel118.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel118.Name = "materialLabel118";
+            this.materialLabel118.Size = new System.Drawing.Size(285, 19);
+            this.materialLabel118.TabIndex = 23;
+            this.materialLabel118.Text = "REVIEW YOUR COURSES INFORMATION";
+            // 
+            // materialButton5
+            // 
+            this.materialButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton5.Depth = 0;
+            this.materialButton5.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.materialButton5.HighEmphasis = true;
+            this.materialButton5.Icon = null;
+            this.materialButton5.Location = new System.Drawing.Point(1487, 895);
+            this.materialButton5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton5.Name = "materialButton5";
+            this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton5.Size = new System.Drawing.Size(65, 36);
+            this.materialButton5.TabIndex = 22;
+            this.materialButton5.Text = "Reset";
+            this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.materialButton5.UseAccentColor = true;
+            this.materialButton5.UseMnemonic = false;
+            this.materialButton5.UseVisualStyleBackColor = false;
+            // 
+            // materialButton6
+            // 
+            this.materialButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton6.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton6.Depth = 0;
+            this.materialButton6.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.materialButton6.HighEmphasis = true;
+            this.materialButton6.Icon = null;
+            this.materialButton6.Location = new System.Drawing.Point(1397, 895);
+            this.materialButton6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton6.Name = "materialButton6";
+            this.materialButton6.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton6.Size = new System.Drawing.Size(84, 36);
+            this.materialButton6.TabIndex = 21;
+            this.materialButton6.Text = "FINALIZE";
+            this.materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton6.UseAccentColor = false;
+            this.materialButton6.UseMnemonic = false;
+            this.materialButton6.UseVisualStyleBackColor = false;
+            // 
+            // materialCard5
+            // 
+            this.materialCard5.AutoScroll = true;
+            this.materialCard5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard5.Controls.Add(this.fifthCourseBox);
+            this.materialCard5.Controls.Add(this.materialLabel112);
+            this.materialCard5.Controls.Add(this.fourthCourseBox);
+            this.materialCard5.Controls.Add(this.materialLabel113);
+            this.materialCard5.Controls.Add(this.thirdCourseBox);
+            this.materialCard5.Controls.Add(this.materialLabel114);
+            this.materialCard5.Controls.Add(this.secondCourseBox);
+            this.materialCard5.Controls.Add(this.materialLabel115);
+            this.materialCard5.Controls.Add(this.firstCourseBox);
+            this.materialCard5.Controls.Add(this.materialLabel116);
+            this.materialCard5.Controls.Add(this.materialLabel117);
+            this.materialCard5.Controls.Add(this.materialDivider19);
+            this.materialCard5.Depth = 0;
+            this.materialCard5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard5.Location = new System.Drawing.Point(217, 271);
+            this.materialCard5.Margin = new System.Windows.Forms.Padding(12);
+            this.materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard5.Name = "materialCard5";
+            this.materialCard5.Padding = new System.Windows.Forms.Padding(12);
+            this.materialCard5.Size = new System.Drawing.Size(1130, 597);
+            this.materialCard5.TabIndex = 16;
+            // 
+            // fifthCourseBox
+            // 
+            this.fifthCourseBox.AnimateReadOnly = false;
+            this.fifthCourseBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fifthCourseBox.Depth = 0;
+            this.fifthCourseBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.fifthCourseBox.LeadingIcon = null;
+            this.fifthCourseBox.Location = new System.Drawing.Point(249, 481);
+            this.fifthCourseBox.MaxLength = 50;
+            this.fifthCourseBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.fifthCourseBox.Multiline = false;
+            this.fifthCourseBox.Name = "fifthCourseBox";
+            this.fifthCourseBox.ReadOnly = true;
+            this.fifthCourseBox.Size = new System.Drawing.Size(625, 50);
+            this.fifthCourseBox.TabIndex = 55;
+            this.fifthCourseBox.Text = "";
+            this.fifthCourseBox.TrailingIcon = null;
+            // 
+            // materialLabel112
+            // 
+            this.materialLabel112.AutoSize = true;
+            this.materialLabel112.Depth = 0;
+            this.materialLabel112.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel112.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel112.Location = new System.Drawing.Point(252, 461);
+            this.materialLabel112.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel112.Name = "materialLabel112";
+            this.materialLabel112.Size = new System.Drawing.Size(96, 17);
+            this.materialLabel112.TabIndex = 56;
+            this.materialLabel112.Text = "FIFTH COURSE";
+            // 
+            // fourthCourseBox
+            // 
+            this.fourthCourseBox.AnimateReadOnly = false;
+            this.fourthCourseBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fourthCourseBox.Depth = 0;
+            this.fourthCourseBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.fourthCourseBox.LeadingIcon = null;
+            this.fourthCourseBox.Location = new System.Drawing.Point(249, 394);
+            this.fourthCourseBox.MaxLength = 50;
+            this.fourthCourseBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.fourthCourseBox.Multiline = false;
+            this.fourthCourseBox.Name = "fourthCourseBox";
+            this.fourthCourseBox.ReadOnly = true;
+            this.fourthCourseBox.Size = new System.Drawing.Size(625, 50);
+            this.fourthCourseBox.TabIndex = 53;
+            this.fourthCourseBox.Text = "";
+            this.fourthCourseBox.TrailingIcon = null;
+            // 
+            // materialLabel113
+            // 
+            this.materialLabel113.AutoSize = true;
+            this.materialLabel113.Depth = 0;
+            this.materialLabel113.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel113.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel113.Location = new System.Drawing.Point(252, 374);
+            this.materialLabel113.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel113.Name = "materialLabel113";
+            this.materialLabel113.Size = new System.Drawing.Size(112, 17);
+            this.materialLabel113.TabIndex = 54;
+            this.materialLabel113.Text = "FOURTH COURSE";
+            // 
+            // thirdCourseBox
+            // 
+            this.thirdCourseBox.AnimateReadOnly = false;
+            this.thirdCourseBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirdCourseBox.Depth = 0;
+            this.thirdCourseBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.thirdCourseBox.LeadingIcon = null;
+            this.thirdCourseBox.Location = new System.Drawing.Point(249, 305);
+            this.thirdCourseBox.MaxLength = 50;
+            this.thirdCourseBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.thirdCourseBox.Multiline = false;
+            this.thirdCourseBox.Name = "thirdCourseBox";
+            this.thirdCourseBox.ReadOnly = true;
+            this.thirdCourseBox.Size = new System.Drawing.Size(625, 50);
+            this.thirdCourseBox.TabIndex = 51;
+            this.thirdCourseBox.Text = "";
+            this.thirdCourseBox.TrailingIcon = null;
+            // 
+            // materialLabel114
+            // 
+            this.materialLabel114.AutoSize = true;
+            this.materialLabel114.Depth = 0;
+            this.materialLabel114.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel114.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel114.Location = new System.Drawing.Point(251, 285);
+            this.materialLabel114.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel114.Name = "materialLabel114";
+            this.materialLabel114.Size = new System.Drawing.Size(98, 17);
+            this.materialLabel114.TabIndex = 52;
+            this.materialLabel114.Text = "THIRD COURSE";
+            // 
+            // secondCourseBox
+            // 
+            this.secondCourseBox.AnimateReadOnly = false;
+            this.secondCourseBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.secondCourseBox.Depth = 0;
+            this.secondCourseBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.secondCourseBox.LeadingIcon = null;
+            this.secondCourseBox.Location = new System.Drawing.Point(249, 211);
+            this.secondCourseBox.MaxLength = 50;
+            this.secondCourseBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.secondCourseBox.Multiline = false;
+            this.secondCourseBox.Name = "secondCourseBox";
+            this.secondCourseBox.ReadOnly = true;
+            this.secondCourseBox.Size = new System.Drawing.Size(625, 50);
+            this.secondCourseBox.TabIndex = 49;
+            this.secondCourseBox.Text = "";
+            this.secondCourseBox.TrailingIcon = null;
+            // 
+            // materialLabel115
+            // 
+            this.materialLabel115.AutoSize = true;
+            this.materialLabel115.Depth = 0;
+            this.materialLabel115.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel115.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel115.Location = new System.Drawing.Point(252, 191);
+            this.materialLabel115.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel115.Name = "materialLabel115";
+            this.materialLabel115.Size = new System.Drawing.Size(111, 17);
+            this.materialLabel115.TabIndex = 50;
+            this.materialLabel115.Text = "SECOND COURSE";
+            // 
+            // firstCourseBox
+            // 
+            this.firstCourseBox.AnimateReadOnly = false;
+            this.firstCourseBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.firstCourseBox.Depth = 0;
+            this.firstCourseBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.firstCourseBox.LeadingIcon = null;
+            this.firstCourseBox.Location = new System.Drawing.Point(249, 119);
+            this.firstCourseBox.MaxLength = 50;
+            this.firstCourseBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.firstCourseBox.Multiline = false;
+            this.firstCourseBox.Name = "firstCourseBox";
+            this.firstCourseBox.ReadOnly = true;
+            this.firstCourseBox.Size = new System.Drawing.Size(625, 50);
+            this.firstCourseBox.TabIndex = 47;
+            this.firstCourseBox.Text = "";
+            this.firstCourseBox.TrailingIcon = null;
+            // 
+            // materialLabel116
+            // 
+            this.materialLabel116.AutoSize = true;
+            this.materialLabel116.Depth = 0;
+            this.materialLabel116.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel116.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel116.Location = new System.Drawing.Point(252, 99);
+            this.materialLabel116.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel116.Name = "materialLabel116";
+            this.materialLabel116.Size = new System.Drawing.Size(95, 17);
+            this.materialLabel116.TabIndex = 48;
+            this.materialLabel116.Text = "FIRST COURSE";
+            // 
+            // materialLabel117
+            // 
+            this.materialLabel117.AutoSize = true;
+            this.materialLabel117.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabel117.Depth = 0;
+            this.materialLabel117.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel117.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
+            this.materialLabel117.Location = new System.Drawing.Point(407, 25);
+            this.materialLabel117.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel117.Name = "materialLabel117";
+            this.materialLabel117.Size = new System.Drawing.Size(315, 41);
+            this.materialLabel117.TabIndex = 0;
+            this.materialLabel117.Text = "SELECTED COURSES";
+            // 
+            // materialDivider19
+            // 
+            this.materialDivider19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider19.Depth = 0;
+            this.materialDivider19.Location = new System.Drawing.Point(0, -349);
+            this.materialDivider19.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider19.Name = "materialDivider19";
+            this.materialDivider19.Size = new System.Drawing.Size(501, 10);
+            this.materialDivider19.TabIndex = 17;
+            this.materialDivider19.Text = "materialDivider19";
+            // 
+            // materialLabel119
+            // 
+            this.materialLabel119.AutoSize = true;
+            this.materialLabel119.Depth = 0;
+            this.materialLabel119.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel119.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel119.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel119.Location = new System.Drawing.Point(558, 206);
+            this.materialLabel119.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel119.Name = "materialLabel119";
+            this.materialLabel119.Size = new System.Drawing.Size(446, 24);
+            this.materialLabel119.TabIndex = 19;
+            this.materialLabel119.Text = "POLYTECHNIC UNIVERSITY OF THE PHILIPPINES";
+            this.materialLabel119.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(711, 66);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(141, 133);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 18;
+            this.pictureBox3.TabStop = false;
+            // 
             // finalizationTab
             // 
             this.finalizationTab.BackColor = System.Drawing.Color.White;
@@ -4971,308 +5273,7 @@
             this.thSwitch.TabIndex = 346;
             this.thSwitch.Text = "LIGHT MODE";
             this.thSwitch.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.materialLabel118);
-            this.panel2.Controls.Add(this.materialButton5);
-            this.panel2.Controls.Add(this.materialButton6);
-            this.panel2.Controls.Add(this.materialCard5);
-            this.panel2.Controls.Add(this.materialLabel119);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(207, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1569, 957);
-            this.panel2.TabIndex = 1;
-            // 
-            // materialButton5
-            // 
-            this.materialButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton5.Depth = 0;
-            this.materialButton5.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton5.HighEmphasis = true;
-            this.materialButton5.Icon = null;
-            this.materialButton5.Location = new System.Drawing.Point(1487, 895);
-            this.materialButton5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton5.Name = "materialButton5";
-            this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton5.Size = new System.Drawing.Size(65, 36);
-            this.materialButton5.TabIndex = 22;
-            this.materialButton5.Text = "Reset";
-            this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.materialButton5.UseAccentColor = true;
-            this.materialButton5.UseMnemonic = false;
-            this.materialButton5.UseVisualStyleBackColor = false;
-            // 
-            // materialButton6
-            // 
-            this.materialButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton6.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton6.Depth = 0;
-            this.materialButton6.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton6.HighEmphasis = true;
-            this.materialButton6.Icon = null;
-            this.materialButton6.Location = new System.Drawing.Point(1397, 895);
-            this.materialButton6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton6.Name = "materialButton6";
-            this.materialButton6.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton6.Size = new System.Drawing.Size(75, 36);
-            this.materialButton6.TabIndex = 21;
-            this.materialButton6.Text = "FINALIZE";
-            this.materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton6.UseAccentColor = false;
-            this.materialButton6.UseMnemonic = false;
-            this.materialButton6.UseVisualStyleBackColor = false;
-            // 
-            // materialCard5
-            // 
-            this.materialCard5.AutoScroll = true;
-            this.materialCard5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard5.Controls.Add(this.fifthCourseBox);
-            this.materialCard5.Controls.Add(this.materialLabel112);
-            this.materialCard5.Controls.Add(this.fourthCourseBox);
-            this.materialCard5.Controls.Add(this.materialLabel113);
-            this.materialCard5.Controls.Add(this.thirdCourseBox);
-            this.materialCard5.Controls.Add(this.materialLabel114);
-            this.materialCard5.Controls.Add(this.secondCourseBox);
-            this.materialCard5.Controls.Add(this.materialLabel115);
-            this.materialCard5.Controls.Add(this.firstCourseBox);
-            this.materialCard5.Controls.Add(this.materialLabel116);
-            this.materialCard5.Controls.Add(this.materialLabel117);
-            this.materialCard5.Controls.Add(this.materialDivider19);
-            this.materialCard5.Depth = 0;
-            this.materialCard5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard5.Location = new System.Drawing.Point(217, 271);
-            this.materialCard5.Margin = new System.Windows.Forms.Padding(12);
-            this.materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard5.Name = "materialCard5";
-            this.materialCard5.Padding = new System.Windows.Forms.Padding(12);
-            this.materialCard5.Size = new System.Drawing.Size(1130, 597);
-            this.materialCard5.TabIndex = 16;
-            // 
-            // materialLabel117
-            // 
-            this.materialLabel117.AutoSize = true;
-            this.materialLabel117.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel117.Depth = 0;
-            this.materialLabel117.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel117.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.materialLabel117.Location = new System.Drawing.Point(407, 25);
-            this.materialLabel117.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel117.Name = "materialLabel117";
-            this.materialLabel117.Size = new System.Drawing.Size(315, 41);
-            this.materialLabel117.TabIndex = 0;
-            this.materialLabel117.Text = "SELECTED COURSES";
-            // 
-            // materialDivider19
-            // 
-            this.materialDivider19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider19.Depth = 0;
-            this.materialDivider19.Location = new System.Drawing.Point(0, -349);
-            this.materialDivider19.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider19.Name = "materialDivider19";
-            this.materialDivider19.Size = new System.Drawing.Size(501, 10);
-            this.materialDivider19.TabIndex = 17;
-            this.materialDivider19.Text = "materialDivider19";
-            // 
-            // materialLabel119
-            // 
-            this.materialLabel119.AutoSize = true;
-            this.materialLabel119.Depth = 0;
-            this.materialLabel119.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel119.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel119.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.materialLabel119.Location = new System.Drawing.Point(558, 206);
-            this.materialLabel119.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel119.Name = "materialLabel119";
-            this.materialLabel119.Size = new System.Drawing.Size(446, 24);
-            this.materialLabel119.TabIndex = 19;
-            this.materialLabel119.Text = "POLYTECHNIC UNIVERSITY OF THE PHILIPPINES";
-            this.materialLabel119.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(711, 66);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(141, 133);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 18;
-            this.pictureBox3.TabStop = false;
-            // 
-            // materialLabel118
-            // 
-            this.materialLabel118.AutoSize = true;
-            this.materialLabel118.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel118.Depth = 0;
-            this.materialLabel118.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel118.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
-            this.materialLabel118.Location = new System.Drawing.Point(639, 232);
-            this.materialLabel118.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel118.Name = "materialLabel118";
-            this.materialLabel118.Size = new System.Drawing.Size(285, 19);
-            this.materialLabel118.TabIndex = 23;
-            this.materialLabel118.Text = "REVIEW YOUR COURSES INFORMATION";
-            // 
-            // fifthCourseBox
-            // 
-            this.fifthCourseBox.AnimateReadOnly = false;
-            this.fifthCourseBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fifthCourseBox.Depth = 0;
-            this.fifthCourseBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.fifthCourseBox.LeadingIcon = null;
-            this.fifthCourseBox.Location = new System.Drawing.Point(249, 481);
-            this.fifthCourseBox.MaxLength = 50;
-            this.fifthCourseBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.fifthCourseBox.Multiline = false;
-            this.fifthCourseBox.Name = "fifthCourseBox";
-            this.fifthCourseBox.ReadOnly = true;
-            this.fifthCourseBox.Size = new System.Drawing.Size(625, 50);
-            this.fifthCourseBox.TabIndex = 55;
-            this.fifthCourseBox.Text = "";
-            this.fifthCourseBox.TrailingIcon = null;
-            // 
-            // materialLabel112
-            // 
-            this.materialLabel112.AutoSize = true;
-            this.materialLabel112.Depth = 0;
-            this.materialLabel112.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel112.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel112.Location = new System.Drawing.Point(252, 461);
-            this.materialLabel112.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel112.Name = "materialLabel112";
-            this.materialLabel112.Size = new System.Drawing.Size(96, 17);
-            this.materialLabel112.TabIndex = 56;
-            this.materialLabel112.Text = "FIFTH COURSE";
-            // 
-            // fourthCourseBox
-            // 
-            this.fourthCourseBox.AnimateReadOnly = false;
-            this.fourthCourseBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fourthCourseBox.Depth = 0;
-            this.fourthCourseBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.fourthCourseBox.LeadingIcon = null;
-            this.fourthCourseBox.Location = new System.Drawing.Point(249, 394);
-            this.fourthCourseBox.MaxLength = 50;
-            this.fourthCourseBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.fourthCourseBox.Multiline = false;
-            this.fourthCourseBox.Name = "fourthCourseBox";
-            this.fourthCourseBox.ReadOnly = true;
-            this.fourthCourseBox.Size = new System.Drawing.Size(625, 50);
-            this.fourthCourseBox.TabIndex = 53;
-            this.fourthCourseBox.Text = "";
-            this.fourthCourseBox.TrailingIcon = null;
-            // 
-            // materialLabel113
-            // 
-            this.materialLabel113.AutoSize = true;
-            this.materialLabel113.Depth = 0;
-            this.materialLabel113.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel113.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel113.Location = new System.Drawing.Point(252, 374);
-            this.materialLabel113.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel113.Name = "materialLabel113";
-            this.materialLabel113.Size = new System.Drawing.Size(112, 17);
-            this.materialLabel113.TabIndex = 54;
-            this.materialLabel113.Text = "FOURTH COURSE";
-            // 
-            // thirdCourseBox
-            // 
-            this.thirdCourseBox.AnimateReadOnly = false;
-            this.thirdCourseBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirdCourseBox.Depth = 0;
-            this.thirdCourseBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.thirdCourseBox.LeadingIcon = null;
-            this.thirdCourseBox.Location = new System.Drawing.Point(249, 305);
-            this.thirdCourseBox.MaxLength = 50;
-            this.thirdCourseBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.thirdCourseBox.Multiline = false;
-            this.thirdCourseBox.Name = "thirdCourseBox";
-            this.thirdCourseBox.ReadOnly = true;
-            this.thirdCourseBox.Size = new System.Drawing.Size(625, 50);
-            this.thirdCourseBox.TabIndex = 51;
-            this.thirdCourseBox.Text = "";
-            this.thirdCourseBox.TrailingIcon = null;
-            // 
-            // materialLabel114
-            // 
-            this.materialLabel114.AutoSize = true;
-            this.materialLabel114.Depth = 0;
-            this.materialLabel114.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel114.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel114.Location = new System.Drawing.Point(251, 285);
-            this.materialLabel114.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel114.Name = "materialLabel114";
-            this.materialLabel114.Size = new System.Drawing.Size(98, 17);
-            this.materialLabel114.TabIndex = 52;
-            this.materialLabel114.Text = "THIRD COURSE";
-            // 
-            // secondCourseBox
-            // 
-            this.secondCourseBox.AnimateReadOnly = false;
-            this.secondCourseBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.secondCourseBox.Depth = 0;
-            this.secondCourseBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.secondCourseBox.LeadingIcon = null;
-            this.secondCourseBox.Location = new System.Drawing.Point(249, 211);
-            this.secondCourseBox.MaxLength = 50;
-            this.secondCourseBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.secondCourseBox.Multiline = false;
-            this.secondCourseBox.Name = "secondCourseBox";
-            this.secondCourseBox.ReadOnly = true;
-            this.secondCourseBox.Size = new System.Drawing.Size(625, 50);
-            this.secondCourseBox.TabIndex = 49;
-            this.secondCourseBox.Text = "";
-            this.secondCourseBox.TrailingIcon = null;
-            // 
-            // materialLabel115
-            // 
-            this.materialLabel115.AutoSize = true;
-            this.materialLabel115.Depth = 0;
-            this.materialLabel115.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel115.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel115.Location = new System.Drawing.Point(252, 191);
-            this.materialLabel115.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel115.Name = "materialLabel115";
-            this.materialLabel115.Size = new System.Drawing.Size(111, 17);
-            this.materialLabel115.TabIndex = 50;
-            this.materialLabel115.Text = "SECOND COURSE";
-            // 
-            // firstCourseBox
-            // 
-            this.firstCourseBox.AnimateReadOnly = false;
-            this.firstCourseBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.firstCourseBox.Depth = 0;
-            this.firstCourseBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.firstCourseBox.LeadingIcon = null;
-            this.firstCourseBox.Location = new System.Drawing.Point(249, 119);
-            this.firstCourseBox.MaxLength = 50;
-            this.firstCourseBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.firstCourseBox.Multiline = false;
-            this.firstCourseBox.Name = "firstCourseBox";
-            this.firstCourseBox.ReadOnly = true;
-            this.firstCourseBox.Size = new System.Drawing.Size(625, 50);
-            this.firstCourseBox.TabIndex = 47;
-            this.firstCourseBox.Text = "";
-            this.firstCourseBox.TrailingIcon = null;
-            // 
-            // materialLabel116
-            // 
-            this.materialLabel116.AutoSize = true;
-            this.materialLabel116.Depth = 0;
-            this.materialLabel116.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel116.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel116.Location = new System.Drawing.Point(252, 99);
-            this.materialLabel116.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel116.Name = "materialLabel116";
-            this.materialLabel116.Size = new System.Drawing.Size(95, 17);
-            this.materialLabel116.TabIndex = 48;
-            this.materialLabel116.Text = "FIRST COURSE";
+            this.thSwitch.CheckedChanged += new System.EventHandler(this.thSwitch_CheckedChanged);
             // 
             // EnrollmentForm
             // 
@@ -5328,13 +5329,13 @@
             this.departmentBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.coursesRevTab.ResumeLayout(false);
-            this.materialCard29.ResumeLayout(false);
-            this.materialCard29.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.materialCard5.ResumeLayout(false);
             this.materialCard5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.materialCard29.ResumeLayout(false);
+            this.materialCard29.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
