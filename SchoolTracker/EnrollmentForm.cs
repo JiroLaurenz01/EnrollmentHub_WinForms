@@ -14,6 +14,8 @@ namespace SchoolTracker
 {
     public partial class EnrollmentForm : MaterialForm
     {
+        Functionality functions = new Functionality();
+
         public EnrollmentForm()
         {
             InitializeComponent();
@@ -55,5 +57,9 @@ namespace SchoolTracker
         }
 
         #endregion
+
+        private void openWebBtn_Click(object sender, EventArgs e) => functions.OpenWeb(0);
+        private void termUseBtn_Click(object sender, EventArgs e) => functions.OpenWeb(1);
+        private void privacyStateBtn_Click(object sender, EventArgs e) => functions.OpenWeb(2);
     }
 }

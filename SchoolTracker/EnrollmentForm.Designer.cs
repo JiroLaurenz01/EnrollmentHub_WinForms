@@ -5186,6 +5186,7 @@
             this.privacyStateBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.privacyStateBtn.UseAccentColor = true;
             this.privacyStateBtn.UseVisualStyleBackColor = true;
+            this.privacyStateBtn.Click += new System.EventHandler(this.privacyStateBtn_Click);
             // 
             // termUseBtn
             // 
@@ -5205,6 +5206,7 @@
             this.termUseBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.termUseBtn.UseAccentColor = true;
             this.termUseBtn.UseVisualStyleBackColor = true;
+            this.termUseBtn.Click += new System.EventHandler(this.termUseBtn_Click);
             // 
             // pupBtn
             // 
@@ -5224,6 +5226,7 @@
             this.pupBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.pupBtn.UseAccentColor = true;
             this.pupBtn.UseVisualStyleBackColor = true;
+            this.pupBtn.Click += new System.EventHandler(this.openWebBtn_Click);
             // 
             // materialLabel44
             // 
@@ -5257,6 +5260,7 @@
             this.openWebBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.openWebBtn.UseAccentColor = true;
             this.openWebBtn.UseVisualStyleBackColor = true;
+            this.openWebBtn.Click += new System.EventHandler(this.openWebBtn_Click);
             // 
             // thSwitch
             // 

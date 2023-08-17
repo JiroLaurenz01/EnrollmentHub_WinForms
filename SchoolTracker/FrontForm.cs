@@ -48,5 +48,10 @@ namespace SchoolTracker
         }
 
         #endregion
+
+
+        Functionality functions = new Functionality();
+
+        private void WebsiteVisitBtn_Click(object sender, EventArgs e) => functions.OpenWeb(0);
     }
 }
