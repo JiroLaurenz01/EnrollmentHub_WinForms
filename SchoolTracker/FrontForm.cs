@@ -49,9 +49,12 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTIONS TO OPEN SPECIFIC WEBSITE
 
         Functionality functions = new Functionality();
 
         private void WebsiteVisitBtn_Click(object sender, EventArgs e) => functions.OpenWeb(0);
+
+        #endregion
     }
 }
