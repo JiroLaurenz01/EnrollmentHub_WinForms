@@ -58,8 +58,12 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTIONS TO OPEN SPECIFIC WEBSITE
+
         private void openWebBtn_Click(object sender, EventArgs e) => functions.OpenWeb(0);
         private void termUseBtn_Click(object sender, EventArgs e) => functions.OpenWeb(1);
         private void privacyStateBtn_Click(object sender, EventArgs e) => functions.OpenWeb(2);
+
+        #endregion
     }
 }
