@@ -173,6 +173,7 @@
             this.WebsiteVisitBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.WebsiteVisitBtn.UseAccentColor = true;
             this.WebsiteVisitBtn.UseVisualStyleBackColor = true;
+            this.WebsiteVisitBtn.Click += new System.EventHandler(this.WebsiteVisitBtn_Click);
             // 
             // FrontForm
             // 

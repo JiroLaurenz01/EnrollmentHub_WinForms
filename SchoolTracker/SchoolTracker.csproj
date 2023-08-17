@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>education.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
@@ -79,6 +82,7 @@
     <Compile Include="FrontForm.Designer.cs">
       <DependentUpon>FrontForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functionality.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EnrollmentForm.resx">
@@ -125,6 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="education.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
