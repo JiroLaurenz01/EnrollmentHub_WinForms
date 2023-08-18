@@ -141,63 +141,65 @@ namespace SchoolTracker
 
         #endregion
 
-
         #region FUNCTION TO HANDLE (IF MOTHER/FATHER -> GUARDIAN) CHECKBOXES LOGIC
 
+        // This event handler is triggered when the checked state of the "gMotherBtn" or "gFatherBtn" checkboxes changes.
         private void ifMotherFatherIsAGuardian_CheckedChanged(object sender, EventArgs e)
         {
             // Cast the sender object to a MaterialCheckbox, representing the checkbox that triggered the event.
-            MaterialCheckbox materialCheckbox = (MaterialCheckbox)sender;
+            MaterialCheckbox materialCheckBox = (MaterialCheckbox)sender;
 
-            List<MaterialTextBox> materialTextBoxList = new List<MaterialTextBox>();
+            // Create a list to hold MaterialTextBox controls for guardians' information.
+            List<MaterialTextBox> materialGuardianTextBoxList = new List<MaterialTextBox>
+            {
+                gLNameBox,
+                gFNameBox,
+                gMNameBox,
+                gCNumBox
+            };
 
-            // Get the name of the checked checkbox and calculate the inverse of its checked state.
-            string checkedCheckBox = materialCheckbox.Name;
-            bool ifChecked = !materialCheckbox.Checked;
+            // Create a list to hold MaterialTextBox controls for parents' information.
+            List<MaterialTextBox> materialParentTextBoxList = new List<MaterialTextBox>();
 
-            // Perform different enabling/disabling logic based on the checked checkbox.
+            // Get the name of the checked checkbox and its checked state.
+            string checkedCheckBox = materialCheckBox.Name;
+            bool ifChecked = materialCheckBox.Checked;
+
+            // Perform different logic based on the checked checkbox.
             switch (checkedCheckBox)
             {
-                case "mNoneBtn":
-                    materialTextBoxList.Clear();
+                case "gMotherBtn":
+                    materialParentTextBoxList.Add(mLNameBox);
+                    materialParentTextBoxList.Add(mFNameBox);
+                    materialParentTextBoxList.Add(mMNameBox);
+                    materialParentTextBoxList.Add(mCNumBox);
 
-                    materialTextBoxList.Add(mLNameBox);
-                    materialTextBoxList.Add(mFNameBox);
-                    materialTextBoxList.Add(mMNameBox);
-                    materialTextBoxList.Add(mCNumBox);
+                    gExtNameCBox.Enabled = !ifChecked;
                     break;
 
-                case "fNoneBtn":
-                    fLNameBox.Enabled = ifChecked;
-                    fFNameBox.Enabled = ifChecked;
-                    fMNameBox.Enabled = ifChecked;
-                    fCNumBox.Enabled = ifChecked;
-                    fExtNameCBox.Enabled = ifChecked;
-                    break;
-                case "gNoneBtn":
-                    gLNameBox.Enabled = ifChecked;
-                    gFNameBox.Enabled = ifChecked;
-                    gMNameBox.Enabled = ifChecked;
-                    gCNumBox.Enabled = ifChecked;
-                    gExtNameCBox.Enabled = ifChecked;
+                case "gFatherBtn":
+                    materialParentTextBoxList.Add(fLNameBox);
+                    materialParentTextBoxList.Add(fFNameBox);
+                    materialParentTextBoxList.Add(fMNameBox);
+                    materialParentTextBoxList.Add(fCNumBox);
 
-                    gMotherBtn.Enabled = ifChecked;
-                    gFatherBtn.Enabled = ifChecked;
-
-                    if (!ifChecked)
-                    {
-                        gMotherBtn.Checked = false;
-                        gFatherBtn.Checked = false;
-                    }
+                    // Set the guardian's extended name combo box index based on the checked state.
+                    gExtNameCBox.SelectedIndex = ifChecked
+                        ? fExtNameCBox.SelectedIndex
+                        : 0;
                     break;
             }
 
-            foreach (MaterialTextBox textBox in materialTextBoxList)
+            // Loop through the guardian and parent text boxes and perform necessary actions.
+            for (int i = 0; i < 4; i++)
             {
-                textBox.Enabled = ifChecked;
-                MessageBox.Show("1");
+                if (ifChecked) // Copy parent's information to guardian's text boxes if the checkbox is checked.
+                    materialGuardianTextBoxList[i].Text = materialParentTextBoxList[i].Text;
+                else // Clear guardian's text boxes if the checkbox is not checked.
+                    materialGuardianTextBoxList[i].Clear();
             }
         }
+
 
         #endregion
 
