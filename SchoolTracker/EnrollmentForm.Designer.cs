@@ -53,8 +53,8 @@
             this.shSchoolName = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
             this.materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
-            this.materialCheckbox6 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialCheckbox7 = new MaterialSkin.Controls.MaterialCheckbox();
+            this.gFatherBtn = new MaterialSkin.Controls.MaterialCheckbox();
+            this.gMotherBtn = new MaterialSkin.Controls.MaterialCheckbox();
             this.gNoneBtn = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
@@ -81,7 +81,6 @@
             this.materialLabel31 = new MaterialSkin.Controls.MaterialLabel();
             this.fMNameBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel33 = new MaterialSkin.Controls.MaterialLabel();
-            this.mNoneBtn = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialLabel22 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel23 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel24 = new MaterialSkin.Controls.MaterialLabel();
@@ -318,6 +317,7 @@
             this.materialLabel44 = new MaterialSkin.Controls.MaterialLabel();
             this.openWebBtn = new MaterialSkin.Controls.MaterialButton();
             this.thSwitch = new MaterialSkin.Controls.MaterialSwitch();
+            this.mNoneBtn = new MaterialSkin.Controls.MaterialCheckbox();
             this.enrollmentTab.SuspendLayout();
             this.basicInfoTab.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -365,6 +365,7 @@
             // basicInfoTab
             // 
             this.basicInfoTab.BackColor = System.Drawing.Color.White;
+            this.basicInfoTab.Controls.Add(this.mNoneBtn);
             this.basicInfoTab.Controls.Add(this.materialButton1);
             this.basicInfoTab.Controls.Add(this.materialButton2);
             this.basicInfoTab.Controls.Add(this.materialTextBox9);
@@ -387,8 +388,8 @@
             this.basicInfoTab.Controls.Add(this.shSchoolName);
             this.basicInfoTab.Controls.Add(this.materialLabel11);
             this.basicInfoTab.Controls.Add(this.materialDivider4);
-            this.basicInfoTab.Controls.Add(this.materialCheckbox6);
-            this.basicInfoTab.Controls.Add(this.materialCheckbox7);
+            this.basicInfoTab.Controls.Add(this.gFatherBtn);
+            this.basicInfoTab.Controls.Add(this.gMotherBtn);
             this.basicInfoTab.Controls.Add(this.gNoneBtn);
             this.basicInfoTab.Controls.Add(this.materialDivider2);
             this.basicInfoTab.Controls.Add(this.materialDivider1);
@@ -415,7 +416,6 @@
             this.basicInfoTab.Controls.Add(this.materialLabel31);
             this.basicInfoTab.Controls.Add(this.fMNameBox);
             this.basicInfoTab.Controls.Add(this.materialLabel33);
-            this.basicInfoTab.Controls.Add(this.mNoneBtn);
             this.basicInfoTab.Controls.Add(this.materialLabel22);
             this.basicInfoTab.Controls.Add(this.materialLabel23);
             this.basicInfoTab.Controls.Add(this.materialLabel24);
@@ -842,37 +842,39 @@
             this.materialDivider4.TabIndex = 323;
             this.materialDivider4.Text = "materialDivider4";
             // 
-            // materialCheckbox6
+            // gFatherBtn
             // 
-            this.materialCheckbox6.AutoSize = true;
-            this.materialCheckbox6.Depth = 0;
-            this.materialCheckbox6.Location = new System.Drawing.Point(1627, 429);
-            this.materialCheckbox6.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox6.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox6.Name = "materialCheckbox6";
-            this.materialCheckbox6.ReadOnly = false;
-            this.materialCheckbox6.Ripple = true;
-            this.materialCheckbox6.Size = new System.Drawing.Size(80, 37);
-            this.materialCheckbox6.TabIndex = 322;
-            this.materialCheckbox6.Text = "Father";
-            this.materialCheckbox6.UseVisualStyleBackColor = true;
+            this.gFatherBtn.AutoSize = true;
+            this.gFatherBtn.Depth = 0;
+            this.gFatherBtn.Location = new System.Drawing.Point(1627, 429);
+            this.gFatherBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.gFatherBtn.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.gFatherBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.gFatherBtn.Name = "gFatherBtn";
+            this.gFatherBtn.ReadOnly = false;
+            this.gFatherBtn.Ripple = true;
+            this.gFatherBtn.Size = new System.Drawing.Size(80, 37);
+            this.gFatherBtn.TabIndex = 322;
+            this.gFatherBtn.Text = "Father";
+            this.gFatherBtn.UseVisualStyleBackColor = true;
+            this.gFatherBtn.CheckedChanged += new System.EventHandler(this.ifMotherFatherIsAGuardian_CheckedChanged);
             // 
-            // materialCheckbox7
+            // gMotherBtn
             // 
-            this.materialCheckbox7.AutoSize = true;
-            this.materialCheckbox7.Depth = 0;
-            this.materialCheckbox7.Location = new System.Drawing.Point(1537, 429);
-            this.materialCheckbox7.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox7.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox7.Name = "materialCheckbox7";
-            this.materialCheckbox7.ReadOnly = false;
-            this.materialCheckbox7.Ripple = true;
-            this.materialCheckbox7.Size = new System.Drawing.Size(85, 37);
-            this.materialCheckbox7.TabIndex = 321;
-            this.materialCheckbox7.Text = "Mother";
-            this.materialCheckbox7.UseVisualStyleBackColor = true;
+            this.gMotherBtn.AutoSize = true;
+            this.gMotherBtn.Depth = 0;
+            this.gMotherBtn.Location = new System.Drawing.Point(1537, 429);
+            this.gMotherBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.gMotherBtn.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.gMotherBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.gMotherBtn.Name = "gMotherBtn";
+            this.gMotherBtn.ReadOnly = false;
+            this.gMotherBtn.Ripple = true;
+            this.gMotherBtn.Size = new System.Drawing.Size(85, 37);
+            this.gMotherBtn.TabIndex = 321;
+            this.gMotherBtn.Text = "Mother";
+            this.gMotherBtn.UseVisualStyleBackColor = true;
+            this.gMotherBtn.CheckedChanged += new System.EventHandler(this.ifMotherFatherIsAGuardian_CheckedChanged);
             // 
             // gNoneBtn
             // 
@@ -1311,24 +1313,6 @@
             this.materialLabel33.TabIndex = 293;
             this.materialLabel33.Text = "FATHER\'S INFORMATION";
             this.materialLabel33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // mNoneBtn
-            // 
-            this.mNoneBtn.AutoSize = true;
-            this.mNoneBtn.Depth = 0;
-            this.mNoneBtn.Location = new System.Drawing.Point(186, 429);
-            this.mNoneBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.mNoneBtn.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.mNoneBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mNoneBtn.Name = "mNoneBtn";
-            this.mNoneBtn.ReadOnly = false;
-            this.mNoneBtn.Ripple = true;
-            this.mNoneBtn.Size = new System.Drawing.Size(72, 37);
-            this.mNoneBtn.TabIndex = 288;
-            this.mNoneBtn.Text = "None";
-            this.mNoneBtn.ThreeState = true;
-            this.mNoneBtn.UseVisualStyleBackColor = true;
-            this.mNoneBtn.CheckedChanged += new System.EventHandler(this.noneParentsGuardiansBtn_CheckedChanged);
             // 
             // materialLabel22
             // 
@@ -5282,6 +5266,23 @@
             this.thSwitch.UseVisualStyleBackColor = false;
             this.thSwitch.CheckedChanged += new System.EventHandler(this.thSwitch_CheckedChanged);
             // 
+            // mNoneBtn
+            // 
+            this.mNoneBtn.AutoSize = true;
+            this.mNoneBtn.Depth = 0;
+            this.mNoneBtn.Location = new System.Drawing.Point(188, 429);
+            this.mNoneBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.mNoneBtn.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mNoneBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mNoneBtn.Name = "mNoneBtn";
+            this.mNoneBtn.ReadOnly = false;
+            this.mNoneBtn.Ripple = true;
+            this.mNoneBtn.Size = new System.Drawing.Size(72, 37);
+            this.mNoneBtn.TabIndex = 480;
+            this.mNoneBtn.Text = "None";
+            this.mNoneBtn.UseVisualStyleBackColor = true;
+            this.mNoneBtn.CheckedChanged += new System.EventHandler(this.noneParentsGuardiansBtn_CheckedChanged);
+            // 
             // EnrollmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5436,7 +5437,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel31;
         private MaterialSkin.Controls.MaterialTextBox fMNameBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel33;
-        private MaterialSkin.Controls.MaterialCheckbox mNoneBtn;
         private MaterialSkin.Controls.MaterialLabel materialLabel22;
         private MaterialSkin.Controls.MaterialLabel materialLabel23;
         private MaterialSkin.Controls.MaterialLabel materialLabel24;
@@ -5446,8 +5446,8 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel25;
         private MaterialSkin.Controls.MaterialTextBox mMNameBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel26;
-        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox6;
-        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox7;
+        private MaterialSkin.Controls.MaterialCheckbox gFatherBtn;
+        private MaterialSkin.Controls.MaterialCheckbox gMotherBtn;
         private MaterialSkin.Controls.MaterialCheckbox gNoneBtn;
         private MaterialSkin.Controls.MaterialDivider materialDivider4;
         private MaterialSkin.Controls.MaterialDivider materialDivider5;
@@ -5639,5 +5639,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private MaterialSkin.Controls.MaterialRadioButton maleBtn;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
+        private MaterialSkin.Controls.MaterialCheckbox mNoneBtn;
     }
 }
