@@ -68,13 +68,16 @@ namespace SchoolTracker
 
         #region FUNCTIONS FOR CHECKBOX
 
-        #region FUNCTION TO HANDLE PARENT/GUARDIAN CHECKBOXES LOGIC
+        #region FUNCTION TO HANDLE PARENT/GUARDIAN (NONE) CHECKBOXES LOGIC
 
         // This event handler is triggered when any of the "noneParentsGuardiansBtn" checkboxes' checked state changes.
         private void noneParentsGuardiansBtn_CheckedChanged(object sender, EventArgs e)
         {
             // Cast the sender object to a MaterialCheckbox, representing the checkbox that triggered the event.
             MaterialCheckbox materialCheckbox = (MaterialCheckbox)sender;
+
+            // Create a list to hold MaterialTextBox controls that need to be enabled/disabled.
+            List<MaterialTextBox> materialTextBoxList = new List<MaterialTextBox>();
 
             // Get the name of the checked checkbox and calculate the inverse of its checked state.
             string checkedCheckBox = materialCheckbox.Name;
@@ -84,10 +87,84 @@ namespace SchoolTracker
             switch (checkedCheckBox)
             {
                 case "mNoneBtn":
-                    mLNameBox.Enabled = ifChecked;
-                    mFNameBox.Enabled = ifChecked;
-                    mMNameBox.Enabled = ifChecked;
-                    mCNumBox.Enabled = ifChecked;
+                    materialTextBoxList.Add(mLNameBox);
+                    materialTextBoxList.Add(mFNameBox);
+                    materialTextBoxList.Add(mMNameBox);
+                    materialTextBoxList.Add(mCNumBox);
+                    break;
+
+                case "fNoneBtn":
+                    materialTextBoxList.Add(fLNameBox);
+                    materialTextBoxList.Add(fFNameBox);
+                    materialTextBoxList.Add(fMNameBox);
+                    materialTextBoxList.Add(fCNumBox);
+
+                    fExtNameCBox.Enabled = ifChecked;
+
+                    if (!ifChecked)
+                        fExtNameCBox.SelectedIndex = 0;
+                    break;
+
+                case "gNoneBtn":
+                    materialTextBoxList.Add(gLNameBox);
+                    materialTextBoxList.Add(gFNameBox);
+                    materialTextBoxList.Add(gMNameBox);
+                    materialTextBoxList.Add(gCNumBox);
+
+                    gExtNameCBox.Enabled = ifChecked;
+
+                    if (!ifChecked)
+                        gExtNameCBox.SelectedIndex = 0;
+
+                    gMotherBtn.Enabled = ifChecked;
+                    gFatherBtn.Enabled = ifChecked;
+
+                    if (!ifChecked)
+                    {
+                        gMotherBtn.Checked = false;
+                        gFatherBtn.Checked = false;
+                    }
+                    break;
+            }
+
+            // Iterate through the list of MaterialTextBox controls and enable/disable them accordingly.
+            foreach (MaterialTextBox textBox in materialTextBoxList)
+            {
+                textBox.Enabled = ifChecked;
+
+                // If the checkbox is unchecked, clear the content of the MaterialTextBox.
+                if (!ifChecked)
+                    textBox.Clear();
+            }
+        }
+
+
+        #endregion
+
+
+        #region FUNCTION TO HANDLE (IF MOTHER/FATHER -> GUARDIAN) CHECKBOXES LOGIC
+
+        private void ifMotherFatherIsAGuardian_CheckedChanged(object sender, EventArgs e)
+        {
+            // Cast the sender object to a MaterialCheckbox, representing the checkbox that triggered the event.
+            MaterialCheckbox materialCheckbox = (MaterialCheckbox)sender;
+
+            List<MaterialTextBox> materialTextBoxList = new List<MaterialTextBox>();
+
+            // Get the name of the checked checkbox and calculate the inverse of its checked state.
+            string checkedCheckBox = materialCheckbox.Name;
+            bool ifChecked = !materialCheckbox.Checked;
+
+            // Perform different enabling/disabling logic based on the checked checkbox.
+            switch (checkedCheckBox)
+            {
+                case "mNoneBtn":
+                    materialTextBoxList.Clear();
+
+                    materialTextBoxList.Add(mLNameBox);
+                    materialTextBoxList.Add(mFNameBox);
+                    materialTextBoxList.Add(mMNameBox);
+                    materialTextBoxList.Add(mCNumBox);
                     break;
 
                 case "fNoneBtn":
@@ -103,7 +180,22 @@ namespace SchoolTracker
                     gMNameBox.Enabled = ifChecked;
                     gCNumBox.Enabled = ifChecked;
                     gExtNameCBox.Enabled = ifChecked;
+
+                    gMotherBtn.Enabled = ifChecked;
+                    gFatherBtn.Enabled = ifChecked;
+
+                    if (!ifChecked)
+                    {
+                        gMotherBtn.Checked = false;
+                        gFatherBtn.Checked = false;
+                    }
                     break;
+            }
+
+            foreach (MaterialTextBox textBox in materialTextBoxList)
+            {
+                textBox.Enabled = ifChecked;
+                MessageBox.Show("1");
             }
         }
 
