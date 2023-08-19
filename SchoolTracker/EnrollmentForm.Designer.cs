@@ -35,13 +35,13 @@
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.materialTextBox9 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialSwitch2 = new MaterialSkin.Controls.MaterialSwitch();
+            this.ipSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSwitch1 = new MaterialSkin.Controls.MaterialSwitch();
+            this.fpsSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox7 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox8 = new MaterialSkin.Controls.MaterialTextBox();
+            this.fpsTextBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.ipTextBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTextBox6 = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
@@ -369,13 +369,13 @@
             this.basicInfoTab.Controls.Add(this.materialButton1);
             this.basicInfoTab.Controls.Add(this.materialButton2);
             this.basicInfoTab.Controls.Add(this.materialTextBox9);
-            this.basicInfoTab.Controls.Add(this.materialSwitch2);
+            this.basicInfoTab.Controls.Add(this.ipSwitch);
             this.basicInfoTab.Controls.Add(this.materialLabel16);
-            this.basicInfoTab.Controls.Add(this.materialSwitch1);
+            this.basicInfoTab.Controls.Add(this.fpsSwitch);
             this.basicInfoTab.Controls.Add(this.materialLabel10);
             this.basicInfoTab.Controls.Add(this.materialLabel14);
-            this.basicInfoTab.Controls.Add(this.materialTextBox7);
-            this.basicInfoTab.Controls.Add(this.materialTextBox8);
+            this.basicInfoTab.Controls.Add(this.fpsTextBox);
+            this.basicInfoTab.Controls.Add(this.ipTextBox);
             this.basicInfoTab.Controls.Add(this.materialLabel15);
             this.basicInfoTab.Controls.Add(this.materialTextBox6);
             this.basicInfoTab.Controls.Add(this.materialLabel19);
@@ -562,20 +562,21 @@
             this.materialTextBox9.Text = "";
             this.materialTextBox9.TrailingIcon = null;
             // 
-            // materialSwitch2
+            // ipSwitch
             // 
-            this.materialSwitch2.AutoSize = true;
-            this.materialSwitch2.Depth = 0;
-            this.materialSwitch2.Location = new System.Drawing.Point(1444, 886);
-            this.materialSwitch2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialSwitch2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialSwitch2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSwitch2.Name = "materialSwitch2";
-            this.materialSwitch2.Ripple = true;
-            this.materialSwitch2.Size = new System.Drawing.Size(80, 37);
-            this.materialSwitch2.TabIndex = 355;
-            this.materialSwitch2.Text = "NO";
-            this.materialSwitch2.UseVisualStyleBackColor = true;
+            this.ipSwitch.AutoSize = true;
+            this.ipSwitch.Depth = 0;
+            this.ipSwitch.Location = new System.Drawing.Point(1444, 886);
+            this.ipSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.ipSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ipSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ipSwitch.Name = "ipSwitch";
+            this.ipSwitch.Ripple = true;
+            this.ipSwitch.Size = new System.Drawing.Size(80, 37);
+            this.ipSwitch.TabIndex = 355;
+            this.ipSwitch.Text = "NO";
+            this.ipSwitch.UseVisualStyleBackColor = true;
+            this.ipSwitch.CheckedChanged += new System.EventHandler(this.extraInfoSwitch_CheckedChanged);
             // 
             // materialLabel16
             // 
@@ -592,20 +593,21 @@
             this.materialLabel16.Text = "Belonging to any Indigenous Peoples Community/Cultural Community?";
             this.materialLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialSwitch1
+            // fpsSwitch
             // 
-            this.materialSwitch1.AutoSize = true;
-            this.materialSwitch1.Depth = 0;
-            this.materialSwitch1.Location = new System.Drawing.Point(970, 886);
-            this.materialSwitch1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialSwitch1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialSwitch1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSwitch1.Name = "materialSwitch1";
-            this.materialSwitch1.Ripple = true;
-            this.materialSwitch1.Size = new System.Drawing.Size(80, 37);
-            this.materialSwitch1.TabIndex = 353;
-            this.materialSwitch1.Text = "NO";
-            this.materialSwitch1.UseVisualStyleBackColor = true;
+            this.fpsSwitch.AutoSize = true;
+            this.fpsSwitch.Depth = 0;
+            this.fpsSwitch.Location = new System.Drawing.Point(970, 886);
+            this.fpsSwitch.Margin = new System.Windows.Forms.Padding(0);
+            this.fpsSwitch.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.fpsSwitch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.fpsSwitch.Name = "fpsSwitch";
+            this.fpsSwitch.Ripple = true;
+            this.fpsSwitch.Size = new System.Drawing.Size(80, 37);
+            this.fpsSwitch.TabIndex = 353;
+            this.fpsSwitch.Text = "NO";
+            this.fpsSwitch.UseVisualStyleBackColor = true;
+            this.fpsSwitch.CheckedChanged += new System.EventHandler(this.extraInfoSwitch_CheckedChanged);
             // 
             // materialLabel10
             // 
@@ -637,43 +639,43 @@
             this.materialLabel14.Text = "4PS HOUSEHOLD ID NUMBER";
             this.materialLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialTextBox7
+            // fpsTextBox
             // 
-            this.materialTextBox7.AnimateReadOnly = false;
-            this.materialTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialTextBox7.Depth = 0;
-            this.materialTextBox7.Enabled = false;
-            this.materialTextBox7.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox7.Hint = "4Ps Household ID Number";
-            this.materialTextBox7.LeadingIcon = null;
-            this.materialTextBox7.Location = new System.Drawing.Point(603, 881);
-            this.materialTextBox7.MaxLength = 50;
-            this.materialTextBox7.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox7.Multiline = false;
-            this.materialTextBox7.Name = "materialTextBox7";
-            this.materialTextBox7.Size = new System.Drawing.Size(360, 50);
-            this.materialTextBox7.TabIndex = 350;
-            this.materialTextBox7.Text = "";
-            this.materialTextBox7.TrailingIcon = null;
+            this.fpsTextBox.AnimateReadOnly = false;
+            this.fpsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fpsTextBox.Depth = 0;
+            this.fpsTextBox.Enabled = false;
+            this.fpsTextBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.fpsTextBox.Hint = "4Ps Household ID Number";
+            this.fpsTextBox.LeadingIcon = null;
+            this.fpsTextBox.Location = new System.Drawing.Point(603, 881);
+            this.fpsTextBox.MaxLength = 50;
+            this.fpsTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.fpsTextBox.Multiline = false;
+            this.fpsTextBox.Name = "fpsTextBox";
+            this.fpsTextBox.Size = new System.Drawing.Size(360, 50);
+            this.fpsTextBox.TabIndex = 350;
+            this.fpsTextBox.Text = "";
+            this.fpsTextBox.TrailingIcon = null;
             // 
-            // materialTextBox8
+            // ipTextBox
             // 
-            this.materialTextBox8.AnimateReadOnly = false;
-            this.materialTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialTextBox8.Depth = 0;
-            this.materialTextBox8.Enabled = false;
-            this.materialTextBox8.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox8.Hint = "Specify";
-            this.materialTextBox8.LeadingIcon = null;
-            this.materialTextBox8.Location = new System.Drawing.Point(1077, 881);
-            this.materialTextBox8.MaxLength = 50;
-            this.materialTextBox8.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox8.Multiline = false;
-            this.materialTextBox8.Name = "materialTextBox8";
-            this.materialTextBox8.Size = new System.Drawing.Size(360, 50);
-            this.materialTextBox8.TabIndex = 349;
-            this.materialTextBox8.Text = "";
-            this.materialTextBox8.TrailingIcon = null;
+            this.ipTextBox.AnimateReadOnly = false;
+            this.ipTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ipTextBox.Depth = 0;
+            this.ipTextBox.Enabled = false;
+            this.ipTextBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ipTextBox.Hint = "Specify";
+            this.ipTextBox.LeadingIcon = null;
+            this.ipTextBox.Location = new System.Drawing.Point(1077, 881);
+            this.ipTextBox.MaxLength = 50;
+            this.ipTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.ipTextBox.Multiline = false;
+            this.ipTextBox.Name = "ipTextBox";
+            this.ipTextBox.Size = new System.Drawing.Size(360, 50);
+            this.ipTextBox.TabIndex = 349;
+            this.ipTextBox.Text = "";
+            this.ipTextBox.TrailingIcon = null;
             // 
             // materialLabel15
             // 
@@ -5474,11 +5476,11 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel19;
         private MaterialSkin.Controls.MaterialLabel materialLabel18;
         private MaterialSkin.Controls.MaterialLabel materialLabel14;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox7;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox8;
-        private MaterialSkin.Controls.MaterialSwitch materialSwitch2;
+        private MaterialSkin.Controls.MaterialTextBox fpsTextBox;
+        private MaterialSkin.Controls.MaterialTextBox ipTextBox;
+        private MaterialSkin.Controls.MaterialSwitch ipSwitch;
         private MaterialSkin.Controls.MaterialLabel materialLabel16;
-        private MaterialSkin.Controls.MaterialSwitch materialSwitch1;
+        private MaterialSkin.Controls.MaterialSwitch fpsSwitch;
         private MaterialSkin.Controls.MaterialLabel materialLabel10;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox9;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox60;

@@ -31,7 +31,7 @@ namespace SchoolTracker
                 );
         }
 
-        #region FUNCTIONS FOR TOGGLE SWITCHES
+        #region FUNCTIONS FOR SWITCHES
 
         #region FUNCTION TO CHANGE THE THEME COLOR [LIGHT/DARK]
 
@@ -93,6 +93,27 @@ namespace SchoolTracker
                 else
                     textBoxList[i + 5].Clear();
             }
+        }
+
+        #endregion
+
+        #region FUNCTION FOR EXTRA INFORMATION ENABLE/DISABLE TEXTBOXES LOGIC
+
+        // Event handler method triggered when the state of the checkbox 'extraInfoSwitch' changes
+        private void extraInfoSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            // Cast the sender object to a 'MaterialSwitch' type
+            MaterialSwitch materialSwitch = (MaterialSwitch)sender;
+
+            // Get the name and checked state of the switch that triggered the event
+            string checkedSwitch = materialSwitch.Name;
+            bool ifChecked = materialSwitch.Checked;
+
+            // Check if the triggered switch is 'fpsSwitch' and if not, it is 'ipSwitch'
+            if (checkedSwitch == "fpsSwitch")
+                fpsTextBox.Enabled = ifChecked;
+            else
+                ipTextBox.Enabled = ifChecked;
         }
 
         #endregion
