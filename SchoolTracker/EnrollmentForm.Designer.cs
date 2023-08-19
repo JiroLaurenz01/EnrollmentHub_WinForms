@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnrollmentForm));
             this.enrollmentTab = new MaterialSkin.Controls.MaterialTabControl();
             this.basicInfoTab = new System.Windows.Forms.TabPage();
+            this.mNoneBtn = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.materialTextBox9 = new MaterialSkin.Controls.MaterialTextBox();
@@ -93,16 +94,16 @@
             this.materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox4 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox5 = new MaterialSkin.Controls.MaterialTextBox();
+            this.pProvBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.pCityBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel91 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel92 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox3 = new MaterialSkin.Controls.MaterialTextBox();
+            this.pBrgyBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.pStNameBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.pStNumBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel93 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel94 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel95 = new MaterialSkin.Controls.MaterialLabel();
@@ -317,7 +318,6 @@
             this.materialLabel44 = new MaterialSkin.Controls.MaterialLabel();
             this.openWebBtn = new MaterialSkin.Controls.MaterialButton();
             this.thSwitch = new MaterialSkin.Controls.MaterialSwitch();
-            this.mNoneBtn = new MaterialSkin.Controls.MaterialCheckbox();
             this.enrollmentTab.SuspendLayout();
             this.basicInfoTab.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -428,16 +428,16 @@
             this.basicInfoTab.Controls.Add(this.materialDivider3);
             this.basicInfoTab.Controls.Add(this.materialLabel8);
             this.basicInfoTab.Controls.Add(this.materialLabel9);
-            this.basicInfoTab.Controls.Add(this.materialTextBox4);
-            this.basicInfoTab.Controls.Add(this.materialTextBox5);
+            this.basicInfoTab.Controls.Add(this.pProvBox);
+            this.basicInfoTab.Controls.Add(this.pCityBox);
             this.basicInfoTab.Controls.Add(this.materialLabel91);
             this.basicInfoTab.Controls.Add(this.materialLabel92);
             this.basicInfoTab.Controls.Add(this.materialLabel1);
             this.basicInfoTab.Controls.Add(this.materialLabel3);
             this.basicInfoTab.Controls.Add(this.materialLabel7);
-            this.basicInfoTab.Controls.Add(this.materialTextBox1);
-            this.basicInfoTab.Controls.Add(this.materialTextBox2);
-            this.basicInfoTab.Controls.Add(this.materialTextBox3);
+            this.basicInfoTab.Controls.Add(this.pBrgyBox);
+            this.basicInfoTab.Controls.Add(this.pStNameBox);
+            this.basicInfoTab.Controls.Add(this.pStNumBox);
             this.basicInfoTab.Controls.Add(this.materialLabel93);
             this.basicInfoTab.Controls.Add(this.materialLabel94);
             this.basicInfoTab.Controls.Add(this.materialLabel95);
@@ -484,6 +484,23 @@
             this.basicInfoTab.Size = new System.Drawing.Size(1776, 957);
             this.basicInfoTab.TabIndex = 0;
             this.basicInfoTab.Text = "BASIC INFORMATION";
+            // 
+            // mNoneBtn
+            // 
+            this.mNoneBtn.AutoSize = true;
+            this.mNoneBtn.Depth = 0;
+            this.mNoneBtn.Location = new System.Drawing.Point(188, 429);
+            this.mNoneBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.mNoneBtn.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mNoneBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mNoneBtn.Name = "mNoneBtn";
+            this.mNoneBtn.ReadOnly = false;
+            this.mNoneBtn.Ripple = true;
+            this.mNoneBtn.Size = new System.Drawing.Size(72, 37);
+            this.mNoneBtn.TabIndex = 480;
+            this.mNoneBtn.Text = "None";
+            this.mNoneBtn.UseVisualStyleBackColor = true;
+            this.mNoneBtn.CheckedChanged += new System.EventHandler(this.noneParentsGuardiansBtn_CheckedChanged);
             // 
             // materialButton1
             // 
@@ -1502,41 +1519,41 @@
             this.materialLabel9.Text = "MUNICIPALITY/CITY";
             this.materialLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialTextBox4
+            // pProvBox
             // 
-            this.materialTextBox4.AnimateReadOnly = false;
-            this.materialTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialTextBox4.Depth = 0;
-            this.materialTextBox4.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox4.Hint = "Province";
-            this.materialTextBox4.LeadingIcon = null;
-            this.materialTextBox4.Location = new System.Drawing.Point(1338, 369);
-            this.materialTextBox4.MaxLength = 50;
-            this.materialTextBox4.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox4.Multiline = false;
-            this.materialTextBox4.Name = "materialTextBox4";
-            this.materialTextBox4.Size = new System.Drawing.Size(369, 50);
-            this.materialTextBox4.TabIndex = 269;
-            this.materialTextBox4.Text = "";
-            this.materialTextBox4.TrailingIcon = null;
+            this.pProvBox.AnimateReadOnly = false;
+            this.pProvBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pProvBox.Depth = 0;
+            this.pProvBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.pProvBox.Hint = "Province";
+            this.pProvBox.LeadingIcon = null;
+            this.pProvBox.Location = new System.Drawing.Point(1338, 369);
+            this.pProvBox.MaxLength = 50;
+            this.pProvBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.pProvBox.Multiline = false;
+            this.pProvBox.Name = "pProvBox";
+            this.pProvBox.Size = new System.Drawing.Size(369, 50);
+            this.pProvBox.TabIndex = 269;
+            this.pProvBox.Text = "";
+            this.pProvBox.TrailingIcon = null;
             // 
-            // materialTextBox5
+            // pCityBox
             // 
-            this.materialTextBox5.AnimateReadOnly = false;
-            this.materialTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialTextBox5.Depth = 0;
-            this.materialTextBox5.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox5.Hint = "Municipality/City";
-            this.materialTextBox5.LeadingIcon = null;
-            this.materialTextBox5.Location = new System.Drawing.Point(965, 369);
-            this.materialTextBox5.MaxLength = 50;
-            this.materialTextBox5.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox5.Multiline = false;
-            this.materialTextBox5.Name = "materialTextBox5";
-            this.materialTextBox5.Size = new System.Drawing.Size(367, 50);
-            this.materialTextBox5.TabIndex = 268;
-            this.materialTextBox5.Text = "";
-            this.materialTextBox5.TrailingIcon = null;
+            this.pCityBox.AnimateReadOnly = false;
+            this.pCityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pCityBox.Depth = 0;
+            this.pCityBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.pCityBox.Hint = "Municipality/City";
+            this.pCityBox.LeadingIcon = null;
+            this.pCityBox.Location = new System.Drawing.Point(965, 369);
+            this.pCityBox.MaxLength = 50;
+            this.pCityBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.pCityBox.Multiline = false;
+            this.pCityBox.Name = "pCityBox";
+            this.pCityBox.Size = new System.Drawing.Size(367, 50);
+            this.pCityBox.TabIndex = 268;
+            this.pCityBox.Text = "";
+            this.pCityBox.TrailingIcon = null;
             // 
             // materialLabel91
             // 
@@ -1613,59 +1630,59 @@
             this.materialLabel7.Text = "STREET NO.";
             this.materialLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialTextBox1
+            // pBrgyBox
             // 
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox1.Hint = "Barangay";
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(1386, 285);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(321, 50);
-            this.materialTextBox1.TabIndex = 262;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
+            this.pBrgyBox.AnimateReadOnly = false;
+            this.pBrgyBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBrgyBox.Depth = 0;
+            this.pBrgyBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.pBrgyBox.Hint = "Barangay";
+            this.pBrgyBox.LeadingIcon = null;
+            this.pBrgyBox.Location = new System.Drawing.Point(1386, 285);
+            this.pBrgyBox.MaxLength = 50;
+            this.pBrgyBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.pBrgyBox.Multiline = false;
+            this.pBrgyBox.Name = "pBrgyBox";
+            this.pBrgyBox.Size = new System.Drawing.Size(321, 50);
+            this.pBrgyBox.TabIndex = 262;
+            this.pBrgyBox.Text = "";
+            this.pBrgyBox.TrailingIcon = null;
             // 
-            // materialTextBox2
+            // pStNameBox
             // 
-            this.materialTextBox2.AnimateReadOnly = false;
-            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialTextBox2.Depth = 0;
-            this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox2.Hint = "Street Name";
-            this.materialTextBox2.LeadingIcon = null;
-            this.materialTextBox2.Location = new System.Drawing.Point(1070, 285);
-            this.materialTextBox2.MaxLength = 50;
-            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox2.Multiline = false;
-            this.materialTextBox2.Name = "materialTextBox2";
-            this.materialTextBox2.Size = new System.Drawing.Size(310, 50);
-            this.materialTextBox2.TabIndex = 261;
-            this.materialTextBox2.Text = "";
-            this.materialTextBox2.TrailingIcon = null;
+            this.pStNameBox.AnimateReadOnly = false;
+            this.pStNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pStNameBox.Depth = 0;
+            this.pStNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.pStNameBox.Hint = "Street Name";
+            this.pStNameBox.LeadingIcon = null;
+            this.pStNameBox.Location = new System.Drawing.Point(1070, 285);
+            this.pStNameBox.MaxLength = 50;
+            this.pStNameBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.pStNameBox.Multiline = false;
+            this.pStNameBox.Name = "pStNameBox";
+            this.pStNameBox.Size = new System.Drawing.Size(310, 50);
+            this.pStNameBox.TabIndex = 261;
+            this.pStNameBox.Text = "";
+            this.pStNameBox.TrailingIcon = null;
             // 
-            // materialTextBox3
+            // pStNumBox
             // 
-            this.materialTextBox3.AnimateReadOnly = false;
-            this.materialTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialTextBox3.Depth = 0;
-            this.materialTextBox3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox3.Hint = "Street No.";
-            this.materialTextBox3.LeadingIcon = null;
-            this.materialTextBox3.Location = new System.Drawing.Point(965, 285);
-            this.materialTextBox3.MaxLength = 50;
-            this.materialTextBox3.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox3.Multiline = false;
-            this.materialTextBox3.Name = "materialTextBox3";
-            this.materialTextBox3.Size = new System.Drawing.Size(98, 50);
-            this.materialTextBox3.TabIndex = 260;
-            this.materialTextBox3.Text = "";
-            this.materialTextBox3.TrailingIcon = null;
+            this.pStNumBox.AnimateReadOnly = false;
+            this.pStNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pStNumBox.Depth = 0;
+            this.pStNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.pStNumBox.Hint = "Street No.";
+            this.pStNumBox.LeadingIcon = null;
+            this.pStNumBox.Location = new System.Drawing.Point(965, 285);
+            this.pStNumBox.MaxLength = 50;
+            this.pStNumBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.pStNumBox.Multiline = false;
+            this.pStNumBox.Name = "pStNumBox";
+            this.pStNumBox.Size = new System.Drawing.Size(98, 50);
+            this.pStNumBox.TabIndex = 260;
+            this.pStNumBox.Text = "";
+            this.pStNumBox.TrailingIcon = null;
             // 
             // materialLabel93
             // 
@@ -1816,6 +1833,7 @@
             this.permaAddSwitch.TabIndex = 250;
             this.permaAddSwitch.Text = "NO";
             this.permaAddSwitch.UseVisualStyleBackColor = true;
+            this.permaAddSwitch.CheckedChanged += new System.EventHandler(this.permaAddSwitch_CheckedChanged);
             // 
             // materialLabel12
             // 
@@ -5266,23 +5284,6 @@
             this.thSwitch.UseVisualStyleBackColor = false;
             this.thSwitch.CheckedChanged += new System.EventHandler(this.thSwitch_CheckedChanged);
             // 
-            // mNoneBtn
-            // 
-            this.mNoneBtn.AutoSize = true;
-            this.mNoneBtn.Depth = 0;
-            this.mNoneBtn.Location = new System.Drawing.Point(188, 429);
-            this.mNoneBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.mNoneBtn.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.mNoneBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mNoneBtn.Name = "mNoneBtn";
-            this.mNoneBtn.ReadOnly = false;
-            this.mNoneBtn.Ripple = true;
-            this.mNoneBtn.Size = new System.Drawing.Size(72, 37);
-            this.mNoneBtn.TabIndex = 480;
-            this.mNoneBtn.Text = "None";
-            this.mNoneBtn.UseVisualStyleBackColor = true;
-            this.mNoneBtn.CheckedChanged += new System.EventHandler(this.noneParentsGuardiansBtn_CheckedChanged);
-            // 
             // EnrollmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5359,16 +5360,16 @@
         private System.Windows.Forms.TabPage basicInfoTab;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox4;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox5;
+        private MaterialSkin.Controls.MaterialTextBox pProvBox;
+        private MaterialSkin.Controls.MaterialTextBox pCityBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel91;
         private MaterialSkin.Controls.MaterialLabel materialLabel92;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox3;
+        private MaterialSkin.Controls.MaterialTextBox pBrgyBox;
+        private MaterialSkin.Controls.MaterialTextBox pStNameBox;
+        private MaterialSkin.Controls.MaterialTextBox pStNumBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel93;
         private MaterialSkin.Controls.MaterialLabel materialLabel94;
         private MaterialSkin.Controls.MaterialLabel materialLabel95;

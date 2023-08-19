@@ -31,6 +31,8 @@ namespace SchoolTracker
                 );
         }
 
+        #region FUNCTIONS FOR TOGGLE SWITCHES
+
         #region FUNCTION TO CHANGE THE THEME COLOR [LIGHT/DARK]
 
         // This method is an event handler that is triggered when the state of the thSwitch (toggle switch) changes.
@@ -55,6 +57,45 @@ namespace SchoolTracker
                 thSwitch.Text = "LIGHT MODE";
             }
         }
+
+        #endregion
+
+        #region FUNCTION FOR IF SAME CURRENT/PERMANENT ADDRESS 
+
+        // Event handler method triggered when the state of the checkbox 'permaAddSwitch' changes
+        private void permaAddSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            // Create a list to store instances of 'MaterialTextBox' controls
+            List<MaterialTextBox> textBoxList = new List<MaterialTextBox>
+            {
+                //CURRENT ADDRESS TEXTBOXES
+                stNumBox,
+                stNameBox,
+                brgyBox,
+                cityBox,
+                provBox,
+
+                //PERMANENT ADDRESS TEXTBOXES
+                pStNumBox,
+                pStNameBox,
+                pBrgyBox,
+                pCityBox,
+                pProvBox
+            };
+
+            for (int i = 0; i < 5; i++)
+            {
+                /* If checked, copy the text from current address textbox (at index 'i')
+                   to the corresponding permanent address textbox (at index 'i + 5') */
+                // If not checked, clear the text in the corresponding permanent address textbox
+                if (permaAddSwitch.Checked)
+                    textBoxList[i + 5].Text = textBoxList[i].Text;
+                else
+                    textBoxList[i + 5].Clear();
+            }
+        }
+
+        #endregion
 
         #endregion
 
