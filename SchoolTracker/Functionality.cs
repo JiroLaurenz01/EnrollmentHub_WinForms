@@ -9,7 +9,6 @@ namespace SchoolTracker
 {
     class Functionality
     {
-
         #region FUNCTIONS THAT WILL RUN SPECIFIC WEBSITE BASED ON THE GIVEN PARAMETER
 
         // This method is designed to open a specific web URL based on the given index.
@@ -36,7 +35,6 @@ namespace SchoolTracker
             {
                 MessageBox.Show($"Error opening website: {ex.Message}", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
         #endregion

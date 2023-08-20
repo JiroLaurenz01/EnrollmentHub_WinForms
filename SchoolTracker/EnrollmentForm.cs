@@ -120,15 +120,7 @@ namespace SchoolTracker
 
         #endregion
 
-        #region FUNCTIONS TO OPEN VARIOUS WEBSITES
-
-        private void openWebBtn_Click(object sender, EventArgs e) => functions.OpenWeb(0);
-        private void termUseBtn_Click(object sender, EventArgs e) => functions.OpenWeb(1);
-        private void privacyStateBtn_Click(object sender, EventArgs e) => functions.OpenWeb(2);
-
-        #endregion
-
-        #region FUNCTIONS FOR CHECKBOX
+        #region FUNCTIONS FOR CHECKBOXES
 
         #region FUNCTION TO HANDLE PARENT/GUARDIAN (NONE) CHECKBOXES LOGIC
 
@@ -281,5 +273,54 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTION FOR BUTTONS
+
+        #region FUNCTION TO SELECT PHOTO
+
+        private void selectPhoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // To handle any exceptions that might occur during the process.
+            try
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    Bitmap selectedImage = new Bitmap(openFileDialog.FileName);
+
+                    // Check if the loaded image is square using the IsSquareImage function.
+                    // If the image is square, set it as the student's picture.
+                    // Else, display a warning message.
+                    if (IsSquareImage(selectedImage))
+                    {
+                        studentPicture.Image = selectedImage;
+
+                        // Note: The commented line below seems to be related to storing the user's image elsewhere.
+                        // UD.userImage = studentPicture.Image;
+                    }
+                    else
+                        MessageBox.Show("Please select a square image.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error selecting photo: {ex.Message}", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        // This method checks if an image is square based on its width and height.
+        private bool IsSquareImage(Bitmap image) => image.Width == image.Height;
+
+        #endregion
+
+        #endregion
+
+        #region FUNCTIONS TO OPEN VARIOUS WEBSITES
+
+        private void openWebBtn_Click(object sender, EventArgs e) => functions.OpenWeb(0);
+        private void termUseBtn_Click(object sender, EventArgs e) => functions.OpenWeb(1);
+        private void privacyStateBtn_Click(object sender, EventArgs e) => functions.OpenWeb(2);
+
+        #endregion
     }
 }
