@@ -2074,6 +2074,7 @@
             this.selectPhoto.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.selectPhoto.UseAccentColor = false;
             this.selectPhoto.UseVisualStyleBackColor = true;
+            this.selectPhoto.Click += new System.EventHandler(this.selectPhoto_Click);
             // 
             // contactNumber
             // 
