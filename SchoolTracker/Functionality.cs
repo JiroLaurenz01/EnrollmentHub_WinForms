@@ -34,7 +34,7 @@ namespace SchoolTracker
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error opening website: {ex.Message}", "Open Website", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Error opening website: {ex.Message}", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
