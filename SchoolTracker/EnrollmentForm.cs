@@ -45,12 +45,12 @@ namespace SchoolTracker
             bool isLight = skin.Theme == MaterialSkinManager.Themes.LIGHT;
 
             // If the current theme is light, switch to dark theme and update the text of the toggle switch.
+            // Else, the current theme is dark, switch to light theme and update the text of the toggle switch.
             if (isLight)
             {
                 skin.Theme = MaterialSkinManager.Themes.DARK;  
                 thSwitch.Text = "DARK MODE"; 
             }
-            // If the current theme is dark, switch to light theme and update the text of the toggle switch.
             else
             {
                 skin.Theme = MaterialSkinManager.Themes.LIGHT; 
@@ -120,7 +120,7 @@ namespace SchoolTracker
 
         #endregion
 
-        #region FUNCTIONS TO OPEN SPECIFIC WEBSITE
+        #region FUNCTIONS TO OPEN VARIOUS WEBSITES
 
         private void openWebBtn_Click(object sender, EventArgs e) => functions.OpenWeb(0);
         private void termUseBtn_Click(object sender, EventArgs e) => functions.OpenWeb(1);
@@ -143,9 +143,10 @@ namespace SchoolTracker
 
             // Get the name of the checked checkbox and calculate the inverse of its checked state.
             string checkedCheckBox = materialCheckbox.Name;
-            bool ifChecked = !materialCheckbox.Checked;
+            bool ifChecked = materialCheckbox.Checked;
 
             // Perform different enabling/disabling logic based on the checked checkbox.
+            // Adding textboxes to the materialTextBoxList based on the checkbox that triggered the event.
             switch (checkedCheckBox)
             {
                 case "mNoneBtn":
@@ -153,6 +154,11 @@ namespace SchoolTracker
                     materialTextBoxList.Add(mFNameBox);
                     materialTextBoxList.Add(mMNameBox);
                     materialTextBoxList.Add(mCNumBox);
+
+                    gMotherBtn.Enabled = !ifChecked;
+
+                    if (ifChecked)
+                        gMotherBtn.Checked = false;
                     break;
 
                 case "fNoneBtn":
@@ -161,10 +167,15 @@ namespace SchoolTracker
                     materialTextBoxList.Add(fMNameBox);
                     materialTextBoxList.Add(fCNumBox);
 
-                    fExtNameCBox.Enabled = ifChecked;
+                    fExtNameCBox.Enabled = !ifChecked;
 
-                    if (!ifChecked)
+                    if (ifChecked)
                         fExtNameCBox.SelectedIndex = 0;
+
+                    gFatherBtn.Enabled = !ifChecked;
+
+                    if (ifChecked)
+                        gFatherBtn.Checked = false;
                     break;
 
                 case "gNoneBtn":
@@ -173,15 +184,18 @@ namespace SchoolTracker
                     materialTextBoxList.Add(gMNameBox);
                     materialTextBoxList.Add(gCNumBox);
 
-                    gExtNameCBox.Enabled = ifChecked;
+                    gExtNameCBox.Enabled = !ifChecked;
 
-                    if (!ifChecked)
+                    if (ifChecked)
                         gExtNameCBox.SelectedIndex = 0;
 
-                    gMotherBtn.Enabled = ifChecked;
-                    gFatherBtn.Enabled = ifChecked;
+                    if (!mNoneBtn.Checked)
+                        gMotherBtn.Enabled = !ifChecked;
 
-                    if (!ifChecked)
+                    if (!fNoneBtn.Checked)
+                        gFatherBtn.Enabled = !ifChecked;
+
+                    if (ifChecked)
                     {
                         gMotherBtn.Checked = false;
                         gFatherBtn.Checked = false;
@@ -192,10 +206,10 @@ namespace SchoolTracker
             // Iterate through the list of MaterialTextBox controls and enable/disable them accordingly.
             foreach (MaterialTextBox textBox in materialTextBoxList)
             {
-                textBox.Enabled = ifChecked;
+                textBox.Enabled = !ifChecked;
 
-                // If the checkbox is unchecked, clear the content of the MaterialTextBox.
-                if (!ifChecked)
+                // If the checkbox is checked, clear the content of the MaterialTextBox.
+                if (ifChecked)
                     textBox.Clear();
             }
         }
