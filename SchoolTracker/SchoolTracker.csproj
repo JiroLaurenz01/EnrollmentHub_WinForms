@@ -85,7 +85,7 @@
     <Compile Include="Functionality.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentData.cs" />
+    <Compile Include="PersonData.cs" />
     <EmbeddedResource Include="EnrollmentForm.resx">
       <DependentUpon>EnrollmentForm.cs</DependentUpon>
     </EmbeddedResource>

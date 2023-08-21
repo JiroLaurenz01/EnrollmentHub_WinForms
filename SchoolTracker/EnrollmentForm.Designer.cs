@@ -129,7 +129,7 @@
             this.materialLabel103 = new MaterialSkin.Controls.MaterialLabel();
             this.telephoneNumber = new MaterialSkin.Controls.MaterialTextBox();
             this.selectPhoto = new MaterialSkin.Controls.MaterialButton();
-            this.phoneNumBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.studCNumBox = new MaterialSkin.Controls.MaterialTextBox();
             this.fbLink = new MaterialSkin.Controls.MaterialTextBox();
             this.userEmail = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel106 = new MaterialSkin.Controls.MaterialLabel();
@@ -460,7 +460,7 @@
             this.basicInfoTab.Controls.Add(this.materialLabel103);
             this.basicInfoTab.Controls.Add(this.telephoneNumber);
             this.basicInfoTab.Controls.Add(this.selectPhoto);
-            this.basicInfoTab.Controls.Add(this.phoneNumBox);
+            this.basicInfoTab.Controls.Add(this.studCNumBox);
             this.basicInfoTab.Controls.Add(this.fbLink);
             this.basicInfoTab.Controls.Add(this.userEmail);
             this.basicInfoTab.Controls.Add(this.materialLabel106);
@@ -1051,7 +1051,7 @@
             this.gCNumBox.Hint = "Contact Number";
             this.gCNumBox.LeadingIcon = null;
             this.gCNumBox.Location = new System.Drawing.Point(1505, 597);
-            this.gCNumBox.MaxLength = 50;
+            this.gCNumBox.MaxLength = 11;
             this.gCNumBox.MouseState = MaterialSkin.MouseState.OUT;
             this.gCNumBox.Multiline = false;
             this.gCNumBox.Name = "gCNumBox";
@@ -1255,11 +1255,11 @@
             this.fCNumBox.AnimateReadOnly = false;
             this.fCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fCNumBox.Depth = 0;
-            this.fCNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.fCNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.fCNumBox.Hint = "Contact Number";
             this.fCNumBox.LeadingIcon = null;
             this.fCNumBox.Location = new System.Drawing.Point(992, 597);
-            this.fCNumBox.MaxLength = 50;
+            this.fCNumBox.MaxLength = 11;
             this.fCNumBox.MouseState = MaterialSkin.MouseState.OUT;
             this.fCNumBox.Multiline = false;
             this.fCNumBox.Name = "fCNumBox";
@@ -1406,7 +1406,7 @@
             this.mCNumBox.Hint = "Contact Number";
             this.mCNumBox.LeadingIcon = null;
             this.mCNumBox.Location = new System.Drawing.Point(435, 597);
-            this.mCNumBox.MaxLength = 50;
+            this.mCNumBox.MaxLength = 11;
             this.mCNumBox.MouseState = MaterialSkin.MouseState.OUT;
             this.mCNumBox.Multiline = false;
             this.mCNumBox.Name = "mCNumBox";
@@ -2077,23 +2077,23 @@
             this.selectPhoto.UseVisualStyleBackColor = true;
             this.selectPhoto.Click += new System.EventHandler(this.selectPhoto_Click);
             // 
-            // phoneNumBox
+            // studCNumBox
             // 
-            this.phoneNumBox.AnimateReadOnly = false;
-            this.phoneNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phoneNumBox.Depth = 0;
-            this.phoneNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.phoneNumBox.Hint = "Contact Number";
-            this.phoneNumBox.LeadingIcon = null;
-            this.phoneNumBox.Location = new System.Drawing.Point(357, 162);
-            this.phoneNumBox.MaxLength = 50;
-            this.phoneNumBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.phoneNumBox.Multiline = false;
-            this.phoneNumBox.Name = "phoneNumBox";
-            this.phoneNumBox.Size = new System.Drawing.Size(170, 50);
-            this.phoneNumBox.TabIndex = 237;
-            this.phoneNumBox.Text = "";
-            this.phoneNumBox.TrailingIcon = null;
+            this.studCNumBox.AnimateReadOnly = false;
+            this.studCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.studCNumBox.Depth = 0;
+            this.studCNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.studCNumBox.Hint = "Contact Number";
+            this.studCNumBox.LeadingIcon = null;
+            this.studCNumBox.Location = new System.Drawing.Point(357, 162);
+            this.studCNumBox.MaxLength = 11;
+            this.studCNumBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.studCNumBox.Multiline = false;
+            this.studCNumBox.Name = "studCNumBox";
+            this.studCNumBox.Size = new System.Drawing.Size(170, 50);
+            this.studCNumBox.TabIndex = 237;
+            this.studCNumBox.Text = "";
+            this.studCNumBox.TrailingIcon = null;
             // 
             // fbLink
             // 
@@ -5397,7 +5397,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel103;
         private MaterialSkin.Controls.MaterialTextBox telephoneNumber;
         private MaterialSkin.Controls.MaterialButton selectPhoto;
-        private MaterialSkin.Controls.MaterialTextBox phoneNumBox;
+        private MaterialSkin.Controls.MaterialTextBox studCNumBox;
         private MaterialSkin.Controls.MaterialTextBox fbLink;
         private MaterialSkin.Controls.MaterialTextBox userEmail;
         private MaterialSkin.Controls.MaterialLabel materialLabel106;
