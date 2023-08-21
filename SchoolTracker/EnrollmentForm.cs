@@ -318,19 +318,51 @@ namespace SchoolTracker
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
             StudentData studentData = new StudentData();
+            MotherData motherData = new MotherData();
+            FatherData fatherData = new FatherData();
+            GuardianData guardianData = new GuardianData();
 
-            if (string.IsNullOrEmpty(phoneNumBox.Text))
-                MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
+            // Create an array of base class type PersonData to store instances of different people
+            PersonData[] personDatas = new PersonData[]
             {
-                //Validating the format of phone number.
-                studentData.PhoneNumber = phoneNumBox.Text.Trim();
+                        studentData,
+                        motherData,
+                        fatherData,
+                        guardianData
+            };
 
-                if (!string.IsNullOrEmpty(studentData.PhoneNumber))
-                   MessageBox.Show("Phone number is valid.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Initialize an index to keep track of the current person in the array
+            int indexPerson = 0;
+
+            // Loop through each control in reverse order within the "basicInfoTab" control container
+            foreach (Control textBox in basicInfoTab.Controls.Cast<Control>().Reverse())
+            {
+                // Check if the control is for the contact number
+                if (textBox.Name.Contains("CNumBox"))
+                {
+                    if (string.IsNullOrEmpty(textBox.Text))
+                    {
+                        MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBox.Focus();
+                        return;
+                    }
+                    else
+                    {
+                        // Set the ContactNumber property of the current person's data based on the index
+                        personDatas[indexPerson].ContactNumber = textBox.Text.Trim();
+
+                        if (string.IsNullOrEmpty(personDatas[indexPerson].ContactNumber))
+                        {
+                            textBox.Focus();
+                            return;
+                        }
+                    }
+
+                    // Move to the next person in the array
+                    indexPerson++;
+                }
             }
-        }
-
+        }     
 
         #endregion
 
