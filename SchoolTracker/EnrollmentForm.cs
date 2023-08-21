@@ -313,6 +313,27 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTION FOR VALIDATING THE INFORMATIONS BEFORE THE APPROVAL OF SUBMISSION
+
+        private void submitInfoBtn_Click(object sender, EventArgs e)
+        {
+            StudentData studentData = new StudentData();
+
+            if (string.IsNullOrEmpty(phoneNumBox.Text))
+                MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                //Validating the format of phone number.
+                studentData.PhoneNumber = phoneNumBox.Text.Trim();
+
+                if (!string.IsNullOrEmpty(studentData.PhoneNumber))
+                   MessageBox.Show("Phone number is valid.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+        #endregion
+
         #endregion
 
         #region FUNCTIONS TO OPEN VARIOUS WEBSITES
@@ -321,6 +342,8 @@ namespace SchoolTracker
         private void termUseBtn_Click(object sender, EventArgs e) => functions.OpenWeb(1);
         private void privacyStateBtn_Click(object sender, EventArgs e) => functions.OpenWeb(2);
 
+
         #endregion
+
     }
 }
