@@ -33,7 +33,7 @@
             this.basicInfoTab = new System.Windows.Forms.TabPage();
             this.mNoneBtn = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            this.submitInfoBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialTextBox9 = new MaterialSkin.Controls.MaterialTextBox();
             this.ipSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
@@ -129,7 +129,7 @@
             this.materialLabel103 = new MaterialSkin.Controls.MaterialLabel();
             this.telephoneNumber = new MaterialSkin.Controls.MaterialTextBox();
             this.selectPhoto = new MaterialSkin.Controls.MaterialButton();
-            this.contactNumber = new MaterialSkin.Controls.MaterialTextBox();
+            this.phoneNumBox = new MaterialSkin.Controls.MaterialTextBox();
             this.fbLink = new MaterialSkin.Controls.MaterialTextBox();
             this.userEmail = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel106 = new MaterialSkin.Controls.MaterialLabel();
@@ -367,7 +367,7 @@
             this.basicInfoTab.BackColor = System.Drawing.Color.White;
             this.basicInfoTab.Controls.Add(this.mNoneBtn);
             this.basicInfoTab.Controls.Add(this.materialButton1);
-            this.basicInfoTab.Controls.Add(this.materialButton2);
+            this.basicInfoTab.Controls.Add(this.submitInfoBtn);
             this.basicInfoTab.Controls.Add(this.materialTextBox9);
             this.basicInfoTab.Controls.Add(this.ipSwitch);
             this.basicInfoTab.Controls.Add(this.materialLabel16);
@@ -460,7 +460,7 @@
             this.basicInfoTab.Controls.Add(this.materialLabel103);
             this.basicInfoTab.Controls.Add(this.telephoneNumber);
             this.basicInfoTab.Controls.Add(this.selectPhoto);
-            this.basicInfoTab.Controls.Add(this.contactNumber);
+            this.basicInfoTab.Controls.Add(this.phoneNumBox);
             this.basicInfoTab.Controls.Add(this.fbLink);
             this.basicInfoTab.Controls.Add(this.userEmail);
             this.basicInfoTab.Controls.Add(this.materialLabel106);
@@ -523,26 +523,27 @@
             this.materialButton1.UseMnemonic = false;
             this.materialButton1.UseVisualStyleBackColor = false;
             // 
-            // materialButton2
+            // submitInfoBtn
             // 
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(1553, 895);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(75, 36);
-            this.materialButton2.TabIndex = 478;
-            this.materialButton2.Text = "SUBMIT";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = false;
-            this.materialButton2.UseMnemonic = false;
-            this.materialButton2.UseVisualStyleBackColor = false;
+            this.submitInfoBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.submitInfoBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.submitInfoBtn.Depth = 0;
+            this.submitInfoBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.submitInfoBtn.HighEmphasis = true;
+            this.submitInfoBtn.Icon = null;
+            this.submitInfoBtn.Location = new System.Drawing.Point(1553, 895);
+            this.submitInfoBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.submitInfoBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.submitInfoBtn.Name = "submitInfoBtn";
+            this.submitInfoBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.submitInfoBtn.Size = new System.Drawing.Size(75, 36);
+            this.submitInfoBtn.TabIndex = 478;
+            this.submitInfoBtn.Text = "SUBMIT";
+            this.submitInfoBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.submitInfoBtn.UseAccentColor = false;
+            this.submitInfoBtn.UseMnemonic = false;
+            this.submitInfoBtn.UseVisualStyleBackColor = false;
+            this.submitInfoBtn.Click += new System.EventHandler(this.submitInfoBtn_Click);
             // 
             // materialTextBox9
             // 
@@ -2076,23 +2077,23 @@
             this.selectPhoto.UseVisualStyleBackColor = true;
             this.selectPhoto.Click += new System.EventHandler(this.selectPhoto_Click);
             // 
-            // contactNumber
+            // phoneNumBox
             // 
-            this.contactNumber.AnimateReadOnly = false;
-            this.contactNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contactNumber.Depth = 0;
-            this.contactNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.contactNumber.Hint = "Contact Number";
-            this.contactNumber.LeadingIcon = null;
-            this.contactNumber.Location = new System.Drawing.Point(357, 162);
-            this.contactNumber.MaxLength = 50;
-            this.contactNumber.MouseState = MaterialSkin.MouseState.OUT;
-            this.contactNumber.Multiline = false;
-            this.contactNumber.Name = "contactNumber";
-            this.contactNumber.Size = new System.Drawing.Size(170, 50);
-            this.contactNumber.TabIndex = 237;
-            this.contactNumber.Text = "";
-            this.contactNumber.TrailingIcon = null;
+            this.phoneNumBox.AnimateReadOnly = false;
+            this.phoneNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phoneNumBox.Depth = 0;
+            this.phoneNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.phoneNumBox.Hint = "Contact Number";
+            this.phoneNumBox.LeadingIcon = null;
+            this.phoneNumBox.Location = new System.Drawing.Point(357, 162);
+            this.phoneNumBox.MaxLength = 50;
+            this.phoneNumBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.phoneNumBox.Multiline = false;
+            this.phoneNumBox.Name = "phoneNumBox";
+            this.phoneNumBox.Size = new System.Drawing.Size(170, 50);
+            this.phoneNumBox.TabIndex = 237;
+            this.phoneNumBox.Text = "";
+            this.phoneNumBox.TrailingIcon = null;
             // 
             // fbLink
             // 
@@ -5396,7 +5397,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel103;
         private MaterialSkin.Controls.MaterialTextBox telephoneNumber;
         private MaterialSkin.Controls.MaterialButton selectPhoto;
-        private MaterialSkin.Controls.MaterialTextBox contactNumber;
+        private MaterialSkin.Controls.MaterialTextBox phoneNumBox;
         private MaterialSkin.Controls.MaterialTextBox fbLink;
         private MaterialSkin.Controls.MaterialTextBox userEmail;
         private MaterialSkin.Controls.MaterialLabel materialLabel106;
@@ -5590,7 +5591,7 @@
         private MaterialSkin.Controls.MaterialTextBox materialTextBox61;
         private MaterialSkin.Controls.MaterialDivider materialDivider14;
         private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialButton materialButton2;
+        private MaterialSkin.Controls.MaterialButton submitInfoBtn;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialCard materialCard3;
         private MaterialSkin.Controls.MaterialCheckedListBox materialCheckedListBox5;
