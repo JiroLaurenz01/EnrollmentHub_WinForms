@@ -337,29 +337,52 @@ namespace SchoolTracker
             // Loop through each control in reverse order within the "basicInfoTab" control container
             foreach (Control textBox in basicInfoTab.Controls.Cast<Control>().Reverse())
             {
-                // Check if the control is for the contact number
-                if (textBox.Name.Contains("CNumBox"))
+                if (textBox is MaterialTextBox)
                 {
-                    if (string.IsNullOrEmpty(textBox.Text))
+                    // Check if the control is for the contact number
+                    if (textBox.Name.Contains("CNumBox"))
                     {
-                        MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        textBox.Focus();
-                        return;
-                    }
-                    else
-                    {
-                        // Set the ContactNumber property of the current person's data based on the index
-                        personDatas[indexPerson].ContactNumber = textBox.Text.Trim();
-
-                        if (string.IsNullOrEmpty(personDatas[indexPerson].ContactNumber))
+                        if (string.IsNullOrEmpty(textBox.Text))
                         {
+                            MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             textBox.Focus();
                             return;
                         }
-                    }
+                        else
+                        {
+                            // Set the ContactNumber property of the current person's data based on the index
+                            personDatas[indexPerson].ContactNumber = textBox.Text.Trim();
 
-                    // Move to the next person in the array
-                    indexPerson++;
+                            if (string.IsNullOrEmpty(personDatas[indexPerson].ContactNumber))
+                            {
+                                textBox.Focus();
+                                return;
+                            }
+                        }
+
+                        // Move to the next person in the array
+                        indexPerson++;
+                    }
+                    // Check if the control is for the landline number
+                    else if (textBox.Name.Contains("landlineNumBox"))
+                    {
+                        if (string.IsNullOrEmpty(textBox.Text))
+                        {
+                            MessageBox.Show("Landline number is empty. Please enter a landline number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            textBox.Focus();
+                            return;
+                        }
+                        else
+                        {
+                            studentData.LandlineNumber = textBox.Text.Trim();
+
+                            if (string.IsNullOrEmpty(studentData.LandlineNumber))
+                            {
+                                textBox.Focus();
+                                return;
+                            }
+                        }
+                    }
                 }
             }
         }     

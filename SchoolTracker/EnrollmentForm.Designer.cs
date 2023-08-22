@@ -127,7 +127,7 @@
             this.materialLabel99 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel100 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel103 = new MaterialSkin.Controls.MaterialLabel();
-            this.telephoneNumber = new MaterialSkin.Controls.MaterialTextBox();
+            this.landlineNumBox = new MaterialSkin.Controls.MaterialTextBox();
             this.selectPhoto = new MaterialSkin.Controls.MaterialButton();
             this.studCNumBox = new MaterialSkin.Controls.MaterialTextBox();
             this.fbLink = new MaterialSkin.Controls.MaterialTextBox();
@@ -458,7 +458,7 @@
             this.basicInfoTab.Controls.Add(this.materialLabel99);
             this.basicInfoTab.Controls.Add(this.materialLabel100);
             this.basicInfoTab.Controls.Add(this.materialLabel103);
-            this.basicInfoTab.Controls.Add(this.telephoneNumber);
+            this.basicInfoTab.Controls.Add(this.landlineNumBox);
             this.basicInfoTab.Controls.Add(this.selectPhoto);
             this.basicInfoTab.Controls.Add(this.studCNumBox);
             this.basicInfoTab.Controls.Add(this.fbLink);
@@ -1255,7 +1255,7 @@
             this.fCNumBox.AnimateReadOnly = false;
             this.fCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fCNumBox.Depth = 0;
-            this.fCNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.fCNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.fCNumBox.Hint = "Contact Number";
             this.fCNumBox.LeadingIcon = null;
             this.fCNumBox.Location = new System.Drawing.Point(992, 597);
@@ -2019,9 +2019,9 @@
             this.materialLabel100.Location = new System.Drawing.Point(536, 142);
             this.materialLabel100.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel100.Name = "materialLabel100";
-            this.materialLabel100.Size = new System.Drawing.Size(90, 17);
+            this.materialLabel100.Size = new System.Drawing.Size(127, 17);
             this.materialLabel100.TabIndex = 241;
-            this.materialLabel100.Text = "TEL. NUMBER";
+            this.materialLabel100.Text = "LANDLINE NUMBER";
             this.materialLabel100.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // materialLabel103
@@ -2039,23 +2039,23 @@
             this.materialLabel103.Text = "BIRTH PLACE";
             this.materialLabel103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // telephoneNumber
+            // landlineNumBox
             // 
-            this.telephoneNumber.AnimateReadOnly = false;
-            this.telephoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.telephoneNumber.Depth = 0;
-            this.telephoneNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.telephoneNumber.Hint = "Telephone Number";
-            this.telephoneNumber.LeadingIcon = null;
-            this.telephoneNumber.Location = new System.Drawing.Point(533, 162);
-            this.telephoneNumber.MaxLength = 50;
-            this.telephoneNumber.MouseState = MaterialSkin.MouseState.OUT;
-            this.telephoneNumber.Multiline = false;
-            this.telephoneNumber.Name = "telephoneNumber";
-            this.telephoneNumber.Size = new System.Drawing.Size(170, 50);
-            this.telephoneNumber.TabIndex = 236;
-            this.telephoneNumber.Text = "";
-            this.telephoneNumber.TrailingIcon = null;
+            this.landlineNumBox.AnimateReadOnly = false;
+            this.landlineNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.landlineNumBox.Depth = 0;
+            this.landlineNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.landlineNumBox.Hint = "Landline Number";
+            this.landlineNumBox.LeadingIcon = null;
+            this.landlineNumBox.Location = new System.Drawing.Point(533, 162);
+            this.landlineNumBox.MaxLength = 50;
+            this.landlineNumBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.landlineNumBox.Multiline = false;
+            this.landlineNumBox.Name = "landlineNumBox";
+            this.landlineNumBox.Size = new System.Drawing.Size(170, 50);
+            this.landlineNumBox.TabIndex = 236;
+            this.landlineNumBox.Text = "";
+            this.landlineNumBox.TrailingIcon = null;
             // 
             // selectPhoto
             // 
@@ -5395,7 +5395,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel99;
         private MaterialSkin.Controls.MaterialLabel materialLabel100;
         private MaterialSkin.Controls.MaterialLabel materialLabel103;
-        private MaterialSkin.Controls.MaterialTextBox telephoneNumber;
+        private MaterialSkin.Controls.MaterialTextBox landlineNumBox;
         private MaterialSkin.Controls.MaterialButton selectPhoto;
         private MaterialSkin.Controls.MaterialTextBox studCNumBox;
         private MaterialSkin.Controls.MaterialTextBox fbLink;
