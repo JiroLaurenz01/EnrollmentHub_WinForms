@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static QRCoder.PayloadGenerator;
 
 namespace SchoolTracker
 {
@@ -34,21 +35,25 @@ namespace SchoolTracker
 
     class StudentData : PersonData
     {
-        
+        private string _landlineNumber;
+
+        public string LandlineNumber
+        {
+            get { return _landlineNumber; }
+            set
+            {
+                string pattern = @"^(02|0[3-8])\d{7}$";
+
+                // Check if the provided value matches the pattern for valid landline numbers
+                if (Regex.IsMatch(value, pattern))
+                    _landlineNumber = value;
+                else
+                    MessageBox.Show("Invalid landline number. Please enter a valid Philippine landline number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 
-    class MotherData : PersonData
-    {
-
-    }
-
-    class FatherData : PersonData
-    {
-
-    }
-
-    class GuardianData : PersonData
-    {
-
-    }
+    class MotherData : PersonData { }
+    class FatherData : PersonData { }
+    class GuardianData : PersonData { }
 }
