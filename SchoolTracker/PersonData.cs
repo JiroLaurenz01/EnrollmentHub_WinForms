@@ -51,6 +51,23 @@ namespace SchoolTracker
                     MessageBox.Show("Invalid landline number. Please enter a valid Philippine landline number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private string _gmailAddress;
+
+        public string GmailAddress
+        {
+            get { return _gmailAddress; }
+            set
+            {
+                string pattern = @"^[a-zA-Z0-9._%+-]+@gmail\.com$";
+
+                // Check if the provided value matches the pattern for valid gmail address
+                if (Regex.IsMatch(value, pattern))
+                    _gmailAddress = value;
+                else
+                    MessageBox.Show("Invalid gmail address. Please enter a valid gmail address.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 
     class MotherData : PersonData { }

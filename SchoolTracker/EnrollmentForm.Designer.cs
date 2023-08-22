@@ -131,7 +131,7 @@
             this.selectPhoto = new MaterialSkin.Controls.MaterialButton();
             this.studCNumBox = new MaterialSkin.Controls.MaterialTextBox();
             this.fbLink = new MaterialSkin.Controls.MaterialTextBox();
-            this.userEmail = new MaterialSkin.Controls.MaterialTextBox();
+            this.gmailAddBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel106 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel107 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel108 = new MaterialSkin.Controls.MaterialLabel();
@@ -462,7 +462,7 @@
             this.basicInfoTab.Controls.Add(this.selectPhoto);
             this.basicInfoTab.Controls.Add(this.studCNumBox);
             this.basicInfoTab.Controls.Add(this.fbLink);
-            this.basicInfoTab.Controls.Add(this.userEmail);
+            this.basicInfoTab.Controls.Add(this.gmailAddBox);
             this.basicInfoTab.Controls.Add(this.materialLabel106);
             this.basicInfoTab.Controls.Add(this.materialLabel107);
             this.basicInfoTab.Controls.Add(this.materialLabel108);
@@ -1989,9 +1989,9 @@
             this.materialLabel98.Location = new System.Drawing.Point(713, 142);
             this.materialLabel98.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel98.Name = "materialLabel98";
-            this.materialLabel98.Size = new System.Drawing.Size(42, 17);
+            this.materialLabel98.Size = new System.Drawing.Size(107, 17);
             this.materialLabel98.TabIndex = 243;
-            this.materialLabel98.Text = "EMAIL";
+            this.materialLabel98.Text = "GMAIL ADDRESS";
             this.materialLabel98.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // materialLabel99
@@ -2113,23 +2113,23 @@
             this.fbLink.Text = "";
             this.fbLink.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("fbLink.TrailingIcon")));
             // 
-            // userEmail
+            // gmailAddBox
             // 
-            this.userEmail.AnimateReadOnly = false;
-            this.userEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userEmail.Depth = 0;
-            this.userEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.userEmail.Hint = "Email";
-            this.userEmail.LeadingIcon = null;
-            this.userEmail.Location = new System.Drawing.Point(709, 162);
-            this.userEmail.MaxLength = 50;
-            this.userEmail.MouseState = MaterialSkin.MouseState.OUT;
-            this.userEmail.Multiline = false;
-            this.userEmail.Name = "userEmail";
-            this.userEmail.Size = new System.Drawing.Size(320, 50);
-            this.userEmail.TabIndex = 238;
-            this.userEmail.Text = "";
-            this.userEmail.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("userEmail.TrailingIcon")));
+            this.gmailAddBox.AnimateReadOnly = false;
+            this.gmailAddBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gmailAddBox.Depth = 0;
+            this.gmailAddBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.gmailAddBox.Hint = "Gmail Address";
+            this.gmailAddBox.LeadingIcon = null;
+            this.gmailAddBox.Location = new System.Drawing.Point(709, 162);
+            this.gmailAddBox.MaxLength = 50;
+            this.gmailAddBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.gmailAddBox.Multiline = false;
+            this.gmailAddBox.Name = "gmailAddBox";
+            this.gmailAddBox.Size = new System.Drawing.Size(320, 50);
+            this.gmailAddBox.TabIndex = 238;
+            this.gmailAddBox.Text = "";
+            this.gmailAddBox.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("gmailAddBox.TrailingIcon")));
             // 
             // materialLabel106
             // 
@@ -5399,7 +5399,7 @@
         private MaterialSkin.Controls.MaterialButton selectPhoto;
         private MaterialSkin.Controls.MaterialTextBox studCNumBox;
         private MaterialSkin.Controls.MaterialTextBox fbLink;
-        private MaterialSkin.Controls.MaterialTextBox userEmail;
+        private MaterialSkin.Controls.MaterialTextBox gmailAddBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel106;
         private MaterialSkin.Controls.MaterialLabel materialLabel107;
         private MaterialSkin.Controls.MaterialLabel materialLabel108;

@@ -317,6 +317,7 @@ namespace SchoolTracker
 
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
+            // Create instances of data classes
             StudentData studentData = new StudentData();
             MotherData motherData = new MotherData();
             FatherData fatherData = new FatherData();
@@ -325,10 +326,10 @@ namespace SchoolTracker
             // Create an array of base class type PersonData to store instances of different people
             PersonData[] personDatas = new PersonData[]
             {
-                        studentData,
-                        motherData,
-                        fatherData,
-                        guardianData
+                studentData,
+                motherData,
+                fatherData,
+                guardianData
             };
 
             // Initialize an index to keep track of the current person in the array
@@ -364,7 +365,7 @@ namespace SchoolTracker
                         indexPerson++;
                     }
                     // Check if the control is for the landline number
-                    else if (textBox.Name.Contains("landlineNumBox"))
+                    else if (textBox == landlineNumBox)
                     {
                         if (string.IsNullOrEmpty(textBox.Text))
                         {
@@ -377,6 +378,26 @@ namespace SchoolTracker
                             studentData.LandlineNumber = textBox.Text.Trim();
 
                             if (string.IsNullOrEmpty(studentData.LandlineNumber))
+                            {
+                                textBox.Focus();
+                                return;
+                            }
+                        }
+                    }
+                    // Check if the control is for the gmail address
+                    else if (textBox == gmailAddBox)
+                    {
+                        if (string.IsNullOrEmpty(textBox.Text))
+                        {
+                            MessageBox.Show("Gmail address is empty. Please enter a gmail address.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            textBox.Focus();
+                            return;
+                        }
+                        else
+                        {
+                            studentData.GmailAddress = textBox.Text.Trim();
+
+                            if (string.IsNullOrEmpty(studentData.GmailAddress))
                             {
                                 textBox.Focus();
                                 return;
