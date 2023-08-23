@@ -68,6 +68,23 @@ namespace SchoolTracker
                     MessageBox.Show("Invalid gmail address. Please enter a valid gmail address.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private string _facebookLink;
+
+        public string FacebookLink
+        {
+            get { return _facebookLink; }
+            set
+            {
+                // Regular expression pattern for a valid Facebook profile link
+                string pattern = @"^(https?://)?(www\.)?facebook\.com/[\w.-]+/?$";
+
+                if (Regex.IsMatch(value, pattern, RegexOptions.IgnoreCase))
+                    _facebookLink = value;
+                else
+                    MessageBox.Show("Invalid Facebook link. Please enter a valid link.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 
     class MotherData : PersonData { }

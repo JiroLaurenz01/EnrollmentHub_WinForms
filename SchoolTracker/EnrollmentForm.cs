@@ -326,10 +326,10 @@ namespace SchoolTracker
             // Create an array of base class type PersonData to store instances of different people
             PersonData[] personDatas = new PersonData[]
             {
-                        studentData,
-                        motherData,
-                        fatherData,
-                        guardianData
+                studentData,
+                motherData,
+                fatherData,
+                guardianData
             };
 
             // Initialize an index to keep track of the current person in the array
@@ -365,12 +365,12 @@ namespace SchoolTracker
                         // Move to the next person in the array
                         indexPerson++;
                     }
-                    // Check if the control is for the landline number
                     else if (textBox == landlineNumBox)
                         ifReturn = ValidateAndAssign(textBox, studentData, "Landline number", "LandlineNumber");
-                    // Check if the control is for the gmail address
                     else if (textBox == gmailAddBox)
                         ifReturn = ValidateAndAssign(textBox, studentData, "Gmail address", "GmailAddress");
+                    else if (textBox == fbLinkBox)
+                        ifReturn = ValidateAndAssign(textBox, studentData, "Facebook link", "FacebookLink");
                    
                     if (ifReturn)
                         return;
@@ -419,6 +419,16 @@ namespace SchoolTracker
         private void termUseBtn_Click(object sender, EventArgs e) => functions.OpenWeb(1);
         private void privacyStateBtn_Click(object sender, EventArgs e) => functions.OpenWeb(2);
 
+
+        #endregion
+
+        #region FUNCTIONS FOR KEY PRESS
+
+        private void infoBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                submitInfoBtn_Click(sender, e);
+        }
 
         #endregion
 
