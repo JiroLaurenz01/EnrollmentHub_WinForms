@@ -130,7 +130,7 @@
             this.landlineNumBox = new MaterialSkin.Controls.MaterialTextBox();
             this.selectPhoto = new MaterialSkin.Controls.MaterialButton();
             this.studCNumBox = new MaterialSkin.Controls.MaterialTextBox();
-            this.fbLink = new MaterialSkin.Controls.MaterialTextBox();
+            this.fbLinkBox = new MaterialSkin.Controls.MaterialTextBox();
             this.gmailAddBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel106 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel107 = new MaterialSkin.Controls.MaterialLabel();
@@ -461,7 +461,7 @@
             this.basicInfoTab.Controls.Add(this.landlineNumBox);
             this.basicInfoTab.Controls.Add(this.selectPhoto);
             this.basicInfoTab.Controls.Add(this.studCNumBox);
-            this.basicInfoTab.Controls.Add(this.fbLink);
+            this.basicInfoTab.Controls.Add(this.fbLinkBox);
             this.basicInfoTab.Controls.Add(this.gmailAddBox);
             this.basicInfoTab.Controls.Add(this.materialLabel106);
             this.basicInfoTab.Controls.Add(this.materialLabel107);
@@ -562,6 +562,7 @@
             this.materialTextBox9.TabIndex = 356;
             this.materialTextBox9.Text = "";
             this.materialTextBox9.TrailingIcon = null;
+            this.materialTextBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // ipSwitch
             // 
@@ -658,6 +659,7 @@
             this.fpsTextBox.TabIndex = 350;
             this.fpsTextBox.Text = "";
             this.fpsTextBox.TrailingIcon = null;
+            this.fpsTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // ipTextBox
             // 
@@ -677,6 +679,7 @@
             this.ipTextBox.TabIndex = 349;
             this.ipTextBox.Text = "";
             this.ipTextBox.TrailingIcon = null;
+            this.ipTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel15
             // 
@@ -710,6 +713,7 @@
             this.materialTextBox6.TabIndex = 347;
             this.materialTextBox6.Text = "";
             this.materialTextBox6.TrailingIcon = null;
+            this.materialTextBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel19
             // 
@@ -799,6 +803,7 @@
             this.eSchoolName.TabIndex = 338;
             this.eSchoolName.Text = "";
             this.eSchoolName.TrailingIcon = null;
+            this.eSchoolName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // hSchoolName
             // 
@@ -817,6 +822,7 @@
             this.hSchoolName.TabIndex = 337;
             this.hSchoolName.Text = "";
             this.hSchoolName.TrailingIcon = null;
+            this.hSchoolName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // shSchoolName
             // 
@@ -835,6 +841,7 @@
             this.shSchoolName.TabIndex = 336;
             this.shSchoolName.Text = "";
             this.shSchoolName.TrailingIcon = null;
+            this.shSchoolName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel11
             // 
@@ -965,6 +972,7 @@
             this.gExtNameCBox.Size = new System.Drawing.Size(81, 49);
             this.gExtNameCBox.StartIndex = 0;
             this.gExtNameCBox.TabIndex = 306;
+            this.gExtNameCBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel35
             // 
@@ -1041,6 +1049,7 @@
             this.gLNameBox.TabIndex = 308;
             this.gLNameBox.Text = "";
             this.gLNameBox.TrailingIcon = null;
+            this.gLNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // gCNumBox
             // 
@@ -1059,6 +1068,7 @@
             this.gCNumBox.TabIndex = 311;
             this.gCNumBox.Text = "";
             this.gCNumBox.TrailingIcon = null;
+            this.gCNumBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // gFNameBox
             // 
@@ -1077,6 +1087,7 @@
             this.gFNameBox.TabIndex = 309;
             this.gFNameBox.Text = "";
             this.gFNameBox.TrailingIcon = null;
+            this.gFNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel39
             // 
@@ -1110,6 +1121,7 @@
             this.gMNameBox.TabIndex = 310;
             this.gMNameBox.Text = "";
             this.gMNameBox.TrailingIcon = null;
+            this.gMNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel40
             // 
@@ -1156,6 +1168,7 @@
             this.fExtNameCBox.Size = new System.Drawing.Size(81, 49);
             this.fExtNameCBox.StartIndex = 0;
             this.fExtNameCBox.TabIndex = 294;
+            this.fExtNameCBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel27
             // 
@@ -1249,6 +1262,7 @@
             this.fLNameBox.TabIndex = 296;
             this.fLNameBox.Text = "";
             this.fLNameBox.TrailingIcon = null;
+            this.fLNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // fCNumBox
             // 
@@ -1267,6 +1281,7 @@
             this.fCNumBox.TabIndex = 299;
             this.fCNumBox.Text = "";
             this.fCNumBox.TrailingIcon = null;
+            this.fCNumBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // fFNameBox
             // 
@@ -1285,6 +1300,7 @@
             this.fFNameBox.TabIndex = 297;
             this.fFNameBox.Text = "";
             this.fFNameBox.TrailingIcon = null;
+            this.fFNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel31
             // 
@@ -1318,6 +1334,7 @@
             this.fMNameBox.TabIndex = 298;
             this.fMNameBox.Text = "";
             this.fMNameBox.TrailingIcon = null;
+            this.fMNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel33
             // 
@@ -1396,6 +1413,7 @@
             this.mLNameBox.TabIndex = 284;
             this.mLNameBox.Text = "";
             this.mLNameBox.TrailingIcon = null;
+            this.mLNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // mCNumBox
             // 
@@ -1414,6 +1432,7 @@
             this.mCNumBox.TabIndex = 287;
             this.mCNumBox.Text = "";
             this.mCNumBox.TrailingIcon = null;
+            this.mCNumBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // mFNameBox
             // 
@@ -1432,6 +1451,7 @@
             this.mFNameBox.TabIndex = 285;
             this.mFNameBox.Text = "";
             this.mFNameBox.TrailingIcon = null;
+            this.mFNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel25
             // 
@@ -1465,6 +1485,7 @@
             this.mMNameBox.TabIndex = 286;
             this.mMNameBox.Text = "";
             this.mMNameBox.TrailingIcon = null;
+            this.mMNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel26
             // 
@@ -1539,6 +1560,7 @@
             this.pProvBox.TabIndex = 269;
             this.pProvBox.Text = "";
             this.pProvBox.TrailingIcon = null;
+            this.pProvBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // pCityBox
             // 
@@ -1557,6 +1579,7 @@
             this.pCityBox.TabIndex = 268;
             this.pCityBox.Text = "";
             this.pCityBox.TrailingIcon = null;
+            this.pCityBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel91
             // 
@@ -1650,6 +1673,7 @@
             this.pBrgyBox.TabIndex = 262;
             this.pBrgyBox.Text = "";
             this.pBrgyBox.TrailingIcon = null;
+            this.pBrgyBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // pStNameBox
             // 
@@ -1668,6 +1692,7 @@
             this.pStNameBox.TabIndex = 261;
             this.pStNameBox.Text = "";
             this.pStNameBox.TrailingIcon = null;
+            this.pStNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // pStNumBox
             // 
@@ -1686,6 +1711,7 @@
             this.pStNumBox.TabIndex = 260;
             this.pStNumBox.Text = "";
             this.pStNumBox.TrailingIcon = null;
+            this.pStNumBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel93
             // 
@@ -1749,6 +1775,7 @@
             this.brgyBox.TabIndex = 254;
             this.brgyBox.Text = "";
             this.brgyBox.TrailingIcon = null;
+            this.brgyBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // stNameBox
             // 
@@ -1767,6 +1794,7 @@
             this.stNameBox.TabIndex = 253;
             this.stNameBox.Text = "";
             this.stNameBox.TrailingIcon = null;
+            this.stNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // provBox
             // 
@@ -1785,6 +1813,7 @@
             this.provBox.TabIndex = 256;
             this.provBox.Text = "";
             this.provBox.TrailingIcon = null;
+            this.provBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // stNumBox
             // 
@@ -1821,6 +1850,7 @@
             this.cityBox.TabIndex = 255;
             this.cityBox.Text = "";
             this.cityBox.TrailingIcon = null;
+            this.cityBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // permaAddSwitch
             // 
@@ -1934,6 +1964,7 @@
             this.materialRadioButton1.TabStop = true;
             this.materialRadioButton1.Text = "Female";
             this.materialRadioButton1.UseVisualStyleBackColor = true;
+            this.materialRadioButton1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // maleBtn
             // 
@@ -1950,6 +1981,7 @@
             this.maleBtn.TabStop = true;
             this.maleBtn.Text = "Male";
             this.maleBtn.UseVisualStyleBackColor = true;
+            this.maleBtn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel5
             // 
@@ -2056,6 +2088,7 @@
             this.landlineNumBox.TabIndex = 236;
             this.landlineNumBox.Text = "";
             this.landlineNumBox.TrailingIcon = null;
+            this.landlineNumBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // selectPhoto
             // 
@@ -2094,24 +2127,26 @@
             this.studCNumBox.TabIndex = 237;
             this.studCNumBox.Text = "";
             this.studCNumBox.TrailingIcon = null;
+            this.studCNumBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
-            // fbLink
+            // fbLinkBox
             // 
-            this.fbLink.AnimateReadOnly = false;
-            this.fbLink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fbLink.Depth = 0;
-            this.fbLink.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.fbLink.Hint = "Facebook Link";
-            this.fbLink.LeadingIcon = null;
-            this.fbLink.Location = new System.Drawing.Point(1034, 162);
-            this.fbLink.MaxLength = 50;
-            this.fbLink.MouseState = MaterialSkin.MouseState.OUT;
-            this.fbLink.Multiline = false;
-            this.fbLink.Name = "fbLink";
-            this.fbLink.Size = new System.Drawing.Size(404, 50);
-            this.fbLink.TabIndex = 239;
-            this.fbLink.Text = "";
-            this.fbLink.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("fbLink.TrailingIcon")));
+            this.fbLinkBox.AnimateReadOnly = false;
+            this.fbLinkBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fbLinkBox.Depth = 0;
+            this.fbLinkBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.fbLinkBox.Hint = "Facebook Link";
+            this.fbLinkBox.LeadingIcon = null;
+            this.fbLinkBox.Location = new System.Drawing.Point(1034, 162);
+            this.fbLinkBox.MaxLength = 50;
+            this.fbLinkBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.fbLinkBox.Multiline = false;
+            this.fbLinkBox.Name = "fbLinkBox";
+            this.fbLinkBox.Size = new System.Drawing.Size(404, 50);
+            this.fbLinkBox.TabIndex = 239;
+            this.fbLinkBox.Text = "";
+            this.fbLinkBox.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("fbLinkBox.TrailingIcon")));
+            this.fbLinkBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // gmailAddBox
             // 
@@ -2130,6 +2165,7 @@
             this.gmailAddBox.TabIndex = 238;
             this.gmailAddBox.Text = "";
             this.gmailAddBox.TrailingIcon = ((System.Drawing.Image)(resources.GetObject("gmailAddBox.TrailingIcon")));
+            this.gmailAddBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel106
             // 
@@ -2262,6 +2298,7 @@
             this.ageCBox.Size = new System.Drawing.Size(67, 49);
             this.ageCBox.StartIndex = 0;
             this.ageCBox.TabIndex = 228;
+            this.ageCBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // uExtName
             // 
@@ -2293,6 +2330,7 @@
             this.uExtName.Size = new System.Drawing.Size(96, 49);
             this.uExtName.StartIndex = 0;
             this.uExtName.TabIndex = 226;
+            this.uExtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel2
             // 
@@ -2324,6 +2362,7 @@
             this.mNameBox.TabIndex = 221;
             this.mNameBox.Text = "";
             this.mNameBox.TrailingIcon = null;
+            this.mNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // bDatePicker
             // 
@@ -2340,6 +2379,7 @@
             this.bDatePicker.TabIndex = 222;
             this.bDatePicker.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.bDatePicker.Value = new System.DateTime(2013, 12, 31, 0, 0, 0, 0);
+            this.bDatePicker.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // lNameBox
             // 
@@ -2358,6 +2398,7 @@
             this.lNameBox.TabIndex = 219;
             this.lNameBox.Text = "";
             this.lNameBox.TrailingIcon = null;
+            this.lNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // fNameBox
             // 
@@ -2376,6 +2417,7 @@
             this.fNameBox.TabIndex = 220;
             this.fNameBox.Text = "";
             this.fNameBox.TrailingIcon = null;
+            this.fNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel4
             // 
@@ -5398,7 +5440,7 @@
         private MaterialSkin.Controls.MaterialTextBox landlineNumBox;
         private MaterialSkin.Controls.MaterialButton selectPhoto;
         private MaterialSkin.Controls.MaterialTextBox studCNumBox;
-        private MaterialSkin.Controls.MaterialTextBox fbLink;
+        private MaterialSkin.Controls.MaterialTextBox fbLinkBox;
         private MaterialSkin.Controls.MaterialTextBox gmailAddBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel106;
         private MaterialSkin.Controls.MaterialLabel materialLabel107;
