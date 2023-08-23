@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -317,7 +318,6 @@ namespace SchoolTracker
 
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
-            // Create instances of data classes
             StudentData studentData = new StudentData();
             MotherData motherData = new MotherData();
             FatherData fatherData = new FatherData();
@@ -326,14 +326,15 @@ namespace SchoolTracker
             // Create an array of base class type PersonData to store instances of different people
             PersonData[] personDatas = new PersonData[]
             {
-                studentData,
-                motherData,
-                fatherData,
-                guardianData
+                        studentData,
+                        motherData,
+                        fatherData,
+                        guardianData
             };
 
             // Initialize an index to keep track of the current person in the array
             int indexPerson = 0;
+            bool ifReturn = false;
 
             // Loop through each control in reverse order within the "basicInfoTab" control container
             foreach (Control textBox in basicInfoTab.Controls.Cast<Control>().Reverse())
@@ -366,47 +367,47 @@ namespace SchoolTracker
                     }
                     // Check if the control is for the landline number
                     else if (textBox == landlineNumBox)
-                    {
-                        if (string.IsNullOrEmpty(textBox.Text))
-                        {
-                            MessageBox.Show("Landline number is empty. Please enter a landline number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            textBox.Focus();
-                            return;
-                        }
-                        else
-                        {
-                            studentData.LandlineNumber = textBox.Text.Trim();
-
-                            if (string.IsNullOrEmpty(studentData.LandlineNumber))
-                            {
-                                textBox.Focus();
-                                return;
-                            }
-                        }
-                    }
+                        ifReturn = ValidateAndAssign(textBox, studentData, "Landline number", "LandlineNumber");
                     // Check if the control is for the gmail address
                     else if (textBox == gmailAddBox)
-                    {
-                        if (string.IsNullOrEmpty(textBox.Text))
-                        {
-                            MessageBox.Show("Gmail address is empty. Please enter a gmail address.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            textBox.Focus();
-                            return;
-                        }
-                        else
-                        {
-                            studentData.GmailAddress = textBox.Text.Trim();
-
-                            if (string.IsNullOrEmpty(studentData.GmailAddress))
-                            {
-                                textBox.Focus();
-                                return;
-                            }
-                        }
-                    }
+                        ifReturn = ValidateAndAssign(textBox, studentData, "Gmail address", "GmailAddress");
+                   
+                    if (ifReturn)
+                        return;
                 }
             }
-        }     
+        }
+
+        // It will return true if there is an issue; otherwise, it will return false.
+        private bool ValidateAndAssign(Control textBox, StudentData studentData, string fieldName, string property)
+        {
+            string input = textBox.Text.Trim();
+
+            // Show an error message using the field name if the input is null or empty, then focus on the textbox and return true (indicating validation failure)
+            if (string.IsNullOrEmpty(input))
+            {
+                MessageBox.Show($"{fieldName} is empty. Please enter a {fieldName}.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox.Focus();
+
+                return true;
+            }
+            else
+            {
+                // Using reflection, set the value of the specified property in the 'studentData' object to the 'input'
+                studentData.GetType().GetProperty(property).SetValue(studentData, input);
+
+                // Using reflection, get the value of the specified property in the 'studentData' object,
+                // convert it to a string, check if it's empty or null
+                if (string.IsNullOrEmpty(studentData.GetType().GetProperty(property).GetValue(studentData) as string))
+                {
+                    textBox.Focus();
+
+                    return true;
+                }
+            }
+
+            return false;
+        }
 
         #endregion
 
