@@ -325,6 +325,8 @@ namespace SchoolTracker
             }
         }
 
+        #region FUNCTION FOR INFORMATION'S VALIDATION
+
         // This method is responsible for validating the information provided in various input controls.
         private bool ValidateInformation()
         {
@@ -412,6 +414,18 @@ namespace SchoolTracker
                         studentData.Age = ageCBox.Text;
                     }
                 }
+                else if (control == genderCard)
+                {
+                    // If student selected gender is empty, show an error message. Return false to indicate validation failure.
+                    // Else, set gender in student data.
+                    if (!maleBtn.Checked && !femaleBtn.Checked)
+                    {
+                        MessageBox.Show("Selected gender is empty. Please select your gender.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                    else
+                        studentData.Gender = (maleBtn.Checked) ? "Male" : "Female";
+                }
                 // If the control's name contains "CNumBox" (contact number textbox)
                 else if (control.Name.Contains("CNumBox"))
                 {
@@ -452,6 +466,10 @@ namespace SchoolTracker
             return true;
         }
 
+        #endregion
+
+        #region FUNCTION TO VALIDATE STUDENT AGE AND BIRTH DATE
+
         // Calculate the age based on birth date and check if it matches the selected age.
         private bool ValidateStudentAgeInBDate()
         {
@@ -462,6 +480,10 @@ namespace SchoolTracker
 
             return age == Convert.ToInt16(ageCBox.Text);
         }
+
+        #endregion
+
+        #region FUNCTION TO VALIDATE FACEBOOK LINK, GMAIL ADDRESS AND LANDLINE NUMBER
 
         // It will return true if there is an issue; otherwise, it will return false.
         private bool ValidateAndAssign(Control textBox, StudentData studentData, string fieldName, string property)
@@ -493,6 +515,8 @@ namespace SchoolTracker
 
             return true;
         }
+
+        #endregion
 
         #endregion
 
