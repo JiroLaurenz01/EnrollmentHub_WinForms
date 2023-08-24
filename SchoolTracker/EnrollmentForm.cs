@@ -432,23 +432,24 @@ namespace SchoolTracker
 
                     // Handling phone number text boxes
                     case MaterialTextBox textBox when control.Name.Contains("CNumBox"):
-                        if (string.IsNullOrEmpty(textBox.Text))
-                        {
-                            MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            textBox.Focus();
-                            return false;
-                        }
-                        else
-                        {
-                            // Set the ContactNumber property of the current person's data based on the index
-                            personDatas[indexPerson].ContactNumber = textBox.Text.Trim();
-
-                            if (string.IsNullOrEmpty(personDatas[indexPerson].ContactNumber))
+                        if (textBox.Enabled)
+                            if (string.IsNullOrEmpty(textBox.Text))
                             {
+                                MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 textBox.Focus();
                                 return false;
                             }
-                        }
+                            else
+                            {
+                                // Set the ContactNumber property of the current person's data based on the index
+                                personDatas[indexPerson].ContactNumber = textBox.Text.Trim();
+
+                                if (string.IsNullOrEmpty(personDatas[indexPerson].ContactNumber))
+                                {
+                                    textBox.Focus();
+                                    return false;
+                                }
+                            }
 
                         // Move to the next person in the array.
                         indexPerson++;
@@ -467,7 +468,7 @@ namespace SchoolTracker
 
                     // Handling other MaterialTextBox controls
                     case MaterialTextBox materialTextBox:
-                        if (String.IsNullOrEmpty(materialTextBox.Text))
+                        if (String.IsNullOrEmpty(materialTextBox.Text) && materialTextBox.Enabled)
                         {
                             string capitalizedString = char.ToUpper(materialTextBox.Hint[0]) + materialTextBox.Hint.Substring(1).ToLower();
                             MessageBox.Show($"{capitalizedString} is empty. Please enter a {materialTextBox.Hint.ToLower()}.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
