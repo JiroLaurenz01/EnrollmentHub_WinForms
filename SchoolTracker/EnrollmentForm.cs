@@ -1,10 +1,12 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -295,9 +297,6 @@ namespace SchoolTracker
                     if (IsSquareImage(selectedImage))
                     {
                         studentPicture.Image = selectedImage;
-
-                        // Note: The commented line below seems to be related to storing the user's image elsewhere.
-                        // UD.userImage = studentPicture.Image;
                     }
                     else
                         MessageBox.Show("Please select a square image.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -334,11 +333,11 @@ namespace SchoolTracker
 
             List<Control> controlList = new List<Control>
             {
+                studentPicture,
                 lNameBox,
                 fNameBox,
                 mNameBox,
                 bDatePicker,
-                ageCBox,
                 genderCard,
                 studCNumBox,
                 landlineNumBox,
@@ -371,8 +370,6 @@ namespace SchoolTracker
                 hSchoolName,
                 shSchoolName,
                 lrnBox,
-                fpsBox,
-                ipBox
             };
 
             #endregion
@@ -399,7 +396,19 @@ namespace SchoolTracker
             // Loop through each control in controlList to be validated.
             foreach (Control control in controlList)
             {
-                if (control == bDatePicker)
+                if (control == studentPicture)
+                {
+                    // If student picture is empty, show an error message. Return false to indicate validation failure.
+                    // Else, store the student picture in student data.
+                    if (ImageEquals(studentPicture.Image, SchoolTracker.Properties.Resources.user))
+                    {
+                        MessageBox.Show("The student picture is empty. Please select your picture.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                    else
+                        studentData.Image = studentPicture.Image;
+                }
+                else if (control == bDatePicker)
                 {
                     // If student age and birth date don't match, show an error message. Return false to indicate validation failure.
                     // Else, set birth date and age in student data.
@@ -465,6 +474,26 @@ namespace SchoolTracker
             // If all validations pass, return true.
             return true;
         }
+
+        #endregion
+
+        #region FUNCTION TO COMPARE TWO IMAGES
+
+        private bool ImageEquals(Image image1, Image image2)
+        {
+            // Enter a using block to ensure proper disposal of resources
+            using (MemoryStream ms1 = new MemoryStream(), ms2 = new MemoryStream())
+            {
+                // Save the content of the first and second image to the MemoryStream ms1 and ms2.
+                image1.Save(ms1, image1.RawFormat);
+                image2.Save(ms2, image2.RawFormat);
+
+                // Return the result of the comparison between the byte arrays obtained from ms1 and ms2
+                // StructuralComparisons.StructuralEqualityComparer.Equals() is used to compare the arrays
+                return StructuralComparisons.StructuralEqualityComparer.Equals(ms1.ToArray(), ms2.ToArray());
+            }
+        }
+
 
         #endregion
 
