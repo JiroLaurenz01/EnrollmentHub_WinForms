@@ -25,8 +25,6 @@ namespace SchoolTracker
 
         Functionality functions = new Functionality();
 
-        private int originalTabIndex; // Store the original selected tab index
-
         public EnrollmentForm()
         {
             InitializeComponent();
@@ -325,10 +323,16 @@ namespace SchoolTracker
 
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
-            // If the information is validated (all checks pass), show a "VALID" message.
+            int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+
+            //If the information is validated(all checks pass), show a "VALID" message.
             if (ValidateInformation())
             {
                 MessageBox.Show("VALID");
+
+                enrollmentTab.Selecting -= enrollmentTab_Selecting;
+                enrollmentTab.SelectedIndex = nextTabIndex;
+                enrollmentTab.Selecting += enrollmentTab_Selecting;
             }
         }
 
@@ -516,6 +520,8 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTION FOR STORING THE REMAINING FUNCTION TO THE CLASSES.
+
         private void PassingInformation()
         {
             studentData.LastName = lNameBox.Text;
@@ -556,6 +562,8 @@ namespace SchoolTracker
 
             studentData.LRN = lrnBox.Text;
         }
+
+        #endregion
 
         #region FUNCTION TO COMPARE TWO IMAGES
 
@@ -647,17 +655,17 @@ namespace SchoolTracker
                 submitInfoBtn_Click(sender, e);
         }
 
+
         #endregion
 
-        private void enrollmentTab_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Disable changing the tab by resetting the selected index to the original index
-            enrollmentTab.SelectedIndex = originalTabIndex;
-        }
+        #region FUNCTION FOR DISABLING TAB CONTROL
 
         private void enrollmentTab_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            originalTabIndex = e.TabPageIndex;
+            // Prevent manual tab changing
+            e.Cancel = true;
         }
+
+        #endregion
     }
 }

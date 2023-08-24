@@ -361,7 +361,6 @@
             this.enrollmentTab.SelectedIndex = 0;
             this.enrollmentTab.Size = new System.Drawing.Size(1784, 983);
             this.enrollmentTab.TabIndex = 0;
-            this.enrollmentTab.SelectedIndexChanged += new System.EventHandler(this.enrollmentTab_SelectedIndexChanged);
             this.enrollmentTab.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.enrollmentTab_Selecting);
             // 
             // basicInfoTab
@@ -1834,6 +1833,7 @@
             this.stNumBox.TabIndex = 252;
             this.stNumBox.Text = "";
             this.stNumBox.TrailingIcon = null;
+            this.stNumBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // cityBox
             // 
