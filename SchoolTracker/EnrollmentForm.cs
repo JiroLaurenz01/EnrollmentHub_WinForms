@@ -182,8 +182,15 @@ namespace SchoolTracker
 
                     if (ifChecked)
                     {
+                        // UNSUBSCRIBE AND SUBSCRIBE AFTER CHANGING THE CHECKED STATE OF BOTH BUTTONS TO AVOID CheckChanged DOMINO.
+                        gMotherBtn.CheckedChanged -= ifMotherFatherIsAGuardian_CheckedChanged;
+                        gFatherBtn.CheckedChanged -= ifMotherFatherIsAGuardian_CheckedChanged;
+
                         gMotherBtn.Checked = false;
                         gFatherBtn.Checked = false;
+
+                        gMotherBtn.CheckedChanged += ifMotherFatherIsAGuardian_CheckedChanged;
+                        gFatherBtn.CheckedChanged += ifMotherFatherIsAGuardian_CheckedChanged;
                     }
                     break;
             }
@@ -235,7 +242,12 @@ namespace SchoolTracker
                     materialParentTextBoxList.Add(mMNameBox);
                     materialParentTextBoxList.Add(mCNumBox);
 
+                    gExtNameCBox.SelectedIndex = 0;
                     gExtNameCBox.Enabled = !ifChecked;
+
+                    gFatherBtn.CheckedChanged -= ifMotherFatherIsAGuardian_CheckedChanged;
+                    gFatherBtn.Checked = false;
+                    gFatherBtn.CheckedChanged += ifMotherFatherIsAGuardian_CheckedChanged;
                     break;
 
                 case "gFatherBtn":
@@ -248,6 +260,12 @@ namespace SchoolTracker
                     gExtNameCBox.SelectedIndex = ifChecked
                         ? fExtNameCBox.SelectedIndex
                         : 0;
+
+                    gExtNameCBox.Enabled = true;
+
+                    gMotherBtn.CheckedChanged -= ifMotherFatherIsAGuardian_CheckedChanged;
+                    gMotherBtn.Checked = false;
+                    gMotherBtn.CheckedChanged += ifMotherFatherIsAGuardian_CheckedChanged;
                     break;
             }
 
