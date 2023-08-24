@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static QRCoder.PayloadGenerator;
+using System.Drawing;
 
 namespace SchoolTracker
 {
@@ -35,6 +35,7 @@ namespace SchoolTracker
 
     class StudentData : PersonData
     {
+        public Image Image { get; set; }
         public string BirthDate { get; set; }
         public string Age { get; set; }
         public string Gender { get; set; }

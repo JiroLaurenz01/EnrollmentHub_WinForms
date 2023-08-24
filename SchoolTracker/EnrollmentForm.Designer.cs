@@ -2474,7 +2474,7 @@
             // 
             // studentPicture
             // 
-            this.studentPicture.Image = ((System.Drawing.Image)(resources.GetObject("studentPicture.Image")));
+            this.studentPicture.Image = global::SchoolTracker.Properties.Resources.user;
             this.studentPicture.Location = new System.Drawing.Point(5, 5);
             this.studentPicture.Name = "studentPicture";
             this.studentPicture.Size = new System.Drawing.Size(150, 150);
