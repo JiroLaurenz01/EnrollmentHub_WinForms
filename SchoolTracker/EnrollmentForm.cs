@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using Guna.UI2.WinForms;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections;
@@ -17,13 +18,21 @@ namespace SchoolTracker
 {
     public partial class EnrollmentForm : MaterialForm
     {
+        #region CLASSES
+
         // Instances of classes that will store the validated data.
         StudentData studentData = new StudentData();
         MotherData motherData = new MotherData();
         FatherData fatherData = new FatherData();
         GuardianData guardianData = new GuardianData();
 
+        #endregion
+
+        #region FUNCTIONS
+
         Functionality functions = new Functionality();
+
+        #endregion
 
         public EnrollmentForm()
         {
@@ -32,42 +41,17 @@ namespace SchoolTracker
             skin.AddFormToManage(this);
             skin.Theme = MaterialSkinManager.Themes.DARK;
             skin.ColorScheme = new ColorScheme(
-                    Primary.Red800,
-                    Primary.Red900,
-                    Primary.Red500,
-                    Accent.Red200,
-                    TextShade.WHITE
-                );
+                Primary.Red800,
+                Primary.Red900,
+                Primary.Red500,
+                Accent.Red200,
+                TextShade.WHITE
+            );
         }
+
+        #region GENERAL FUNCTIONS FOR BASIC INFORMATION TAB
 
         #region FUNCTIONS FOR SWITCHES
-
-        #region FUNCTION TO CHANGE THE THEME COLOR [LIGHT/DARK]
-
-        // This method is an event handler that is triggered when the state of the thSwitch (toggle switch) changes.
-        private void thSwitch_CheckedChanged(object sender, EventArgs e)
-        {
-            // Get the current MaterialSkinManager instance to manage the application's visual theme.
-            var skin = MaterialSkinManager.Instance;
-
-            // Determine whether the current theme is light or dark.
-            bool isLight = skin.Theme == MaterialSkinManager.Themes.LIGHT;
-
-            // If the current theme is light, switch to dark theme and update the text of the toggle switch.
-            // Else, the current theme is dark, switch to light theme and update the text of the toggle switch.
-            if (isLight)
-            {
-                skin.Theme = MaterialSkinManager.Themes.DARK;  
-                thSwitch.Text = "DARK MODE"; 
-            }
-            else
-            {
-                skin.Theme = MaterialSkinManager.Themes.LIGHT; 
-                thSwitch.Text = "LIGHT MODE";
-            }
-        }
-
-        #endregion
 
         #region FUNCTION FOR IF SAME CURRENT/PERMANENT ADDRESS 
 
@@ -319,7 +303,7 @@ namespace SchoolTracker
 
         #endregion
 
-        #region FUNCTION FOR VALIDATING THE INFORMATIONS BEFORE THE APPROVAL OF SUBMISSION
+        #region FUNCTIONS FOR VALIDATING THE INFORMATIONS BEFORE THE APPROVAL OF SUBMISSION
 
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
@@ -636,14 +620,44 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTION TO RESET ALL FILLED INFORMATION
+
+        private void resetInfoBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Clicking reset will clear all your provided data. Would you like to continue?", "PUP-SIS", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dr == DialogResult.Yes)
+            {
+                // Iterate through each control in the basicInfoTab's Controls collection.
+                foreach (Control control in basicInfoTab.Controls)
+                {
+                    // Use a switch statement with pattern matching to handle different control types.
+                    switch (control)
+                    {
+                        case MaterialTextBox textBox:
+                            textBox.Clear();
+                            break;
+                        case MaterialComboBox comboBox:
+                            comboBox.SelectedIndex = 0;
+                            break;
+                        case MaterialSwitch switchControl:
+                            switchControl.Checked = false;
+                            break;
+                        case MaterialCheckbox checkbox:
+                            checkbox.Checked = false;
+                            break;
+                    }
+                }
+
+                maleBtn.Checked = false;
+                femaleBtn.Checked = false;
+
+                // Set the studentPicture Image to the default user image.
+                studentPicture.Image = SchoolTracker.Properties.Resources.user;
+            }
+        }
+
         #endregion
-
-        #region FUNCTIONS TO OPEN VARIOUS WEBSITES
-
-        private void openWebBtn_Click(object sender, EventArgs e) => functions.OpenWeb(0);
-        private void termUseBtn_Click(object sender, EventArgs e) => functions.OpenWeb(1);
-        private void privacyStateBtn_Click(object sender, EventArgs e) => functions.OpenWeb(2);
-
 
         #endregion
 
@@ -658,6 +672,25 @@ namespace SchoolTracker
 
         #endregion
 
+        #endregion
+
+        #region GENERAL FUNCTIONS FOR BASIC INFORMATION REVIEW TAB
+
+
+
+        #endregion
+
+        #region GENERAL FUNCTIONS FOR ENROLLMENT FORM
+
+        #region FUNCTIONS TO OPEN VARIOUS WEBSITES
+
+        private void openWebBtn_Click(object sender, EventArgs e) => functions.OpenWeb(0);
+        private void termUseBtn_Click(object sender, EventArgs e) => functions.OpenWeb(1);
+        private void privacyStateBtn_Click(object sender, EventArgs e) => functions.OpenWeb(2);
+
+
+        #endregion
+
         #region FUNCTION FOR DISABLING TAB CONTROL
 
         private void enrollmentTab_Selecting(object sender, TabControlCancelEventArgs e)
@@ -665,6 +698,35 @@ namespace SchoolTracker
             // Prevent manual tab changing
             e.Cancel = true;
         }
+
+        #endregion
+
+        #region FUNCTION TO CHANGE THE THEME COLOR [LIGHT/DARK]
+
+        // This method is an event handler that is triggered when the state of the thSwitch (toggle switch) changes.
+        private void thSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            // Get the current MaterialSkinManager instance to manage the application's visual theme.
+            var skin = MaterialSkinManager.Instance;
+
+            // Determine whether the current theme is light or dark.
+            bool isLight = skin.Theme == MaterialSkinManager.Themes.LIGHT;
+
+            // If the current theme is light, switch to dark theme and update the text of the toggle switch.
+            // Else, the current theme is dark, switch to light theme and update the text of the toggle switch.
+            if (isLight)
+            {
+                skin.Theme = MaterialSkinManager.Themes.DARK;
+                thSwitch.Text = "DARK MODE";
+            }
+            else
+            {
+                skin.Theme = MaterialSkinManager.Themes.LIGHT;
+                thSwitch.Text = "LIGHT MODE";
+            }
+        }
+
+        #endregion
 
         #endregion
     }
