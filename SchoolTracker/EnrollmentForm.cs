@@ -17,7 +17,15 @@ namespace SchoolTracker
 {
     public partial class EnrollmentForm : MaterialForm
     {
+        // Instances of classes that will store the validated data.
+        StudentData studentData = new StudentData();
+        MotherData motherData = new MotherData();
+        FatherData fatherData = new FatherData();
+        GuardianData guardianData = new GuardianData();
+
         Functionality functions = new Functionality();
+
+        private int originalTabIndex; // Store the original selected tab index
 
         public EnrollmentForm()
         {
@@ -374,12 +382,6 @@ namespace SchoolTracker
 
             #endregion
 
-            // Instances of classes that will store the validated data.
-            StudentData studentData = new StudentData();
-            MotherData motherData = new MotherData();
-            FatherData fatherData = new FatherData();
-            GuardianData guardianData = new GuardianData();
-
             // Create an array of base class type PersonData to store instances of different people
             PersonData[] personDatas = new PersonData[]
             {
@@ -465,17 +467,95 @@ namespace SchoolTracker
                     ifReturn = ValidateAndAssign(control, studentData, "Gmail address", "GmailAddress");
                 else if (control == fbLinkBox)
                     ifReturn = ValidateAndAssign(control, studentData, "Facebook link", "FacebookLink");
+                else
+                {
+                    if (String.IsNullOrEmpty(control.Text) && control is MaterialTextBox textBox)
+                    {
+                        string capitalizedString = char.ToUpper(textBox.Hint[0]) + textBox.Hint.Substring(1).ToLower();
+
+                        MessageBox.Show($"{capitalizedString} is empty. Please enter a {textBox.Hint.ToLower()}.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        control.Focus();
+                        return false;
+                    }
+                }
 
                 // If above statement return a false value for ifReturn, this statement will return false to indicate validation failure.
                 if (!ifReturn)
                     return false;
             }
 
+            if (fpsSwitch.Checked)
+            {
+                if (string.IsNullOrEmpty(fpsBox.Text))
+                {
+                    MessageBox.Show($"4Ps household id number is empty. Please enter a valid id number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    fpsBox.Focus();
+                    return false;
+                }
+            }
+            else
+                studentData.FPSNumber = "N/A";
+
+            if (ipSwitch.Checked)
+            {
+                if (string.IsNullOrEmpty(ipBox.Text))
+                {
+                    MessageBox.Show($"Indigenous people community is empty. Please enter a community.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ipBox.Focus();
+                    return false;
+                }
+            }
+            else
+                studentData.IPCommunity = "N/A";
+
+            PassingInformation();
+
             // If all validations pass, return true.
             return true;
         }
 
         #endregion
+
+        private void PassingInformation()
+        {
+            studentData.LastName = lNameBox.Text;
+            studentData.FirstName = fNameBox.Text;
+            studentData.MiddleName = mNameBox.Text;
+            studentData.ExtensionName = extNameBox.Text;
+            studentData.BirthPlace = birthPlaceBox.Text;
+
+            studentData.StreetNumber = stNumBox.Text;
+            studentData.StreetName = stNameBox.Text;
+            studentData.Barangay = brgyBox.Text;
+            studentData.City = cityBox.Text;
+            studentData.Province = provBox.Text;
+
+            studentData.PStreetNumber = pStNumBox.Text;
+            studentData.PStreetName = pStNameBox.Text;
+            studentData.PBarangay = pBrgyBox.Text;
+            studentData.PCity = pCityBox.Text;
+            studentData.PProvince = pProvBox.Text;
+
+            motherData.LastName = mLNameBox.Text;
+            motherData.FirstName = mFNameBox.Text;
+            motherData.MiddleName = mMNameBox.Text;
+
+            fatherData.LastName = fLNameBox.Text;
+            fatherData.FirstName = fFNameBox.Text;
+            fatherData.MiddleName = fMNameBox.Text;
+            fatherData.ExtensionName = fExtNameCBox.Text;
+
+            guardianData.LastName = gLNameBox.Text;
+            guardianData.FirstName = gFNameBox.Text;
+            guardianData.MiddleName = gMNameBox.Text;
+            guardianData.ExtensionName = gExtNameCBox.Text;
+
+            studentData.ElementarySchool = eSchoolName.Text;
+            studentData.HighSchool = hSchoolName.Text;
+            studentData.SeniorHighSchool = shSchoolName.Text;
+
+            studentData.LRN = lrnBox.Text;
+        }
 
         #region FUNCTION TO COMPARE TWO IMAGES
 
@@ -493,7 +573,6 @@ namespace SchoolTracker
                 return StructuralComparisons.StructuralEqualityComparer.Equals(ms1.ToArray(), ms2.ToArray());
             }
         }
-
 
         #endregion
 
@@ -569,5 +648,16 @@ namespace SchoolTracker
         }
 
         #endregion
+
+        private void enrollmentTab_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Disable changing the tab by resetting the selected index to the original index
+            enrollmentTab.SelectedIndex = originalTabIndex;
+        }
+
+        private void enrollmentTab_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            originalTabIndex = e.TabPageIndex;
+        }
     }
 }

@@ -137,7 +137,7 @@
             this.materialLabel108 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.ageCBox = new MaterialSkin.Controls.MaterialComboBox();
-            this.uExtName = new MaterialSkin.Controls.MaterialComboBox();
+            this.extNameBox = new MaterialSkin.Controls.MaterialComboBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.mNameBox = new MaterialSkin.Controls.MaterialTextBox();
             this.bDatePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -361,6 +361,8 @@
             this.enrollmentTab.SelectedIndex = 0;
             this.enrollmentTab.Size = new System.Drawing.Size(1784, 983);
             this.enrollmentTab.TabIndex = 0;
+            this.enrollmentTab.SelectedIndexChanged += new System.EventHandler(this.enrollmentTab_SelectedIndexChanged);
+            this.enrollmentTab.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.enrollmentTab_Selecting);
             // 
             // basicInfoTab
             // 
@@ -468,7 +470,7 @@
             this.basicInfoTab.Controls.Add(this.materialLabel108);
             this.basicInfoTab.Controls.Add(this.materialLabel6);
             this.basicInfoTab.Controls.Add(this.ageCBox);
-            this.basicInfoTab.Controls.Add(this.uExtName);
+            this.basicInfoTab.Controls.Add(this.extNameBox);
             this.basicInfoTab.Controls.Add(this.materialLabel2);
             this.basicInfoTab.Controls.Add(this.mNameBox);
             this.basicInfoTab.Controls.Add(this.bDatePicker);
@@ -2300,21 +2302,21 @@
             this.ageCBox.TabIndex = 228;
             this.ageCBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
-            // uExtName
+            // extNameBox
             // 
-            this.uExtName.AutoResize = false;
-            this.uExtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.uExtName.Depth = 0;
-            this.uExtName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.uExtName.DropDownHeight = 174;
-            this.uExtName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.uExtName.DropDownWidth = 49;
-            this.uExtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.uExtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.uExtName.FormattingEnabled = true;
-            this.uExtName.IntegralHeight = false;
-            this.uExtName.ItemHeight = 43;
-            this.uExtName.Items.AddRange(new object[] {
+            this.extNameBox.AutoResize = false;
+            this.extNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.extNameBox.Depth = 0;
+            this.extNameBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.extNameBox.DropDownHeight = 174;
+            this.extNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.extNameBox.DropDownWidth = 49;
+            this.extNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.extNameBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.extNameBox.FormattingEnabled = true;
+            this.extNameBox.IntegralHeight = false;
+            this.extNameBox.ItemHeight = 43;
+            this.extNameBox.Items.AddRange(new object[] {
             "N/A",
             "Jr.",
             "Sr.",
@@ -2323,14 +2325,14 @@
             "IV",
             "V",
             "V|"});
-            this.uExtName.Location = new System.Drawing.Point(1065, 77);
-            this.uExtName.MaxDropDownItems = 4;
-            this.uExtName.MouseState = MaterialSkin.MouseState.OUT;
-            this.uExtName.Name = "uExtName";
-            this.uExtName.Size = new System.Drawing.Size(96, 49);
-            this.uExtName.StartIndex = 0;
-            this.uExtName.TabIndex = 226;
-            this.uExtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
+            this.extNameBox.Location = new System.Drawing.Point(1065, 77);
+            this.extNameBox.MaxDropDownItems = 4;
+            this.extNameBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.extNameBox.Name = "extNameBox";
+            this.extNameBox.Size = new System.Drawing.Size(96, 49);
+            this.extNameBox.StartIndex = 0;
+            this.extNameBox.TabIndex = 226;
+            this.extNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel2
             // 
@@ -2379,7 +2381,6 @@
             this.bDatePicker.TabIndex = 222;
             this.bDatePicker.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.bDatePicker.Value = new System.DateTime(2013, 12, 31, 0, 0, 0, 0);
-            this.bDatePicker.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // lNameBox
             // 
@@ -5447,7 +5448,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel108;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialComboBox ageCBox;
-        private MaterialSkin.Controls.MaterialComboBox uExtName;
+        private MaterialSkin.Controls.MaterialComboBox extNameBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialTextBox mNameBox;
         private Guna.UI2.WinForms.Guna2DateTimePicker bDatePicker;
