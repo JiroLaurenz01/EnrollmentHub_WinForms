@@ -37,6 +37,7 @@ namespace SchoolTracker
     {
         public string BirthDate { get; set; }
         public string Age { get; set; }
+        public string Gender { get; set; }
 
         private string _landlineNumber;
 

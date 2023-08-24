@@ -1989,12 +1989,12 @@
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel5.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel5.Location = new System.Drawing.Point(80, 4);
+            this.materialLabel5.Location = new System.Drawing.Point(71, 4);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(34, 24);
+            this.materialLabel5.Size = new System.Drawing.Size(66, 24);
             this.materialLabel5.TabIndex = 232;
-            this.materialLabel5.Text = "Sex";
+            this.materialLabel5.Text = "Gender";
             // 
             // materialLabel97
             // 
