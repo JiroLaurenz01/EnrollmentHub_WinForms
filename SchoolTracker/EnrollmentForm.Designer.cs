@@ -32,7 +32,7 @@
             this.enrollmentTab = new MaterialSkin.Controls.MaterialTabControl();
             this.basicInfoTab = new System.Windows.Forms.TabPage();
             this.mNoneBtn = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.resetInfoBtn = new MaterialSkin.Controls.MaterialButton();
             this.submitInfoBtn = new MaterialSkin.Controls.MaterialButton();
             this.birthPlaceBox = new MaterialSkin.Controls.MaterialTextBox();
             this.ipSwitch = new MaterialSkin.Controls.MaterialSwitch();
@@ -367,7 +367,7 @@
             // 
             this.basicInfoTab.BackColor = System.Drawing.Color.White;
             this.basicInfoTab.Controls.Add(this.mNoneBtn);
-            this.basicInfoTab.Controls.Add(this.materialButton1);
+            this.basicInfoTab.Controls.Add(this.resetInfoBtn);
             this.basicInfoTab.Controls.Add(this.submitInfoBtn);
             this.basicInfoTab.Controls.Add(this.birthPlaceBox);
             this.basicInfoTab.Controls.Add(this.ipSwitch);
@@ -503,26 +503,27 @@
             this.mNoneBtn.UseVisualStyleBackColor = true;
             this.mNoneBtn.CheckedChanged += new System.EventHandler(this.noneParentsGuardiansBtn_CheckedChanged);
             // 
-            // materialButton1
+            // resetInfoBtn
             // 
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(1643, 895);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(65, 36);
-            this.materialButton1.TabIndex = 479;
-            this.materialButton1.Text = "reset";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.materialButton1.UseAccentColor = true;
-            this.materialButton1.UseMnemonic = false;
-            this.materialButton1.UseVisualStyleBackColor = false;
+            this.resetInfoBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.resetInfoBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.resetInfoBtn.Depth = 0;
+            this.resetInfoBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.resetInfoBtn.HighEmphasis = true;
+            this.resetInfoBtn.Icon = null;
+            this.resetInfoBtn.Location = new System.Drawing.Point(1643, 895);
+            this.resetInfoBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.resetInfoBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.resetInfoBtn.Name = "resetInfoBtn";
+            this.resetInfoBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.resetInfoBtn.Size = new System.Drawing.Size(65, 36);
+            this.resetInfoBtn.TabIndex = 479;
+            this.resetInfoBtn.Text = "reset";
+            this.resetInfoBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.resetInfoBtn.UseAccentColor = true;
+            this.resetInfoBtn.UseMnemonic = false;
+            this.resetInfoBtn.UseVisualStyleBackColor = false;
+            this.resetInfoBtn.Click += new System.EventHandler(this.resetInfoBtn_Click);
             // 
             // submitInfoBtn
             // 
@@ -5633,7 +5634,7 @@
         private MaterialSkin.Controls.MaterialTextBox materialTextBox62;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox61;
         private MaterialSkin.Controls.MaterialDivider materialDivider14;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton resetInfoBtn;
         private MaterialSkin.Controls.MaterialButton submitInfoBtn;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialCard materialCard3;
