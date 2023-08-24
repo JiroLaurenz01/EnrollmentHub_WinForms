@@ -36,10 +36,11 @@ namespace SchoolTracker
     class StudentData : PersonData
     {
         public Image Image { get; set; }
+        public string ExtensionName { get; set; }
         public string BirthDate { get; set; }
         public string Age { get; set; }
         public string Gender { get; set; }
-
+       
         private string _landlineNumber;
 
         public string LandlineNumber
@@ -90,9 +91,37 @@ namespace SchoolTracker
                     MessageBox.Show("Invalid Facebook link. Please enter a valid link.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public string BirthPlace { get; set; }
+
+        public string StreetNumber { get; set; }
+        public string StreetName { get; set; }
+        public string Barangay { get; set; }
+        public string City { get; set; }
+        public string Province { get; set; }
+
+        public string PStreetNumber { get; set; }
+        public string PStreetName { get; set; }
+        public string PBarangay { get; set; }
+        public string PCity { get; set; }
+        public string PProvince { get; set; }
+
+        public string ElementarySchool { get; set; }
+        public string HighSchool { get; set; }
+        public string SeniorHighSchool { get; set; }
+
+        public string LRN { get; set; }
+        public string FPSNumber { get; set; }
+        public string IPCommunity { get; set; }
     }
 
     class MotherData : PersonData { }
-    class FatherData : PersonData { }
-    class GuardianData : PersonData { }
+    class FatherData : PersonData
+    {
+        public string ExtensionName { get; set; }
+    }
+    class GuardianData : PersonData
+    {
+        public string ExtensionName { get; set; }
+    }
 }
