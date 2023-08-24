@@ -35,6 +35,9 @@ namespace SchoolTracker
 
     class StudentData : PersonData
     {
+        public string BirthDate { get; set; }
+        public string Age { get; set; }
+
         private string _landlineNumber;
 
         public string LandlineNumber

@@ -34,16 +34,16 @@
             this.mNoneBtn = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.submitInfoBtn = new MaterialSkin.Controls.MaterialButton();
-            this.materialTextBox9 = new MaterialSkin.Controls.MaterialTextBox();
+            this.birthPlaceBox = new MaterialSkin.Controls.MaterialTextBox();
             this.ipSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
             this.fpsSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
-            this.fpsTextBox = new MaterialSkin.Controls.MaterialTextBox();
-            this.ipTextBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.fpsBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.ipBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox6 = new MaterialSkin.Controls.MaterialTextBox();
+            this.lrnBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
@@ -118,8 +118,8 @@
             this.materialLabel89 = new MaterialSkin.Controls.MaterialLabel();
             this.materialDivider17 = new MaterialSkin.Controls.MaterialDivider();
             this.materialLabel90 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.genderCard = new MaterialSkin.Controls.MaterialCard();
+            this.femaleBtn = new MaterialSkin.Controls.MaterialRadioButton();
             this.maleBtn = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel97 = new MaterialSkin.Controls.MaterialLabel();
@@ -320,7 +320,7 @@
             this.thSwitch = new MaterialSkin.Controls.MaterialSwitch();
             this.enrollmentTab.SuspendLayout();
             this.basicInfoTab.SuspendLayout();
-            this.materialCard2.SuspendLayout();
+            this.genderCard.SuspendLayout();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentPicture)).BeginInit();
             this.basicInfoRevTab.SuspendLayout();
@@ -368,16 +368,16 @@
             this.basicInfoTab.Controls.Add(this.mNoneBtn);
             this.basicInfoTab.Controls.Add(this.materialButton1);
             this.basicInfoTab.Controls.Add(this.submitInfoBtn);
-            this.basicInfoTab.Controls.Add(this.materialTextBox9);
+            this.basicInfoTab.Controls.Add(this.birthPlaceBox);
             this.basicInfoTab.Controls.Add(this.ipSwitch);
             this.basicInfoTab.Controls.Add(this.materialLabel16);
             this.basicInfoTab.Controls.Add(this.fpsSwitch);
             this.basicInfoTab.Controls.Add(this.materialLabel10);
             this.basicInfoTab.Controls.Add(this.materialLabel14);
-            this.basicInfoTab.Controls.Add(this.fpsTextBox);
-            this.basicInfoTab.Controls.Add(this.ipTextBox);
+            this.basicInfoTab.Controls.Add(this.fpsBox);
+            this.basicInfoTab.Controls.Add(this.ipBox);
             this.basicInfoTab.Controls.Add(this.materialLabel15);
-            this.basicInfoTab.Controls.Add(this.materialTextBox6);
+            this.basicInfoTab.Controls.Add(this.lrnBox);
             this.basicInfoTab.Controls.Add(this.materialLabel19);
             this.basicInfoTab.Controls.Add(this.materialLabel18);
             this.basicInfoTab.Controls.Add(this.materialLabel17);
@@ -452,7 +452,7 @@
             this.basicInfoTab.Controls.Add(this.materialLabel89);
             this.basicInfoTab.Controls.Add(this.materialDivider17);
             this.basicInfoTab.Controls.Add(this.materialLabel90);
-            this.basicInfoTab.Controls.Add(this.materialCard2);
+            this.basicInfoTab.Controls.Add(this.genderCard);
             this.basicInfoTab.Controls.Add(this.materialLabel97);
             this.basicInfoTab.Controls.Add(this.materialLabel98);
             this.basicInfoTab.Controls.Add(this.materialLabel99);
@@ -545,24 +545,24 @@
             this.submitInfoBtn.UseVisualStyleBackColor = false;
             this.submitInfoBtn.Click += new System.EventHandler(this.submitInfoBtn_Click);
             // 
-            // materialTextBox9
+            // birthPlaceBox
             // 
-            this.materialTextBox9.AnimateReadOnly = false;
-            this.materialTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialTextBox9.Depth = 0;
-            this.materialTextBox9.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox9.Hint = "Birth Place";
-            this.materialTextBox9.LeadingIcon = null;
-            this.materialTextBox9.Location = new System.Drawing.Point(1444, 162);
-            this.materialTextBox9.MaxLength = 50;
-            this.materialTextBox9.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox9.Multiline = false;
-            this.materialTextBox9.Name = "materialTextBox9";
-            this.materialTextBox9.Size = new System.Drawing.Size(263, 50);
-            this.materialTextBox9.TabIndex = 356;
-            this.materialTextBox9.Text = "";
-            this.materialTextBox9.TrailingIcon = null;
-            this.materialTextBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
+            this.birthPlaceBox.AnimateReadOnly = false;
+            this.birthPlaceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.birthPlaceBox.Depth = 0;
+            this.birthPlaceBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.birthPlaceBox.Hint = "Birth Place";
+            this.birthPlaceBox.LeadingIcon = null;
+            this.birthPlaceBox.Location = new System.Drawing.Point(1444, 162);
+            this.birthPlaceBox.MaxLength = 50;
+            this.birthPlaceBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.birthPlaceBox.Multiline = false;
+            this.birthPlaceBox.Name = "birthPlaceBox";
+            this.birthPlaceBox.Size = new System.Drawing.Size(263, 50);
+            this.birthPlaceBox.TabIndex = 356;
+            this.birthPlaceBox.Text = "";
+            this.birthPlaceBox.TrailingIcon = null;
+            this.birthPlaceBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // ipSwitch
             // 
@@ -641,45 +641,45 @@
             this.materialLabel14.Text = "4PS HOUSEHOLD ID NUMBER";
             this.materialLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // fpsTextBox
+            // fpsBox
             // 
-            this.fpsTextBox.AnimateReadOnly = false;
-            this.fpsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fpsTextBox.Depth = 0;
-            this.fpsTextBox.Enabled = false;
-            this.fpsTextBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.fpsTextBox.Hint = "4Ps Household ID Number";
-            this.fpsTextBox.LeadingIcon = null;
-            this.fpsTextBox.Location = new System.Drawing.Point(603, 881);
-            this.fpsTextBox.MaxLength = 50;
-            this.fpsTextBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.fpsTextBox.Multiline = false;
-            this.fpsTextBox.Name = "fpsTextBox";
-            this.fpsTextBox.Size = new System.Drawing.Size(360, 50);
-            this.fpsTextBox.TabIndex = 350;
-            this.fpsTextBox.Text = "";
-            this.fpsTextBox.TrailingIcon = null;
-            this.fpsTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
+            this.fpsBox.AnimateReadOnly = false;
+            this.fpsBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fpsBox.Depth = 0;
+            this.fpsBox.Enabled = false;
+            this.fpsBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.fpsBox.Hint = "4Ps Household ID Number";
+            this.fpsBox.LeadingIcon = null;
+            this.fpsBox.Location = new System.Drawing.Point(603, 881);
+            this.fpsBox.MaxLength = 50;
+            this.fpsBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.fpsBox.Multiline = false;
+            this.fpsBox.Name = "fpsBox";
+            this.fpsBox.Size = new System.Drawing.Size(360, 50);
+            this.fpsBox.TabIndex = 350;
+            this.fpsBox.Text = "";
+            this.fpsBox.TrailingIcon = null;
+            this.fpsBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
-            // ipTextBox
+            // ipBox
             // 
-            this.ipTextBox.AnimateReadOnly = false;
-            this.ipTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ipTextBox.Depth = 0;
-            this.ipTextBox.Enabled = false;
-            this.ipTextBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ipTextBox.Hint = "Specify";
-            this.ipTextBox.LeadingIcon = null;
-            this.ipTextBox.Location = new System.Drawing.Point(1077, 881);
-            this.ipTextBox.MaxLength = 50;
-            this.ipTextBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.ipTextBox.Multiline = false;
-            this.ipTextBox.Name = "ipTextBox";
-            this.ipTextBox.Size = new System.Drawing.Size(360, 50);
-            this.ipTextBox.TabIndex = 349;
-            this.ipTextBox.Text = "";
-            this.ipTextBox.TrailingIcon = null;
-            this.ipTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
+            this.ipBox.AnimateReadOnly = false;
+            this.ipBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ipBox.Depth = 0;
+            this.ipBox.Enabled = false;
+            this.ipBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ipBox.Hint = "Specify";
+            this.ipBox.LeadingIcon = null;
+            this.ipBox.Location = new System.Drawing.Point(1077, 881);
+            this.ipBox.MaxLength = 50;
+            this.ipBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.ipBox.Multiline = false;
+            this.ipBox.Name = "ipBox";
+            this.ipBox.Size = new System.Drawing.Size(360, 50);
+            this.ipBox.TabIndex = 349;
+            this.ipBox.Text = "";
+            this.ipBox.TrailingIcon = null;
+            this.ipBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel15
             // 
@@ -696,24 +696,24 @@
             this.materialLabel15.Text = "LEARNER REFERENCE NUMBER (LRN)";
             this.materialLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialTextBox6
+            // lrnBox
             // 
-            this.materialTextBox6.AnimateReadOnly = false;
-            this.materialTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialTextBox6.Depth = 0;
-            this.materialTextBox6.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox6.Hint = "LRN";
-            this.materialTextBox6.LeadingIcon = null;
-            this.materialTextBox6.Location = new System.Drawing.Point(186, 881);
-            this.materialTextBox6.MaxLength = 50;
-            this.materialTextBox6.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox6.Multiline = false;
-            this.materialTextBox6.Name = "materialTextBox6";
-            this.materialTextBox6.Size = new System.Drawing.Size(387, 50);
-            this.materialTextBox6.TabIndex = 347;
-            this.materialTextBox6.Text = "";
-            this.materialTextBox6.TrailingIcon = null;
-            this.materialTextBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
+            this.lrnBox.AnimateReadOnly = false;
+            this.lrnBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lrnBox.Depth = 0;
+            this.lrnBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lrnBox.Hint = "LRN";
+            this.lrnBox.LeadingIcon = null;
+            this.lrnBox.Location = new System.Drawing.Point(186, 881);
+            this.lrnBox.MaxLength = 50;
+            this.lrnBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.lrnBox.Multiline = false;
+            this.lrnBox.Name = "lrnBox";
+            this.lrnBox.Size = new System.Drawing.Size(387, 50);
+            this.lrnBox.TabIndex = 347;
+            this.lrnBox.Text = "";
+            this.lrnBox.TrailingIcon = null;
+            this.lrnBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // materialLabel19
             // 
@@ -1933,38 +1933,38 @@
             this.materialLabel90.Text = "CURRENT ADDRESS";
             this.materialLabel90.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialCard2
+            // genderCard
             // 
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.materialRadioButton1);
-            this.materialCard2.Controls.Add(this.maleBtn);
-            this.materialCard2.Controls.Add(this.materialLabel5);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(1498, 56);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(209, 69);
-            this.materialCard2.TabIndex = 245;
+            this.genderCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.genderCard.Controls.Add(this.femaleBtn);
+            this.genderCard.Controls.Add(this.maleBtn);
+            this.genderCard.Controls.Add(this.materialLabel5);
+            this.genderCard.Depth = 0;
+            this.genderCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.genderCard.Location = new System.Drawing.Point(1498, 56);
+            this.genderCard.Margin = new System.Windows.Forms.Padding(14);
+            this.genderCard.MouseState = MaterialSkin.MouseState.HOVER;
+            this.genderCard.Name = "genderCard";
+            this.genderCard.Padding = new System.Windows.Forms.Padding(14);
+            this.genderCard.Size = new System.Drawing.Size(209, 69);
+            this.genderCard.TabIndex = 245;
             // 
-            // materialRadioButton1
+            // femaleBtn
             // 
-            this.materialRadioButton1.AutoSize = true;
-            this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Location = new System.Drawing.Point(100, 27);
-            this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton1.Name = "materialRadioButton1";
-            this.materialRadioButton1.Ripple = true;
-            this.materialRadioButton1.Size = new System.Drawing.Size(87, 37);
-            this.materialRadioButton1.TabIndex = 481;
-            this.materialRadioButton1.TabStop = true;
-            this.materialRadioButton1.Text = "Female";
-            this.materialRadioButton1.UseVisualStyleBackColor = true;
-            this.materialRadioButton1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
+            this.femaleBtn.AutoSize = true;
+            this.femaleBtn.Depth = 0;
+            this.femaleBtn.Location = new System.Drawing.Point(100, 27);
+            this.femaleBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.femaleBtn.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.femaleBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.femaleBtn.Name = "femaleBtn";
+            this.femaleBtn.Ripple = true;
+            this.femaleBtn.Size = new System.Drawing.Size(87, 37);
+            this.femaleBtn.TabIndex = 481;
+            this.femaleBtn.TabStop = true;
+            this.femaleBtn.Text = "Female";
+            this.femaleBtn.UseVisualStyleBackColor = true;
+            this.femaleBtn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoBox_KeyDown);
             // 
             // maleBtn
             // 
@@ -5357,8 +5357,8 @@
             this.enrollmentTab.ResumeLayout(false);
             this.basicInfoTab.ResumeLayout(false);
             this.basicInfoTab.PerformLayout();
-            this.materialCard2.ResumeLayout(false);
-            this.materialCard2.PerformLayout();
+            this.genderCard.ResumeLayout(false);
+            this.genderCard.PerformLayout();
             this.materialCard1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.studentPicture)).EndInit();
             this.basicInfoRevTab.ResumeLayout(false);
@@ -5430,7 +5430,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel89;
         private MaterialSkin.Controls.MaterialDivider materialDivider17;
         private MaterialSkin.Controls.MaterialLabel materialLabel90;
-        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private MaterialSkin.Controls.MaterialCard genderCard;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialLabel materialLabel97;
         private MaterialSkin.Controls.MaterialLabel materialLabel98;
@@ -5516,17 +5516,17 @@
         private System.Windows.Forms.TabPage backBtn;
         private MaterialSkin.Controls.MaterialLabel materialLabel17;
         private MaterialSkin.Controls.MaterialLabel materialLabel15;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox6;
+        private MaterialSkin.Controls.MaterialTextBox lrnBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel19;
         private MaterialSkin.Controls.MaterialLabel materialLabel18;
         private MaterialSkin.Controls.MaterialLabel materialLabel14;
-        private MaterialSkin.Controls.MaterialTextBox fpsTextBox;
-        private MaterialSkin.Controls.MaterialTextBox ipTextBox;
+        private MaterialSkin.Controls.MaterialTextBox fpsBox;
+        private MaterialSkin.Controls.MaterialTextBox ipBox;
         private MaterialSkin.Controls.MaterialSwitch ipSwitch;
         private MaterialSkin.Controls.MaterialLabel materialLabel16;
         private MaterialSkin.Controls.MaterialSwitch fpsSwitch;
         private MaterialSkin.Controls.MaterialLabel materialLabel10;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox9;
+        private MaterialSkin.Controls.MaterialTextBox birthPlaceBox;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox60;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox59;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox58;
@@ -5685,7 +5685,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel119;
         private System.Windows.Forms.PictureBox pictureBox3;
         private MaterialSkin.Controls.MaterialRadioButton maleBtn;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
+        private MaterialSkin.Controls.MaterialRadioButton femaleBtn;
         private MaterialSkin.Controls.MaterialCheckbox mNoneBtn;
     }
 }

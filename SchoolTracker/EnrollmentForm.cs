@@ -112,9 +112,9 @@ namespace SchoolTracker
 
             // Check if the triggered switch is 'fpsSwitch' and if not, it is 'ipSwitch'
             if (checkedSwitch == "fpsSwitch")
-                fpsTextBox.Enabled = ifChecked;
+                fpsBox.Enabled = ifChecked;
             else
-                ipTextBox.Enabled = ifChecked;
+                ipBox.Enabled = ifChecked;
         }
 
         #endregion
@@ -318,6 +318,64 @@ namespace SchoolTracker
 
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
+            // If the information is validated (all checks pass), show a "VALID" message.
+            if (ValidateInformation())
+            {
+                MessageBox.Show("VALID");
+            }
+        }
+
+        // This method is responsible for validating the information provided in various input controls.
+        private bool ValidateInformation()
+        {
+            #region LIST OF CONTROLS THAT CONTAIN INFORMATION TO BE VALIDATED
+
+            List<Control> controlList = new List<Control>
+            {
+                lNameBox,
+                fNameBox,
+                mNameBox,
+                bDatePicker,
+                ageCBox,
+                genderCard,
+                studCNumBox,
+                landlineNumBox,
+                gmailAddBox,
+                fbLinkBox,
+                birthPlaceBox,
+                stNumBox,
+                stNameBox,
+                brgyBox,
+                cityBox,
+                provBox,
+                pStNumBox,
+                pStNameBox,
+                pBrgyBox,
+                pCityBox,
+                pProvBox,
+                mLNameBox,
+                mFNameBox,
+                mMNameBox,
+                mCNumBox,
+                fLNameBox,
+                fFNameBox,
+                fMNameBox,
+                fCNumBox,
+                gLNameBox,
+                gFNameBox,
+                gMNameBox,
+                gCNumBox,
+                eSchoolName,
+                hSchoolName,
+                shSchoolName,
+                lrnBox,
+                fpsBox,
+                ipBox
+            };
+
+            #endregion
+
+            // Instances of classes that will store the validated data.
             StudentData studentData = new StudentData();
             MotherData motherData = new MotherData();
             FatherData fatherData = new FatherData();
@@ -332,50 +390,77 @@ namespace SchoolTracker
                 guardianData
             };
 
-            // Initialize an index to keep track of the current person in the array
+            // Index to keep track of the current person in the array.
             int indexPerson = 0;
-            bool ifReturn = false;
+            bool ifReturn = true;
 
-            // Loop through each control in reverse order within the "basicInfoTab" control container
-            foreach (Control textBox in basicInfoTab.Controls.Cast<Control>().Reverse())
+            // Loop through each control in controlList to be validated.
+            foreach (Control control in controlList)
             {
-                if (textBox is MaterialTextBox)
+                if (control == bDatePicker)
                 {
-                    // Check if the control is for the contact number
-                    if (textBox.Name.Contains("CNumBox"))
+                    // If student age and birth date don't match, show an error message. Return false to indicate validation failure.
+                    // Else, set birth date and age in student data.
+                    if (!ValidateStudentAgeInBDate())
                     {
-                        if (string.IsNullOrEmpty(textBox.Text))
-                        {
-                            MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            textBox.Focus();
-                            return;
-                        }
-                        else
-                        {
-                            // Set the ContactNumber property of the current person's data based on the index
-                            personDatas[indexPerson].ContactNumber = textBox.Text.Trim();
-
-                            if (string.IsNullOrEmpty(personDatas[indexPerson].ContactNumber))
-                            {
-                                textBox.Focus();
-                                return;
-                            }
-                        }
-
-                        // Move to the next person in the array
-                        indexPerson++;
+                        MessageBox.Show("The age and birth date did not match. Please enter a correct birth date or age.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
                     }
-                    else if (textBox == landlineNumBox)
-                        ifReturn = ValidateAndAssign(textBox, studentData, "Landline number", "LandlineNumber");
-                    else if (textBox == gmailAddBox)
-                        ifReturn = ValidateAndAssign(textBox, studentData, "Gmail address", "GmailAddress");
-                    else if (textBox == fbLinkBox)
-                        ifReturn = ValidateAndAssign(textBox, studentData, "Facebook link", "FacebookLink");
-                   
-                    if (ifReturn)
-                        return;
+                    else
+                    {
+                        studentData.BirthDate = bDatePicker.Value.ToString("MMMM dd, yyyy");
+                        studentData.Age = ageCBox.Text;
+                    }
                 }
+                // If the control's name contains "CNumBox" (contact number textbox)
+                else if (control.Name.Contains("CNumBox"))
+                {
+                    if (string.IsNullOrEmpty(control.Text))
+                    {
+                        MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        control.Focus();
+                        return false;
+                    }
+                    else
+                    {
+                        // Set the ContactNumber property of the current person's data based on the index
+                        personDatas[indexPerson].ContactNumber = control.Text.Trim();
+
+                        if (string.IsNullOrEmpty(personDatas[indexPerson].ContactNumber))
+                        {
+                            control.Focus();
+                            return false;
+                        }
+                    }
+
+                    // Move to the next person in the array.
+                    indexPerson++;
+                }
+                else if (control == landlineNumBox)
+                    ifReturn = ValidateAndAssign(control, studentData, "Landline number", "LandlineNumber");
+                else if (control == gmailAddBox)
+                    ifReturn = ValidateAndAssign(control, studentData, "Gmail address", "GmailAddress");
+                else if (control == fbLinkBox)
+                    ifReturn = ValidateAndAssign(control, studentData, "Facebook link", "FacebookLink");
+
+                // If above statement return a false value for ifReturn, this statement will return false to indicate validation failure.
+                if (!ifReturn)
+                    return false;
             }
+
+            // If all validations pass, return true.
+            return true;
+        }
+
+        // Calculate the age based on birth date and check if it matches the selected age.
+        private bool ValidateStudentAgeInBDate()
+        {
+            int age = DateTime.Today.Year - bDatePicker.Value.Year;
+
+            if (bDatePicker.Value.AddYears(age) > DateTime.Today)
+                age--;
+
+            return age == Convert.ToInt16(ageCBox.Text);
         }
 
         // It will return true if there is an issue; otherwise, it will return false.
@@ -389,7 +474,7 @@ namespace SchoolTracker
                 MessageBox.Show($"{fieldName} is empty. Please enter a {fieldName}.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox.Focus();
 
-                return true;
+                return false;
             }
             else
             {
@@ -402,11 +487,11 @@ namespace SchoolTracker
                 {
                     textBox.Focus();
 
-                    return true;
+                    return false;
                 }
             }
 
-            return false;
+            return true;
         }
 
         #endregion
@@ -431,6 +516,5 @@ namespace SchoolTracker
         }
 
         #endregion
-
     }
 }
