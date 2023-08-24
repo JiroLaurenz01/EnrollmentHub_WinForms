@@ -386,85 +386,95 @@ namespace SchoolTracker
             // Loop through each control in controlList to be validated.
             foreach (Control control in controlList)
             {
-                if (control == studentPicture)
+                switch (control)
                 {
-                    // If student picture is empty, show an error message. Return false to indicate validation failure.
-                    // Else, store the student picture in student data.
-                    if (ImageEquals(studentPicture.Image, SchoolTracker.Properties.Resources.user))
-                    {
-                        MessageBox.Show("The student picture is empty. Please select your picture.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
-                    }
-                    else
-                        studentData.Image = studentPicture.Image;
-                }
-                else if (control == bDatePicker)
-                {
-                    // If student age and birth date don't match, show an error message. Return false to indicate validation failure.
-                    // Else, set birth date and age in student data.
-                    if (!ValidateStudentAgeInBDate())
-                    {
-                        MessageBox.Show("The age and birth date did not match. Please enter a correct birth date or age.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
-                    }
-                    else
-                    {
-                        studentData.BirthDate = bDatePicker.Value.ToString("MMMM dd, yyyy");
-                        studentData.Age = ageCBox.Text;
-                    }
-                }
-                else if (control == genderCard)
-                {
-                    // If student selected gender is empty, show an error message. Return false to indicate validation failure.
-                    // Else, set gender in student data.
-                    if (!maleBtn.Checked && !femaleBtn.Checked)
-                    {
-                        MessageBox.Show("Selected gender is empty. Please select your gender.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
-                    }
-                    else
-                        studentData.Gender = (maleBtn.Checked) ? "Male" : "Female";
-                }
-                // If the control's name contains "CNumBox" (contact number textbox)
-                else if (control.Name.Contains("CNumBox"))
-                {
-                    if (string.IsNullOrEmpty(control.Text))
-                    {
-                        MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        control.Focus();
-                        return false;
-                    }
-                    else
-                    {
-                        // Set the ContactNumber property of the current person's data based on the index
-                        personDatas[indexPerson].ContactNumber = control.Text.Trim();
-
-                        if (string.IsNullOrEmpty(personDatas[indexPerson].ContactNumber))
+                    // Handling student picture
+                    case PictureBox pictureBox when pictureBox == studentPicture:
+                        // If student picture is empty, show an error message. Return false to indicate validation failure.
+                        // Else, store the student picture in student data.
+                        if (ImageEquals(pictureBox.Image, SchoolTracker.Properties.Resources.user))
                         {
-                            control.Focus();
+                            MessageBox.Show("The student picture is empty. Please select your picture.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return false;
                         }
-                    }
+                        else
+                            studentData.Image = pictureBox.Image;
+                        break;
 
-                    // Move to the next person in the array.
-                    indexPerson++;
-                }
-                else if (control == landlineNumBox)
-                    ifReturn = ValidateAndAssign(control, studentData, "Landline number", "LandlineNumber");
-                else if (control == gmailAddBox)
-                    ifReturn = ValidateAndAssign(control, studentData, "Gmail address", "GmailAddress");
-                else if (control == fbLinkBox)
-                    ifReturn = ValidateAndAssign(control, studentData, "Facebook link", "FacebookLink");
-                else
-                {
-                    if (String.IsNullOrEmpty(control.Text) && control is MaterialTextBox textBox)
-                    {
-                        string capitalizedString = char.ToUpper(textBox.Hint[0]) + textBox.Hint.Substring(1).ToLower();
+                    // Handling birth date and age
+                    case Guna2DateTimePicker datePicker when datePicker == bDatePicker:
+                        // If student age and birth date don't match, show an error message. Return false to indicate validation failure.
+                        // Else, set birth date and age in student data.
+                        if (!ValidateStudentAgeInBDate())
+                        {
+                            MessageBox.Show("The age and birth date did not match. Please enter a correct birth date or age.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                        else
+                        {
+                            studentData.BirthDate = datePicker.Value.ToString("MMMM dd, yyyy");
+                            studentData.Age = ageCBox.Text;
+                        }
+                        break;
 
-                        MessageBox.Show($"{capitalizedString} is empty. Please enter a {textBox.Hint.ToLower()}.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        control.Focus();
-                        return false;
-                    }
+                    // Handling gender selection
+                    case MaterialCard card when card == genderCard:
+                        // If student selected gender is empty, show an error message. Return false to indicate validation failure.
+                        // Else, set gender in student data.
+                        if (!maleBtn.Checked && !femaleBtn.Checked)
+                        {
+                            MessageBox.Show("Selected gender is empty. Please select your gender.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                        else
+                            studentData.Gender = (maleBtn.Checked) ? "Male" : "Female";
+                        break;
+
+                    // Handling phone number text boxes
+                    case MaterialTextBox textBox when control.Name.Contains("CNumBox"):
+                        if (string.IsNullOrEmpty(textBox.Text))
+                        {
+                            MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            textBox.Focus();
+                            return false;
+                        }
+                        else
+                        {
+                            // Set the ContactNumber property of the current person's data based on the index
+                            personDatas[indexPerson].ContactNumber = textBox.Text.Trim();
+
+                            if (string.IsNullOrEmpty(personDatas[indexPerson].ContactNumber))
+                            {
+                                textBox.Focus();
+                                return false;
+                            }
+                        }
+
+                        // Move to the next person in the array.
+                        indexPerson++;
+                        break;
+
+                    // Handling specific text boxes with validation
+                    case MaterialTextBox textBox when control == landlineNumBox:
+                        ifReturn = ValidateAndAssign(textBox, studentData, "Landline number", "LandlineNumber");
+                        break;
+                    case MaterialTextBox textBox when control == gmailAddBox:
+                        ifReturn = ValidateAndAssign(textBox, studentData, "Gmail address", "GmailAddress");
+                        break;
+                    case MaterialTextBox textBox when control == fbLinkBox:
+                        ifReturn = ValidateAndAssign(textBox, studentData, "Facebook link", "FacebookLink");
+                        break;
+
+                    // Handling other MaterialTextBox controls
+                    case MaterialTextBox materialTextBox:
+                        if (String.IsNullOrEmpty(materialTextBox.Text))
+                        {
+                            string capitalizedString = char.ToUpper(materialTextBox.Hint[0]) + materialTextBox.Hint.Substring(1).ToLower();
+                            MessageBox.Show($"{capitalizedString} is empty. Please enter a {materialTextBox.Hint.ToLower()}.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            materialTextBox.Focus();
+                            return false;
+                        }
+                        break;
                 }
 
                 // If above statement return a false value for ifReturn, this statement will return false to indicate validation failure.
