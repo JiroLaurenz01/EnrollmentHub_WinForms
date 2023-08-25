@@ -338,8 +338,6 @@ namespace SchoolTracker
                 enrollmentTab.SelectedIndex = nextTabIndex;
                 enrollmentTab.Selecting += enrollmentTab_Selecting;
             }
-
-            RetrievingInformation();
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -713,6 +711,26 @@ namespace SchoolTracker
         #endregion
 
         #region GENERAL FUNCTIONS FOR BASIC INFORMATION REVIEW TAB
+
+        #region FUNCTION FOR FINALIZING INFORMATION
+
+        private void finalizeInfoBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Do you want to continue?", "School Admin", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.Yes)
+            {
+                MessageBox.Show("Finalized successfully.", "School Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+
+                enrollmentTab.Selecting -= enrollmentTab_Selecting;
+                enrollmentTab.SelectedIndex = nextTabIndex;
+                enrollmentTab.Selecting += enrollmentTab_Selecting;
+            }
+        }
+
+        #endregion
 
         #region FUNCTION FOR BACK BUTTON
 
