@@ -150,7 +150,7 @@
             this.studentPicture = new System.Windows.Forms.PictureBox();
             this.basicInfoRevTab = new System.Windows.Forms.TabPage();
             this.infoRevBackBtn = new MaterialSkin.Controls.MaterialButton();
-            this.submitBtn = new MaterialSkin.Controls.MaterialButton();
+            this.finalizeInfoBtn = new MaterialSkin.Controls.MaterialButton();
             this.revGenderBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel21 = new MaterialSkin.Controls.MaterialLabel();
             this.revAgeBox = new MaterialSkin.Controls.MaterialTextBox();
@@ -2488,7 +2488,7 @@
             // 
             this.basicInfoRevTab.BackColor = System.Drawing.Color.White;
             this.basicInfoRevTab.Controls.Add(this.infoRevBackBtn);
-            this.basicInfoRevTab.Controls.Add(this.submitBtn);
+            this.basicInfoRevTab.Controls.Add(this.finalizeInfoBtn);
             this.basicInfoRevTab.Controls.Add(this.revGenderBox);
             this.basicInfoRevTab.Controls.Add(this.materialLabel21);
             this.basicInfoRevTab.Controls.Add(this.revAgeBox);
@@ -2620,26 +2620,27 @@
             this.infoRevBackBtn.UseVisualStyleBackColor = false;
             this.infoRevBackBtn.Click += new System.EventHandler(this.infoRevBackBtn_Click);
             // 
-            // submitBtn
+            // finalizeInfoBtn
             // 
-            this.submitBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.submitBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.submitBtn.Depth = 0;
-            this.submitBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.submitBtn.HighEmphasis = true;
-            this.submitBtn.Icon = null;
-            this.submitBtn.Location = new System.Drawing.Point(1553, 895);
-            this.submitBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.submitBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.submitBtn.Name = "submitBtn";
-            this.submitBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.submitBtn.Size = new System.Drawing.Size(84, 36);
-            this.submitBtn.TabIndex = 476;
-            this.submitBtn.Text = "FINALIZE";
-            this.submitBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.submitBtn.UseAccentColor = false;
-            this.submitBtn.UseMnemonic = false;
-            this.submitBtn.UseVisualStyleBackColor = false;
+            this.finalizeInfoBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.finalizeInfoBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.finalizeInfoBtn.Depth = 0;
+            this.finalizeInfoBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.finalizeInfoBtn.HighEmphasis = true;
+            this.finalizeInfoBtn.Icon = null;
+            this.finalizeInfoBtn.Location = new System.Drawing.Point(1553, 895);
+            this.finalizeInfoBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.finalizeInfoBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.finalizeInfoBtn.Name = "finalizeInfoBtn";
+            this.finalizeInfoBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.finalizeInfoBtn.Size = new System.Drawing.Size(84, 36);
+            this.finalizeInfoBtn.TabIndex = 476;
+            this.finalizeInfoBtn.Text = "FINALIZE";
+            this.finalizeInfoBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.finalizeInfoBtn.UseAccentColor = false;
+            this.finalizeInfoBtn.UseMnemonic = false;
+            this.finalizeInfoBtn.UseVisualStyleBackColor = false;
+            this.finalizeInfoBtn.Click += new System.EventHandler(this.finalizeInfoBtn_Click);
             // 
             // revGenderBox
             // 
@@ -2877,7 +2878,7 @@
             this.revLRNBox.AnimateReadOnly = false;
             this.revLRNBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.revLRNBox.Depth = 0;
-            this.revLRNBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.revLRNBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revLRNBox.LeadingIcon = null;
             this.revLRNBox.Location = new System.Drawing.Point(186, 881);
             this.revLRNBox.MaxLength = 50;
@@ -3594,7 +3595,7 @@
             this.revPCityBox.AnimateReadOnly = false;
             this.revPCityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.revPCityBox.Depth = 0;
-            this.revPCityBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.revPCityBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revPCityBox.LeadingIcon = null;
             this.revPCityBox.Location = new System.Drawing.Point(965, 369);
             this.revPCityBox.MaxLength = 50;
@@ -5627,7 +5628,7 @@
         private MaterialSkin.Controls.MaterialCard materialCard4;
         private System.Windows.Forms.PictureBox revStudentPicture;
         private MaterialSkin.Controls.MaterialButton infoRevBackBtn;
-        private MaterialSkin.Controls.MaterialButton submitBtn;
+        private MaterialSkin.Controls.MaterialButton finalizeInfoBtn;
         private MaterialSkin.Controls.MaterialTextBox revGenderBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel21;
         private MaterialSkin.Controls.MaterialTextBox revAgeBox;
