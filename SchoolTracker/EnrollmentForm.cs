@@ -327,15 +327,21 @@ namespace SchoolTracker
         {
             int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
-            //If the information is validated(all checks pass), show a "VALID" message.
-            if (ValidateInformation())
-            {
-                MessageBox.Show("VALID");
+            //If the information is validated(all checks pass), the user will be directed to the next tab.
+            //if (ValidateInformation())
+            //{
+            //    MessageBox.Show("VALID");
 
-                enrollmentTab.Selecting -= enrollmentTab_Selecting;
-                enrollmentTab.SelectedIndex = nextTabIndex;
-                enrollmentTab.Selecting += enrollmentTab_Selecting;
-            }
+            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            //    enrollmentTab.SelectedIndex = nextTabIndex;
+            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
+            //}
+
+            RetrievingInformation();
+
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -417,6 +423,7 @@ namespace SchoolTracker
                         }
                         else
                             studentData.Image = pictureBox.Image;
+
                         break;
 
                     // Handling birth date and age
@@ -433,6 +440,7 @@ namespace SchoolTracker
                             studentData.BirthDate = datePicker.Value.ToString("MMMM dd, yyyy");
                             studentData.Age = ageCBox.Text;
                         }
+
                         break;
 
                     // Handling gender selection
@@ -446,6 +454,7 @@ namespace SchoolTracker
                         }
                         else
                             studentData.Gender = (maleBtn.Checked) ? "Male" : "Female";
+
                         break;
 
                     // Handling phone number text boxes
@@ -533,7 +542,7 @@ namespace SchoolTracker
 
         #endregion
 
-        #region FUNCTION FOR STORING THE REMAINING FUNCTION TO THE CLASSES.
+        #region FUNCTION FOR STORING THE REMAINING INFORMATION TO THE CLASSES.
 
         private void PassingInformation()
         {
@@ -705,7 +714,31 @@ namespace SchoolTracker
 
         #region GENERAL FUNCTIONS FOR BASIC INFORMATION REVIEW TAB
 
+        #region FUNCTION FOR BACK BUTTON
 
+        private void infoRevBackBtn_Click(object sender, EventArgs e)
+        {
+            int nextTabIndex = enrollmentTab.SelectedIndex - 1;
+
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
+        }
+
+        #endregion
+
+        #region FUNCTION FOR RETRIEVING INFORMATION FROM THE CLASSES
+
+        private void RetrievingInformation()
+        {
+
+            if (studentData.Image == null)
+                MessageBox.Show("NULL");
+            else
+                revStudentPicture.Image = studentPicture.Image;
+        }
+
+        #endregion
 
         #endregion
 
@@ -716,7 +749,6 @@ namespace SchoolTracker
         private void openWebBtn_Click(object sender, EventArgs e) => functions.OpenWeb(0);
         private void termUseBtn_Click(object sender, EventArgs e) => functions.OpenWeb(1);
         private void privacyStateBtn_Click(object sender, EventArgs e) => functions.OpenWeb(2);
-
 
         #endregion
 
@@ -758,5 +790,6 @@ namespace SchoolTracker
         #endregion
 
         #endregion
+
     }
 }

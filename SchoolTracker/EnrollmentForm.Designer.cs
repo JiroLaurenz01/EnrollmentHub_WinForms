@@ -149,7 +149,7 @@
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.studentPicture = new System.Windows.Forms.PictureBox();
             this.basicInfoRevTab = new System.Windows.Forms.TabPage();
-            this.resetBtn = new MaterialSkin.Controls.MaterialButton();
+            this.infoRevBackBtn = new MaterialSkin.Controls.MaterialButton();
             this.submitBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialTextBox63 = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel21 = new MaterialSkin.Controls.MaterialLabel();
@@ -253,7 +253,7 @@
             this.materialDivider13 = new MaterialSkin.Controls.MaterialDivider();
             this.materialLabel102 = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.revStudentPicture = new System.Windows.Forms.PictureBox();
             this.coursesTab = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
@@ -325,7 +325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentPicture)).BeginInit();
             this.basicInfoRevTab.SuspendLayout();
             this.materialCard4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.revStudentPicture)).BeginInit();
             this.coursesTab.SuspendLayout();
             this.panel1.SuspendLayout();
             this.materialCard3.SuspendLayout();
@@ -2083,7 +2083,7 @@
             this.landlineNumBox.Hint = "Landline Number";
             this.landlineNumBox.LeadingIcon = null;
             this.landlineNumBox.Location = new System.Drawing.Point(533, 162);
-            this.landlineNumBox.MaxLength = 50;
+            this.landlineNumBox.MaxLength = 9;
             this.landlineNumBox.MouseState = MaterialSkin.MouseState.OUT;
             this.landlineNumBox.Multiline = false;
             this.landlineNumBox.Name = "landlineNumBox";
@@ -2487,7 +2487,7 @@
             // basicInfoRevTab
             // 
             this.basicInfoRevTab.BackColor = System.Drawing.Color.White;
-            this.basicInfoRevTab.Controls.Add(this.resetBtn);
+            this.basicInfoRevTab.Controls.Add(this.infoRevBackBtn);
             this.basicInfoRevTab.Controls.Add(this.submitBtn);
             this.basicInfoRevTab.Controls.Add(this.materialTextBox63);
             this.basicInfoRevTab.Controls.Add(this.materialLabel21);
@@ -2598,26 +2598,27 @@
             this.basicInfoRevTab.TabIndex = 1;
             this.basicInfoRevTab.Text = "INFORMATION REVIEW";
             // 
-            // resetBtn
+            // infoRevBackBtn
             // 
-            this.resetBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.resetBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.resetBtn.Depth = 0;
-            this.resetBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.resetBtn.HighEmphasis = true;
-            this.resetBtn.Icon = null;
-            this.resetBtn.Location = new System.Drawing.Point(1643, 895);
-            this.resetBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.resetBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.resetBtn.Name = "resetBtn";
-            this.resetBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.resetBtn.Size = new System.Drawing.Size(64, 36);
-            this.resetBtn.TabIndex = 477;
-            this.resetBtn.Text = "back";
-            this.resetBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.resetBtn.UseAccentColor = true;
-            this.resetBtn.UseMnemonic = false;
-            this.resetBtn.UseVisualStyleBackColor = false;
+            this.infoRevBackBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.infoRevBackBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.infoRevBackBtn.Depth = 0;
+            this.infoRevBackBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.infoRevBackBtn.HighEmphasis = true;
+            this.infoRevBackBtn.Icon = null;
+            this.infoRevBackBtn.Location = new System.Drawing.Point(1643, 895);
+            this.infoRevBackBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.infoRevBackBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.infoRevBackBtn.Name = "infoRevBackBtn";
+            this.infoRevBackBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.infoRevBackBtn.Size = new System.Drawing.Size(64, 36);
+            this.infoRevBackBtn.TabIndex = 477;
+            this.infoRevBackBtn.Text = "back";
+            this.infoRevBackBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.infoRevBackBtn.UseAccentColor = true;
+            this.infoRevBackBtn.UseMnemonic = false;
+            this.infoRevBackBtn.UseVisualStyleBackColor = false;
+            this.infoRevBackBtn.Click += new System.EventHandler(this.infoRevBackBtn_Click);
             // 
             // submitBtn
             // 
@@ -2825,7 +2826,6 @@
             this.materialTextBox11.AnimateReadOnly = false;
             this.materialTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.materialTextBox11.Depth = 0;
-            this.materialTextBox11.Enabled = false;
             this.materialTextBox11.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox11.LeadingIcon = null;
             this.materialTextBox11.Location = new System.Drawing.Point(704, 881);
@@ -2844,7 +2844,6 @@
             this.materialTextBox12.AnimateReadOnly = false;
             this.materialTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.materialTextBox12.Depth = 0;
-            this.materialTextBox12.Enabled = false;
             this.materialTextBox12.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox12.LeadingIcon = null;
             this.materialTextBox12.Location = new System.Drawing.Point(1125, 881);
@@ -4238,7 +4237,7 @@
             // materialCard4
             // 
             this.materialCard4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard4.Controls.Add(this.pictureBox1);
+            this.materialCard4.Controls.Add(this.revStudentPicture);
             this.materialCard4.Depth = 0;
             this.materialCard4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard4.Location = new System.Drawing.Point(186, 51);
@@ -4249,15 +4248,15 @@
             this.materialCard4.Size = new System.Drawing.Size(160, 160);
             this.materialCard4.TabIndex = 358;
             // 
-            // pictureBox1
+            // revStudentPicture
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
+            this.revStudentPicture.Image = ((System.Drawing.Image)(resources.GetObject("revStudentPicture.Image")));
+            this.revStudentPicture.Location = new System.Drawing.Point(5, 5);
+            this.revStudentPicture.Name = "revStudentPicture";
+            this.revStudentPicture.Size = new System.Drawing.Size(150, 150);
+            this.revStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.revStudentPicture.TabIndex = 28;
+            this.revStudentPicture.TabStop = false;
             // 
             // coursesTab
             // 
@@ -5366,7 +5365,7 @@
             this.basicInfoRevTab.ResumeLayout(false);
             this.basicInfoRevTab.PerformLayout();
             this.materialCard4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.revStudentPicture)).EndInit();
             this.coursesTab.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -5626,8 +5625,8 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider13;
         private MaterialSkin.Controls.MaterialLabel materialLabel102;
         private MaterialSkin.Controls.MaterialCard materialCard4;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialButton resetBtn;
+        private System.Windows.Forms.PictureBox revStudentPicture;
+        private MaterialSkin.Controls.MaterialButton infoRevBackBtn;
         private MaterialSkin.Controls.MaterialButton submitBtn;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox63;
         private MaterialSkin.Controls.MaterialLabel materialLabel21;
