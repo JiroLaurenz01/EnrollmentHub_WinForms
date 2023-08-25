@@ -328,20 +328,18 @@ namespace SchoolTracker
             int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            //if (ValidateInformation())
-            //{
-            //    MessageBox.Show("VALID");
+            if (ValidateInformation())
+            {
+                MessageBox.Show("VALID");
 
-            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            //    enrollmentTab.SelectedIndex = nextTabIndex;
-            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
-            //}
+                RetrievingInformation();
+
+                enrollmentTab.Selecting -= enrollmentTab_Selecting;
+                enrollmentTab.SelectedIndex = nextTabIndex;
+                enrollmentTab.Selecting += enrollmentTab_Selecting;
+            }
 
             RetrievingInformation();
-
-            enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            enrollmentTab.SelectedIndex = nextTabIndex;
-            enrollmentTab.Selecting += enrollmentTab_Selecting;
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -518,6 +516,7 @@ namespace SchoolTracker
                     fpsBox.Focus();
                     return false;
                 }
+                studentData.FPSNumber = fpsBox.Text;
             }
             else
                 studentData.FPSNumber = "N/A";
@@ -530,6 +529,7 @@ namespace SchoolTracker
                     ipBox.Focus();
                     return false;
                 }
+                studentData.IPCommunity = ipBox.Text;
             }
             else
                 studentData.IPCommunity = "N/A";
@@ -731,11 +731,58 @@ namespace SchoolTracker
 
         private void RetrievingInformation()
         {
+            revStudentPicture.Image = studentData.Image;
 
-            if (studentData.Image == null)
-                MessageBox.Show("NULL");
-            else
-                revStudentPicture.Image = studentPicture.Image;
+            revLNameBox.Text = studentData.LastName;
+            revFNameBox.Text = studentData.FirstName;
+            revMNameBox.Text = studentData.MiddleName;
+            revENameBox.Text = studentData.ExtensionName;
+
+            revBDateBox.Text = studentData.BirthDate;
+            revAgeBox.Text = studentData.Age;
+            revGenderBox.Text = studentData.Gender;
+            revCNumBox.Text = studentData.ContactNumber;
+            revTelNumBox.Text = studentData.LandlineNumber;
+            revGmailAddBox.Text = studentData.GmailAddress;
+            revFBLinkBox.Text = studentData.FacebookLink;
+            revBPlaceBox.Text = studentData.BirthPlace;
+
+            revStreetNumBox.Text = studentData.StreetNumber;
+            revStreetNameBox.Text = studentData.StreetName;
+            revBrgyBox.Text = studentData.Barangay;
+            revCityBox.Text = studentData.City;
+            revProvBox.Text = studentData.Province;
+
+            revPStreetNumBox.Text = studentData.PStreetNumber;
+            revPStreetNameBox.Text = studentData.PStreetName;
+            revPBrgyBox.Text = studentData.PBarangay;
+            revPCityBox.Text = studentData.PCity;
+            revPProvBox.Text = studentData.PProvince;
+
+            revMLNameBox.Text = motherData.LastName;
+            revMFNameBox.Text = motherData.FirstName;
+            revMMNameBox.Text = motherData.MiddleName;
+            revMCNumBox.Text = motherData.ContactNumber;
+
+            revFLNameBox.Text = fatherData.LastName;
+            revFFNameBox.Text = fatherData.FirstName;
+            revFMNameBox.Text = fatherData.MiddleName;
+            revFENameBox.Text = fatherData.ExtensionName;
+            revFCNumBox.Text = fatherData.ContactNumber;
+
+            revGLNameBox.Text = guardianData.LastName;
+            revGFNameBox.Text = guardianData.FirstName;
+            revGMNameBox.Text = guardianData.MiddleName;
+            revGENameBox.Text = guardianData.ExtensionName;
+            revGCNumBox.Text = guardianData.ContactNumber;
+
+            revESchoolBox.Text = studentData.ElementarySchool;
+            revHSchoolBox.Text = studentData.HighSchool;
+            revSHSchoolBox.Text = studentData.SeniorHighSchool;
+
+            revLRNBox.Text = studentData.LRN;
+            revFPSBox.Text = studentData.FPSNumber;
+            revIPBox.Text = studentData.IPCommunity;
         }
 
         #endregion
