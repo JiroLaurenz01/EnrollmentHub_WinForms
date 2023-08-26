@@ -891,14 +891,17 @@ namespace SchoolTracker
 
         #endregion
 
-        #region FUNCTION FOR BACK TO FRONT PAGE
+        #region FUNCTION FOR BACK TO FRONT FORM
 
         private void enrollmentTab_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (enrollmentTab.SelectedIndex == 5)
-            //{
-
-            //}
+            if (enrollmentTab.SelectedIndex == 5)
+            {
+                this.Hide();
+                var FrontForm = new FrontForm();
+                FrontForm.FormClosed += (s, args) => this.Close();
+                FrontForm.Show();
+            }
 
         }
 
