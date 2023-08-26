@@ -328,14 +328,18 @@ namespace SchoolTracker
             int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            if (ValidateInformation())
-            {
-                RetrievingInformation();
+            //if (ValidateInformation())
+            //{
+            //    RetrievingInformation();
 
-                enrollmentTab.Selecting -= enrollmentTab_Selecting;
-                enrollmentTab.SelectedIndex = nextTabIndex;
-                enrollmentTab.Selecting += enrollmentTab_Selecting;
-            }
+            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            //    enrollmentTab.SelectedIndex = nextTabIndex;
+            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
+            //}
+
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -807,6 +811,36 @@ namespace SchoolTracker
 
         #endregion
 
+        #region GENERAL FUNCTIONS FOR COURSES SELECTION TAB
+
+        #region FUNCTIONS FOR SUBMIT BUTTON WITH VALIDATION
+
+        private void submitCoursesBtn_Click(object sender, EventArgs e)
+        {
+            int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
+        }
+
+        #endregion
+
+        #region FUNCTION FOR BACK BUTTON
+
+        private void coursesBackBtn_Click(object sender, EventArgs e)
+        {
+            int nextTabIndex = enrollmentTab.SelectedIndex - 1;
+
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
+        }
+
+        #endregion
+
+        #endregion
+
         #region GENERAL FUNCTIONS FOR ENROLLMENT FORM
 
         #region FUNCTIONS TO OPEN VARIOUS WEBSITES
@@ -821,8 +855,9 @@ namespace SchoolTracker
 
         private void enrollmentTab_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            // Prevent manual tab changing
-            e.Cancel = true;
+            if (enrollmentTab.SelectedIndex != 5)
+                // Prevent manual tab changing
+                e.Cancel = true;
         }
 
         #endregion
@@ -850,6 +885,21 @@ namespace SchoolTracker
                 skin.Theme = MaterialSkinManager.Themes.LIGHT;
                 thSwitch.Text = "LIGHT MODE";
             }
+        }
+
+
+
+        #endregion
+
+        #region FUNCTION FOR BACK TO FRONT PAGE
+
+        private void enrollmentTab_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if (enrollmentTab.SelectedIndex == 5)
+            //{
+
+            //}
+
         }
 
         #endregion

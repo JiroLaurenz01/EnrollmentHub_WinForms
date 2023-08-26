@@ -256,8 +256,8 @@
             this.revStudentPicture = new System.Windows.Forms.PictureBox();
             this.coursesTab = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
+            this.coursesBackBtn = new MaterialSkin.Controls.MaterialButton();
+            this.submitCoursesBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.materialCheckedListBox5 = new MaterialSkin.Controls.MaterialCheckedListBox();
             this.materialLabel75 = new MaterialSkin.Controls.MaterialLabel();
@@ -361,6 +361,7 @@
             this.enrollmentTab.SelectedIndex = 0;
             this.enrollmentTab.Size = new System.Drawing.Size(1784, 983);
             this.enrollmentTab.TabIndex = 0;
+            this.enrollmentTab.SelectedIndexChanged += new System.EventHandler(this.enrollmentTab_SelectedIndexChanged);
             this.enrollmentTab.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.enrollmentTab_Selecting);
             // 
             // basicInfoTab
@@ -4273,8 +4274,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.materialButton3);
-            this.panel1.Controls.Add(this.materialButton4);
+            this.panel1.Controls.Add(this.coursesBackBtn);
+            this.panel1.Controls.Add(this.submitCoursesBtn);
             this.panel1.Controls.Add(this.materialCard3);
             this.panel1.Controls.Add(this.materialLabel111);
             this.panel1.Controls.Add(this.userLabel);
@@ -4285,47 +4286,49 @@
             this.panel1.Size = new System.Drawing.Size(1569, 951);
             this.panel1.TabIndex = 0;
             // 
-            // materialButton3
+            // coursesBackBtn
             // 
-            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton3.Depth = 0;
-            this.materialButton3.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton3.HighEmphasis = true;
-            this.materialButton3.Icon = null;
-            this.materialButton3.Location = new System.Drawing.Point(1490, 892);
-            this.materialButton3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton3.Name = "materialButton3";
-            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton3.Size = new System.Drawing.Size(65, 36);
-            this.materialButton3.TabIndex = 22;
-            this.materialButton3.Text = "Reset";
-            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.materialButton3.UseAccentColor = true;
-            this.materialButton3.UseMnemonic = false;
-            this.materialButton3.UseVisualStyleBackColor = false;
+            this.coursesBackBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.coursesBackBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.coursesBackBtn.Depth = 0;
+            this.coursesBackBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.coursesBackBtn.HighEmphasis = true;
+            this.coursesBackBtn.Icon = null;
+            this.coursesBackBtn.Location = new System.Drawing.Point(1490, 892);
+            this.coursesBackBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.coursesBackBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.coursesBackBtn.Name = "coursesBackBtn";
+            this.coursesBackBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.coursesBackBtn.Size = new System.Drawing.Size(64, 36);
+            this.coursesBackBtn.TabIndex = 22;
+            this.coursesBackBtn.Text = "BACK";
+            this.coursesBackBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.coursesBackBtn.UseAccentColor = true;
+            this.coursesBackBtn.UseMnemonic = false;
+            this.coursesBackBtn.UseVisualStyleBackColor = false;
+            this.coursesBackBtn.Click += new System.EventHandler(this.coursesBackBtn_Click);
             // 
-            // materialButton4
+            // submitCoursesBtn
             // 
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(1400, 892);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(75, 36);
-            this.materialButton4.TabIndex = 21;
-            this.materialButton4.Text = "SUBMIT";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseMnemonic = false;
-            this.materialButton4.UseVisualStyleBackColor = false;
+            this.submitCoursesBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.submitCoursesBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.submitCoursesBtn.Depth = 0;
+            this.submitCoursesBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.submitCoursesBtn.HighEmphasis = true;
+            this.submitCoursesBtn.Icon = null;
+            this.submitCoursesBtn.Location = new System.Drawing.Point(1400, 892);
+            this.submitCoursesBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.submitCoursesBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.submitCoursesBtn.Name = "submitCoursesBtn";
+            this.submitCoursesBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.submitCoursesBtn.Size = new System.Drawing.Size(75, 36);
+            this.submitCoursesBtn.TabIndex = 21;
+            this.submitCoursesBtn.Text = "SUBMIT";
+            this.submitCoursesBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.submitCoursesBtn.UseAccentColor = false;
+            this.submitCoursesBtn.UseMnemonic = false;
+            this.submitCoursesBtn.UseVisualStyleBackColor = false;
+            this.submitCoursesBtn.Click += new System.EventHandler(this.submitCoursesBtn_Click);
             // 
             // materialCard3
             // 
@@ -4885,7 +4888,7 @@
             this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
             this.materialButton5.Size = new System.Drawing.Size(65, 36);
             this.materialButton5.TabIndex = 22;
-            this.materialButton5.Text = "Reset";
+            this.materialButton5.Text = "BACK";
             this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.materialButton5.UseAccentColor = true;
             this.materialButton5.UseMnemonic = false;
@@ -5665,8 +5668,8 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel111;
         private MaterialSkin.Controls.MaterialLabel userLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private MaterialSkin.Controls.MaterialButton materialButton3;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
+        private MaterialSkin.Controls.MaterialButton coursesBackBtn;
+        private MaterialSkin.Controls.MaterialButton submitCoursesBtn;
         private System.Windows.Forms.Panel panel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel118;
         private MaterialSkin.Controls.MaterialButton materialButton5;
