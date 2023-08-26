@@ -28,7 +28,10 @@ namespace SchoolTracker
                 if (Regex.IsMatch(value, pattern))
                     _contactNumber = value;
                 else
+                {
                     MessageBox.Show("Invalid phone number. Please enter a valid Philippine phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _contactNumber = null;
+                }
             }
         }
     }
@@ -54,7 +57,10 @@ namespace SchoolTracker
                 if (Regex.IsMatch(value, pattern))
                     _landlineNumber = value;
                 else
+                {
                     MessageBox.Show("Invalid landline number. Please enter a valid Philippine landline number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _landlineNumber = null;
+                }
             }
         }
 
@@ -71,7 +77,10 @@ namespace SchoolTracker
                 if (Regex.IsMatch(value, pattern))
                     _gmailAddress = value;
                 else
+                {
                     MessageBox.Show("Invalid gmail address. Please enter a valid gmail address.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _gmailAddress = null;
+                }
             }
         }
 
@@ -88,7 +97,10 @@ namespace SchoolTracker
                 if (Regex.IsMatch(value, pattern, RegexOptions.IgnoreCase))
                     _facebookLink = value;
                 else
+                {
                     MessageBox.Show("Invalid Facebook link. Please enter a valid link.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _facebookLink = null;
+                }
             }
         }
 
