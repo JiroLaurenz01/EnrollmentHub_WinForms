@@ -34,6 +34,8 @@ namespace SchoolTracker
 
         #endregion
 
+        int previousTab = 0;
+
         public EnrollmentForm()
         {
             InitializeComponent();
@@ -328,18 +330,14 @@ namespace SchoolTracker
             int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            //if (ValidateInformation())
-            //{
-            //    RetrievingInformation();
+            if (ValidateInformation())
+            {
+                RetrievingInformation();
 
-            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            //    enrollmentTab.SelectedIndex = nextTabIndex;
-            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
-            //}
-
-            enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            enrollmentTab.SelectedIndex = nextTabIndex;
-            enrollmentTab.Selecting += enrollmentTab_Selecting;
+                enrollmentTab.Selecting -= enrollmentTab_Selecting;
+                enrollmentTab.SelectedIndex = nextTabIndex;
+                enrollmentTab.Selecting += enrollmentTab_Selecting;
+            }
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -474,8 +472,6 @@ namespace SchoolTracker
                                     textBox.Focus();
                                     return false;
                                 }
-
-                                MessageBox.Show(personDatas[indexPerson].ContactNumber);
                             }
 
                         // Move to the next person in the array.
@@ -851,13 +847,32 @@ namespace SchoolTracker
 
         #endregion
 
-        #region FUNCTION FOR DISABLING TAB CONTROL
+        #region FUNCTION FOR DISABLING TAB CONTROL AND FOR RETURNING TO THE FRONT FORM
 
         private void enrollmentTab_Selecting(object sender, TabControlCancelEventArgs e)
         {
             if (enrollmentTab.SelectedIndex != 5)
-                // Prevent manual tab changing
+                //Prevent manual tab changing.
                 e.Cancel = true;
+
+
+            if (e.TabPageIndex == 5)
+            {
+                DialogResult dr = MessageBox.Show("Returning to the front form will clear all your provided data. Would you like to continue?", "PUP-SIS", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    // Returning to the front form.
+                    this.Hide();
+                    var FrontForm = new FrontForm();
+                    FrontForm.FormClosed += (s, args) => this.Close();
+                    FrontForm.Show();
+                }
+                else
+                    e.Cancel = true; // Cancel the tab selection change.
+            }
+            else
+                previousTab = e.TabPageIndex; // Update previousTab for other tab changes.
         }
 
         #endregion
@@ -885,24 +900,6 @@ namespace SchoolTracker
                 skin.Theme = MaterialSkinManager.Themes.LIGHT;
                 thSwitch.Text = "LIGHT MODE";
             }
-        }
-
-
-
-        #endregion
-
-        #region FUNCTION FOR BACK TO FRONT FORM
-
-        private void enrollmentTab_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (enrollmentTab.SelectedIndex == 5)
-            {
-                this.Hide();
-                var FrontForm = new FrontForm();
-                FrontForm.FormClosed += (s, args) => this.Close();
-                FrontForm.Show();
-            }
-
         }
 
         #endregion

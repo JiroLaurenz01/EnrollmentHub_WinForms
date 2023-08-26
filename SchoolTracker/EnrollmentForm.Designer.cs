@@ -361,7 +361,6 @@
             this.enrollmentTab.SelectedIndex = 0;
             this.enrollmentTab.Size = new System.Drawing.Size(1784, 983);
             this.enrollmentTab.TabIndex = 0;
-            this.enrollmentTab.SelectedIndexChanged += new System.EventHandler(this.enrollmentTab_SelectedIndexChanged);
             this.enrollmentTab.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.enrollmentTab_Selecting);
             // 
             // basicInfoTab
@@ -4886,7 +4885,7 @@
             this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton5.Name = "materialButton5";
             this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton5.Size = new System.Drawing.Size(65, 36);
+            this.materialButton5.Size = new System.Drawing.Size(64, 36);
             this.materialButton5.TabIndex = 22;
             this.materialButton5.Text = "BACK";
             this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
