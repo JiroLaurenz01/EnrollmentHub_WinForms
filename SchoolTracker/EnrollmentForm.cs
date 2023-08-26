@@ -330,8 +330,6 @@ namespace SchoolTracker
             //If the information is validated(all checks pass), the user will be directed to the next tab.
             if (ValidateInformation())
             {
-                MessageBox.Show("VALID");
-
                 RetrievingInformation();
 
                 enrollmentTab.Selecting -= enrollmentTab_Selecting;
