@@ -470,6 +470,8 @@ namespace SchoolTracker
                                     textBox.Focus();
                                     return false;
                                 }
+
+                                MessageBox.Show(personDatas[indexPerson].ContactNumber);
                             }
 
                         // Move to the next person in the array.

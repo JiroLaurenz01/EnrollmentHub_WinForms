@@ -23,17 +23,29 @@ namespace SchoolTracker
             get { return _contactNumber; }
             set
             {
+                // Regular expression pattern for a valid Philippine contact number.
                 string pattern = @"^(09\d{9}|(\+63|0)[2-8]\d{7})$";
-                // Check if the provided value matches the pattern for valid phone numbers
-                if (Regex.IsMatch(value, pattern))
-                    _contactNumber = value;
-                else
-                {
-                    MessageBox.Show("Invalid phone number. Please enter a valid Philippine phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    _contactNumber = null;
-                }
+
+                Validate(pattern, ref _contactNumber, value, "phone number", "Philippine phone number");
             }
         }
+
+        // This method is defined to validate a given value against a regular expression pattern.
+        // If the value matches the pattern, it's assigned to the specified privateHolder variable.
+        // If the value doesn't match, an error message is displayed and the privateHolder variable is set to null.
+        public void Validate(string pattern, ref string privateHolder, string value, string name, string secondName)
+        {
+            // Check if the provided value matches the specified regular expression pattern.
+            if (Regex.IsMatch(value, pattern))
+                privateHolder = value; // Assign the value to the privateHolder if it's valid.
+            else
+            {
+                // Display an error message using string interpolation to include the invalid value and the expected type.
+                MessageBox.Show($"Invalid {name}. Please enter a valid {secondName}.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                privateHolder = null; // Set the privateHolder to null since the value is invalid.
+            }
+        }
+
     }
 
     class StudentData : PersonData
@@ -51,16 +63,10 @@ namespace SchoolTracker
             get { return _landlineNumber; }
             set
             {
+                // Regular expression pattern for a valid Philippine landline number.
                 string pattern = @"^(02|0[3-8])\d{7}$";
 
-                // Check if the provided value matches the pattern for valid landline numbers
-                if (Regex.IsMatch(value, pattern))
-                    _landlineNumber = value;
-                else
-                {
-                    MessageBox.Show("Invalid landline number. Please enter a valid Philippine landline number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    _landlineNumber = null;
-                }
+                Validate(pattern, ref _landlineNumber, value, "landline number", "Philippine landline number");
             }
         }
 
@@ -71,16 +77,10 @@ namespace SchoolTracker
             get { return _gmailAddress; }
             set
             {
+                // Regular expression pattern for a valid Gmail address.
                 string pattern = @"^[a-zA-Z0-9._%+-]+@gmail\.com$";
 
-                // Check if the provided value matches the pattern for valid gmail address
-                if (Regex.IsMatch(value, pattern))
-                    _gmailAddress = value;
-                else
-                {
-                    MessageBox.Show("Invalid gmail address. Please enter a valid gmail address.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    _gmailAddress = null;
-                }
+                Validate(pattern, ref _gmailAddress, value, "Gmail address", "address");
             }
         }
 
@@ -91,16 +91,10 @@ namespace SchoolTracker
             get { return _facebookLink; }
             set
             {
-                // Regular expression pattern for a valid Facebook profile link
+                // Regular expression pattern for a valid Facebook profile link.
                 string pattern = @"^(https?://)?(www\.)?facebook\.com/[\w.-]+/?$";
 
-                if (Regex.IsMatch(value, pattern, RegexOptions.IgnoreCase))
-                    _facebookLink = value;
-                else
-                {
-                    MessageBox.Show("Invalid Facebook link. Please enter a valid link.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    _facebookLink = null;
-                }
+                Validate(pattern, ref _facebookLink, value, "Facebook link", "link");
             }
         }
 
@@ -128,12 +122,6 @@ namespace SchoolTracker
     }
 
     class MotherData : PersonData { }
-    class FatherData : PersonData
-    {
-        public string ExtensionName { get; set; }
-    }
-    class GuardianData : PersonData
-    {
-        public string ExtensionName { get; set; }
-    }
+    class FatherData : PersonData { public string ExtensionName { get; set; } }
+    class GuardianData : PersonData { public string ExtensionName { get; set; } }
 }
