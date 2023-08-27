@@ -289,8 +289,8 @@
             this.coursesRevTab = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.materialLabel118 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
+            this.coursesRevBackBtn = new MaterialSkin.Controls.MaterialButton();
+            this.finalizeCoursesBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
             this.fifthCourseBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel112 = new MaterialSkin.Controls.MaterialLabel();
@@ -4847,8 +4847,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.materialLabel118);
-            this.panel2.Controls.Add(this.materialButton5);
-            this.panel2.Controls.Add(this.materialButton6);
+            this.panel2.Controls.Add(this.coursesRevBackBtn);
+            this.panel2.Controls.Add(this.finalizeCoursesBtn);
             this.panel2.Controls.Add(this.materialCard5);
             this.panel2.Controls.Add(this.materialLabel119);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -4872,47 +4872,49 @@
             this.materialLabel118.TabIndex = 23;
             this.materialLabel118.Text = "REVIEW YOUR COURSES INFORMATION";
             // 
-            // materialButton5
+            // coursesRevBackBtn
             // 
-            this.materialButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton5.Depth = 0;
-            this.materialButton5.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton5.HighEmphasis = true;
-            this.materialButton5.Icon = null;
-            this.materialButton5.Location = new System.Drawing.Point(1487, 895);
-            this.materialButton5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton5.Name = "materialButton5";
-            this.materialButton5.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton5.Size = new System.Drawing.Size(64, 36);
-            this.materialButton5.TabIndex = 22;
-            this.materialButton5.Text = "BACK";
-            this.materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.materialButton5.UseAccentColor = true;
-            this.materialButton5.UseMnemonic = false;
-            this.materialButton5.UseVisualStyleBackColor = false;
+            this.coursesRevBackBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.coursesRevBackBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.coursesRevBackBtn.Depth = 0;
+            this.coursesRevBackBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.coursesRevBackBtn.HighEmphasis = true;
+            this.coursesRevBackBtn.Icon = null;
+            this.coursesRevBackBtn.Location = new System.Drawing.Point(1487, 895);
+            this.coursesRevBackBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.coursesRevBackBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.coursesRevBackBtn.Name = "coursesRevBackBtn";
+            this.coursesRevBackBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.coursesRevBackBtn.Size = new System.Drawing.Size(64, 36);
+            this.coursesRevBackBtn.TabIndex = 22;
+            this.coursesRevBackBtn.Text = "BACK";
+            this.coursesRevBackBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.coursesRevBackBtn.UseAccentColor = true;
+            this.coursesRevBackBtn.UseMnemonic = false;
+            this.coursesRevBackBtn.UseVisualStyleBackColor = false;
+            this.coursesRevBackBtn.Click += new System.EventHandler(this.coursesRevBackBtn_Click);
             // 
-            // materialButton6
+            // finalizeCoursesBtn
             // 
-            this.materialButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton6.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton6.Depth = 0;
-            this.materialButton6.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton6.HighEmphasis = true;
-            this.materialButton6.Icon = null;
-            this.materialButton6.Location = new System.Drawing.Point(1397, 895);
-            this.materialButton6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton6.Name = "materialButton6";
-            this.materialButton6.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton6.Size = new System.Drawing.Size(84, 36);
-            this.materialButton6.TabIndex = 21;
-            this.materialButton6.Text = "FINALIZE";
-            this.materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton6.UseAccentColor = false;
-            this.materialButton6.UseMnemonic = false;
-            this.materialButton6.UseVisualStyleBackColor = false;
+            this.finalizeCoursesBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.finalizeCoursesBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.finalizeCoursesBtn.Depth = 0;
+            this.finalizeCoursesBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.finalizeCoursesBtn.HighEmphasis = true;
+            this.finalizeCoursesBtn.Icon = null;
+            this.finalizeCoursesBtn.Location = new System.Drawing.Point(1397, 895);
+            this.finalizeCoursesBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.finalizeCoursesBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.finalizeCoursesBtn.Name = "finalizeCoursesBtn";
+            this.finalizeCoursesBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.finalizeCoursesBtn.Size = new System.Drawing.Size(84, 36);
+            this.finalizeCoursesBtn.TabIndex = 21;
+            this.finalizeCoursesBtn.Text = "FINALIZE";
+            this.finalizeCoursesBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.finalizeCoursesBtn.UseAccentColor = false;
+            this.finalizeCoursesBtn.UseMnemonic = false;
+            this.finalizeCoursesBtn.UseVisualStyleBackColor = false;
+            this.finalizeCoursesBtn.Click += new System.EventHandler(this.finalizeCoursesBtn_Click);
             // 
             // materialCard5
             // 
@@ -5671,8 +5673,8 @@
         private MaterialSkin.Controls.MaterialButton submitCoursesBtn;
         private System.Windows.Forms.Panel panel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel118;
-        private MaterialSkin.Controls.MaterialButton materialButton5;
-        private MaterialSkin.Controls.MaterialButton materialButton6;
+        private MaterialSkin.Controls.MaterialButton coursesRevBackBtn;
+        private MaterialSkin.Controls.MaterialButton finalizeCoursesBtn;
         private MaterialSkin.Controls.MaterialCard materialCard5;
         private MaterialSkin.Controls.MaterialTextBox fifthCourseBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel112;

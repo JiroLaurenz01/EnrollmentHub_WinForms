@@ -714,8 +714,6 @@ namespace SchoolTracker
 
         #region GENERAL FUNCTIONS FOR BASIC INFORMATION REVIEW TAB
 
-        #region FUNCTION FOR FINALIZING INFORMATION
-
         private void finalizeInfoBtn_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Do you want to continue?", "School Admin", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -732,10 +730,6 @@ namespace SchoolTracker
             }
         }
 
-        #endregion
-
-        #region FUNCTION FOR BACK BUTTON
-
         private void infoRevBackBtn_Click(object sender, EventArgs e)
         {
             int nextTabIndex = enrollmentTab.SelectedIndex - 1;
@@ -744,8 +738,6 @@ namespace SchoolTracker
             enrollmentTab.SelectedIndex = nextTabIndex;
             enrollmentTab.Selecting += enrollmentTab_Selecting;
         }
-
-        #endregion
 
         #region FUNCTION FOR RETRIEVING INFORMATION FROM THE CLASSES
 
@@ -836,6 +828,35 @@ namespace SchoolTracker
         }
 
         #endregion
+
+        #endregion
+
+        #region GENERAL FUNCTIONS FOR COURSES SELECTION REVIEW TAB
+
+        private void finalizeCoursesBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Do you want to continue?", "School Admin", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.Yes)
+            {
+                MessageBox.Show("Finalized successfully.", "School Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+
+                enrollmentTab.Selecting -= enrollmentTab_Selecting;
+                enrollmentTab.SelectedIndex = nextTabIndex;
+                enrollmentTab.Selecting += enrollmentTab_Selecting;
+            }
+        }
+
+        private void coursesRevBackBtn_Click(object sender, EventArgs e)
+        {
+            int nextTabIndex = enrollmentTab.SelectedIndex - 1;
+
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
+        }
 
         #endregion
 
