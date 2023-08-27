@@ -13,6 +13,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace SchoolTracker
 {
@@ -264,6 +265,7 @@ namespace SchoolTracker
                         : 0;
 
                     gExtNameCBox.Enabled = true;
+                    gExtNameCBox.Refresh();
 
                     gMotherBtn.CheckedChanged -= ifMotherFatherIsAGuardian_CheckedChanged;
                     gMotherBtn.Checked = false;
