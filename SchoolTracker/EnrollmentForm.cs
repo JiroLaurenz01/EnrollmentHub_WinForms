@@ -172,10 +172,11 @@ namespace SchoolTracker
                     materialTextBoxList.Add(gMNameBox);
                     materialTextBoxList.Add(gCNumBox);
 
-                    gExtNameCBox.Enabled = !ifChecked;
 
                     if (ifChecked)
                         gExtNameCBox.SelectedIndex = 0;
+
+                    gExtNameCBox.Enabled = !ifChecked;
 
                     if (!mNoneBtn.Checked)
                         gMotherBtn.Enabled = !ifChecked;
@@ -665,8 +666,6 @@ namespace SchoolTracker
 
         #endregion
 
-        #endregion
-
         #region FUNCTIONS FOR KEY PRESS
 
         private void infoBox_KeyDown(object sender, KeyEventArgs e)
@@ -675,10 +674,10 @@ namespace SchoolTracker
                 submitInfoBtn_Click(sender, e);
         }
 
-
         #endregion
 
         #endregion
+
 
         #region GENERAL FUNCTIONS FOR BASIC INFORMATION REVIEW TAB
 
