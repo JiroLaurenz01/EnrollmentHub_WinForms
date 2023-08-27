@@ -414,7 +414,7 @@ namespace SchoolTracker
                     case PictureBox pictureBox when pictureBox == studentPicture:
                         // If student picture is empty, show an error message. Return false to indicate validation failure.
                         // Else, store the student picture in student data.
-                        if (ImageEquals(pictureBox.Image, SchoolTracker.Properties.Resources.user))
+                        if (functions.ImageEquals(pictureBox.Image, SchoolTracker.Properties.Resources.user))
                         {
                             MessageBox.Show("The student picture is empty. Please select your picture.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return false;
@@ -583,25 +583,6 @@ namespace SchoolTracker
             studentData.SeniorHighSchool = shSchoolName.Text;
 
             studentData.LRN = lrnBox.Text;
-        }
-
-        #endregion
-
-        #region FUNCTION TO COMPARE TWO IMAGES
-
-        private bool ImageEquals(Image image1, Image image2)
-        {
-            // Enter a using block to ensure proper disposal of resources
-            using (MemoryStream ms1 = new MemoryStream(), ms2 = new MemoryStream())
-            {
-                // Save the content of the first and second image to the MemoryStream ms1 and ms2.
-                image1.Save(ms1, image1.RawFormat);
-                image2.Save(ms2, image2.RawFormat);
-
-                // Return the result of the comparison between the byte arrays obtained from ms1 and ms2
-                // StructuralComparisons.StructuralEqualityComparer.Equals() is used to compare the arrays
-                return StructuralComparisons.StructuralEqualityComparer.Equals(ms1.ToArray(), ms2.ToArray());
-            }
         }
 
         #endregion
