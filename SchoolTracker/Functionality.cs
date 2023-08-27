@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using Guna.UI2.WinForms;
 
 namespace SchoolTracker
 {
@@ -57,6 +58,21 @@ namespace SchoolTracker
                 // StructuralComparisons.StructuralEqualityComparer.Equals() is used to compare the arrays
                 return StructuralComparisons.StructuralEqualityComparer.Equals(ms1.ToArray(), ms2.ToArray());
             }
+        }
+
+        #endregion
+
+        #region FUNCTION TO VALIDATE STUDENT AGE AND BIRTH DATE
+
+        // Calculate the age based on birth date and check if it matches the selected age.
+        public bool ValidateStudentAgeInBDate(Guna2DateTimePicker bDatePicker, int selectedAge)
+        {
+            int age = DateTime.Today.Year - bDatePicker.Value.Year;
+
+            if (bDatePicker.Value.AddYears(age) > DateTime.Today)
+                age--;
+
+            return age == selectedAge;
         }
 
         #endregion

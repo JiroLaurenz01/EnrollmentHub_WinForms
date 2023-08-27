@@ -428,7 +428,7 @@ namespace SchoolTracker
                     case Guna2DateTimePicker datePicker when datePicker == bDatePicker:
                         // If student age and birth date don't match, show an error message. Return false to indicate validation failure.
                         // Else, set birth date and age in student data.
-                        if (!ValidateStudentAgeInBDate())
+                        if (!functions.ValidateStudentAgeInBDate(bDatePicker, Convert.ToInt32(ageCBox.Text)))
                         {
                             MessageBox.Show("The age and birth date did not match. Please enter a correct birth date or age.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return false;
@@ -586,19 +586,6 @@ namespace SchoolTracker
         }
 
         #endregion
-
-        #region FUNCTION TO VALIDATE STUDENT AGE AND BIRTH DATE
-
-        // Calculate the age based on birth date and check if it matches the selected age.
-        private bool ValidateStudentAgeInBDate()
-        {
-            int age = DateTime.Today.Year - bDatePicker.Value.Year;
-
-            if (bDatePicker.Value.AddYears(age) > DateTime.Today)
-                age--;
-
-            return age == Convert.ToInt16(ageCBox.Text);
-        }
 
         #endregion
 
