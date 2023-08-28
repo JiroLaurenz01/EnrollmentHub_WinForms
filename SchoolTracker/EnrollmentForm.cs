@@ -769,6 +769,43 @@ namespace SchoolTracker
 
         #region GENERAL FUNCTIONS FOR COURSES SELECTION TAB
 
+        private List<DataTable> deptDTableList = new List<DataTable>();
+
+        DataTable firstDept = new DataTable();
+        DataTable secondDept = new DataTable();
+        DataTable thirdDept = new DataTable();
+        DataTable fourthDept = new DataTable();
+        DataTable fifthDept = new DataTable();
+
+        private void FillDepartmentTable()
+        {
+            deptDTableList.Add(firstDept);
+            deptDTableList.Add(secondDept);
+            deptDTableList.Add(thirdDept);
+            deptDTableList.Add(fourthDept);
+            deptDTableList.Add(fifthDept);
+
+            foreach (DataTable dt in deptDTableList)
+            {
+                dt.Columns.Add("DID", typeof(int));
+                dt.Columns.Add("DName");
+
+                dt.Rows.Add(1, "Select your department.");
+                dt.Rows.Add(2, "Department of Information Technology");
+                dt.Rows.Add(3, "Department of Business Administration");
+                dt.Rows.Add(4, "Department of Communication and Journalism");
+                dt.Rows.Add(5, "Department of Engineering");
+                dt.Rows.Add(6, "Department of Education");
+                dt.Rows.Add(7, "Department of Accountancy");
+                dt.Rows.Add(8, "Department of Architecture");
+                dt.Rows.Add(9, "Department of Tourism, Hospitality, and Transportation Management");
+                dt.Rows.Add(10, "Department of Mathematics and Science");
+                dt.Rows.Add(11, "Department of Psychology and Social Sciences");
+                dt.Rows.Add(12, "Department of Languages and Literature");
+            }
+        }
+
+
         #region FUNCTIONS FOR SUBMIT AND BACK BUTTON
 
         private void submitCoursesBtn_Click(object sender, EventArgs e)
