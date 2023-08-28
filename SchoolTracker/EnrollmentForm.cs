@@ -688,6 +688,8 @@ namespace SchoolTracker
             {
                 MessageBox.Show("Finalized successfully.", "School Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                CoursesSelectionLoad();
+
                 int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
                 enrollmentTab.Selecting -= enrollmentTab_Selecting;
@@ -777,6 +779,26 @@ namespace SchoolTracker
         DataTable fourthDept = new DataTable();
         DataTable fifthDept = new DataTable();
 
+        private void CoursesSelectionLoad()
+        {
+            FillDepartmentTable();
+
+            firstDepartment.DataSource = firstDept;
+            firstDepartment.DisplayMember = "DName";
+
+            secondDepartment.DataSource = secondDept;
+            secondDepartment.DisplayMember = "DName";
+
+            thirdDepartment.DataSource = thirdDept;
+            thirdDepartment.DisplayMember = "DName";
+
+            fourthDepartment.DataSource = fourthDept;
+            fourthDepartment.DisplayMember = "DName";
+
+            fifthDepartment.DataSource = fifthDept;
+            fifthDepartment.DisplayMember = "DName";
+        }
+
         private void FillDepartmentTable()
         {
             deptDTableList.Add(firstDept);
@@ -790,7 +812,7 @@ namespace SchoolTracker
                 dt.Columns.Add("DID", typeof(int));
                 dt.Columns.Add("DName");
 
-                dt.Rows.Add(1, "Select your department.");
+                dt.Rows.Add(1, "- Select your department -");
                 dt.Rows.Add(2, "Department of Information Technology");
                 dt.Rows.Add(3, "Department of Business Administration");
                 dt.Rows.Add(4, "Department of Communication and Journalism");
