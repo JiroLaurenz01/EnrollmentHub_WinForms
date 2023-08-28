@@ -769,7 +769,7 @@ namespace SchoolTracker
 
         #region GENERAL FUNCTIONS FOR COURSES SELECTION TAB
 
-        #region FUNCTIONS FOR SUBMIT BUTTON WITH VALIDATION
+        #region FUNCTIONS FOR SUBMIT AND BACK BUTTON
 
         private void submitCoursesBtn_Click(object sender, EventArgs e)
         {
@@ -779,10 +779,6 @@ namespace SchoolTracker
             enrollmentTab.SelectedIndex = nextTabIndex;
             enrollmentTab.Selecting += enrollmentTab_Selecting;
         }
-
-        #endregion
-
-        #region FUNCTION FOR BACK BUTTON
 
         private void coursesBackBtn_Click(object sender, EventArgs e)
         {
