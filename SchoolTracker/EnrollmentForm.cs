@@ -27,15 +27,27 @@ namespace SchoolTracker
         FatherData fatherData = new FatherData();
         GuardianData guardianData = new GuardianData();
 
-        #endregion
-
-        #region FUNCTIONS
-
         Functionality functions = new Functionality();
 
         #endregion
 
+        #region FIELDS
+
         int previousTab = 0;
+
+        #region FIELDS FOR DEPARTMENTS AND COURSES SELECTION
+
+        private List<DataTable> deptDTableList = new List<DataTable>();
+
+        DataTable firstDept = new DataTable();
+        DataTable secondDept = new DataTable();
+        DataTable thirdDept = new DataTable();
+        DataTable fourthDept = new DataTable();
+        DataTable fifthDept = new DataTable();
+
+        #endregion
+
+        #endregion
 
         public EnrollmentForm()
         {
@@ -775,13 +787,7 @@ namespace SchoolTracker
 
         #region GENERAL FUNCTIONS FOR COURSES SELECTION TAB
 
-        private List<DataTable> deptDTableList = new List<DataTable>();
-
-        DataTable firstDept = new DataTable();
-        DataTable secondDept = new DataTable();
-        DataTable thirdDept = new DataTable();
-        DataTable fourthDept = new DataTable();
-        DataTable fifthDept = new DataTable();
+        #region FUNCTION TO LOAD THE COURSES SELECTION TAB
 
         private void CoursesSelectionLoad()
         {
@@ -802,6 +808,10 @@ namespace SchoolTracker
             fifthDepartment.DataSource = fifthDept;
             fifthDepartment.DisplayMember = "DName";
         }
+
+        #endregion
+
+        #region FUNCTION TO FILL THE DEPARTMENT TABLES
 
         private void FillDepartmentTable()
         {
@@ -835,6 +845,7 @@ namespace SchoolTracker
             }
         }
 
+        #endregion
 
         #region FUNCTIONS FOR SUBMIT AND BACK BUTTON
 
