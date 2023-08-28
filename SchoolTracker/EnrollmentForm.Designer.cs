@@ -707,7 +707,7 @@
             this.lrnBox.Hint = "LRN";
             this.lrnBox.LeadingIcon = null;
             this.lrnBox.Location = new System.Drawing.Point(186, 881);
-            this.lrnBox.MaxLength = 50;
+            this.lrnBox.MaxLength = 12;
             this.lrnBox.MouseState = MaterialSkin.MouseState.OUT;
             this.lrnBox.Multiline = false;
             this.lrnBox.Name = "lrnBox";
