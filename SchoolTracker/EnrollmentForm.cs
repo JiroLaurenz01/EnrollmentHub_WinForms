@@ -678,7 +678,6 @@ namespace SchoolTracker
 
         #endregion
 
-
         #region GENERAL FUNCTIONS FOR BASIC INFORMATION REVIEW TAB
 
         private void finalizeInfoBtn_Click(object sender, EventArgs e)

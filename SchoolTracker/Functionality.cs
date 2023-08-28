@@ -13,7 +13,7 @@ namespace SchoolTracker
 {
     class Functionality
     {
-        #region FUNCTIONS THAT WILL RUN SPECIFIC WEBSITE BASED ON THE GIVEN PARAMETER
+        #region FUNCTION THAT WILL RUN SPECIFIC WEBSITE BASED ON THE GIVEN PARAMETER
 
         // This method is designed to open a specific web URL based on the given index.
         public void OpenWeb(int num)
