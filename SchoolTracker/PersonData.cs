@@ -119,6 +119,14 @@ namespace SchoolTracker
         public string LRN { get; set; }
         public string FPSNumber { get; set; }
         public string IPCommunity { get; set; }
+
+        public string FirstCourse { get; set; }
+        public string SecondCourse { get; set; }
+        public string ThirdCourse { get; set; }
+        public string FourthCourse { get; set; }
+        public string FifthCourse { get; set; }
+
+        public string ApprovedCourse { get; set; }
     }
 
     class MotherData : PersonData { }
