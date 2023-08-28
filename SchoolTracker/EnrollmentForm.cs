@@ -680,6 +680,8 @@ namespace SchoolTracker
 
         #region GENERAL FUNCTIONS FOR BASIC INFORMATION REVIEW TAB
 
+        #region FUNCTION FOR SUBMIT AND BACK BUTTON
+
         private void finalizeInfoBtn_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Do you want to continue?", "School Admin", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -706,6 +708,8 @@ namespace SchoolTracker
             enrollmentTab.SelectedIndex = nextTabIndex;
             enrollmentTab.Selecting += enrollmentTab_Selecting;
         }
+
+        #endregion
 
         #region FUNCTION FOR RETRIEVING INFORMATION FROM THE CLASSES
 
@@ -813,17 +817,21 @@ namespace SchoolTracker
                 dt.Columns.Add("DName");
 
                 dt.Rows.Add(1, "- Select your department -");
-                dt.Rows.Add(2, "Department of Information Technology");
-                dt.Rows.Add(3, "Department of Business Administration");
-                dt.Rows.Add(4, "Department of Communication and Journalism");
-                dt.Rows.Add(5, "Department of Engineering");
-                dt.Rows.Add(6, "Department of Education");
-                dt.Rows.Add(7, "Department of Accountancy");
-                dt.Rows.Add(8, "Department of Architecture");
-                dt.Rows.Add(9, "Department of Tourism, Hospitality, and Transportation Management");
-                dt.Rows.Add(10, "Department of Mathematics and Science");
-                dt.Rows.Add(11, "Department of Psychology and Social Sciences");
-                dt.Rows.Add(12, "Department of Languages and Literature");
+                dt.Rows.Add(2, "College of Accountancy and Finance (CAF)");
+                dt.Rows.Add(3, "College of Architecture, Design and the Built Environment (CADBE)");
+                dt.Rows.Add(4, "College of Arts and Letters (CAL)");
+                dt.Rows.Add(5, "College of Business Administration (CBA)");
+                dt.Rows.Add(6, "College of Communication (COC)");
+                dt.Rows.Add(7, "College of Computer and Information Sciences (CCIS)");
+                dt.Rows.Add(8, "College of Education (COED)");
+                dt.Rows.Add(9, "College of Engineering (CE)");
+                dt.Rows.Add(10, "College of Human Kinetics (CHK)");
+                dt.Rows.Add(11, "College of Law (CL)");
+                dt.Rows.Add(12, "College of Political Science and Public Administration (CPSPA)");
+                dt.Rows.Add(13, "College of Social Sciences and Development (CSSD)");
+                dt.Rows.Add(14, "College of Science (CS)");
+                dt.Rows.Add(15, "College of Tourism, Hospitality and Transportation Management (CTHTM)");
+                dt.Rows.Add(16, "Institute of Technology");
             }
         }
 
