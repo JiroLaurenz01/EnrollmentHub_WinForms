@@ -795,9 +795,14 @@ namespace SchoolTracker
 
         #region FUNCTION TO LOAD THE COURSES SELECTION TAB
 
+        // This method is responsible for populating the ComboBoxes with department information.
         private void CoursesSelectionLoad()
         {
+            // Call the method "FillDepartmentTable" to populate department-related data.
             FillDepartmentTable();
+
+            // Set the data source for the first to fifth ComboBoxes to the "firstDept" to "fifthDept" collections.
+            // Specify that the "DName" property from the data source should be displayed in the ComboBox.
 
             firstDepartment.DataSource = firstDept;
             firstDepartment.DisplayMember = "DName";
@@ -819,22 +824,31 @@ namespace SchoolTracker
 
         #region FUNCTION TO FILL THE DEPARTMENT TABLES
 
+        // This method populates the department-related DataTables.
         private void FillDepartmentTable()
         {
+            // Clear the existing list of department DataTables.
             deptDTableList.Clear();
+
+            // Add each department DataTable to the list.
             deptDTableList.Add(firstDept);
             deptDTableList.Add(secondDept);
             deptDTableList.Add(thirdDept);
             deptDTableList.Add(fourthDept);
             deptDTableList.Add(fifthDept);
 
+            // For each department DataTable in the list.
             foreach (DataTable dt in deptDTableList)
             {
                 dt.Columns.Clear();
+
+                // Add "DID" and "DName" column of integer type to the DataTable.
                 dt.Columns.Add("DID", typeof(int));
                 dt.Columns.Add("DName");
 
                 dt.Rows.Clear();
+
+                // Add rows with department information to the DataTable.
                 dt.Rows.Add(1, "- Select your department -");
                 dt.Rows.Add(2, "College of Accountancy and Finance (CAF)");
                 dt.Rows.Add(3, "College of Architecture, Design and the Built Environment (CADBE)");
