@@ -45,6 +45,8 @@ namespace SchoolTracker
         DataTable fourthDept = new DataTable();
         DataTable fifthDept = new DataTable();
 
+        DataTable dtCourses = new DataTable();
+
         #endregion
 
         #endregion
@@ -842,7 +844,7 @@ namespace SchoolTracker
             {
                 dt.Columns.Clear();
 
-                // Add "DID" and "DName" column of integer type to the DataTable.
+                // Add "DID" of integer type and "DName" column to the DataTable.
                 dt.Columns.Add("DID", typeof(int));
                 dt.Columns.Add("DName");
 
@@ -869,6 +871,97 @@ namespace SchoolTracker
         }
 
         #endregion
+
+        // This method populate the courses depends on the selected department.
+        private void FillCoursesTable()
+        {
+            dtCourses.Columns.Clear();
+
+            // Add "CID" of integer type and "cName" column to the DataTable.
+            dtCourses.Columns.Add("CID", typeof(int));
+            dtCourses.Columns.Add("CName");
+
+            dtCourses.Rows.Clear();
+            // Add rows with courses information to the DataTable.
+            dtCourses.Rows.Add(1, "- Select your course -");
+
+            dtCourses.Rows.Add(2, "Bachelor of Science in Accountancy (BSA)");
+            dtCourses.Rows.Add(2, "Bachelor of Science in Business Administration Major in Financial Management (BSBAFM)");
+            dtCourses.Rows.Add(2, "Bachelor of Science in Management Accounting (BSMA)");
+
+            dtCourses.Rows.Add(3, "Bachelor of Science in Architecture (BS-ARCH)");
+            dtCourses.Rows.Add(3, "Bachelor of Science in Interior Design (BSID)");
+            dtCourses.Rows.Add(3, "Bachelor of Science in Environmental Planning (BSEP)");
+
+            dtCourses.Rows.Add(4, "Bachelor of Arts in English Language Studies (ABELS)");
+            dtCourses.Rows.Add(4, "Bachelor of Arts in Filipinology (ABF)");
+            dtCourses.Rows.Add(4, "Bachelor of Arts in Literary and Cultural Studies (ABLCS)");
+            dtCourses.Rows.Add(4, "Bachelor of Arts in Philosophy (AB-PHILO)");
+            dtCourses.Rows.Add(4, "Bachelor of Performing Arts major in Theater Arts (BPEA)");
+
+            dtCourses.Rows.Add(5, "Bachelor of Science in Business Administration major in Human Resource Management (BSBAHRM)");
+            dtCourses.Rows.Add(5, "Bachelor of Science in Business Administration major in Marketing Management (BSBA-MM)");
+            dtCourses.Rows.Add(5, "Bachelor of Science in Entrepreneurship (BSENTREP)");
+            dtCourses.Rows.Add(5, "Bachelor of Science in Office Administration (BSOA)");
+
+            dtCourses.Rows.Add(6, "Bachelor in Advertising and Public Relations (BADPR)");
+            dtCourses.Rows.Add(6, "Bachelor of Arts in Broadcasting (BA-Broad)");
+            dtCourses.Rows.Add(6, "Bachelor of Arts in Communication Research (BACR)");
+            dtCourses.Rows.Add(6, "Bachelor of Arts in Journalism (BAJ)");
+
+            dtCourses.Rows.Add(7, "Bachelor of Science in Computer Science (BSCS)");
+            dtCourses.Rows.Add(7, "Bachelor of Science in Information Technology (BSIT)");
+
+            dtCourses.Rows.Add(8, "Bachelor of Technology and Livelihood Education (BTLEd)");
+            dtCourses.Rows.Add(8, "Bachelor of Library and Information Science (BLIS)");
+            dtCourses.Rows.Add(8, "Bachelor of Secondary Education (BSEd)");
+            dtCourses.Rows.Add(8, "Bachelor of Elementary Education (BEEd)");
+            dtCourses.Rows.Add(8, "Bachelor of Early Childhood Education (BECEd)");
+
+            dtCourses.Rows.Add(9, "Bachelor of Science in Civil Engineering (BSCE)");
+            dtCourses.Rows.Add(9, "Bachelor of Science in Computer Engineering (BSCpE)");
+            dtCourses.Rows.Add(9, "Bachelor of Science in Electrical Engineering (BSEE)");
+            dtCourses.Rows.Add(9, "Bachelor of Science in Electronics Engineering (BSECE)");
+            dtCourses.Rows.Add(9, "Bachelor of Science in Industrial Engineering (BSIE)");
+            dtCourses.Rows.Add(9, "Bachelor of Science in Mechanical Engineering (BSME)");
+            dtCourses.Rows.Add(9, "Bachelor of Science in Railway Engineering (BSRE)");
+
+            dtCourses.Rows.Add(10, "Bachelor of Physical Education (BPE)");
+            dtCourses.Rows.Add(10, "Bachelor of Science in Exercises and Sports (BSESS)");
+
+            dtCourses.Rows.Add(11, "Juris Doctor (JD)");
+
+            dtCourses.Rows.Add(12, "Bachelor of Arts in Political Science (BAPS)");
+            dtCourses.Rows.Add(12, "Bachelor of Arts in Political Economy (BAPE)");
+            dtCourses.Rows.Add(12, "Bachelor of Arts in International Studies (BAIS)");
+            dtCourses.Rows.Add(12, "Bachelor of Public Administration (BPA)");
+
+            dtCourses.Rows.Add(13, "Bachelor of Arts in History (BAH)");
+            dtCourses.Rows.Add(13, "Bachelor of Arts in Sociology (BAS)");
+            dtCourses.Rows.Add(13, "Bachelor of Science in Cooperatives (BSC)");
+            dtCourses.Rows.Add(13, "Bachelor of Science in Economics (BSE)");
+            dtCourses.Rows.Add(13, "Bachelor of Science in Psychology (BSPSY)");
+
+            dtCourses.Rows.Add(14, "Bachelor of Science Food Technology (BSFT)");
+            dtCourses.Rows.Add(14, "Bachelor of Science in Applied Mathematics (BSAPMATH)");
+            dtCourses.Rows.Add(14, "Bachelor of Science in Biology (BSBIO)");
+            dtCourses.Rows.Add(14, "Bachelor of Science in Chemistry (BSCHEM)");
+            dtCourses.Rows.Add(14, "Bachelor of Science in Mathematics (BSMATH)");
+            dtCourses.Rows.Add(14, "Bachelor of Science in Nutrition and Dietetics (BSND)");
+            dtCourses.Rows.Add(14, "Bachelor of Science in Physics (BSPHY)");
+            dtCourses.Rows.Add(14, "Bachelor of Science in Statistics (BSSTAT)");
+
+            dtCourses.Rows.Add(15, "Bachelor of Science in Hospitality Management (BSHM)");
+            dtCourses.Rows.Add(15, "Bachelor of Science in Tourism Management (BSTM)");
+            dtCourses.Rows.Add(15, "Bachelor of Science in Transportation Management (BSTRM)");
+
+            dtCourses.Rows.Add(16, "Diploma in Computer Engineering Technology (DCET)");
+            dtCourses.Rows.Add(16, "Diploma in Electrical Engineering Technology (DEET)");
+            dtCourses.Rows.Add(16, "Diploma in Electronics Engineering Technology (DECET)");
+            dtCourses.Rows.Add(16, "Diploma in Information Communication Technology (DICT)");
+            dtCourses.Rows.Add(16, "Diploma in Mechanical Engineering Technology (DMET)");
+            dtCourses.Rows.Add(16, "Diploma in Office Management (DOMT)");
+        }
 
         #region FUNCTIONS FOR SUBMIT AND BACK BUTTON
 
