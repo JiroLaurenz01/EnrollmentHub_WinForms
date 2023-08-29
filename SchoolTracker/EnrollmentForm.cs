@@ -345,14 +345,18 @@ namespace SchoolTracker
             int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            if (ValidateInformation())
-            {
-                RetrievingInformation();
+            //if (ValidateInformation())
+            //{
+            //    RetrievingInformation();
 
-                enrollmentTab.Selecting -= enrollmentTab_Selecting;
-                enrollmentTab.SelectedIndex = nextTabIndex;
-                enrollmentTab.Selecting += enrollmentTab_Selecting;
-            }
+            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            //    enrollmentTab.SelectedIndex = nextTabIndex;
+            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
+            //}
+
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -815,6 +819,7 @@ namespace SchoolTracker
 
         private void FillDepartmentTable()
         {
+            deptDTableList.Clear();
             deptDTableList.Add(firstDept);
             deptDTableList.Add(secondDept);
             deptDTableList.Add(thirdDept);
@@ -823,9 +828,11 @@ namespace SchoolTracker
 
             foreach (DataTable dt in deptDTableList)
             {
+                dt.Columns.Clear();
                 dt.Columns.Add("DID", typeof(int));
                 dt.Columns.Add("DName");
 
+                dt.Rows.Clear();
                 dt.Rows.Add(1, "- Select your department -");
                 dt.Rows.Add(2, "College of Accountancy and Finance (CAF)");
                 dt.Rows.Add(3, "College of Architecture, Design and the Built Environment (CADBE)");
