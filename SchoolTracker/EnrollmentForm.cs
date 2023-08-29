@@ -872,6 +872,8 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTION TO FILL THE COURSES TABLES
+
         // This method populate the courses depends on the selected department.
         private void FillCoursesTable()
         {
@@ -962,6 +964,23 @@ namespace SchoolTracker
             dtCourses.Rows.Add(16, "Diploma in Mechanical Engineering Technology (DMET)");
             dtCourses.Rows.Add(16, "Diploma in Office Management (DOMT)");
         }
+
+        #endregion
+
+        #region FUNCTION FOR DEPARTMENT AND COURSE SELECTION LOGIC
+
+        // This method populates a MaterialComboBox for courses based on the selected department.
+        private void Courses(DataTable dtDept, MaterialComboBox dept, MaterialComboBox course)
+        {
+            // Select courses from dtCourses where the Course ID (CID) matches the selected department's ID (DID).
+            // Set the data source of the course MaterialComboBox to the dtSpecificCourses DataTable.
+            course.DataSource = dtCourses.Select("CID = " + dtDept.Rows[dept.SelectedIndex]["DID"]).CopyToDataTable();
+
+            // Specify that the "CName" property from the data source should be displayed in the course MaterialComboBox.
+            course.DisplayMember = "CName";
+        }
+
+        #endregion
 
         #region FUNCTIONS FOR SUBMIT AND BACK BUTTON
 
