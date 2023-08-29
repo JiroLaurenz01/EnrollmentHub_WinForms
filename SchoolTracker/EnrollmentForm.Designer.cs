@@ -4530,6 +4530,7 @@
             this.fifthCourse.DropDownHeight = 217;
             this.fifthCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fifthCourse.DropDownWidth = 49;
+            this.fifthCourse.Enabled = false;
             this.fifthCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.fifthCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.fifthCourse.FormattingEnabled = true;
@@ -4553,6 +4554,7 @@
             this.firstCourse.DropDownHeight = 217;
             this.firstCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.firstCourse.DropDownWidth = 49;
+            this.firstCourse.Enabled = false;
             this.firstCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.firstCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.firstCourse.FormattingEnabled = true;
@@ -4576,6 +4578,7 @@
             this.secondCourse.DropDownHeight = 217;
             this.secondCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.secondCourse.DropDownWidth = 49;
+            this.secondCourse.Enabled = false;
             this.secondCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.secondCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.secondCourse.FormattingEnabled = true;
@@ -4599,6 +4602,7 @@
             this.thirdCourse.DropDownHeight = 217;
             this.thirdCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.thirdCourse.DropDownWidth = 49;
+            this.thirdCourse.Enabled = false;
             this.thirdCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.thirdCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.thirdCourse.FormattingEnabled = true;
@@ -4622,6 +4626,7 @@
             this.fourthCourse.DropDownHeight = 217;
             this.fourthCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fourthCourse.DropDownWidth = 49;
+            this.fourthCourse.Enabled = false;
             this.fourthCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.fourthCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.fourthCourse.FormattingEnabled = true;
