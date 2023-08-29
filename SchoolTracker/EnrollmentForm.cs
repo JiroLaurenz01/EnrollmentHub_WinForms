@@ -342,21 +342,21 @@ namespace SchoolTracker
 
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
-            int nextTabIndex = enrollmentTab.SelectedIndex + 1;
-
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            //if (ValidateInformation())
-            //{
-            //    RetrievingInformation();
+            if (ValidateInformation())
+            {
+                RetrievingInformation();
 
-            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            //    enrollmentTab.SelectedIndex = nextTabIndex;
-            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
-            //}
+                // Calculate the index of the next tab to be displayed.
+                int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
-            enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            enrollmentTab.SelectedIndex = nextTabIndex;
-            enrollmentTab.Selecting += enrollmentTab_Selecting;
+                // Temporarily remove the event handler "enrollmentTab_Selecting".
+                // Set the selected index of the tab control to the calculated nextTabIndex.
+                // Add back the event handler "enrollmentTab_Selecting".
+                enrollmentTab.Selecting -= enrollmentTab_Selecting;
+                enrollmentTab.SelectedIndex = nextTabIndex;
+                enrollmentTab.Selecting += enrollmentTab_Selecting;
+            }
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -708,6 +708,7 @@ namespace SchoolTracker
 
                 CoursesSelectionLoad();
 
+                // Calculate the index of the next tab to be displayed.
                 int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
                 enrollmentTab.Selecting -= enrollmentTab_Selecting;
@@ -718,6 +719,7 @@ namespace SchoolTracker
 
         private void infoRevBackBtn_Click(object sender, EventArgs e)
         {
+            // Calculate the index of the previous tab to be displayed.
             int nextTabIndex = enrollmentTab.SelectedIndex - 1;
 
             enrollmentTab.Selecting -= enrollmentTab_Selecting;
@@ -858,6 +860,7 @@ namespace SchoolTracker
 
         private void submitCoursesBtn_Click(object sender, EventArgs e)
         {
+            // Calculate the index of the next tab to be displayed.
             int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
             enrollmentTab.Selecting -= enrollmentTab_Selecting;
@@ -867,6 +870,7 @@ namespace SchoolTracker
 
         private void coursesBackBtn_Click(object sender, EventArgs e)
         {
+            // Calculate the index of the previous tab to be displayed.
             int nextTabIndex = enrollmentTab.SelectedIndex - 1;
 
             enrollmentTab.Selecting -= enrollmentTab_Selecting;
@@ -888,6 +892,7 @@ namespace SchoolTracker
             {
                 MessageBox.Show("Finalized successfully.", "School Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                // Calculate the index of the next tab to be displayed.
                 int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
                 enrollmentTab.Selecting -= enrollmentTab_Selecting;
@@ -898,6 +903,7 @@ namespace SchoolTracker
 
         private void coursesRevBackBtn_Click(object sender, EventArgs e)
         {
+            // Calculate the index of the previous tab to be displayed.
             int nextTabIndex = enrollmentTab.SelectedIndex - 1;
 
             enrollmentTab.Selecting -= enrollmentTab_Selecting;
