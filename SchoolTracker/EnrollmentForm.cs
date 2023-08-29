@@ -345,20 +345,25 @@ namespace SchoolTracker
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            if (ValidateInformation())
-            {
-                RetrievingInformation();
+            //if (ValidateInformation())
+            //{
+            //    RetrievingInformation();
 
-                // Calculate the index of the next tab to be displayed.
-                int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+            //    // Calculate the index of the next tab to be displayed.
+            //    int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
-                // Temporarily remove the event handler "enrollmentTab_Selecting".
-                // Set the selected index of the tab control to the calculated nextTabIndex.
-                // Add back the event handler "enrollmentTab_Selecting".
-                enrollmentTab.Selecting -= enrollmentTab_Selecting;
-                enrollmentTab.SelectedIndex = nextTabIndex;
-                enrollmentTab.Selecting += enrollmentTab_Selecting;
-            }
+            //    // Temporarily remove the event handler "enrollmentTab_Selecting".
+            //    // Set the selected index of the tab control to the calculated nextTabIndex.
+            //    // Add back the event handler "enrollmentTab_Selecting".
+            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            //    enrollmentTab.SelectedIndex = nextTabIndex;
+            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
+            //}
+            int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -803,6 +808,9 @@ namespace SchoolTracker
             // Call the method "FillDepartmentTable" to populate department-related data.
             FillDepartmentTable();
 
+            // Call the method "FillCoursesTable" to populate courses depends on the selected department.
+            FillCoursesTable();
+
             // Set the data source for the first to fifth ComboBoxes to the "firstDept" to "fifthDept" collections.
             // Specify that the "DName" property from the data source should be displayed in the ComboBox.
 
@@ -982,6 +990,20 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTION FOR DEPARTMENT SELECTION EVENT HANDLERS
+
+        // Event handlers for department selection changes. These methods are triggered when a department is selected
+        // in its respective MaterialComboBox. They call the Courses() function to update the course selection based on
+        // the chosen department. Each handler is associated with a specific department's data and MaterialComboBoxes.
+
+        private void firstDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(firstDept, firstDepartment, firstCourse);
+        private void secondDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(secondDept, secondDepartment, secondCourse);
+        private void thirdDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(thirdDept, thirdDepartment, thirdCourse);
+        private void fourthDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(fourthDept, fourthDepartment, fourthCourse);
+        private void fifthDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(fifthDept, fifthDepartment, fifthCourse);
+
+        #endregion
+
         #region FUNCTIONS FOR SUBMIT AND BACK BUTTON
 
         private void submitCoursesBtn_Click(object sender, EventArgs e)
@@ -1107,6 +1129,5 @@ namespace SchoolTracker
         #endregion
 
         #endregion
-
     }
 }

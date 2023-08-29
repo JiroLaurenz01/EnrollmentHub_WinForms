@@ -4527,7 +4527,7 @@
             this.fifthCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.fifthCourse.Depth = 0;
             this.fifthCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.fifthCourse.DropDownHeight = 174;
+            this.fifthCourse.DropDownHeight = 217;
             this.fifthCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fifthCourse.DropDownWidth = 49;
             this.fifthCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -4550,7 +4550,7 @@
             this.firstCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.firstCourse.Depth = 0;
             this.firstCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.firstCourse.DropDownHeight = 174;
+            this.firstCourse.DropDownHeight = 217;
             this.firstCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.firstCourse.DropDownWidth = 49;
             this.firstCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -4573,7 +4573,7 @@
             this.secondCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.secondCourse.Depth = 0;
             this.secondCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.secondCourse.DropDownHeight = 174;
+            this.secondCourse.DropDownHeight = 217;
             this.secondCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.secondCourse.DropDownWidth = 49;
             this.secondCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -4596,7 +4596,7 @@
             this.thirdCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.thirdCourse.Depth = 0;
             this.thirdCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.thirdCourse.DropDownHeight = 174;
+            this.thirdCourse.DropDownHeight = 217;
             this.thirdCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.thirdCourse.DropDownWidth = 49;
             this.thirdCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -4619,7 +4619,7 @@
             this.fourthCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.fourthCourse.Depth = 0;
             this.fourthCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.fourthCourse.DropDownHeight = 174;
+            this.fourthCourse.DropDownHeight = 217;
             this.fourthCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fourthCourse.DropDownWidth = 49;
             this.fourthCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -4661,7 +4661,7 @@
             this.secondDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.secondDepartment.Depth = 0;
             this.secondDepartment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.secondDepartment.DropDownHeight = 174;
+            this.secondDepartment.DropDownHeight = 217;
             this.secondDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.secondDepartment.DropDownWidth = 49;
             this.secondDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -4677,6 +4677,7 @@
             this.secondDepartment.Size = new System.Drawing.Size(625, 49);
             this.secondDepartment.StartIndex = 0;
             this.secondDepartment.TabIndex = 1;
+            this.secondDepartment.SelectedIndexChanged += new System.EventHandler(this.secondDepartment_SelectedIndexChanged);
             // 
             // firstDepartment
             // 
@@ -4684,7 +4685,7 @@
             this.firstDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.firstDepartment.Depth = 0;
             this.firstDepartment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.firstDepartment.DropDownHeight = 174;
+            this.firstDepartment.DropDownHeight = 217;
             this.firstDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.firstDepartment.DropDownWidth = 49;
             this.firstDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -4700,6 +4701,7 @@
             this.firstDepartment.Size = new System.Drawing.Size(625, 49);
             this.firstDepartment.StartIndex = 0;
             this.firstDepartment.TabIndex = 0;
+            this.firstDepartment.SelectedIndexChanged += new System.EventHandler(this.firstDepartment_SelectedIndexChanged);
             // 
             // fifthDepartment
             // 
@@ -4707,7 +4709,7 @@
             this.fifthDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.fifthDepartment.Depth = 0;
             this.fifthDepartment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.fifthDepartment.DropDownHeight = 174;
+            this.fifthDepartment.DropDownHeight = 217;
             this.fifthDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fifthDepartment.DropDownWidth = 49;
             this.fifthDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -4723,6 +4725,7 @@
             this.fifthDepartment.Size = new System.Drawing.Size(625, 49);
             this.fifthDepartment.StartIndex = 0;
             this.fifthDepartment.TabIndex = 4;
+            this.fifthDepartment.SelectedIndexChanged += new System.EventHandler(this.fifthDepartment_SelectedIndexChanged);
             // 
             // thirdDepartment
             // 
@@ -4730,7 +4733,7 @@
             this.thirdDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.thirdDepartment.Depth = 0;
             this.thirdDepartment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.thirdDepartment.DropDownHeight = 174;
+            this.thirdDepartment.DropDownHeight = 217;
             this.thirdDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.thirdDepartment.DropDownWidth = 49;
             this.thirdDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -4746,6 +4749,7 @@
             this.thirdDepartment.Size = new System.Drawing.Size(625, 49);
             this.thirdDepartment.StartIndex = 0;
             this.thirdDepartment.TabIndex = 2;
+            this.thirdDepartment.SelectedIndexChanged += new System.EventHandler(this.thirdDepartment_SelectedIndexChanged);
             // 
             // fourthDepartment
             // 
@@ -4753,7 +4757,7 @@
             this.fourthDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.fourthDepartment.Depth = 0;
             this.fourthDepartment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.fourthDepartment.DropDownHeight = 174;
+            this.fourthDepartment.DropDownHeight = 217;
             this.fourthDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fourthDepartment.DropDownWidth = 49;
             this.fourthDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -4769,6 +4773,7 @@
             this.fourthDepartment.Size = new System.Drawing.Size(625, 49);
             this.fourthDepartment.StartIndex = 0;
             this.fourthDepartment.TabIndex = 3;
+            this.fourthDepartment.SelectedIndexChanged += new System.EventHandler(this.fourthDepartment_SelectedIndexChanged);
             // 
             // materialLabel110
             // 
