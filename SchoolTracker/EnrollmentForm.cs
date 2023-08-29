@@ -345,25 +345,20 @@ namespace SchoolTracker
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            //if (ValidateInformation())
-            //{
-            //    RetrievingInformation();
+            if (ValidateInformation())
+            {
+                RetrievingInformation();
 
-            //    // Calculate the index of the next tab to be displayed.
-            //    int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+                // Calculate the index of the next tab to be displayed.
+                int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
-            //    // Temporarily remove the event handler "enrollmentTab_Selecting".
-            //    // Set the selected index of the tab control to the calculated nextTabIndex.
-            //    // Add back the event handler "enrollmentTab_Selecting".
-            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            //    enrollmentTab.SelectedIndex = nextTabIndex;
-            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
-            //}
-            int nextTabIndex = enrollmentTab.SelectedIndex + 1;
-
-            enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            enrollmentTab.SelectedIndex = nextTabIndex;
-            enrollmentTab.Selecting += enrollmentTab_Selecting;
+                // Temporarily remove the event handler "enrollmentTab_Selecting".
+                // Set the selected index of the tab control to the calculated nextTabIndex.
+                // Add back the event handler "enrollmentTab_Selecting".
+                enrollmentTab.Selecting -= enrollmentTab_Selecting;
+                enrollmentTab.SelectedIndex = nextTabIndex;
+                enrollmentTab.Selecting += enrollmentTab_Selecting;
+            }
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -977,15 +972,24 @@ namespace SchoolTracker
 
         #region FUNCTION FOR DEPARTMENT AND COURSE SELECTION LOGIC
 
-        // This method populates a MaterialComboBox for courses based on the selected department.
+        // This method populates a MaterialComboBox with course options based on the selected department.
+        // It takes in a DataTable containing department data, the MaterialComboBox for department selection,
+        // and the MaterialComboBox for course selection.
         private void Courses(DataTable dtDept, MaterialComboBox dept, MaterialComboBox course)
         {
-            // Select courses from dtCourses where the Course ID (CID) matches the selected department's ID (DID).
-            // Set the data source of the course MaterialComboBox to the dtSpecificCourses DataTable.
+            // Enable or disable the course MaterialComboBox based on whether a department is selected.
+            // If the selected index is 0 (indicating a default/select option), disable the course selection;
+            // otherwise, enable it.
+            course.Enabled = !(dept.SelectedIndex == 0);
+
+            // Select courses from the dtCourses DataTable where the Course ID (CID) matches the selected department's ID (DID).
+            // Set the data source of the course MaterialComboBox to the DataTable containing the specific courses.
+            // The .Select() method filters the dtCourses DataTable to include only the rows with matching CID.
+            // Then, .CopyToDataTable() creates a new DataTable from the filtered results.
             course.DataSource = dtCourses.Select("CID = " + dtDept.Rows[dept.SelectedIndex]["DID"]).CopyToDataTable();
 
             // Specify that the "CName" property from the data source should be displayed in the course MaterialComboBox.
-            course.DisplayMember = "CName";
+            course.DisplayMember = "CName";     
         }
 
         #endregion
