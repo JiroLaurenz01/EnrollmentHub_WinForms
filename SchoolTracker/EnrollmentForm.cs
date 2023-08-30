@@ -325,7 +325,7 @@ namespace SchoolTracker
                         studentPicture.Image = selectedImage;
                     }
                     else
-                        MessageBox.Show("Please select a square image.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        functions.Alert("Please, select a square image", AlertForm.Type.Error);
                 }
             }
             catch (Exception ex)
@@ -346,6 +346,8 @@ namespace SchoolTracker
             //If the information is validated(all checks pass), the user will be directed to the next tab.
             if (ValidateInformation())
             {
+                functions.Alert("Submitted Successfully", AlertForm.Type.Success);
+
                 RetrievingInformation();
 
                 // Calculate the index of the next tab to be displayed.
@@ -434,7 +436,7 @@ namespace SchoolTracker
                         // Else, store the student picture in student data.
                         if (functions.ImageEquals(pictureBox.Image, SchoolTracker.Properties.Resources.user))
                         {
-                            MessageBox.Show("The student picture is empty. Please select your picture.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            functions.Alert("Please, select your formal picture", AlertForm.Type.Error);
                             return false;
                         }
                         else
@@ -447,8 +449,8 @@ namespace SchoolTracker
                         // If student age and birth date don't match, show an error message. Return false to indicate validation failure.
                         // Else, set birth date and age in student data.
                         if (!functions.ValidateStudentAgeInBDate(bDatePicker, Convert.ToInt32(ageCBox.Text)))
-                        {
-                            MessageBox.Show("The age and birth date did not match. Please enter a correct birth date or age.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        {                         
+                            functions.Alert("Unmatched birth date and age", AlertForm.Type.Error);
                             return false;
                         }
                         else
@@ -465,7 +467,7 @@ namespace SchoolTracker
                         // Else, set gender in student data.
                         if (!maleBtn.Checked && !femaleBtn.Checked)
                         {
-                            MessageBox.Show("Selected gender is empty. Please select your gender.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            functions.Alert("Please, select your gender", AlertForm.Type.Error);
                             return false;
                         }
                         else
@@ -478,7 +480,7 @@ namespace SchoolTracker
                         if (textBox.Enabled)
                             if (string.IsNullOrEmpty(textBox.Text))
                             {
-                                MessageBox.Show("Phone number is empty. Please enter a phone number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                functions.Alert("Please, enter your phone number", AlertForm.Type.Error);
                                 textBox.Focus();
                                 return false;
                             }
@@ -513,8 +515,7 @@ namespace SchoolTracker
                     case MaterialTextBox materialTextBox:
                         if (String.IsNullOrEmpty(materialTextBox.Text) && materialTextBox.Enabled)
                         {
-                            string capitalizedString = char.ToUpper(materialTextBox.Hint[0]) + materialTextBox.Hint.Substring(1).ToLower();
-                            MessageBox.Show($"{capitalizedString} is empty. Please enter a {materialTextBox.Hint.ToLower()}.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            functions.Alert($"Please, enter your {materialTextBox.Hint.ToLower()}", AlertForm.Type.Error);
                             materialTextBox.Focus();
                             return false;
                         }
@@ -530,7 +531,7 @@ namespace SchoolTracker
             {
                 if (string.IsNullOrEmpty(fpsBox.Text))
                 {
-                    MessageBox.Show($"4Ps household id number is empty. Please enter a valid id number.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    functions.Alert("Enter a valid 4Ps ID number", AlertForm.Type.Error);
                     fpsBox.Focus();
                     return false;
                 }
@@ -543,7 +544,7 @@ namespace SchoolTracker
             {
                 if (string.IsNullOrEmpty(ipBox.Text))
                 {
-                    MessageBox.Show($"Indigenous people community is empty. Please enter a community.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    functions.Alert("Enter a valid I.P community", AlertForm.Type.Error);
                     ipBox.Focus();
                     return false;
                 }
@@ -617,7 +618,7 @@ namespace SchoolTracker
             // Show an error message using the field name if the input is null or empty, then focus on the textbox and return true (indicating validation failure)
             if (string.IsNullOrEmpty(input))
             {
-                MessageBox.Show($"{fieldName} is empty. Please enter a {fieldName}.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                functions.Alert($"Please, enter your {fieldName}", AlertForm.Type.Error);
                 textBox.Focus();
 
                 return false;
@@ -678,6 +679,8 @@ namespace SchoolTracker
 
                 // Set the studentPicture Image to the default user image.
                 studentPicture.Image = SchoolTracker.Properties.Resources.user;
+
+                functions.Alert("Cleared Successfully", AlertForm.Type.Success);
             }
         }
 
@@ -705,7 +708,7 @@ namespace SchoolTracker
 
             if (dr == DialogResult.Yes)
             {
-                MessageBox.Show("Finalized successfully.", "School Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                functions.Alert("Finalized Successfully", AlertForm.Type.Success);
 
                 CoursesSelectionLoad();
 
@@ -1017,6 +1020,7 @@ namespace SchoolTracker
         {
             if (ValidateSelectedCourses())
             {
+                functions.Alert("Submitted Successfully", AlertForm.Type.Success);
                 RetrieveSelectedCourses();
 
                 // Calculate the index of the next tab to be displayed.
@@ -1053,7 +1057,7 @@ namespace SchoolTracker
                 // Return false to indicate that validation failed.
                 if (comboBox.SelectedIndex == 0)
                 {
-                    MessageBox.Show("Complete all of the requirements.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    functions.Alert("Complete all of the requirements", AlertForm.Type.Info);
                     return false;
                 }
             }
@@ -1071,7 +1075,7 @@ namespace SchoolTracker
                     // Return false to indicate that validation failed.
                     if (courses[i] == courses[j])
                     {
-                        MessageBox.Show("Could not select the course that is already selected.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        functions.Alert("Please, select the unselected course", AlertForm.Type.Error);
                         return false;
                     }
                 }
@@ -1111,7 +1115,7 @@ namespace SchoolTracker
 
             if (dr == DialogResult.Yes)
             {
-                MessageBox.Show("Finalized successfully.", "School Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                functions.Alert("Finalized successfully", AlertForm.Type.Success);
 
                 // Calculate the index of the next tab to be displayed.
                 int nextTabIndex = enrollmentTab.SelectedIndex + 1;

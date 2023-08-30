@@ -12,6 +12,8 @@ namespace SchoolTracker
 {
     public partial class AlertForm : Form
     {
+        #region FIELDS AND ENUMS
+
         private int x, y;
 
         // Defines a public enumeration named Action with three possible values: wait, start, and close.
@@ -35,10 +37,14 @@ namespace SchoolTracker
 
         private AlertForm.Action action;
 
+        #endregion
+
         public AlertForm()
         {
             InitializeComponent();
         }
+
+        #region FUNCTION FOR TIMER TICK
 
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -76,6 +82,10 @@ namespace SchoolTracker
             }
         }
 
+        #endregion
+
+        #region FUNCTION FOR REMOVE BUTTON TO CLEAR THE ALERT 
+
         private void removeBtn_Click(object sender, EventArgs e)
         {
             // Event handler for the remove button's click event.
@@ -83,6 +93,10 @@ namespace SchoolTracker
             timer.Interval = 1;
             action = Action.close;
         }
+
+        #endregion
+
+        #region FUNCTION TO SHOW ALERT
 
         public void ShowAlert(string msg, Type type)
         {
@@ -142,5 +156,7 @@ namespace SchoolTracker
             timer.Interval = 1;
             timer.Start();
         }
+
+        #endregion
     }
 }
