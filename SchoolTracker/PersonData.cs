@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.IO;
 
 namespace SchoolTracker
 {
@@ -26,7 +27,7 @@ namespace SchoolTracker
                 // Regular expression pattern for a valid Philippine contact number.
                 string pattern = @"^(09\d{9}|(\+63|0)[2-8]\d{7})$";
 
-                Validate(pattern, ref _contactNumber, value, "phone number", "Philippine phone number");
+                Validate(pattern, ref _contactNumber, value, "phone number", "Philippines phone number");
             }
         }
 
@@ -35,13 +36,15 @@ namespace SchoolTracker
         // If the value doesn't match, an error message is displayed and the privateHolder variable is set to null.
         public void Validate(string pattern, ref string privateHolder, string value, string name, string secondName)
         {
+            Functionality functions = new Functionality();
+
             // Check if the provided value matches the specified regular expression pattern.
             if (Regex.IsMatch(value, pattern))
                 privateHolder = value; // Assign the value to the privateHolder if it's valid.
             else
             {
                 // Display an error message using string interpolation to include the invalid value and the expected type.
-                MessageBox.Show($"Invalid {name}. Please enter a valid {secondName}.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                functions.Alert($"Invalid {secondName}", AlertForm.Type.Error);
                 privateHolder = null; // Set the privateHolder to null since the value is invalid.
             }
         }
