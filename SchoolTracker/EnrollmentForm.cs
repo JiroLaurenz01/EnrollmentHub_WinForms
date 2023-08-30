@@ -794,6 +794,8 @@ namespace SchoolTracker
 
         #region GENERAL FUNCTIONS FOR COURSES SELECTION TAB
 
+        #region FUNCTIONS TO HANDLE THE LOGIC OF DEPARTMENTS AND COURSES SELECTION
+
         #region FUNCTION TO LOAD THE COURSES SELECTION TAB
 
         // This method is responsible for populating the ComboBoxes with department information.
@@ -1007,6 +1009,8 @@ namespace SchoolTracker
 
         #endregion
 
+        #endregion
+
         #region FUNCTIONS FOR SUBMIT AND BACK BUTTON
 
         private void submitCoursesBtn_Click(object sender, EventArgs e)
@@ -1040,8 +1044,13 @@ namespace SchoolTracker
 
         private bool ValidateSelectedCourses()
         {
+            // This method is used to validate selected courses before further processing.
+
+            // Iterate through each MaterialComboBox control inside departmentBox.
             foreach (MaterialComboBox comboBox in departmentBox.Controls)
             {
+                // Check if the selected index of the current combo box is 0, which usually indicates no valid selection.
+                // Return false to indicate that validation failed.
                 if (comboBox.SelectedIndex == 0)
                 {
                     MessageBox.Show("Complete all of the requirements.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1049,17 +1058,29 @@ namespace SchoolTracker
                 }
             }
 
+            // Create an array containing the text of five course input fields.
             string[] courses = { firstCourse.Text, secondCourse.Text, thirdCourse.Text, fourthCourse.Text, fifthCourse.Text };
+
+            // Loop through the courses array to compare each course with the others.
             for (int i = 0; i < courses.Length - 1; i++)
+            {
+                // Start an inner loop to compare the current course (courses[i]) with subsequent courses (courses[j]).
                 for (int j = i + 1; j < courses.Length; j++)
+                {
+                    // Check if the current course is the same as any of the subsequent courses.
+                    // Return false to indicate that validation failed.
                     if (courses[i] == courses[j])
                     {
-                        MessageBox.Show("Could not select the course that already selected.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Could not select the course that is already selected.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return false;
                     }
+                }
+            }
 
+            // Call the PassCoursesInformation method to perform further processing or storage of course information.
             PassCoursesInformation();
 
+            // If all validation checks pass, return true to indicate that selected courses are valid.
             return true;
         }
 
