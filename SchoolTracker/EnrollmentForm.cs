@@ -1032,6 +1032,40 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTION TO VALIDATE SELECTED COURSES
+
+        private bool ValidateSelectedCourses()
+        {
+            foreach (MaterialComboBox comboBox in coursesTab.Controls)
+            {
+                if (comboBox.SelectedIndex == 0)
+                {
+                    MessageBox.Show("Complete all of the requirements.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+            }
+
+
+            PassCoursesInformation();
+
+            return true;
+        }
+
+        #endregion
+
+        #region FUNCTION TO PASS THE COURSES INFORMATION
+
+        private void PassCoursesInformation()
+        {
+            studentData.FirstCourse = firstCourse.Text;
+            studentData.SecondCourse = secondCourse.Text;
+            studentData.ThirdCourse = thirdCourse.Text;
+            studentData.FourthCourse = fourthCourse.Text;
+            studentData.FifthCourse = fifthCourse.Text;
+        }
+
+        #endregion
+
         #endregion
 
         #region GENERAL FUNCTIONS FOR COURSES SELECTION REVIEW TAB
