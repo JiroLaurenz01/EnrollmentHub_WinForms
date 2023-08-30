@@ -1009,10 +1009,7 @@ namespace SchoolTracker
         // in its respective MaterialComboBox. They call the Courses() function to update the course selection based on
         // the chosen department. Each handler is associated with a specific department's data and MaterialComboBoxes.
 
-        private void firstDepartment_SelectedIndexChanged(object sender, EventArgs e) 
-        {
-            Courses(firstDept, firstDepartment, firstCourse); 
-        }
+        private void firstDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(firstDept, firstDepartment, firstCourse);
         private void secondDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(secondDept, secondDepartment, secondCourse);
         private void thirdDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(thirdDept, thirdDepartment, thirdCourse);
         private void fourthDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(fourthDept, fourthDepartment, fourthCourse);
