@@ -34,10 +34,9 @@ namespace SchoolTracker
         #region FIELDS
 
         int previousTab = 0;
+        bool ifLoaded = false;
 
         #region FIELDS FOR DEPARTMENTS AND COURSES SELECTION
-
-        private List<DataTable> deptDTableList = new List<DataTable>();
 
         DataTable firstDept = new DataTable();
         DataTable secondDept = new DataTable();
@@ -345,20 +344,30 @@ namespace SchoolTracker
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            if (ValidateInformation())
-            {
-                RetrievingInformation();
+            //if (ValidateInformation())
+            //{
+            //    RetrievingInformation();
 
-                // Calculate the index of the next tab to be displayed.
-                int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+            //    // Calculate the index of the next tab to be displayed.
+            //    int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
-                // Temporarily remove the event handler "enrollmentTab_Selecting".
-                // Set the selected index of the tab control to the calculated nextTabIndex.
-                // Add back the event handler "enrollmentTab_Selecting".
-                enrollmentTab.Selecting -= enrollmentTab_Selecting;
-                enrollmentTab.SelectedIndex = nextTabIndex;
-                enrollmentTab.Selecting += enrollmentTab_Selecting;
-            }
+            //    // Temporarily remove the event handler "enrollmentTab_Selecting".
+            //    // Set the selected index of the tab control to the calculated nextTabIndex.
+            //    // Add back the event handler "enrollmentTab_Selecting".
+            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            //    enrollmentTab.SelectedIndex = nextTabIndex;
+            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
+            //}
+
+            // Calculate the index of the next tab to be displayed.
+            int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+
+            // Temporarily remove the event handler "enrollmentTab_Selecting".
+            // Set the selected index of the tab control to the calculated nextTabIndex.
+            // Add back the event handler "enrollmentTab_Selecting".
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -800,29 +809,32 @@ namespace SchoolTracker
         // This method is responsible for populating the ComboBoxes with department information.
         private void CoursesSelectionLoad()
         {
-            // Call the method "FillDepartmentTable" to populate department-related data.
-            FillDepartmentTable();
+            if (!ifLoaded)
+            {
+                // Call the method "FillDepartmentTable" to populate department-related data.
+                FillDepartmentTable();
 
-            // Call the method "FillCoursesTable" to populate courses depends on the selected department.
-            FillCoursesTable();
+                // Call the method "FillCoursesTable" to populate courses depends on the selected department.
+                FillCoursesTable();
 
-            // Set the data source for the first to fifth ComboBoxes to the "firstDept" to "fifthDept" collections.
-            // Specify that the "DName" property from the data source should be displayed in the ComboBox.
+                // Set the data source for the first to fifth ComboBoxes to the "firstDept" to "fifthDept" collections.
+                // Specify that the "DName" property from the data source should be displayed in the ComboBox.
 
-            firstDepartment.DataSource = firstDept;
-            firstDepartment.DisplayMember = "DName";
+                firstDepartment.DataSource = firstDept;
+                firstDepartment.DisplayMember = "DName";
 
-            secondDepartment.DataSource = secondDept;
-            secondDepartment.DisplayMember = "DName";
+                secondDepartment.DataSource = secondDept;
+                secondDepartment.DisplayMember = "DName";
 
-            thirdDepartment.DataSource = thirdDept;
-            thirdDepartment.DisplayMember = "DName";
+                thirdDepartment.DataSource = thirdDept;
+                thirdDepartment.DisplayMember = "DName";
 
-            fourthDepartment.DataSource = fourthDept;
-            fourthDepartment.DisplayMember = "DName";
+                fourthDepartment.DataSource = fourthDept;
+                fourthDepartment.DisplayMember = "DName";
 
-            fifthDepartment.DataSource = fifthDept;
-            fifthDepartment.DisplayMember = "DName";
+                fifthDepartment.DataSource = fifthDept;
+                fifthDepartment.DisplayMember = "DName";
+            }
         }
 
         #endregion
@@ -832,8 +844,7 @@ namespace SchoolTracker
         // This method populates the department-related DataTables.
         private void FillDepartmentTable()
         {
-            // Clear the existing list of department DataTables.
-            deptDTableList.Clear();
+            List<DataTable> deptDTableList = new List<DataTable>();
 
             // Add each department DataTable to the list.
             deptDTableList.Add(firstDept);
@@ -845,13 +856,9 @@ namespace SchoolTracker
             // For each department DataTable in the list.
             foreach (DataTable dt in deptDTableList)
             {
-                dt.Columns.Clear();
-
-                // Add "DID" of integer type and "DName" column to the DataTable.
+                //Add "DID" of integer type and "DName" column to the DataTable.
                 dt.Columns.Add("DID", typeof(int));
                 dt.Columns.Add("DName");
-
-                dt.Rows.Clear();
 
                 // Add rows with department information to the DataTable.
                 dt.Rows.Add(1, "- Select your department -");
@@ -871,6 +878,8 @@ namespace SchoolTracker
                 dt.Rows.Add(15, "College of Tourism, Hospitality and Transportation Management (CTHTM)");
                 dt.Rows.Add(16, "Institute of Technology");
             }
+
+            ifLoaded = true;
         }
 
         #endregion
@@ -1000,7 +1009,10 @@ namespace SchoolTracker
         // in its respective MaterialComboBox. They call the Courses() function to update the course selection based on
         // the chosen department. Each handler is associated with a specific department's data and MaterialComboBoxes.
 
-        private void firstDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(firstDept, firstDepartment, firstCourse);
+        private void firstDepartment_SelectedIndexChanged(object sender, EventArgs e) 
+        {
+            Courses(firstDept, firstDepartment, firstCourse); 
+        }
         private void secondDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(secondDept, secondDepartment, secondCourse);
         private void thirdDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(thirdDept, thirdDepartment, thirdCourse);
         private void fourthDepartment_SelectedIndexChanged(object sender, EventArgs e) => Courses(fourthDept, fourthDepartment, fourthCourse);
@@ -1012,12 +1024,15 @@ namespace SchoolTracker
 
         private void submitCoursesBtn_Click(object sender, EventArgs e)
         {
-            // Calculate the index of the next tab to be displayed.
-            int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+            if (ValidateSelectedCourses())
+            {
+                // Calculate the index of the next tab to be displayed.
+                int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
-            enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            enrollmentTab.SelectedIndex = nextTabIndex;
-            enrollmentTab.Selecting += enrollmentTab_Selecting;
+                enrollmentTab.Selecting -= enrollmentTab_Selecting;
+                enrollmentTab.SelectedIndex = nextTabIndex;
+                enrollmentTab.Selecting += enrollmentTab_Selecting;
+            }
         }
 
         private void coursesBackBtn_Click(object sender, EventArgs e)
@@ -1036,7 +1051,7 @@ namespace SchoolTracker
 
         private bool ValidateSelectedCourses()
         {
-            foreach (MaterialComboBox comboBox in coursesTab.Controls)
+            foreach (MaterialComboBox comboBox in departmentBox.Controls)
             {
                 if (comboBox.SelectedIndex == 0)
                 {
@@ -1045,6 +1060,14 @@ namespace SchoolTracker
                 }
             }
 
+            string[] courses = { firstCourse.Text, secondCourse.Text, thirdCourse.Text, fourthCourse.Text, fifthCourse.Text };
+            for (int i = 0; i < courses.Length - 1; i++)
+                for (int j = i + 1; j < courses.Length; j++)
+                    if (courses[i] == courses[j])
+                    {
+                        MessageBox.Show("Could not select the course that already selected.", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
 
             PassCoursesInformation();
 
