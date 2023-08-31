@@ -818,7 +818,7 @@
             this.eSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eSchoolName.Depth = 0;
             this.eSchoolName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.eSchoolName.Hint = "Name of  Elementary School";
+            this.eSchoolName.Hint = "Elementary School";
             this.eSchoolName.LeadingIcon = null;
             this.eSchoolName.Location = new System.Drawing.Point(186, 738);
             this.eSchoolName.MaxLength = 50;
@@ -837,7 +837,7 @@
             this.hSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hSchoolName.Depth = 0;
             this.hSchoolName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.hSchoolName.Hint = "Name of  High School";
+            this.hSchoolName.Hint = "High School";
             this.hSchoolName.LeadingIcon = null;
             this.hSchoolName.Location = new System.Drawing.Point(704, 738);
             this.hSchoolName.MaxLength = 50;
@@ -856,7 +856,7 @@
             this.shSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.shSchoolName.Depth = 0;
             this.shSchoolName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.shSchoolName.Hint = "Name of Senior High School";
+            this.shSchoolName.Hint = "Senior High School";
             this.shSchoolName.LeadingIcon = null;
             this.shSchoolName.Location = new System.Drawing.Point(1217, 738);
             this.shSchoolName.MaxLength = 50;
@@ -5663,7 +5663,6 @@
             this.submitGradesBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.submitGradesBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.submitGradesBtn.Depth = 0;
-            this.submitGradesBtn.Enabled = false;
             this.submitGradesBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.submitGradesBtn.HighEmphasis = true;
             this.submitGradesBtn.Icon = null;

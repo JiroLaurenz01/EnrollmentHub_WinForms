@@ -42,7 +42,7 @@
             this.labelMessage.AutoSize = true;
             this.labelMessage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMessage.ForeColor = System.Drawing.Color.White;
-            this.labelMessage.Location = new System.Drawing.Point(65, 21);
+            this.labelMessage.Location = new System.Drawing.Point(63, 21);
             this.labelMessage.Name = "labelMessage";
             this.labelMessage.Size = new System.Drawing.Size(116, 21);
             this.labelMessage.TabIndex = 0;
@@ -55,7 +55,7 @@
             // removeBtn
             // 
             this.removeBtn.Image = global::SchoolTracker.Properties.Resources.icons8_cancel_25px;
-            this.removeBtn.Location = new System.Drawing.Point(352, 16);
+            this.removeBtn.Location = new System.Drawing.Point(330, 16);
             this.removeBtn.Name = "removeBtn";
             this.removeBtn.Size = new System.Drawing.Size(26, 30);
             this.removeBtn.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(390, 62);
+            this.ClientSize = new System.Drawing.Size(367, 62);
             this.Controls.Add(this.removeBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelMessage);
