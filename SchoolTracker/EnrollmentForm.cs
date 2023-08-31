@@ -344,32 +344,22 @@ namespace SchoolTracker
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            //if (ValidateInformation())
-            //{
-            //    functions.Alert("Submitted Successfully", AlertForm.Type.Success);
+            if (ValidateInformation())
+            {
+                functions.Alert("Submitted Successfully", AlertForm.Type.Success);
 
-            //    RetrievingInformation();
+                RetrievingInformation();
 
-            //    // Calculate the index of the next tab to be displayed.
-            //    int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+                // Calculate the index of the next tab to be displayed.
+                int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
-            //    // Temporarily remove the event handler "enrollmentTab_Selecting".
-            //    // Set the selected index of the tab control to the calculated nextTabIndex.
-            //    // Add back the event handler "enrollmentTab_Selecting".
-            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            //    enrollmentTab.SelectedIndex = nextTabIndex;
-            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
-            //}
-
-            // Calculate the index of the next tab to be displayed.
-            int nextTabIndex = enrollmentTab.SelectedIndex + 1;
-
-            // Temporarily remove the event handler "enrollmentTab_Selecting".
-            // Set the selected index of the tab control to the calculated nextTabIndex.
-            // Add back the event handler "enrollmentTab_Selecting".
-            enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            enrollmentTab.SelectedIndex = nextTabIndex;
-            enrollmentTab.Selecting += enrollmentTab_Selecting;
+                // Temporarily remove the event handler "enrollmentTab_Selecting".
+                // Set the selected index of the tab control to the calculated nextTabIndex.
+                // Add back the event handler "enrollmentTab_Selecting".
+                enrollmentTab.Selecting -= enrollmentTab_Selecting;
+                enrollmentTab.SelectedIndex = nextTabIndex;
+                enrollmentTab.Selecting += enrollmentTab_Selecting;
+            }
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -653,8 +643,6 @@ namespace SchoolTracker
 
         #endregion
 
-        #endregion
-
         #region FUNCTION TO RESET ALL FILLED INFORMATION
 
         private void resetInfoBtn_Click(object sender, EventArgs e)
@@ -695,6 +683,8 @@ namespace SchoolTracker
         }
 
         #endregion
+
+        #endregion    
 
         #region FUNCTIONS FOR KEY PRESS
 
@@ -1169,11 +1159,18 @@ namespace SchoolTracker
 
         private void submitGradesBtn_Click(object sender, EventArgs e)
         {
+            // Iterate through each control (user interface element) within the "gradesAverageCard" container.
             foreach (Control control in gradesAverageCard.Controls)
             {
+                // Check if the current control is a MaterialTextBox (a specific type of text input control)
+                // and if its Text property is empty or null (no text entered).
                 if (control is MaterialTextBox && String.IsNullOrEmpty(control.Text))
                 {
+                    // If the condition is met, call the "Alert" function with an error message
+                    // and an alert type of "Error".
                     functions.Alert("Complete the Requirements", AlertForm.Type.Error);
+
+                    // Exit the loop and return from this method.
                     return;
                 }
             }
@@ -1181,7 +1178,13 @@ namespace SchoolTracker
 
         private void resetGradesBtn_Click(object sender, EventArgs e)
         {
-
+            // Iterate through each control within the "gradesAverageCard" container.
+            // Check if the current control is a MaterialTextBox.
+            // If true, set the text property of the MaterialTextBox control to an empty string,
+            // effectively clearing the text entered by the user.
+            foreach (Control control in gradesAverageCard.Controls)
+                if (control is MaterialTextBox)
+                    control.Text = "";
         }
 
         #endregion
