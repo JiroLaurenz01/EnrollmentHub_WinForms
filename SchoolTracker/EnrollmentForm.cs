@@ -325,7 +325,7 @@ namespace SchoolTracker
                         studentPicture.Image = selectedImage;
                     }
                     else
-                        functions.Alert("Please, select a square image", AlertForm.Type.Error);
+                        functions.Alert("Select a Square Image", AlertForm.Type.Error);
                 }
             }
             catch (Exception ex)
@@ -436,7 +436,7 @@ namespace SchoolTracker
                         // Else, store the student picture in student data.
                         if (functions.ImageEquals(pictureBox.Image, SchoolTracker.Properties.Resources.user))
                         {
-                            functions.Alert("Please, select your formal picture", AlertForm.Type.Error);
+                            functions.Alert("Select your Formal Picture", AlertForm.Type.Error);
                             return false;
                         }
                         else
@@ -449,8 +449,8 @@ namespace SchoolTracker
                         // If student age and birth date don't match, show an error message. Return false to indicate validation failure.
                         // Else, set birth date and age in student data.
                         if (!functions.ValidateStudentAgeInBDate(bDatePicker, Convert.ToInt32(ageCBox.Text)))
-                        {                         
-                            functions.Alert("Unmatched birth date and age", AlertForm.Type.Error);
+                        {
+                            functions.Alert("Unmatched Birth Date and Age", AlertForm.Type.Error);
                             return false;
                         }
                         else
@@ -467,7 +467,7 @@ namespace SchoolTracker
                         // Else, set gender in student data.
                         if (!maleBtn.Checked && !femaleBtn.Checked)
                         {
-                            functions.Alert("Please, select your gender", AlertForm.Type.Error);
+                            functions.Alert("Select your gender", AlertForm.Type.Error);
                             return false;
                         }
                         else
@@ -480,7 +480,7 @@ namespace SchoolTracker
                         if (textBox.Enabled)
                             if (string.IsNullOrEmpty(textBox.Text))
                             {
-                                functions.Alert("Please, enter your phone number", AlertForm.Type.Error);
+                                functions.Alert("Enter your Phone Number", AlertForm.Type.Error);
                                 textBox.Focus();
                                 return false;
                             }
@@ -502,20 +502,20 @@ namespace SchoolTracker
 
                     // Handling specific text boxes with validation
                     case MaterialTextBox textBox when control == landlineNumBox:
-                        ifReturn = ValidateAndAssign(textBox, studentData, "Landline number", "LandlineNumber");
+                        ifReturn = ValidateAndAssign(textBox, studentData, "Landline Number", "LandlineNumber");
                         break;
                     case MaterialTextBox textBox when control == gmailAddBox:
-                        ifReturn = ValidateAndAssign(textBox, studentData, "Gmail address", "GmailAddress");
+                        ifReturn = ValidateAndAssign(textBox, studentData, "Gmail Address", "GmailAddress");
                         break;
                     case MaterialTextBox textBox when control == fbLinkBox:
-                        ifReturn = ValidateAndAssign(textBox, studentData, "Facebook link", "FacebookLink");
+                        ifReturn = ValidateAndAssign(textBox, studentData, "Facebook Link", "FacebookLink");
                         break;
 
                     // Handling other MaterialTextBox controls
                     case MaterialTextBox materialTextBox:
                         if (String.IsNullOrEmpty(materialTextBox.Text) && materialTextBox.Enabled)
                         {
-                            functions.Alert($"Please, enter your {materialTextBox.Hint.ToLower()}", AlertForm.Type.Error);
+                            functions.Alert($"Enter a {materialTextBox.Hint.ToLower()}", AlertForm.Type.Error);
                             materialTextBox.Focus();
                             return false;
                         }
@@ -531,7 +531,7 @@ namespace SchoolTracker
             {
                 if (string.IsNullOrEmpty(fpsBox.Text))
                 {
-                    functions.Alert("Enter a valid 4Ps ID number", AlertForm.Type.Error);
+                    functions.Alert("Enter a Valid 4Ps ID Number", AlertForm.Type.Error);
                     fpsBox.Focus();
                     return false;
                 }
@@ -544,7 +544,7 @@ namespace SchoolTracker
             {
                 if (string.IsNullOrEmpty(ipBox.Text))
                 {
-                    functions.Alert("Enter a valid I.P community", AlertForm.Type.Error);
+                    functions.Alert("Enter a Valid I.P Community", AlertForm.Type.Error);
                     ipBox.Focus();
                     return false;
                 }
@@ -618,7 +618,7 @@ namespace SchoolTracker
             // Show an error message using the field name if the input is null or empty, then focus on the textbox and return true (indicating validation failure)
             if (string.IsNullOrEmpty(input))
             {
-                functions.Alert($"Please, enter your {fieldName}", AlertForm.Type.Error);
+                functions.Alert($"Enter your {fieldName}", AlertForm.Type.Error);
                 textBox.Focus();
 
                 return false;
@@ -993,7 +993,7 @@ namespace SchoolTracker
             course.DataSource = dtCourses.Select("CID = " + dtDept.Rows[dept.SelectedIndex]["DID"]).CopyToDataTable();
 
             // Specify that the "CName" property from the data source should be displayed in the course MaterialComboBox.
-            course.DisplayMember = "CName";     
+            course.DisplayMember = "CName";
         }
 
         #endregion
@@ -1153,6 +1153,31 @@ namespace SchoolTracker
 
         #endregion
 
+        #region GENERAL FUNCTIONS FOR FINALIZATION TAB
+
+        #region FUNCTIONS FOR SUBMIT AND RESET BUTTONS
+
+        private void submitGradesBtn_Click(object sender, EventArgs e)
+        {
+            foreach (MaterialTextBox textBox in gradesAverageCard.Controls)
+            {
+                if (String.IsNullOrEmpty(textBox.Text))
+                {
+                    functions.Alert("Incomplete Grades", AlertForm.Type.Error);
+                    return;
+                }
+            }
+        }
+
+        private void resetGradesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
+        #endregion
+
         #region GENERAL FUNCTIONS FOR ENROLLMENT FORM
 
         #region FUNCTIONS TO OPEN VARIOUS WEBSITES
@@ -1221,5 +1246,6 @@ namespace SchoolTracker
         #endregion
 
         #endregion
+
     }
 }

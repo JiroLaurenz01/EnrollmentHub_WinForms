@@ -323,19 +323,19 @@
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel127 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.gradesAverageCard = new MaterialSkin.Controls.MaterialCard();
             this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.firstSem11Box = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel121 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel120 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel122 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.secondSem11Box = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel123 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox3 = new MaterialSkin.Controls.MaterialTextBox();
+            this.secondSem12Box = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel124 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox4 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
+            this.firstSem12Box = new MaterialSkin.Controls.MaterialTextBox();
+            this.resetGradesBtn = new MaterialSkin.Controls.MaterialButton();
+            this.submitGradesBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialDivider20 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider21 = new MaterialSkin.Controls.MaterialDivider();
             this.enrollmentTab.SuspendLayout();
@@ -365,7 +365,7 @@
             this.materialCard29.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.materialCard2.SuspendLayout();
+            this.gradesAverageCard.SuspendLayout();
             this.SuspendLayout();
             // 
             // enrollmentTab
@@ -5376,7 +5376,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.materialDivider21);
             this.panel3.Controls.Add(this.materialCard6);
-            this.panel3.Controls.Add(this.materialCard2);
+            this.panel3.Controls.Add(this.gradesAverageCard);
             this.panel3.Controls.Add(this.materialButton1);
             this.panel3.Controls.Add(this.materialButton2);
             this.panel3.Controls.Add(this.materialLabel127);
@@ -5455,30 +5455,30 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // materialCard2
+            // gradesAverageCard
             // 
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.materialDivider20);
-            this.materialCard2.Controls.Add(this.materialButton3);
-            this.materialCard2.Controls.Add(this.materialButton4);
-            this.materialCard2.Controls.Add(this.materialLabel123);
-            this.materialCard2.Controls.Add(this.materialTextBox3);
-            this.materialCard2.Controls.Add(this.materialLabel124);
-            this.materialCard2.Controls.Add(this.materialTextBox4);
-            this.materialCard2.Controls.Add(this.materialLabel122);
-            this.materialCard2.Controls.Add(this.materialTextBox2);
-            this.materialCard2.Controls.Add(this.materialLabel120);
-            this.materialCard2.Controls.Add(this.materialTextBox1);
-            this.materialCard2.Controls.Add(this.materialLabel121);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(244, 253);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(225, 588);
-            this.materialCard2.TabIndex = 23;
+            this.gradesAverageCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gradesAverageCard.Controls.Add(this.materialDivider20);
+            this.gradesAverageCard.Controls.Add(this.resetGradesBtn);
+            this.gradesAverageCard.Controls.Add(this.submitGradesBtn);
+            this.gradesAverageCard.Controls.Add(this.materialLabel123);
+            this.gradesAverageCard.Controls.Add(this.secondSem12Box);
+            this.gradesAverageCard.Controls.Add(this.materialLabel124);
+            this.gradesAverageCard.Controls.Add(this.firstSem12Box);
+            this.gradesAverageCard.Controls.Add(this.materialLabel122);
+            this.gradesAverageCard.Controls.Add(this.secondSem11Box);
+            this.gradesAverageCard.Controls.Add(this.materialLabel120);
+            this.gradesAverageCard.Controls.Add(this.firstSem11Box);
+            this.gradesAverageCard.Controls.Add(this.materialLabel121);
+            this.gradesAverageCard.Depth = 0;
+            this.gradesAverageCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gradesAverageCard.Location = new System.Drawing.Point(244, 253);
+            this.gradesAverageCard.Margin = new System.Windows.Forms.Padding(14);
+            this.gradesAverageCard.MouseState = MaterialSkin.MouseState.HOVER;
+            this.gradesAverageCard.Name = "gradesAverageCard";
+            this.gradesAverageCard.Padding = new System.Windows.Forms.Padding(14);
+            this.gradesAverageCard.Size = new System.Drawing.Size(225, 588);
+            this.gradesAverageCard.TabIndex = 23;
             // 
             // materialCard6
             // 
@@ -5493,22 +5493,22 @@
             this.materialCard6.Size = new System.Drawing.Size(846, 588);
             this.materialCard6.TabIndex = 24;
             // 
-            // materialTextBox1
+            // firstSem11Box
             // 
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(36, 115);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(156, 50);
-            this.materialTextBox1.TabIndex = 26;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
+            this.firstSem11Box.AnimateReadOnly = false;
+            this.firstSem11Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstSem11Box.Depth = 0;
+            this.firstSem11Box.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.firstSem11Box.LeadingIcon = null;
+            this.firstSem11Box.Location = new System.Drawing.Point(36, 115);
+            this.firstSem11Box.MaxLength = 50;
+            this.firstSem11Box.MouseState = MaterialSkin.MouseState.OUT;
+            this.firstSem11Box.Multiline = false;
+            this.firstSem11Box.Name = "firstSem11Box";
+            this.firstSem11Box.Size = new System.Drawing.Size(156, 50);
+            this.firstSem11Box.TabIndex = 26;
+            this.firstSem11Box.Text = "";
+            this.firstSem11Box.TrailingIcon = null;
             // 
             // materialLabel121
             // 
@@ -5555,22 +5555,22 @@
             this.materialLabel122.Text = "GRADE 11 - 2ND SEM";
             this.materialLabel122.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialTextBox2
+            // secondSem11Box
             // 
-            this.materialTextBox2.AnimateReadOnly = false;
-            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox2.Depth = 0;
-            this.materialTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox2.LeadingIcon = null;
-            this.materialTextBox2.Location = new System.Drawing.Point(36, 205);
-            this.materialTextBox2.MaxLength = 50;
-            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox2.Multiline = false;
-            this.materialTextBox2.Name = "materialTextBox2";
-            this.materialTextBox2.Size = new System.Drawing.Size(156, 50);
-            this.materialTextBox2.TabIndex = 28;
-            this.materialTextBox2.Text = "";
-            this.materialTextBox2.TrailingIcon = null;
+            this.secondSem11Box.AnimateReadOnly = false;
+            this.secondSem11Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.secondSem11Box.Depth = 0;
+            this.secondSem11Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.secondSem11Box.LeadingIcon = null;
+            this.secondSem11Box.Location = new System.Drawing.Point(36, 205);
+            this.secondSem11Box.MaxLength = 50;
+            this.secondSem11Box.MouseState = MaterialSkin.MouseState.OUT;
+            this.secondSem11Box.Multiline = false;
+            this.secondSem11Box.Name = "secondSem11Box";
+            this.secondSem11Box.Size = new System.Drawing.Size(156, 50);
+            this.secondSem11Box.TabIndex = 28;
+            this.secondSem11Box.Text = "";
+            this.secondSem11Box.TrailingIcon = null;
             // 
             // materialLabel123
             // 
@@ -5587,22 +5587,22 @@
             this.materialLabel123.Text = "GRADE 12 - 2ND SEM";
             this.materialLabel123.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialTextBox3
+            // secondSem12Box
             // 
-            this.materialTextBox3.AnimateReadOnly = false;
-            this.materialTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox3.Depth = 0;
-            this.materialTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox3.LeadingIcon = null;
-            this.materialTextBox3.Location = new System.Drawing.Point(36, 425);
-            this.materialTextBox3.MaxLength = 50;
-            this.materialTextBox3.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox3.Multiline = false;
-            this.materialTextBox3.Name = "materialTextBox3";
-            this.materialTextBox3.Size = new System.Drawing.Size(156, 50);
-            this.materialTextBox3.TabIndex = 32;
-            this.materialTextBox3.Text = "";
-            this.materialTextBox3.TrailingIcon = null;
+            this.secondSem12Box.AnimateReadOnly = false;
+            this.secondSem12Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.secondSem12Box.Depth = 0;
+            this.secondSem12Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.secondSem12Box.LeadingIcon = null;
+            this.secondSem12Box.Location = new System.Drawing.Point(36, 425);
+            this.secondSem12Box.MaxLength = 50;
+            this.secondSem12Box.MouseState = MaterialSkin.MouseState.OUT;
+            this.secondSem12Box.Multiline = false;
+            this.secondSem12Box.Name = "secondSem12Box";
+            this.secondSem12Box.Size = new System.Drawing.Size(156, 50);
+            this.secondSem12Box.TabIndex = 32;
+            this.secondSem12Box.Text = "";
+            this.secondSem12Box.TrailingIcon = null;
             // 
             // materialLabel124
             // 
@@ -5619,65 +5619,67 @@
             this.materialLabel124.Text = "GRADE 12 - 1ST SEM";
             this.materialLabel124.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialTextBox4
+            // firstSem12Box
             // 
-            this.materialTextBox4.AnimateReadOnly = false;
-            this.materialTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox4.Depth = 0;
-            this.materialTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox4.LeadingIcon = null;
-            this.materialTextBox4.Location = new System.Drawing.Point(33, 335);
-            this.materialTextBox4.MaxLength = 50;
-            this.materialTextBox4.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox4.Multiline = false;
-            this.materialTextBox4.Name = "materialTextBox4";
-            this.materialTextBox4.Size = new System.Drawing.Size(156, 50);
-            this.materialTextBox4.TabIndex = 30;
-            this.materialTextBox4.Text = "";
-            this.materialTextBox4.TrailingIcon = null;
+            this.firstSem12Box.AnimateReadOnly = false;
+            this.firstSem12Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstSem12Box.Depth = 0;
+            this.firstSem12Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.firstSem12Box.LeadingIcon = null;
+            this.firstSem12Box.Location = new System.Drawing.Point(33, 335);
+            this.firstSem12Box.MaxLength = 50;
+            this.firstSem12Box.MouseState = MaterialSkin.MouseState.OUT;
+            this.firstSem12Box.Multiline = false;
+            this.firstSem12Box.Name = "firstSem12Box";
+            this.firstSem12Box.Size = new System.Drawing.Size(156, 50);
+            this.firstSem12Box.TabIndex = 30;
+            this.firstSem12Box.Text = "";
+            this.firstSem12Box.TrailingIcon = null;
             // 
-            // materialButton3
+            // resetGradesBtn
             // 
-            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton3.Depth = 0;
-            this.materialButton3.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton3.HighEmphasis = true;
-            this.materialButton3.Icon = null;
-            this.materialButton3.Location = new System.Drawing.Point(125, 521);
-            this.materialButton3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton3.Name = "materialButton3";
-            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton3.Size = new System.Drawing.Size(65, 36);
-            this.materialButton3.TabIndex = 35;
-            this.materialButton3.Text = "RESET";
-            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.materialButton3.UseAccentColor = true;
-            this.materialButton3.UseMnemonic = false;
-            this.materialButton3.UseVisualStyleBackColor = false;
+            this.resetGradesBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.resetGradesBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.resetGradesBtn.Depth = 0;
+            this.resetGradesBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.resetGradesBtn.HighEmphasis = true;
+            this.resetGradesBtn.Icon = null;
+            this.resetGradesBtn.Location = new System.Drawing.Point(125, 521);
+            this.resetGradesBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.resetGradesBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.resetGradesBtn.Name = "resetGradesBtn";
+            this.resetGradesBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.resetGradesBtn.Size = new System.Drawing.Size(65, 36);
+            this.resetGradesBtn.TabIndex = 35;
+            this.resetGradesBtn.Text = "RESET";
+            this.resetGradesBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.resetGradesBtn.UseAccentColor = true;
+            this.resetGradesBtn.UseMnemonic = false;
+            this.resetGradesBtn.UseVisualStyleBackColor = false;
+            this.resetGradesBtn.Click += new System.EventHandler(this.resetGradesBtn_Click);
             // 
-            // materialButton4
+            // submitGradesBtn
             // 
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.Enabled = false;
-            this.materialButton4.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(42, 521);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(75, 36);
-            this.materialButton4.TabIndex = 34;
-            this.materialButton4.Text = "SUBMIT";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseMnemonic = false;
-            this.materialButton4.UseVisualStyleBackColor = false;
+            this.submitGradesBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.submitGradesBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.submitGradesBtn.Depth = 0;
+            this.submitGradesBtn.Enabled = false;
+            this.submitGradesBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.submitGradesBtn.HighEmphasis = true;
+            this.submitGradesBtn.Icon = null;
+            this.submitGradesBtn.Location = new System.Drawing.Point(42, 521);
+            this.submitGradesBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.submitGradesBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.submitGradesBtn.Name = "submitGradesBtn";
+            this.submitGradesBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.submitGradesBtn.Size = new System.Drawing.Size(75, 36);
+            this.submitGradesBtn.TabIndex = 34;
+            this.submitGradesBtn.Text = "SUBMIT";
+            this.submitGradesBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.submitGradesBtn.UseAccentColor = false;
+            this.submitGradesBtn.UseMnemonic = false;
+            this.submitGradesBtn.UseVisualStyleBackColor = false;
+            this.submitGradesBtn.Click += new System.EventHandler(this.submitGradesBtn_Click);
             // 
             // materialDivider20
             // 
@@ -5766,8 +5768,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.materialCard2.ResumeLayout(false);
-            this.materialCard2.PerformLayout();
+            this.gradesAverageCard.ResumeLayout(false);
+            this.gradesAverageCard.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6066,21 +6068,21 @@
         private MaterialSkin.Controls.MaterialCheckbox mNoneBtn;
         private System.Windows.Forms.Panel panel3;
         private MaterialSkin.Controls.MaterialCard materialCard6;
-        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private MaterialSkin.Controls.MaterialCard gradesAverageCard;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialLabel materialLabel127;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialButton materialButton3;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
+        private MaterialSkin.Controls.MaterialButton resetGradesBtn;
+        private MaterialSkin.Controls.MaterialButton submitGradesBtn;
         private MaterialSkin.Controls.MaterialLabel materialLabel123;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox3;
+        private MaterialSkin.Controls.MaterialTextBox secondSem12Box;
         private MaterialSkin.Controls.MaterialLabel materialLabel124;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox4;
+        private MaterialSkin.Controls.MaterialTextBox firstSem12Box;
         private MaterialSkin.Controls.MaterialLabel materialLabel122;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
+        private MaterialSkin.Controls.MaterialTextBox secondSem11Box;
         private MaterialSkin.Controls.MaterialLabel materialLabel120;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private MaterialSkin.Controls.MaterialTextBox firstSem11Box;
         private MaterialSkin.Controls.MaterialLabel materialLabel121;
         private MaterialSkin.Controls.MaterialDivider materialDivider20;
         private MaterialSkin.Controls.MaterialDivider materialDivider21;
