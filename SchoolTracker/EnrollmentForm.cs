@@ -344,22 +344,32 @@ namespace SchoolTracker
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            if (ValidateInformation())
-            {
-                functions.Alert("Submitted Successfully", AlertForm.Type.Success);
+            //if (ValidateInformation())
+            //{
+            //    functions.Alert("Submitted Successfully", AlertForm.Type.Success);
 
-                RetrievingInformation();
+            //    RetrievingInformation();
 
-                // Calculate the index of the next tab to be displayed.
-                int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+            //    // Calculate the index of the next tab to be displayed.
+            //    int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
-                // Temporarily remove the event handler "enrollmentTab_Selecting".
-                // Set the selected index of the tab control to the calculated nextTabIndex.
-                // Add back the event handler "enrollmentTab_Selecting".
-                enrollmentTab.Selecting -= enrollmentTab_Selecting;
-                enrollmentTab.SelectedIndex = nextTabIndex;
-                enrollmentTab.Selecting += enrollmentTab_Selecting;
-            }
+            //    // Temporarily remove the event handler "enrollmentTab_Selecting".
+            //    // Set the selected index of the tab control to the calculated nextTabIndex.
+            //    // Add back the event handler "enrollmentTab_Selecting".
+            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            //    enrollmentTab.SelectedIndex = nextTabIndex;
+            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
+            //}
+
+            // Calculate the index of the next tab to be displayed.
+            int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+
+            // Temporarily remove the event handler "enrollmentTab_Selecting".
+            // Set the selected index of the tab control to the calculated nextTabIndex.
+            // Add back the event handler "enrollmentTab_Selecting".
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -450,7 +460,7 @@ namespace SchoolTracker
                         // Else, set birth date and age in student data.
                         if (!functions.ValidateStudentAgeInBDate(bDatePicker, Convert.ToInt32(ageCBox.Text)))
                         {
-                            functions.Alert("Unmatched Birth Date and Age", AlertForm.Type.Error);
+                            functions.Alert("Invalid BirthDate or Age", AlertForm.Type.Error);
                             return false;
                         }
                         else
@@ -515,7 +525,7 @@ namespace SchoolTracker
                     case MaterialTextBox materialTextBox:
                         if (String.IsNullOrEmpty(materialTextBox.Text) && materialTextBox.Enabled)
                         {
-                            functions.Alert($"Enter a {materialTextBox.Hint.ToLower()}", AlertForm.Type.Error);
+                            functions.Alert($"Enter a {materialTextBox.Hint}", AlertForm.Type.Error);
                             materialTextBox.Focus();
                             return false;
                         }
@@ -1057,7 +1067,7 @@ namespace SchoolTracker
                 // Return false to indicate that validation failed.
                 if (comboBox.SelectedIndex == 0)
                 {
-                    functions.Alert("Complete all of the requirements", AlertForm.Type.Info);
+                    functions.Alert("Complete the Requirements", AlertForm.Type.Info);
                     return false;
                 }
             }
@@ -1075,7 +1085,7 @@ namespace SchoolTracker
                     // Return false to indicate that validation failed.
                     if (courses[i] == courses[j])
                     {
-                        functions.Alert("Please, select the unselected course", AlertForm.Type.Error);
+                        functions.Alert("Select the Unselected Course", AlertForm.Type.Error);
                         return false;
                     }
                 }
@@ -1159,11 +1169,11 @@ namespace SchoolTracker
 
         private void submitGradesBtn_Click(object sender, EventArgs e)
         {
-            foreach (MaterialTextBox textBox in gradesAverageCard.Controls)
+            foreach (Control control in gradesAverageCard.Controls)
             {
-                if (String.IsNullOrEmpty(textBox.Text))
+                if (control is MaterialTextBox && String.IsNullOrEmpty(control.Text))
                 {
-                    functions.Alert("Incomplete Grades", AlertForm.Type.Error);
+                    functions.Alert("Complete the Requirements", AlertForm.Type.Error);
                     return;
                 }
             }
