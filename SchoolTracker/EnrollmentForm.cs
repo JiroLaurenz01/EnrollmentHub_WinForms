@@ -344,22 +344,32 @@ namespace SchoolTracker
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            if (ValidateInformation())
-            {
-                functions.Alert("Submitted Successfully", AlertForm.Type.Success);
+            //if (ValidateInformation())
+            //{
+            //    functions.Alert("Submitted Successfully", AlertForm.Type.Success);
 
-                RetrievingInformation();
+            //    RetrievingInformation();
 
-                // Calculate the index of the next tab to be displayed.
-                int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+            //     Calculate the index of the next tab to be displayed.
+            //    int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
-                // Temporarily remove the event handler "enrollmentTab_Selecting".
-                // Set the selected index of the tab control to the calculated nextTabIndex.
-                // Add back the event handler "enrollmentTab_Selecting".
-                enrollmentTab.Selecting -= enrollmentTab_Selecting;
-                enrollmentTab.SelectedIndex = nextTabIndex;
-                enrollmentTab.Selecting += enrollmentTab_Selecting;
-            }
+            //     Temporarily remove the event handler "enrollmentTab_Selecting".
+            //     Set the selected index of the tab control to the calculated nextTabIndex.
+            //     Add back the event handler "enrollmentTab_Selecting".
+            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            //    enrollmentTab.SelectedIndex = nextTabIndex;
+            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
+            //}
+
+            // Calculate the index of the next tab to be displayed.
+            int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+
+            // Temporarily remove the event handler "enrollmentTab_Selecting".
+            // Set the selected index of the tab control to the calculated nextTabIndex.
+            // Add back the event handler "enrollmentTab_Selecting".
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -1117,7 +1127,7 @@ namespace SchoolTracker
             {
                 functions.Alert("Finalized successfully", AlertForm.Type.Success);
 
-                functions.Alert("First: Complete the Averages", AlertForm.Type.Info);
+                functions.Alert("Firstly: Complete the Averages", AlertForm.Type.Info);
                 // Calculate the index of the next tab to be displayed.
                 int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
@@ -1176,7 +1186,8 @@ namespace SchoolTracker
                 }
             }
 
-            functions.Alert("Second: Save the QR Code", AlertForm.Type.Info);
+            // Load the QR code image and the text boxes for enrolee number and password.
+            EnroleeAccountQRLoad();
         }
 
         private void resetGradesBtn_Click(object sender, EventArgs e)
@@ -1192,14 +1203,41 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTION TO LOAD THE QR CODE AND ENROLEE ACCOUNT
+
+        private void EnroleeAccountQRLoad()
+        {
+            // Display an informational alert message with the text "Secondly: Save the QR Code".
+            functions.Alert("Secondly: Save the QR Code", AlertForm.Type.Info);
+
+            // Enable the "saveQrBtn" button, the "enroleeNumBox" textbox, and the "tempPassBox" textbox to allow user interaction.
+            saveQrBtn.Enabled = true;
+            enroleeNumBox.Enabled = true;
+            tempPassBox.Enabled = true;
+
+            // Generate an enrollment number and a temporary password using custom functions and store them in variables.
+            string enroleeNumber = functions.GenerateEnroleeNumber();
+            string enroleePassword = functions.GenerateRandomPassword();
+
+            enroleeNumBox.Text = enroleeNumber;
+            tempPassBox.Text = enroleePassword;
+
+            string qrText = $"Enrolee Number: {enroleeNumber}\nTemporary Password: {enroleePassword}";
+
+            // Generate a QR code image using the "GetCode" function and the "qrText" as data, then display it in the "qrCodeBox" control.
+            qrCodeBox.Image = functions.GetCode(qrText);
+        }
+
+        #endregion
+
         private void saveQrBtn_Click(object sender, EventArgs e)
         {
-            functions.Alert("Third: Understand the READ ME", AlertForm.Type.Info);
+            functions.Alert("Thirdly: Understand the READ ME", AlertForm.Type.Info);
         }
 
         private void understandBtn_Click(object sender, EventArgs e)
         {
-            functions.Alert("Last: Finalize the Enrollment", AlertForm.Type.Info);
+            functions.Alert("Lastly: Finalize the Enrollment", AlertForm.Type.Info);
         }
         #endregion
 

@@ -96,7 +96,7 @@ namespace SchoolTracker
         #region FUNCTION TO GENERATE QR CODE
 
         // This method generates a QR code as a Bitmap image based on the given 'code'.
-        public static Bitmap GetCode(string code)
+        public Bitmap GetCode(string code)
         {
             QRCodeGenerator generator = new QRCodeGenerator();
 
@@ -128,7 +128,7 @@ namespace SchoolTracker
         static DataTable appNumber = new DataTable();  // Creates a DataTable to hold the ApplicantNumber data.
 
         // Method to generate an enrolee number.
-        public static string GenerateEnroleeNumber()
+        public string GenerateEnroleeNumber()
         {
             string query = "Select * from ApplicantNumber"; // SQL query to select data from the 'ApplicantNumber' table.
             objDBAccess.readDatathroughAdapter(query, appNumber); // Reads data from the database into the 'appNumber' DataTable.
@@ -142,7 +142,7 @@ namespace SchoolTracker
         }
 
         // Method to generate a random password.
-        public static string GenerateRandomPassword()
+        public string GenerateRandomPassword()
         {
             Random random = new Random(); // Creates a random number generator.
 
