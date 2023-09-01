@@ -118,6 +118,16 @@ namespace SchoolTracker
             );
         }
 
+        #endregion
+
+        #region FUNCTION TO GENERATE TEMPORARY ENROLEE ACCOUNT
+
+        DBAccess objDBAccess = new DBAccess();
+
+        public static void GetEnroleeAccount()
+        {
+            string num;
+        }
 
         #endregion
     }
