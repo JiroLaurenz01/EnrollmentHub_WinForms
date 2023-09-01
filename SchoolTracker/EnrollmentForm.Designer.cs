@@ -5888,6 +5888,7 @@
             this.understandBtn.UseAccentColor = false;
             this.understandBtn.UseMnemonic = false;
             this.understandBtn.UseVisualStyleBackColor = false;
+            this.understandBtn.Click += new System.EventHandler(this.understandBtn_Click);
             // 
             // materialLabel130
             // 
@@ -5987,6 +5988,7 @@
             this.saveQrBtn.UseAccentColor = false;
             this.saveQrBtn.UseMnemonic = false;
             this.saveQrBtn.UseVisualStyleBackColor = false;
+            this.saveQrBtn.Click += new System.EventHandler(this.saveQrBtn_Click);
             // 
             // materialCard9
             // 
