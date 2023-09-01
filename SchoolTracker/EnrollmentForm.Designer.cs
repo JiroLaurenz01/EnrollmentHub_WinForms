@@ -307,6 +307,26 @@
             this.materialLabel119 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.finalizationTab = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.materialDivider21 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
+            this.gradesAverageCard = new MaterialSkin.Controls.MaterialCard();
+            this.materialDivider20 = new MaterialSkin.Controls.MaterialDivider();
+            this.resetGradesBtn = new MaterialSkin.Controls.MaterialButton();
+            this.submitGradesBtn = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel123 = new MaterialSkin.Controls.MaterialLabel();
+            this.secondSem12Box = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel124 = new MaterialSkin.Controls.MaterialLabel();
+            this.firstSem12Box = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel122 = new MaterialSkin.Controls.MaterialLabel();
+            this.secondSem11Box = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel120 = new MaterialSkin.Controls.MaterialLabel();
+            this.firstSem11Box = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel121 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel127 = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backBtn = new System.Windows.Forms.TabPage();
             this.materialCard29 = new MaterialSkin.Controls.MaterialCard();
             this.materialLabel178 = new MaterialSkin.Controls.MaterialLabel();
@@ -318,26 +338,20 @@
             this.materialLabel44 = new MaterialSkin.Controls.MaterialLabel();
             this.openWebBtn = new MaterialSkin.Controls.MaterialButton();
             this.thSwitch = new MaterialSkin.Controls.MaterialSwitch();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
-            this.materialLabel127 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gradesAverageCard = new MaterialSkin.Controls.MaterialCard();
-            this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
-            this.firstSem11Box = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel121 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel120 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel122 = new MaterialSkin.Controls.MaterialLabel();
-            this.secondSem11Box = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel123 = new MaterialSkin.Controls.MaterialLabel();
-            this.secondSem12Box = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel124 = new MaterialSkin.Controls.MaterialLabel();
-            this.firstSem12Box = new MaterialSkin.Controls.MaterialTextBox();
-            this.resetGradesBtn = new MaterialSkin.Controls.MaterialButton();
-            this.submitGradesBtn = new MaterialSkin.Controls.MaterialButton();
-            this.materialDivider20 = new MaterialSkin.Controls.MaterialDivider();
-            this.materialDivider21 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard7 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard8 = new MaterialSkin.Controls.MaterialCard();
+            this.materialLabel125 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel126 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel128 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel129 = new MaterialSkin.Controls.MaterialLabel();
+            this.enroleeNumBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.understandBtn = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel130 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel131 = new MaterialSkin.Controls.MaterialLabel();
+            this.tempPassBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialDivider22 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialLabel132 = new MaterialSkin.Controls.MaterialLabel();
             this.enrollmentTab.SuspendLayout();
             this.basicInfoTab.SuspendLayout();
             this.genderCard.SuspendLayout();
@@ -362,10 +376,13 @@
             this.materialCard5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.finalizationTab.SuspendLayout();
-            this.materialCard29.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.materialCard6.SuspendLayout();
             this.gradesAverageCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.materialCard29.SuspendLayout();
+            this.materialCard7.SuspendLayout();
+            this.materialCard8.SuspendLayout();
             this.SuspendLayout();
             // 
             // enrollmentTab
@@ -574,7 +591,7 @@
             // birthPlaceBox
             // 
             this.birthPlaceBox.AnimateReadOnly = false;
-            this.birthPlaceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.birthPlaceBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.birthPlaceBox.Depth = 0;
             this.birthPlaceBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.birthPlaceBox.Hint = "Birth Place";
@@ -670,7 +687,7 @@
             // fpsBox
             // 
             this.fpsBox.AnimateReadOnly = false;
-            this.fpsBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fpsBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fpsBox.Depth = 0;
             this.fpsBox.Enabled = false;
             this.fpsBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -690,7 +707,7 @@
             // ipBox
             // 
             this.ipBox.AnimateReadOnly = false;
-            this.ipBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ipBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ipBox.Depth = 0;
             this.ipBox.Enabled = false;
             this.ipBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -725,7 +742,7 @@
             // lrnBox
             // 
             this.lrnBox.AnimateReadOnly = false;
-            this.lrnBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lrnBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lrnBox.Depth = 0;
             this.lrnBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lrnBox.Hint = "LRN";
@@ -815,7 +832,7 @@
             // eSchoolName
             // 
             this.eSchoolName.AnimateReadOnly = false;
-            this.eSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.eSchoolName.Depth = 0;
             this.eSchoolName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.eSchoolName.Hint = "Elementary School";
@@ -834,7 +851,7 @@
             // hSchoolName
             // 
             this.hSchoolName.AnimateReadOnly = false;
-            this.hSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.hSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.hSchoolName.Depth = 0;
             this.hSchoolName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.hSchoolName.Hint = "High School";
@@ -853,7 +870,7 @@
             // shSchoolName
             // 
             this.shSchoolName.AnimateReadOnly = false;
-            this.shSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.shSchoolName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.shSchoolName.Depth = 0;
             this.shSchoolName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.shSchoolName.Hint = "Senior High School";
@@ -1061,7 +1078,7 @@
             // gLNameBox
             // 
             this.gLNameBox.AnimateReadOnly = false;
-            this.gLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gLNameBox.Depth = 0;
             this.gLNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gLNameBox.Hint = "Last Name";
@@ -1080,7 +1097,7 @@
             // gCNumBox
             // 
             this.gCNumBox.AnimateReadOnly = false;
-            this.gCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gCNumBox.Depth = 0;
             this.gCNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gCNumBox.Hint = "Contact Number";
@@ -1099,7 +1116,7 @@
             // gFNameBox
             // 
             this.gFNameBox.AnimateReadOnly = false;
-            this.gFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gFNameBox.Depth = 0;
             this.gFNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gFNameBox.Hint = "First Name";
@@ -1133,7 +1150,7 @@
             // gMNameBox
             // 
             this.gMNameBox.AnimateReadOnly = false;
-            this.gMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gMNameBox.Depth = 0;
             this.gMNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gMNameBox.Hint = "Middle Name";
@@ -1274,7 +1291,7 @@
             // fLNameBox
             // 
             this.fLNameBox.AnimateReadOnly = false;
-            this.fLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fLNameBox.Depth = 0;
             this.fLNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.fLNameBox.Hint = "Last Name";
@@ -1293,7 +1310,7 @@
             // fCNumBox
             // 
             this.fCNumBox.AnimateReadOnly = false;
-            this.fCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fCNumBox.Depth = 0;
             this.fCNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.fCNumBox.Hint = "Contact Number";
@@ -1312,7 +1329,7 @@
             // fFNameBox
             // 
             this.fFNameBox.AnimateReadOnly = false;
-            this.fFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fFNameBox.Depth = 0;
             this.fFNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.fFNameBox.Hint = "First Name";
@@ -1346,7 +1363,7 @@
             // fMNameBox
             // 
             this.fMNameBox.AnimateReadOnly = false;
-            this.fMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fMNameBox.Depth = 0;
             this.fMNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.fMNameBox.Hint = "Middle Name";
@@ -1425,7 +1442,7 @@
             // mLNameBox
             // 
             this.mLNameBox.AnimateReadOnly = false;
-            this.mLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mLNameBox.Depth = 0;
             this.mLNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mLNameBox.Hint = "Last Name";
@@ -1444,7 +1461,7 @@
             // mCNumBox
             // 
             this.mCNumBox.AnimateReadOnly = false;
-            this.mCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mCNumBox.Depth = 0;
             this.mCNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mCNumBox.Hint = "Contact Number";
@@ -1463,7 +1480,7 @@
             // mFNameBox
             // 
             this.mFNameBox.AnimateReadOnly = false;
-            this.mFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mFNameBox.Depth = 0;
             this.mFNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mFNameBox.Hint = "First Name";
@@ -1497,7 +1514,7 @@
             // mMNameBox
             // 
             this.mMNameBox.AnimateReadOnly = false;
-            this.mMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mMNameBox.Depth = 0;
             this.mMNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mMNameBox.Hint = "Middle Name";
@@ -1572,7 +1589,7 @@
             // pProvBox
             // 
             this.pProvBox.AnimateReadOnly = false;
-            this.pProvBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pProvBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pProvBox.Depth = 0;
             this.pProvBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.pProvBox.Hint = "Province";
@@ -1591,7 +1608,7 @@
             // pCityBox
             // 
             this.pCityBox.AnimateReadOnly = false;
-            this.pCityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pCityBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pCityBox.Depth = 0;
             this.pCityBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.pCityBox.Hint = "Municipality/City";
@@ -1685,7 +1702,7 @@
             // pBrgyBox
             // 
             this.pBrgyBox.AnimateReadOnly = false;
-            this.pBrgyBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBrgyBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pBrgyBox.Depth = 0;
             this.pBrgyBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.pBrgyBox.Hint = "Barangay";
@@ -1704,7 +1721,7 @@
             // pStNameBox
             // 
             this.pStNameBox.AnimateReadOnly = false;
-            this.pStNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pStNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pStNameBox.Depth = 0;
             this.pStNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.pStNameBox.Hint = "Street Name";
@@ -1723,7 +1740,7 @@
             // pStNumBox
             // 
             this.pStNumBox.AnimateReadOnly = false;
-            this.pStNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pStNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pStNumBox.Depth = 0;
             this.pStNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.pStNumBox.Hint = "Street No.";
@@ -1787,7 +1804,7 @@
             // brgyBox
             // 
             this.brgyBox.AnimateReadOnly = false;
-            this.brgyBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.brgyBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.brgyBox.Depth = 0;
             this.brgyBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.brgyBox.Hint = "Barangay";
@@ -1806,7 +1823,7 @@
             // stNameBox
             // 
             this.stNameBox.AnimateReadOnly = false;
-            this.stNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.stNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.stNameBox.Depth = 0;
             this.stNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.stNameBox.Hint = "Street Name";
@@ -1825,7 +1842,7 @@
             // provBox
             // 
             this.provBox.AnimateReadOnly = false;
-            this.provBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.provBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.provBox.Depth = 0;
             this.provBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.provBox.Hint = "Province";
@@ -1844,7 +1861,7 @@
             // stNumBox
             // 
             this.stNumBox.AnimateReadOnly = false;
-            this.stNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.stNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.stNumBox.Depth = 0;
             this.stNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.stNumBox.Hint = "Street No.";
@@ -1863,7 +1880,7 @@
             // cityBox
             // 
             this.cityBox.AnimateReadOnly = false;
-            this.cityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cityBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cityBox.Depth = 0;
             this.cityBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.cityBox.Hint = "Municipality/City";
@@ -2101,7 +2118,7 @@
             // landlineNumBox
             // 
             this.landlineNumBox.AnimateReadOnly = false;
-            this.landlineNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.landlineNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.landlineNumBox.Depth = 0;
             this.landlineNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.landlineNumBox.Hint = "Landline Number";
@@ -2140,7 +2157,7 @@
             // studCNumBox
             // 
             this.studCNumBox.AnimateReadOnly = false;
-            this.studCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.studCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.studCNumBox.Depth = 0;
             this.studCNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.studCNumBox.Hint = "Contact Number";
@@ -2159,7 +2176,7 @@
             // fbLinkBox
             // 
             this.fbLinkBox.AnimateReadOnly = false;
-            this.fbLinkBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fbLinkBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fbLinkBox.Depth = 0;
             this.fbLinkBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.fbLinkBox.Hint = "Facebook Link";
@@ -2178,7 +2195,7 @@
             // gmailAddBox
             // 
             this.gmailAddBox.AnimateReadOnly = false;
-            this.gmailAddBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gmailAddBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gmailAddBox.Depth = 0;
             this.gmailAddBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gmailAddBox.Hint = "Gmail Address";
@@ -2375,7 +2392,7 @@
             // mNameBox
             // 
             this.mNameBox.AnimateReadOnly = false;
-            this.mNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mNameBox.Depth = 0;
             this.mNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mNameBox.Hint = "Middle Name";
@@ -2410,7 +2427,7 @@
             // lNameBox
             // 
             this.lNameBox.AnimateReadOnly = false;
-            this.lNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lNameBox.Depth = 0;
             this.lNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lNameBox.Hint = "Last Name";
@@ -2429,7 +2446,7 @@
             // fNameBox
             // 
             this.fNameBox.AnimateReadOnly = false;
-            this.fNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fNameBox.Depth = 0;
             this.fNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.fNameBox.Hint = "First Name";
@@ -2669,7 +2686,7 @@
             // revGenderBox
             // 
             this.revGenderBox.AnimateReadOnly = false;
-            this.revGenderBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revGenderBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revGenderBox.Depth = 0;
             this.revGenderBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revGenderBox.LeadingIcon = null;
@@ -2700,7 +2717,7 @@
             // revAgeBox
             // 
             this.revAgeBox.AnimateReadOnly = false;
-            this.revAgeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revAgeBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revAgeBox.Depth = 0;
             this.revAgeBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revAgeBox.LeadingIcon = null;
@@ -2718,7 +2735,7 @@
             // revBDateBox
             // 
             this.revBDateBox.AnimateReadOnly = false;
-            this.revBDateBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revBDateBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revBDateBox.Depth = 0;
             this.revBDateBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revBDateBox.LeadingIcon = null;
@@ -2747,7 +2764,7 @@
             // revENameBox
             // 
             this.revENameBox.AnimateReadOnly = false;
-            this.revENameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revENameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revENameBox.Depth = 0;
             this.revENameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revENameBox.LeadingIcon = null;
@@ -2765,7 +2782,7 @@
             // revGENameBox
             // 
             this.revGENameBox.AnimateReadOnly = false;
-            this.revGENameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revGENameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revGENameBox.Depth = 0;
             this.revGENameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revGENameBox.LeadingIcon = null;
@@ -2783,7 +2800,7 @@
             // revFENameBox
             // 
             this.revFENameBox.AnimateReadOnly = false;
-            this.revFENameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revFENameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revFENameBox.Depth = 0;
             this.revFENameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revFENameBox.LeadingIcon = null;
@@ -2801,7 +2818,7 @@
             // revBPlaceBox
             // 
             this.revBPlaceBox.AnimateReadOnly = false;
-            this.revBPlaceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revBPlaceBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revBPlaceBox.Depth = 0;
             this.revBPlaceBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revBPlaceBox.LeadingIcon = null;
@@ -2849,7 +2866,7 @@
             // revFPSBox
             // 
             this.revFPSBox.AnimateReadOnly = false;
-            this.revFPSBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revFPSBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revFPSBox.Depth = 0;
             this.revFPSBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revFPSBox.LeadingIcon = null;
@@ -2867,7 +2884,7 @@
             // revIPBox
             // 
             this.revIPBox.AnimateReadOnly = false;
-            this.revIPBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revIPBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revIPBox.Depth = 0;
             this.revIPBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revIPBox.LeadingIcon = null;
@@ -2900,7 +2917,7 @@
             // revLRNBox
             // 
             this.revLRNBox.AnimateReadOnly = false;
-            this.revLRNBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revLRNBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revLRNBox.Depth = 0;
             this.revLRNBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revLRNBox.LeadingIcon = null;
@@ -2989,7 +3006,7 @@
             // revESchoolBox
             // 
             this.revESchoolBox.AnimateReadOnly = false;
-            this.revESchoolBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revESchoolBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revESchoolBox.Depth = 0;
             this.revESchoolBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revESchoolBox.LeadingIcon = null;
@@ -3007,7 +3024,7 @@
             // revHSchoolBox
             // 
             this.revHSchoolBox.AnimateReadOnly = false;
-            this.revHSchoolBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revHSchoolBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revHSchoolBox.Depth = 0;
             this.revHSchoolBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revHSchoolBox.LeadingIcon = null;
@@ -3025,7 +3042,7 @@
             // revSHSchoolBox
             // 
             this.revSHSchoolBox.AnimateReadOnly = false;
-            this.revSHSchoolBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revSHSchoolBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revSHSchoolBox.Depth = 0;
             this.revSHSchoolBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revSHSchoolBox.LeadingIcon = null;
@@ -3149,7 +3166,7 @@
             // revGLNameBox
             // 
             this.revGLNameBox.AnimateReadOnly = false;
-            this.revGLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revGLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revGLNameBox.Depth = 0;
             this.revGLNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revGLNameBox.LeadingIcon = null;
@@ -3167,7 +3184,7 @@
             // revGCNumBox
             // 
             this.revGCNumBox.AnimateReadOnly = false;
-            this.revGCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revGCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revGCNumBox.Depth = 0;
             this.revGCNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revGCNumBox.LeadingIcon = null;
@@ -3185,7 +3202,7 @@
             // revGFNameBox
             // 
             this.revGFNameBox.AnimateReadOnly = false;
-            this.revGFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revGFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revGFNameBox.Depth = 0;
             this.revGFNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revGFNameBox.LeadingIcon = null;
@@ -3218,7 +3235,7 @@
             // revGMNameBox
             // 
             this.revGMNameBox.AnimateReadOnly = false;
-            this.revGMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revGMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revGMNameBox.Depth = 0;
             this.revGMNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revGMNameBox.LeadingIcon = null;
@@ -3309,7 +3326,7 @@
             // revFLNameBox
             // 
             this.revFLNameBox.AnimateReadOnly = false;
-            this.revFLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revFLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revFLNameBox.Depth = 0;
             this.revFLNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revFLNameBox.LeadingIcon = null;
@@ -3327,7 +3344,7 @@
             // revFCNumBox
             // 
             this.revFCNumBox.AnimateReadOnly = false;
-            this.revFCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revFCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revFCNumBox.Depth = 0;
             this.revFCNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revFCNumBox.LeadingIcon = null;
@@ -3345,7 +3362,7 @@
             // revFFNameBox
             // 
             this.revFFNameBox.AnimateReadOnly = false;
-            this.revFFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revFFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revFFNameBox.Depth = 0;
             this.revFFNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revFFNameBox.LeadingIcon = null;
@@ -3378,7 +3395,7 @@
             // revFMNameBox
             // 
             this.revFMNameBox.AnimateReadOnly = false;
-            this.revFMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revFMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revFMNameBox.Depth = 0;
             this.revFMNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revFMNameBox.LeadingIcon = null;
@@ -3456,7 +3473,7 @@
             // revMLNameBox
             // 
             this.revMLNameBox.AnimateReadOnly = false;
-            this.revMLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revMLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revMLNameBox.Depth = 0;
             this.revMLNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revMLNameBox.LeadingIcon = null;
@@ -3474,7 +3491,7 @@
             // revMCNumBox
             // 
             this.revMCNumBox.AnimateReadOnly = false;
-            this.revMCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revMCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revMCNumBox.Depth = 0;
             this.revMCNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revMCNumBox.LeadingIcon = null;
@@ -3492,7 +3509,7 @@
             // revMFNameBox
             // 
             this.revMFNameBox.AnimateReadOnly = false;
-            this.revMFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revMFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revMFNameBox.Depth = 0;
             this.revMFNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revMFNameBox.LeadingIcon = null;
@@ -3525,7 +3542,7 @@
             // revMMNameBox
             // 
             this.revMMNameBox.AnimateReadOnly = false;
-            this.revMMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revMMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revMMNameBox.Depth = 0;
             this.revMMNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revMMNameBox.LeadingIcon = null;
@@ -3599,7 +3616,7 @@
             // revPProvBox
             // 
             this.revPProvBox.AnimateReadOnly = false;
-            this.revPProvBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revPProvBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revPProvBox.Depth = 0;
             this.revPProvBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revPProvBox.LeadingIcon = null;
@@ -3617,7 +3634,7 @@
             // revPCityBox
             // 
             this.revPCityBox.AnimateReadOnly = false;
-            this.revPCityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revPCityBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revPCityBox.Depth = 0;
             this.revPCityBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revPCityBox.LeadingIcon = null;
@@ -3710,7 +3727,7 @@
             // revPBrgyBox
             // 
             this.revPBrgyBox.AnimateReadOnly = false;
-            this.revPBrgyBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revPBrgyBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revPBrgyBox.Depth = 0;
             this.revPBrgyBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revPBrgyBox.LeadingIcon = null;
@@ -3728,7 +3745,7 @@
             // revPStreetNameBox
             // 
             this.revPStreetNameBox.AnimateReadOnly = false;
-            this.revPStreetNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revPStreetNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revPStreetNameBox.Depth = 0;
             this.revPStreetNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revPStreetNameBox.LeadingIcon = null;
@@ -3746,7 +3763,7 @@
             // revPStreetNumBox
             // 
             this.revPStreetNumBox.AnimateReadOnly = false;
-            this.revPStreetNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revPStreetNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revPStreetNumBox.Depth = 0;
             this.revPStreetNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revPStreetNumBox.LeadingIcon = null;
@@ -3809,7 +3826,7 @@
             // revBrgyBox
             // 
             this.revBrgyBox.AnimateReadOnly = false;
-            this.revBrgyBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revBrgyBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revBrgyBox.Depth = 0;
             this.revBrgyBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revBrgyBox.LeadingIcon = null;
@@ -3827,7 +3844,7 @@
             // revStreetNameBox
             // 
             this.revStreetNameBox.AnimateReadOnly = false;
-            this.revStreetNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revStreetNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revStreetNameBox.Depth = 0;
             this.revStreetNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revStreetNameBox.LeadingIcon = null;
@@ -3845,7 +3862,7 @@
             // revProvBox
             // 
             this.revProvBox.AnimateReadOnly = false;
-            this.revProvBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revProvBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revProvBox.Depth = 0;
             this.revProvBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revProvBox.LeadingIcon = null;
@@ -3863,7 +3880,7 @@
             // revStreetNumBox
             // 
             this.revStreetNumBox.AnimateReadOnly = false;
-            this.revStreetNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revStreetNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revStreetNumBox.Depth = 0;
             this.revStreetNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revStreetNumBox.LeadingIcon = null;
@@ -3881,7 +3898,7 @@
             // revCityBox
             // 
             this.revCityBox.AnimateReadOnly = false;
-            this.revCityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revCityBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revCityBox.Depth = 0;
             this.revCityBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revCityBox.LeadingIcon = null;
@@ -4026,7 +4043,7 @@
             // revTelNumBox
             // 
             this.revTelNumBox.AnimateReadOnly = false;
-            this.revTelNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revTelNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revTelNumBox.Depth = 0;
             this.revTelNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revTelNumBox.LeadingIcon = null;
@@ -4044,7 +4061,7 @@
             // revCNumBox
             // 
             this.revCNumBox.AnimateReadOnly = false;
-            this.revCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revCNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revCNumBox.Depth = 0;
             this.revCNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revCNumBox.LeadingIcon = null;
@@ -4133,7 +4150,7 @@
             // revMNameBox
             // 
             this.revMNameBox.AnimateReadOnly = false;
-            this.revMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revMNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revMNameBox.Depth = 0;
             this.revMNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revMNameBox.LeadingIcon = null;
@@ -4151,7 +4168,7 @@
             // revLNameBox
             // 
             this.revLNameBox.AnimateReadOnly = false;
-            this.revLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revLNameBox.Depth = 0;
             this.revLNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revLNameBox.LeadingIcon = null;
@@ -4169,7 +4186,7 @@
             // revFNameBox
             // 
             this.revFNameBox.AnimateReadOnly = false;
-            this.revFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revFNameBox.Depth = 0;
             this.revFNameBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revFNameBox.LeadingIcon = null;
@@ -4250,7 +4267,7 @@
             // revFBLinkBox
             // 
             this.revFBLinkBox.AnimateReadOnly = false;
-            this.revFBLinkBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revFBLinkBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revFBLinkBox.Depth = 0;
             this.revFBLinkBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revFBLinkBox.LeadingIcon = null;
@@ -4268,7 +4285,7 @@
             // revGmailAddBox
             // 
             this.revGmailAddBox.AnimateReadOnly = false;
-            this.revGmailAddBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.revGmailAddBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.revGmailAddBox.Depth = 0;
             this.revGmailAddBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.revGmailAddBox.LeadingIcon = null;
@@ -5191,6 +5208,339 @@
             this.finalizationTab.TabIndex = 4;
             this.finalizationTab.Text = "FINALIZATION";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.materialDivider21);
+            this.panel3.Controls.Add(this.materialCard6);
+            this.panel3.Controls.Add(this.gradesAverageCard);
+            this.panel3.Controls.Add(this.materialButton1);
+            this.panel3.Controls.Add(this.materialButton2);
+            this.panel3.Controls.Add(this.materialLabel127);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(207, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1569, 957);
+            this.panel3.TabIndex = 2;
+            // 
+            // materialDivider21
+            // 
+            this.materialDivider21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider21.Depth = 0;
+            this.materialDivider21.Location = new System.Drawing.Point(562, 212);
+            this.materialDivider21.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider21.Name = "materialDivider21";
+            this.materialDivider21.Size = new System.Drawing.Size(440, 2);
+            this.materialDivider21.TabIndex = 25;
+            this.materialDivider21.Text = "materialDivider21";
+            // 
+            // materialCard6
+            // 
+            this.materialCard6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard6.Controls.Add(this.materialCard7);
+            this.materialCard6.Controls.Add(this.materialCard2);
+            this.materialCard6.Depth = 0;
+            this.materialCard6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard6.Location = new System.Drawing.Point(479, 253);
+            this.materialCard6.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard6.Name = "materialCard6";
+            this.materialCard6.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard6.Size = new System.Drawing.Size(846, 588);
+            this.materialCard6.TabIndex = 24;
+            // 
+            // gradesAverageCard
+            // 
+            this.gradesAverageCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gradesAverageCard.Controls.Add(this.materialDivider20);
+            this.gradesAverageCard.Controls.Add(this.resetGradesBtn);
+            this.gradesAverageCard.Controls.Add(this.submitGradesBtn);
+            this.gradesAverageCard.Controls.Add(this.materialLabel123);
+            this.gradesAverageCard.Controls.Add(this.secondSem12Box);
+            this.gradesAverageCard.Controls.Add(this.materialLabel124);
+            this.gradesAverageCard.Controls.Add(this.firstSem12Box);
+            this.gradesAverageCard.Controls.Add(this.materialLabel122);
+            this.gradesAverageCard.Controls.Add(this.secondSem11Box);
+            this.gradesAverageCard.Controls.Add(this.materialLabel120);
+            this.gradesAverageCard.Controls.Add(this.firstSem11Box);
+            this.gradesAverageCard.Controls.Add(this.materialLabel121);
+            this.gradesAverageCard.Depth = 0;
+            this.gradesAverageCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gradesAverageCard.Location = new System.Drawing.Point(244, 253);
+            this.gradesAverageCard.Margin = new System.Windows.Forms.Padding(14);
+            this.gradesAverageCard.MouseState = MaterialSkin.MouseState.HOVER;
+            this.gradesAverageCard.Name = "gradesAverageCard";
+            this.gradesAverageCard.Padding = new System.Windows.Forms.Padding(14);
+            this.gradesAverageCard.Size = new System.Drawing.Size(225, 588);
+            this.gradesAverageCard.TabIndex = 23;
+            // 
+            // materialDivider20
+            // 
+            this.materialDivider20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider20.Depth = 0;
+            this.materialDivider20.Location = new System.Drawing.Point(30, 63);
+            this.materialDivider20.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider20.Name = "materialDivider20";
+            this.materialDivider20.Size = new System.Drawing.Size(165, 3);
+            this.materialDivider20.TabIndex = 0;
+            this.materialDivider20.Text = "materialDivider20";
+            // 
+            // resetGradesBtn
+            // 
+            this.resetGradesBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.resetGradesBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.resetGradesBtn.Depth = 0;
+            this.resetGradesBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.resetGradesBtn.HighEmphasis = true;
+            this.resetGradesBtn.Icon = null;
+            this.resetGradesBtn.Location = new System.Drawing.Point(125, 521);
+            this.resetGradesBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.resetGradesBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.resetGradesBtn.Name = "resetGradesBtn";
+            this.resetGradesBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.resetGradesBtn.Size = new System.Drawing.Size(65, 36);
+            this.resetGradesBtn.TabIndex = 35;
+            this.resetGradesBtn.Text = "RESET";
+            this.resetGradesBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.resetGradesBtn.UseAccentColor = true;
+            this.resetGradesBtn.UseMnemonic = false;
+            this.resetGradesBtn.UseVisualStyleBackColor = false;
+            this.resetGradesBtn.Click += new System.EventHandler(this.resetGradesBtn_Click);
+            // 
+            // submitGradesBtn
+            // 
+            this.submitGradesBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.submitGradesBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.submitGradesBtn.Depth = 0;
+            this.submitGradesBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.submitGradesBtn.HighEmphasis = true;
+            this.submitGradesBtn.Icon = null;
+            this.submitGradesBtn.Location = new System.Drawing.Point(42, 521);
+            this.submitGradesBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.submitGradesBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.submitGradesBtn.Name = "submitGradesBtn";
+            this.submitGradesBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.submitGradesBtn.Size = new System.Drawing.Size(75, 36);
+            this.submitGradesBtn.TabIndex = 34;
+            this.submitGradesBtn.Text = "SUBMIT";
+            this.submitGradesBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.submitGradesBtn.UseAccentColor = false;
+            this.submitGradesBtn.UseMnemonic = false;
+            this.submitGradesBtn.UseVisualStyleBackColor = false;
+            this.submitGradesBtn.Click += new System.EventHandler(this.submitGradesBtn_Click);
+            // 
+            // materialLabel123
+            // 
+            this.materialLabel123.AutoSize = true;
+            this.materialLabel123.Depth = 0;
+            this.materialLabel123.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel123.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel123.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel123.Location = new System.Drawing.Point(39, 405);
+            this.materialLabel123.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel123.Name = "materialLabel123";
+            this.materialLabel123.Size = new System.Drawing.Size(134, 17);
+            this.materialLabel123.TabIndex = 33;
+            this.materialLabel123.Text = "GRADE 12 - 2ND SEM";
+            this.materialLabel123.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // secondSem12Box
+            // 
+            this.secondSem12Box.AnimateReadOnly = false;
+            this.secondSem12Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.secondSem12Box.Depth = 0;
+            this.secondSem12Box.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.secondSem12Box.LeadingIcon = null;
+            this.secondSem12Box.Location = new System.Drawing.Point(36, 425);
+            this.secondSem12Box.MaxLength = 50;
+            this.secondSem12Box.MouseState = MaterialSkin.MouseState.OUT;
+            this.secondSem12Box.Multiline = false;
+            this.secondSem12Box.Name = "secondSem12Box";
+            this.secondSem12Box.Size = new System.Drawing.Size(156, 50);
+            this.secondSem12Box.TabIndex = 32;
+            this.secondSem12Box.Text = "";
+            this.secondSem12Box.TrailingIcon = null;
+            // 
+            // materialLabel124
+            // 
+            this.materialLabel124.AutoSize = true;
+            this.materialLabel124.Depth = 0;
+            this.materialLabel124.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel124.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel124.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel124.Location = new System.Drawing.Point(36, 315);
+            this.materialLabel124.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel124.Name = "materialLabel124";
+            this.materialLabel124.Size = new System.Drawing.Size(132, 17);
+            this.materialLabel124.TabIndex = 31;
+            this.materialLabel124.Text = "GRADE 12 - 1ST SEM";
+            this.materialLabel124.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // firstSem12Box
+            // 
+            this.firstSem12Box.AnimateReadOnly = false;
+            this.firstSem12Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstSem12Box.Depth = 0;
+            this.firstSem12Box.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.firstSem12Box.LeadingIcon = null;
+            this.firstSem12Box.Location = new System.Drawing.Point(33, 335);
+            this.firstSem12Box.MaxLength = 50;
+            this.firstSem12Box.MouseState = MaterialSkin.MouseState.OUT;
+            this.firstSem12Box.Multiline = false;
+            this.firstSem12Box.Name = "firstSem12Box";
+            this.firstSem12Box.Size = new System.Drawing.Size(156, 50);
+            this.firstSem12Box.TabIndex = 30;
+            this.firstSem12Box.Text = "";
+            this.firstSem12Box.TrailingIcon = null;
+            // 
+            // materialLabel122
+            // 
+            this.materialLabel122.AutoSize = true;
+            this.materialLabel122.Depth = 0;
+            this.materialLabel122.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel122.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel122.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel122.Location = new System.Drawing.Point(39, 185);
+            this.materialLabel122.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel122.Name = "materialLabel122";
+            this.materialLabel122.Size = new System.Drawing.Size(134, 17);
+            this.materialLabel122.TabIndex = 29;
+            this.materialLabel122.Text = "GRADE 11 - 2ND SEM";
+            this.materialLabel122.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // secondSem11Box
+            // 
+            this.secondSem11Box.AnimateReadOnly = false;
+            this.secondSem11Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.secondSem11Box.Depth = 0;
+            this.secondSem11Box.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.secondSem11Box.LeadingIcon = null;
+            this.secondSem11Box.Location = new System.Drawing.Point(36, 205);
+            this.secondSem11Box.MaxLength = 50;
+            this.secondSem11Box.MouseState = MaterialSkin.MouseState.OUT;
+            this.secondSem11Box.Multiline = false;
+            this.secondSem11Box.Name = "secondSem11Box";
+            this.secondSem11Box.Size = new System.Drawing.Size(156, 50);
+            this.secondSem11Box.TabIndex = 28;
+            this.secondSem11Box.Text = "";
+            this.secondSem11Box.TrailingIcon = null;
+            // 
+            // materialLabel120
+            // 
+            this.materialLabel120.AutoSize = true;
+            this.materialLabel120.Depth = 0;
+            this.materialLabel120.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel120.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel120.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel120.Location = new System.Drawing.Point(39, 95);
+            this.materialLabel120.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel120.Name = "materialLabel120";
+            this.materialLabel120.Size = new System.Drawing.Size(132, 17);
+            this.materialLabel120.TabIndex = 27;
+            this.materialLabel120.Text = "GRADE 11 - 1ST SEM";
+            this.materialLabel120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // firstSem11Box
+            // 
+            this.firstSem11Box.AnimateReadOnly = false;
+            this.firstSem11Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstSem11Box.Depth = 0;
+            this.firstSem11Box.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.firstSem11Box.LeadingIcon = null;
+            this.firstSem11Box.Location = new System.Drawing.Point(36, 115);
+            this.firstSem11Box.MaxLength = 50;
+            this.firstSem11Box.MouseState = MaterialSkin.MouseState.OUT;
+            this.firstSem11Box.Multiline = false;
+            this.firstSem11Box.Name = "firstSem11Box";
+            this.firstSem11Box.Size = new System.Drawing.Size(156, 50);
+            this.firstSem11Box.TabIndex = 26;
+            this.firstSem11Box.Text = "";
+            this.firstSem11Box.TrailingIcon = null;
+            // 
+            // materialLabel121
+            // 
+            this.materialLabel121.AutoSize = true;
+            this.materialLabel121.Depth = 0;
+            this.materialLabel121.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel121.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel121.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel121.Location = new System.Drawing.Point(28, 36);
+            this.materialLabel121.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel121.Name = "materialLabel121";
+            this.materialLabel121.Size = new System.Drawing.Size(168, 24);
+            this.materialLabel121.TabIndex = 25;
+            this.materialLabel121.Text = "GRADES AVERAGE";
+            this.materialLabel121.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(1487, 895);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton1.Size = new System.Drawing.Size(64, 36);
+            this.materialButton1.TabIndex = 22;
+            this.materialButton1.Text = "BACK";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.materialButton1.UseAccentColor = true;
+            this.materialButton1.UseMnemonic = false;
+            this.materialButton1.UseVisualStyleBackColor = false;
+            // 
+            // materialButton2
+            // 
+            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton2.Depth = 0;
+            this.materialButton2.Enabled = false;
+            this.materialButton2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.materialButton2.HighEmphasis = true;
+            this.materialButton2.Icon = null;
+            this.materialButton2.Location = new System.Drawing.Point(1397, 895);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton2.Name = "materialButton2";
+            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton2.Size = new System.Drawing.Size(84, 36);
+            this.materialButton2.TabIndex = 21;
+            this.materialButton2.Text = "FINALIZE";
+            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton2.UseAccentColor = false;
+            this.materialButton2.UseMnemonic = false;
+            this.materialButton2.UseVisualStyleBackColor = false;
+            // 
+            // materialLabel127
+            // 
+            this.materialLabel127.AutoSize = true;
+            this.materialLabel127.Depth = 0;
+            this.materialLabel127.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel127.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel127.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel127.Location = new System.Drawing.Point(558, 185);
+            this.materialLabel127.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel127.Name = "materialLabel127";
+            this.materialLabel127.Size = new System.Drawing.Size(446, 24);
+            this.materialLabel127.TabIndex = 19;
+            this.materialLabel127.Text = "POLYTECHNIC UNIVERSITY OF THE PHILIPPINES";
+            this.materialLabel127.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(711, 45);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(141, 133);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // backBtn
             // 
             this.backBtn.Location = new System.Drawing.Point(4, 22);
@@ -5371,336 +5721,238 @@
             this.thSwitch.UseVisualStyleBackColor = false;
             this.thSwitch.CheckedChanged += new System.EventHandler(this.thSwitch_CheckedChanged);
             // 
-            // panel3
+            // materialCard2
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.materialDivider21);
-            this.panel3.Controls.Add(this.materialCard6);
-            this.panel3.Controls.Add(this.gradesAverageCard);
-            this.panel3.Controls.Add(this.materialButton1);
-            this.panel3.Controls.Add(this.materialButton2);
-            this.panel3.Controls.Add(this.materialLabel127);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(207, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1569, 957);
-            this.panel3.TabIndex = 2;
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.materialCard2.Depth = 0;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(17, 15);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(399, 560);
+            this.materialCard2.TabIndex = 25;
             // 
-            // materialButton1
+            // materialCard7
             // 
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(1487, 895);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(64, 36);
-            this.materialButton1.TabIndex = 22;
-            this.materialButton1.Text = "BACK";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.materialButton1.UseAccentColor = true;
-            this.materialButton1.UseMnemonic = false;
-            this.materialButton1.UseVisualStyleBackColor = false;
+            this.materialCard7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.materialCard7.Controls.Add(this.materialDivider22);
+            this.materialCard7.Controls.Add(this.materialLabel132);
+            this.materialCard7.Controls.Add(this.materialCard8);
+            this.materialCard7.Controls.Add(this.enroleeNumBox);
+            this.materialCard7.Controls.Add(this.tempPassBox);
+            this.materialCard7.Controls.Add(this.understandBtn);
+            this.materialCard7.Controls.Add(this.materialLabel131);
+            this.materialCard7.Controls.Add(this.materialLabel130);
+            this.materialCard7.Depth = 0;
+            this.materialCard7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard7.Location = new System.Drawing.Point(431, 15);
+            this.materialCard7.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard7.Name = "materialCard7";
+            this.materialCard7.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard7.Size = new System.Drawing.Size(399, 560);
+            this.materialCard7.TabIndex = 26;
             // 
-            // materialButton2
+            // materialCard8
             // 
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.Enabled = false;
-            this.materialButton2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(1397, 895);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(84, 36);
-            this.materialButton2.TabIndex = 21;
-            this.materialButton2.Text = "FINALIZE";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = false;
-            this.materialButton2.UseMnemonic = false;
-            this.materialButton2.UseVisualStyleBackColor = false;
+            this.materialCard8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard8.Controls.Add(this.materialLabel125);
+            this.materialCard8.Controls.Add(this.materialLabel126);
+            this.materialCard8.Controls.Add(this.materialLabel128);
+            this.materialCard8.Controls.Add(this.materialLabel129);
+            this.materialCard8.Depth = 0;
+            this.materialCard8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard8.Location = new System.Drawing.Point(19, 319);
+            this.materialCard8.Margin = new System.Windows.Forms.Padding(12);
+            this.materialCard8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard8.Name = "materialCard8";
+            this.materialCard8.Padding = new System.Windows.Forms.Padding(12);
+            this.materialCard8.Size = new System.Drawing.Size(361, 127);
+            this.materialCard8.TabIndex = 75;
             // 
-            // materialLabel127
+            // materialLabel125
             // 
-            this.materialLabel127.AutoSize = true;
-            this.materialLabel127.Depth = 0;
-            this.materialLabel127.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel127.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel127.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.materialLabel127.Location = new System.Drawing.Point(558, 185);
-            this.materialLabel127.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel127.Name = "materialLabel127";
-            this.materialLabel127.Size = new System.Drawing.Size(446, 24);
-            this.materialLabel127.TabIndex = 19;
-            this.materialLabel127.Text = "POLYTECHNIC UNIVERSITY OF THE PHILIPPINES";
-            this.materialLabel127.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.materialLabel125.AutoSize = true;
+            this.materialLabel125.Depth = 0;
+            this.materialLabel125.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel125.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
+            this.materialLabel125.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel125.Location = new System.Drawing.Point(139, 93);
+            this.materialLabel125.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel125.Name = "materialLabel125";
+            this.materialLabel125.Size = new System.Drawing.Size(83, 14);
+            this.materialLabel125.TabIndex = 73;
+            this.materialLabel125.Text = "APPLICATION. ";
+            this.materialLabel125.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // materialLabel126
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(711, 45);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 133);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.materialLabel126.AutoSize = true;
+            this.materialLabel126.Depth = 0;
+            this.materialLabel126.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel126.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
+            this.materialLabel126.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel126.Location = new System.Drawing.Point(31, 74);
+            this.materialLabel126.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel126.Name = "materialLabel126";
+            this.materialLabel126.Size = new System.Drawing.Size(299, 14);
+            this.materialLabel126.TabIndex = 72;
+            this.materialLabel126.Text = "WAITING FOR THE APPROVAL FOR YOU SCHOLARSHIP";
+            this.materialLabel126.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gradesAverageCard
+            // materialLabel128
             // 
-            this.gradesAverageCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gradesAverageCard.Controls.Add(this.materialDivider20);
-            this.gradesAverageCard.Controls.Add(this.resetGradesBtn);
-            this.gradesAverageCard.Controls.Add(this.submitGradesBtn);
-            this.gradesAverageCard.Controls.Add(this.materialLabel123);
-            this.gradesAverageCard.Controls.Add(this.secondSem12Box);
-            this.gradesAverageCard.Controls.Add(this.materialLabel124);
-            this.gradesAverageCard.Controls.Add(this.firstSem12Box);
-            this.gradesAverageCard.Controls.Add(this.materialLabel122);
-            this.gradesAverageCard.Controls.Add(this.secondSem11Box);
-            this.gradesAverageCard.Controls.Add(this.materialLabel120);
-            this.gradesAverageCard.Controls.Add(this.firstSem11Box);
-            this.gradesAverageCard.Controls.Add(this.materialLabel121);
-            this.gradesAverageCard.Depth = 0;
-            this.gradesAverageCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.gradesAverageCard.Location = new System.Drawing.Point(244, 253);
-            this.gradesAverageCard.Margin = new System.Windows.Forms.Padding(14);
-            this.gradesAverageCard.MouseState = MaterialSkin.MouseState.HOVER;
-            this.gradesAverageCard.Name = "gradesAverageCard";
-            this.gradesAverageCard.Padding = new System.Windows.Forms.Padding(14);
-            this.gradesAverageCard.Size = new System.Drawing.Size(225, 588);
-            this.gradesAverageCard.TabIndex = 23;
+            this.materialLabel128.AutoSize = true;
+            this.materialLabel128.Depth = 0;
+            this.materialLabel128.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel128.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
+            this.materialLabel128.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel128.Location = new System.Drawing.Point(25, 54);
+            this.materialLabel128.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel128.Name = "materialLabel128";
+            this.materialLabel128.Size = new System.Drawing.Size(311, 14);
+            this.materialLabel128.TabIndex = 71;
+            this.materialLabel128.Text = "YOU CAN USE THIS ACCOUNT TO STAY UPDATED WHILE";
+            this.materialLabel128.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialCard6
+            // materialLabel129
             // 
-            this.materialCard6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard6.Depth = 0;
-            this.materialCard6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard6.Location = new System.Drawing.Point(479, 253);
-            this.materialCard6.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard6.Name = "materialCard6";
-            this.materialCard6.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard6.Size = new System.Drawing.Size(846, 588);
-            this.materialCard6.TabIndex = 24;
+            this.materialLabel129.AutoSize = true;
+            this.materialLabel129.Depth = 0;
+            this.materialLabel129.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel129.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel129.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel129.Location = new System.Drawing.Point(138, 18);
+            this.materialLabel129.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel129.Name = "materialLabel129";
+            this.materialLabel129.Size = new System.Drawing.Size(84, 24);
+            this.materialLabel129.TabIndex = 70;
+            this.materialLabel129.Text = "READ ME";
+            this.materialLabel129.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // firstSem11Box
+            // enroleeNumBox
             // 
-            this.firstSem11Box.AnimateReadOnly = false;
-            this.firstSem11Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstSem11Box.Depth = 0;
-            this.firstSem11Box.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.firstSem11Box.LeadingIcon = null;
-            this.firstSem11Box.Location = new System.Drawing.Point(36, 115);
-            this.firstSem11Box.MaxLength = 50;
-            this.firstSem11Box.MouseState = MaterialSkin.MouseState.OUT;
-            this.firstSem11Box.Multiline = false;
-            this.firstSem11Box.Name = "firstSem11Box";
-            this.firstSem11Box.Size = new System.Drawing.Size(156, 50);
-            this.firstSem11Box.TabIndex = 26;
-            this.firstSem11Box.Text = "";
-            this.firstSem11Box.TrailingIcon = null;
+            this.enroleeNumBox.AnimateReadOnly = false;
+            this.enroleeNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.enroleeNumBox.Depth = 0;
+            this.enroleeNumBox.Enabled = false;
+            this.enroleeNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.enroleeNumBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.enroleeNumBox.LeadingIcon = null;
+            this.enroleeNumBox.Location = new System.Drawing.Point(75, 110);
+            this.enroleeNumBox.MaxLength = 50;
+            this.enroleeNumBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.enroleeNumBox.Multiline = false;
+            this.enroleeNumBox.Name = "enroleeNumBox";
+            this.enroleeNumBox.ReadOnly = true;
+            this.enroleeNumBox.Size = new System.Drawing.Size(249, 50);
+            this.enroleeNumBox.TabIndex = 71;
+            this.enroleeNumBox.Tag = "";
+            this.enroleeNumBox.Text = "";
+            this.enroleeNumBox.TrailingIcon = null;
             // 
-            // materialLabel121
+            // understandBtn
             // 
-            this.materialLabel121.AutoSize = true;
-            this.materialLabel121.Depth = 0;
-            this.materialLabel121.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel121.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel121.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.materialLabel121.Location = new System.Drawing.Point(28, 26);
-            this.materialLabel121.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel121.Name = "materialLabel121";
-            this.materialLabel121.Size = new System.Drawing.Size(168, 24);
-            this.materialLabel121.TabIndex = 25;
-            this.materialLabel121.Text = "GRADES AVERAGE";
-            this.materialLabel121.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.understandBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.understandBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.understandBtn.Depth = 0;
+            this.understandBtn.Enabled = false;
+            this.understandBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.understandBtn.HighEmphasis = true;
+            this.understandBtn.Icon = null;
+            this.understandBtn.Location = new System.Drawing.Point(137, 505);
+            this.understandBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.understandBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.understandBtn.Name = "understandBtn";
+            this.understandBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.understandBtn.Size = new System.Drawing.Size(124, 36);
+            this.understandBtn.TabIndex = 70;
+            this.understandBtn.Text = "I UNDERSTAND";
+            this.understandBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.understandBtn.UseAccentColor = false;
+            this.understandBtn.UseMnemonic = false;
+            this.understandBtn.UseVisualStyleBackColor = false;
             // 
-            // materialLabel120
+            // materialLabel130
             // 
-            this.materialLabel120.AutoSize = true;
-            this.materialLabel120.Depth = 0;
-            this.materialLabel120.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel120.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel120.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.materialLabel120.Location = new System.Drawing.Point(39, 95);
-            this.materialLabel120.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel120.Name = "materialLabel120";
-            this.materialLabel120.Size = new System.Drawing.Size(132, 17);
-            this.materialLabel120.TabIndex = 27;
-            this.materialLabel120.Text = "GRADE 11 - 1ST SEM";
-            this.materialLabel120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.materialLabel130.AutoSize = true;
+            this.materialLabel130.Depth = 0;
+            this.materialLabel130.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel130.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel130.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel130.Location = new System.Drawing.Point(138, 163);
+            this.materialLabel130.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel130.Name = "materialLabel130";
+            this.materialLabel130.Size = new System.Drawing.Size(122, 17);
+            this.materialLabel130.TabIndex = 72;
+            this.materialLabel130.Text = "ENROLEE NUMBER";
+            this.materialLabel130.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialLabel122
+            // materialLabel131
             // 
-            this.materialLabel122.AutoSize = true;
-            this.materialLabel122.Depth = 0;
-            this.materialLabel122.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel122.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel122.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.materialLabel122.Location = new System.Drawing.Point(39, 185);
-            this.materialLabel122.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel122.Name = "materialLabel122";
-            this.materialLabel122.Size = new System.Drawing.Size(134, 17);
-            this.materialLabel122.TabIndex = 29;
-            this.materialLabel122.Text = "GRADE 11 - 2ND SEM";
-            this.materialLabel122.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.materialLabel131.AutoSize = true;
+            this.materialLabel131.Depth = 0;
+            this.materialLabel131.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel131.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel131.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel131.Location = new System.Drawing.Point(118, 257);
+            this.materialLabel131.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel131.Name = "materialLabel131";
+            this.materialLabel131.Size = new System.Drawing.Size(162, 17);
+            this.materialLabel131.TabIndex = 74;
+            this.materialLabel131.Text = "TEMPORARY PASSWORD";
+            this.materialLabel131.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // secondSem11Box
+            // tempPassBox
             // 
-            this.secondSem11Box.AnimateReadOnly = false;
-            this.secondSem11Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.secondSem11Box.Depth = 0;
-            this.secondSem11Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.secondSem11Box.LeadingIcon = null;
-            this.secondSem11Box.Location = new System.Drawing.Point(36, 205);
-            this.secondSem11Box.MaxLength = 50;
-            this.secondSem11Box.MouseState = MaterialSkin.MouseState.OUT;
-            this.secondSem11Box.Multiline = false;
-            this.secondSem11Box.Name = "secondSem11Box";
-            this.secondSem11Box.Size = new System.Drawing.Size(156, 50);
-            this.secondSem11Box.TabIndex = 28;
-            this.secondSem11Box.Text = "";
-            this.secondSem11Box.TrailingIcon = null;
+            this.tempPassBox.AnimateReadOnly = false;
+            this.tempPassBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tempPassBox.Depth = 0;
+            this.tempPassBox.Enabled = false;
+            this.tempPassBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tempPassBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tempPassBox.LeadingIcon = null;
+            this.tempPassBox.Location = new System.Drawing.Point(75, 204);
+            this.tempPassBox.MaxLength = 50;
+            this.tempPassBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.tempPassBox.Multiline = false;
+            this.tempPassBox.Name = "tempPassBox";
+            this.tempPassBox.ReadOnly = true;
+            this.tempPassBox.Size = new System.Drawing.Size(249, 50);
+            this.tempPassBox.TabIndex = 73;
+            this.tempPassBox.Tag = "";
+            this.tempPassBox.Text = "";
+            this.tempPassBox.TrailingIcon = null;
             // 
-            // materialLabel123
+            // materialDivider22
             // 
-            this.materialLabel123.AutoSize = true;
-            this.materialLabel123.Depth = 0;
-            this.materialLabel123.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel123.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel123.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.materialLabel123.Location = new System.Drawing.Point(39, 405);
-            this.materialLabel123.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel123.Name = "materialLabel123";
-            this.materialLabel123.Size = new System.Drawing.Size(134, 17);
-            this.materialLabel123.TabIndex = 33;
-            this.materialLabel123.Text = "GRADE 12 - 2ND SEM";
-            this.materialLabel123.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.materialDivider22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider22.Depth = 0;
+            this.materialDivider22.Location = new System.Drawing.Point(51, 53);
+            this.materialDivider22.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider22.Name = "materialDivider22";
+            this.materialDivider22.Size = new System.Drawing.Size(297, 3);
+            this.materialDivider22.TabIndex = 76;
+            this.materialDivider22.Text = "materialDivider22";
             // 
-            // secondSem12Box
+            // materialLabel132
             // 
-            this.secondSem12Box.AnimateReadOnly = false;
-            this.secondSem12Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.secondSem12Box.Depth = 0;
-            this.secondSem12Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.secondSem12Box.LeadingIcon = null;
-            this.secondSem12Box.Location = new System.Drawing.Point(36, 425);
-            this.secondSem12Box.MaxLength = 50;
-            this.secondSem12Box.MouseState = MaterialSkin.MouseState.OUT;
-            this.secondSem12Box.Multiline = false;
-            this.secondSem12Box.Name = "secondSem12Box";
-            this.secondSem12Box.Size = new System.Drawing.Size(156, 50);
-            this.secondSem12Box.TabIndex = 32;
-            this.secondSem12Box.Text = "";
-            this.secondSem12Box.TrailingIcon = null;
-            // 
-            // materialLabel124
-            // 
-            this.materialLabel124.AutoSize = true;
-            this.materialLabel124.Depth = 0;
-            this.materialLabel124.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel124.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel124.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.materialLabel124.Location = new System.Drawing.Point(36, 315);
-            this.materialLabel124.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel124.Name = "materialLabel124";
-            this.materialLabel124.Size = new System.Drawing.Size(132, 17);
-            this.materialLabel124.TabIndex = 31;
-            this.materialLabel124.Text = "GRADE 12 - 1ST SEM";
-            this.materialLabel124.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // firstSem12Box
-            // 
-            this.firstSem12Box.AnimateReadOnly = false;
-            this.firstSem12Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstSem12Box.Depth = 0;
-            this.firstSem12Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.firstSem12Box.LeadingIcon = null;
-            this.firstSem12Box.Location = new System.Drawing.Point(33, 335);
-            this.firstSem12Box.MaxLength = 50;
-            this.firstSem12Box.MouseState = MaterialSkin.MouseState.OUT;
-            this.firstSem12Box.Multiline = false;
-            this.firstSem12Box.Name = "firstSem12Box";
-            this.firstSem12Box.Size = new System.Drawing.Size(156, 50);
-            this.firstSem12Box.TabIndex = 30;
-            this.firstSem12Box.Text = "";
-            this.firstSem12Box.TrailingIcon = null;
-            // 
-            // resetGradesBtn
-            // 
-            this.resetGradesBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.resetGradesBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.resetGradesBtn.Depth = 0;
-            this.resetGradesBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.resetGradesBtn.HighEmphasis = true;
-            this.resetGradesBtn.Icon = null;
-            this.resetGradesBtn.Location = new System.Drawing.Point(125, 521);
-            this.resetGradesBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.resetGradesBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.resetGradesBtn.Name = "resetGradesBtn";
-            this.resetGradesBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.resetGradesBtn.Size = new System.Drawing.Size(65, 36);
-            this.resetGradesBtn.TabIndex = 35;
-            this.resetGradesBtn.Text = "RESET";
-            this.resetGradesBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.resetGradesBtn.UseAccentColor = true;
-            this.resetGradesBtn.UseMnemonic = false;
-            this.resetGradesBtn.UseVisualStyleBackColor = false;
-            this.resetGradesBtn.Click += new System.EventHandler(this.resetGradesBtn_Click);
-            // 
-            // submitGradesBtn
-            // 
-            this.submitGradesBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.submitGradesBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.submitGradesBtn.Depth = 0;
-            this.submitGradesBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.submitGradesBtn.HighEmphasis = true;
-            this.submitGradesBtn.Icon = null;
-            this.submitGradesBtn.Location = new System.Drawing.Point(42, 521);
-            this.submitGradesBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.submitGradesBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.submitGradesBtn.Name = "submitGradesBtn";
-            this.submitGradesBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.submitGradesBtn.Size = new System.Drawing.Size(75, 36);
-            this.submitGradesBtn.TabIndex = 34;
-            this.submitGradesBtn.Text = "SUBMIT";
-            this.submitGradesBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.submitGradesBtn.UseAccentColor = false;
-            this.submitGradesBtn.UseMnemonic = false;
-            this.submitGradesBtn.UseVisualStyleBackColor = false;
-            this.submitGradesBtn.Click += new System.EventHandler(this.submitGradesBtn_Click);
-            // 
-            // materialDivider20
-            // 
-            this.materialDivider20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider20.Depth = 0;
-            this.materialDivider20.Location = new System.Drawing.Point(30, 53);
-            this.materialDivider20.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider20.Name = "materialDivider20";
-            this.materialDivider20.Size = new System.Drawing.Size(165, 3);
-            this.materialDivider20.TabIndex = 0;
-            this.materialDivider20.Text = "materialDivider20";
-            // 
-            // materialDivider21
-            // 
-            this.materialDivider21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider21.Depth = 0;
-            this.materialDivider21.Location = new System.Drawing.Point(562, 212);
-            this.materialDivider21.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider21.Name = "materialDivider21";
-            this.materialDivider21.Size = new System.Drawing.Size(440, 3);
-            this.materialDivider21.TabIndex = 25;
-            this.materialDivider21.Text = "materialDivider21";
+            this.materialLabel132.AutoSize = true;
+            this.materialLabel132.Depth = 0;
+            this.materialLabel132.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel132.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel132.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel132.Location = new System.Drawing.Point(47, 26);
+            this.materialLabel132.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel132.Name = "materialLabel132";
+            this.materialLabel132.Size = new System.Drawing.Size(304, 24);
+            this.materialLabel132.TabIndex = 77;
+            this.materialLabel132.Text = "TEMPORARY ENROLEE ACCOUNT";
+            this.materialLabel132.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EnrollmentForm
             // 
@@ -5762,13 +6014,18 @@
             this.materialCard5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.finalizationTab.ResumeLayout(false);
-            this.materialCard29.ResumeLayout(false);
-            this.materialCard29.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.materialCard6.ResumeLayout(false);
             this.gradesAverageCard.ResumeLayout(false);
             this.gradesAverageCard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.materialCard29.ResumeLayout(false);
+            this.materialCard29.PerformLayout();
+            this.materialCard7.ResumeLayout(false);
+            this.materialCard7.PerformLayout();
+            this.materialCard8.ResumeLayout(false);
+            this.materialCard8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6085,5 +6342,19 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel121;
         private MaterialSkin.Controls.MaterialDivider materialDivider20;
         private MaterialSkin.Controls.MaterialDivider materialDivider21;
+        private MaterialSkin.Controls.MaterialCard materialCard7;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private MaterialSkin.Controls.MaterialDivider materialDivider22;
+        private MaterialSkin.Controls.MaterialLabel materialLabel132;
+        private MaterialSkin.Controls.MaterialCard materialCard8;
+        private MaterialSkin.Controls.MaterialLabel materialLabel125;
+        private MaterialSkin.Controls.MaterialLabel materialLabel126;
+        private MaterialSkin.Controls.MaterialLabel materialLabel128;
+        private MaterialSkin.Controls.MaterialLabel materialLabel129;
+        private MaterialSkin.Controls.MaterialTextBox enroleeNumBox;
+        private MaterialSkin.Controls.MaterialTextBox tempPassBox;
+        private MaterialSkin.Controls.MaterialButton understandBtn;
+        private MaterialSkin.Controls.MaterialLabel materialLabel131;
+        private MaterialSkin.Controls.MaterialLabel materialLabel130;
     }
 }
