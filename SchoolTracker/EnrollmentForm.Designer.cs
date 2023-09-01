@@ -5848,7 +5848,7 @@
             // 
             // enroleeNumBox
             // 
-            this.enroleeNumBox.AnimateReadOnly = false;
+            this.enroleeNumBox.AnimateReadOnly = true;
             this.enroleeNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.enroleeNumBox.Depth = 0;
             this.enroleeNumBox.Enabled = false;
@@ -5922,7 +5922,7 @@
             // 
             // tempPassBox
             // 
-            this.tempPassBox.AnimateReadOnly = false;
+            this.tempPassBox.AnimateReadOnly = true;
             this.tempPassBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tempPassBox.Depth = 0;
             this.tempPassBox.Enabled = false;
