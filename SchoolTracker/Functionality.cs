@@ -9,11 +9,13 @@ using System.Windows.Forms;
 using System.Drawing;
 using Guna.UI2.WinForms;
 using QRCoder;
+using System.Data;
+using System.Globalization;
 
 namespace SchoolTracker
 {
     class Functionality
-    {
+    {   
         #region FUNCTION THAT WILL RUN SPECIFIC WEBSITE BASED ON THE GIVEN PARAMETER
 
         // This method is designed to open a specific web URL based on the given index.
@@ -122,11 +124,35 @@ namespace SchoolTracker
 
         #region FUNCTION TO GENERATE TEMPORARY ENROLEE ACCOUNT
 
-        DBAccess objDBAccess = new DBAccess();
+        static DBAccess objDBAccess = new DBAccess(); // Creates an instance of the DBAccess class for database operations.
+        static DataTable appNumber = new DataTable();  // Creates a DataTable to hold the ApplicantNumber data.
 
-        public static void GetEnroleeAccount()
+        // Method to generate an enrolee number.
+        public static string GenerateEnroleeNumber()
         {
-            string num;
+            string query = "Select * from ApplicantNumber"; // SQL query to select data from the 'ApplicantNumber' table.
+            objDBAccess.readDatathroughAdapter(query, appNumber); // Reads data from the database into the 'appNumber' DataTable.
+
+            int num = Convert.ToInt32(appNumber.Rows[0]["Number"]) + 1; // Extracts the 'Number' column value and increments it by 1.
+
+            // Generates an enrollment number with the format: <Year>-<PaddedNumber>-E.
+            string enroleeNumber = $"{DateTime.Now.Year}-{num.ToString("D5")}-E";
+
+            return enroleeNumber; // Returns the generated enrollment number.
+        }
+
+        // Method to generate a random password.
+        public static string GenerateRandomPassword()
+        {
+            Random random = new Random(); // Creates a random number generator.
+
+            string validChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"; // Valid characters for the password.
+
+            // Generates an 8-character password by selecting random characters from 'validChars'.
+            string password = new string(Enumerable.Repeat(validChars, 8)
+                                        .Select(s => s[random.Next(s.Length)]).ToArray());
+
+            return password; // Returns the generated random password.
         }
 
         #endregion
