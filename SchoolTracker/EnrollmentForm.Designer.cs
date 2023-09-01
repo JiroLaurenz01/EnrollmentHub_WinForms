@@ -352,6 +352,11 @@
             this.tempPassBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialDivider22 = new MaterialSkin.Controls.MaterialDivider();
             this.materialLabel132 = new MaterialSkin.Controls.MaterialLabel();
+            this.saveQrBtn = new MaterialSkin.Controls.MaterialButton();
+            this.materialCard9 = new MaterialSkin.Controls.MaterialCard();
+            this.qrCodeBox = new System.Windows.Forms.PictureBox();
+            this.materialDivider23 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialLabel133 = new MaterialSkin.Controls.MaterialLabel();
             this.enrollmentTab.SuspendLayout();
             this.basicInfoTab.SuspendLayout();
             this.genderCard.SuspendLayout();
@@ -381,8 +386,11 @@
             this.gradesAverageCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.materialCard29.SuspendLayout();
+            this.materialCard2.SuspendLayout();
             this.materialCard7.SuspendLayout();
             this.materialCard8.SuspendLayout();
+            this.materialCard9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qrCodeBox)).BeginInit();
             this.SuspendLayout();
             // 
             // enrollmentTab
@@ -5279,7 +5287,7 @@
             // 
             this.materialDivider20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider20.Depth = 0;
-            this.materialDivider20.Location = new System.Drawing.Point(30, 63);
+            this.materialDivider20.Location = new System.Drawing.Point(30, 70);
             this.materialDivider20.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider20.Name = "materialDivider20";
             this.materialDivider20.Size = new System.Drawing.Size(165, 3);
@@ -5401,7 +5409,7 @@
             this.materialLabel122.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel122.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
             this.materialLabel122.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.materialLabel122.Location = new System.Drawing.Point(39, 185);
+            this.materialLabel122.Location = new System.Drawing.Point(39, 201);
             this.materialLabel122.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel122.Name = "materialLabel122";
             this.materialLabel122.Size = new System.Drawing.Size(134, 17);
@@ -5416,7 +5424,7 @@
             this.secondSem11Box.Depth = 0;
             this.secondSem11Box.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.secondSem11Box.LeadingIcon = null;
-            this.secondSem11Box.Location = new System.Drawing.Point(36, 205);
+            this.secondSem11Box.Location = new System.Drawing.Point(36, 221);
             this.secondSem11Box.MaxLength = 50;
             this.secondSem11Box.MouseState = MaterialSkin.MouseState.OUT;
             this.secondSem11Box.Multiline = false;
@@ -5433,7 +5441,7 @@
             this.materialLabel120.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel120.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
             this.materialLabel120.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.materialLabel120.Location = new System.Drawing.Point(39, 95);
+            this.materialLabel120.Location = new System.Drawing.Point(39, 111);
             this.materialLabel120.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel120.Name = "materialLabel120";
             this.materialLabel120.Size = new System.Drawing.Size(132, 17);
@@ -5448,7 +5456,7 @@
             this.firstSem11Box.Depth = 0;
             this.firstSem11Box.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.firstSem11Box.LeadingIcon = null;
-            this.firstSem11Box.Location = new System.Drawing.Point(36, 115);
+            this.firstSem11Box.Location = new System.Drawing.Point(36, 131);
             this.firstSem11Box.MaxLength = 50;
             this.firstSem11Box.MouseState = MaterialSkin.MouseState.OUT;
             this.firstSem11Box.Multiline = false;
@@ -5465,7 +5473,7 @@
             this.materialLabel121.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel121.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.materialLabel121.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.materialLabel121.Location = new System.Drawing.Point(28, 36);
+            this.materialLabel121.Location = new System.Drawing.Point(28, 43);
             this.materialLabel121.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel121.Name = "materialLabel121";
             this.materialLabel121.Size = new System.Drawing.Size(168, 24);
@@ -5725,6 +5733,10 @@
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.materialCard2.Controls.Add(this.materialDivider23);
+            this.materialCard2.Controls.Add(this.materialLabel133);
+            this.materialCard2.Controls.Add(this.saveQrBtn);
+            this.materialCard2.Controls.Add(this.materialCard9);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard2.Location = new System.Drawing.Point(17, 15);
@@ -5766,7 +5778,7 @@
             this.materialCard8.Controls.Add(this.materialLabel129);
             this.materialCard8.Depth = 0;
             this.materialCard8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard8.Location = new System.Drawing.Point(19, 319);
+            this.materialCard8.Location = new System.Drawing.Point(17, 331);
             this.materialCard8.Margin = new System.Windows.Forms.Padding(12);
             this.materialCard8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard8.Name = "materialCard8";
@@ -5954,6 +5966,78 @@
             this.materialLabel132.Text = "TEMPORARY ENROLEE ACCOUNT";
             this.materialLabel132.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // saveQrBtn
+            // 
+            this.saveQrBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.saveQrBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.saveQrBtn.Depth = 0;
+            this.saveQrBtn.Enabled = false;
+            this.saveQrBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.saveQrBtn.HighEmphasis = true;
+            this.saveQrBtn.Icon = null;
+            this.saveQrBtn.Location = new System.Drawing.Point(156, 501);
+            this.saveQrBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.saveQrBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.saveQrBtn.Name = "saveQrBtn";
+            this.saveQrBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.saveQrBtn.Size = new System.Drawing.Size(83, 36);
+            this.saveQrBtn.TabIndex = 71;
+            this.saveQrBtn.Text = "SAVE ME";
+            this.saveQrBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.saveQrBtn.UseAccentColor = false;
+            this.saveQrBtn.UseMnemonic = false;
+            this.saveQrBtn.UseVisualStyleBackColor = false;
+            // 
+            // materialCard9
+            // 
+            this.materialCard9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard9.Controls.Add(this.qrCodeBox);
+            this.materialCard9.Depth = 0;
+            this.materialCard9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard9.Location = new System.Drawing.Point(17, 98);
+            this.materialCard9.Margin = new System.Windows.Forms.Padding(12);
+            this.materialCard9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard9.Name = "materialCard9";
+            this.materialCard9.Padding = new System.Windows.Forms.Padding(12);
+            this.materialCard9.Size = new System.Drawing.Size(360, 360);
+            this.materialCard9.TabIndex = 72;
+            // 
+            // qrCodeBox
+            // 
+            this.qrCodeBox.Image = global::SchoolTracker.Properties.Resources.pngkey_com_phillies_logo_png_528919;
+            this.qrCodeBox.Location = new System.Drawing.Point(5, 5);
+            this.qrCodeBox.Name = "qrCodeBox";
+            this.qrCodeBox.Size = new System.Drawing.Size(350, 350);
+            this.qrCodeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.qrCodeBox.TabIndex = 28;
+            this.qrCodeBox.TabStop = false;
+            // 
+            // materialDivider23
+            // 
+            this.materialDivider23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider23.Depth = 0;
+            this.materialDivider23.Location = new System.Drawing.Point(65, 53);
+            this.materialDivider23.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider23.Name = "materialDivider23";
+            this.materialDivider23.Size = new System.Drawing.Size(266, 3);
+            this.materialDivider23.TabIndex = 78;
+            this.materialDivider23.Text = "materialDivider23";
+            // 
+            // materialLabel133
+            // 
+            this.materialLabel133.AutoSize = true;
+            this.materialLabel133.Depth = 0;
+            this.materialLabel133.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel133.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel133.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.materialLabel133.Location = new System.Drawing.Point(63, 26);
+            this.materialLabel133.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel133.Name = "materialLabel133";
+            this.materialLabel133.Size = new System.Drawing.Size(269, 24);
+            this.materialLabel133.TabIndex = 79;
+            this.materialLabel133.Text = "ENROLEE ACCOUNT QR CODE";
+            this.materialLabel133.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // EnrollmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6022,10 +6106,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.materialCard29.ResumeLayout(false);
             this.materialCard29.PerformLayout();
+            this.materialCard2.ResumeLayout(false);
+            this.materialCard2.PerformLayout();
             this.materialCard7.ResumeLayout(false);
             this.materialCard7.PerformLayout();
             this.materialCard8.ResumeLayout(false);
             this.materialCard8.PerformLayout();
+            this.materialCard9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.qrCodeBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6356,5 +6444,10 @@
         private MaterialSkin.Controls.MaterialButton understandBtn;
         private MaterialSkin.Controls.MaterialLabel materialLabel131;
         private MaterialSkin.Controls.MaterialLabel materialLabel130;
+        private MaterialSkin.Controls.MaterialDivider materialDivider23;
+        private MaterialSkin.Controls.MaterialLabel materialLabel133;
+        private MaterialSkin.Controls.MaterialButton saveQrBtn;
+        private MaterialSkin.Controls.MaterialCard materialCard9;
+        private System.Windows.Forms.PictureBox qrCodeBox;
     }
 }
