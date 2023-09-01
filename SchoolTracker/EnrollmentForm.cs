@@ -1117,6 +1117,7 @@ namespace SchoolTracker
             {
                 functions.Alert("Finalized successfully", AlertForm.Type.Success);
 
+                functions.Alert("First: Complete the Averages", AlertForm.Type.Info);
                 // Calculate the index of the next tab to be displayed.
                 int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
@@ -1174,6 +1175,8 @@ namespace SchoolTracker
                     return;
                 }
             }
+
+            functions.Alert("Second: Save the QR Code", AlertForm.Type.Info);
         }
 
         private void resetGradesBtn_Click(object sender, EventArgs e)
@@ -1189,6 +1192,15 @@ namespace SchoolTracker
 
         #endregion
 
+        private void saveQrBtn_Click(object sender, EventArgs e)
+        {
+            functions.Alert("Third: Understand the READ ME", AlertForm.Type.Info);
+        }
+
+        private void understandBtn_Click(object sender, EventArgs e)
+        {
+            functions.Alert("Last: Finalize the Enrollment", AlertForm.Type.Info);
+        }
         #endregion
 
         #region GENERAL FUNCTIONS FOR ENROLLMENT FORM
@@ -1259,5 +1271,6 @@ namespace SchoolTracker
         #endregion
 
         #endregion
+
     }
 }
