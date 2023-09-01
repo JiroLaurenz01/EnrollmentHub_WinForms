@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using Guna.UI2.WinForms;
+using QRCoder;
 
 namespace SchoolTracker
 {
@@ -87,6 +88,36 @@ namespace SchoolTracker
             // Call the ShowAlert method of the AlertForm instance, passing the message and alert type as parameters.
             alertForm.ShowAlert(msg, type);
         }
+
+        #endregion
+
+        #region FUNCTION TO GENERATE QR CODE
+
+        // This method generates a QR code as a Bitmap image based on the given 'code'.
+        public static Bitmap GetCode(string code)
+        {
+            QRCodeGenerator generator = new QRCodeGenerator();
+
+            // Create QRCodeData using the 'code' and specifying error correction level (QRCodeGenerator.ECCLevel.Q).
+            QRCodeData data = generator.CreateQrCode(code, QRCodeGenerator.ECCLevel.Q);
+
+            // Create a QRCode instance with the generated data.
+            QRCode qRCode = new QRCode(data);
+
+            // Generate a graphic representation of the QR code with the following parameters:
+            // - Size of each module (20 pixels in this case).
+            // - Color of the modules (Maroon).
+            // - Background color (White).
+            // - Optionally, you can use a custom logo if the condition 'true' is met,
+            //   otherwise, set it to null.
+            return qRCode.GetGraphic(
+                20,                         // Size of each module (pixels).
+                Color.Maroon,                // Color of the QR code modules.
+                Color.White,                // Background color.
+                true ? new Bitmap(Properties.Resources.pngkey_com_phillies_logo_png_528919) : null
+            );
+        }
+
 
         #endregion
     }
