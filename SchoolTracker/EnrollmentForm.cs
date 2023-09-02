@@ -1176,6 +1176,12 @@ namespace SchoolTracker
                 }
             }
 
+            // Assign the value from the specific text box to the specific student data object.
+            studentData.FirstSem11Avg = firstSem11Box.Text;
+            studentData.SecondSem11Avg = secondSem11Box.Text;
+            studentData.FirstSem12Avg = firstSem12Box.Text;
+            studentData.SecondSem12Avg = secondSem12Box.Text;
+
             // Load the QR code image and the text boxes for enrolee number and password.
             EnroleeAccountQRLoad();
         }
@@ -1220,7 +1226,7 @@ namespace SchoolTracker
 
         #endregion
 
-        #region FUNCTION TO SAVE THE QR CODE IMAGE
+        #region FUNCTIONS TO SAVE THE QR CODE IMAGE AND UNDERSTAND BUTTON
 
         private void saveQrBtn_Click(object sender, EventArgs e)
         {
@@ -1264,8 +1270,6 @@ namespace SchoolTracker
             }
         }
 
-        #endregion
-
         private void understandBtn_Click(object sender, EventArgs e)
         {
             // Set the EnroleeNumber property of the studentData object to the text in enroleeNumBox.
@@ -1277,6 +1281,8 @@ namespace SchoolTracker
 
             functions.Alert("Lastly: Finalize the Enrollment", AlertForm.Type.Info);
         }
+
+        #endregion
 
         #endregion
 
