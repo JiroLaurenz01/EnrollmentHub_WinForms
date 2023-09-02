@@ -1220,6 +1220,8 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTION TO SAVE THE QR CODE IMAGE
+
         private void saveQrBtn_Click(object sender, EventArgs e)
         {
             // Get the image from the qrCodeBox control.
@@ -1262,11 +1264,20 @@ namespace SchoolTracker
             }
         }
 
+        #endregion
 
         private void understandBtn_Click(object sender, EventArgs e)
         {
+            // Set the EnroleeNumber property of the studentData object to the text in enroleeNumBox.
+            // Set the TemporaryPassword property of the studentData object to the text in tempPassBox.
+            studentData.EnroleeNumber = enroleeNumBox.Text;
+            studentData.TemporaryPassword = tempPassBox.Text;
+
+            finalizeAllBtn.Enabled = true;
+
             functions.Alert("Lastly: Finalize the Enrollment", AlertForm.Type.Info);
         }
+
         #endregion
 
         #region GENERAL FUNCTIONS FOR ENROLLMENT FORM
