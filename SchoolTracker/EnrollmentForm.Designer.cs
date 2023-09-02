@@ -342,7 +342,7 @@
             this.materialLabel120 = new MaterialSkin.Controls.MaterialLabel();
             this.firstSem11Box = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel121 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.backFinalizationBtn = new MaterialSkin.Controls.MaterialButton();
             this.finalizeAllBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel127 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -5222,7 +5222,7 @@
             this.panel3.Controls.Add(this.materialDivider21);
             this.panel3.Controls.Add(this.materialCard6);
             this.panel3.Controls.Add(this.gradesAverageCard);
-            this.panel3.Controls.Add(this.materialButton1);
+            this.panel3.Controls.Add(this.backFinalizationBtn);
             this.panel3.Controls.Add(this.finalizeAllBtn);
             this.panel3.Controls.Add(this.materialLabel127);
             this.panel3.Controls.Add(this.pictureBox1);
@@ -5792,26 +5792,27 @@
             this.materialLabel121.Text = "GRADES AVERAGE";
             this.materialLabel121.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialButton1
+            // backFinalizationBtn
             // 
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(1487, 895);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(64, 36);
-            this.materialButton1.TabIndex = 22;
-            this.materialButton1.Text = "BACK";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.materialButton1.UseAccentColor = true;
-            this.materialButton1.UseMnemonic = false;
-            this.materialButton1.UseVisualStyleBackColor = false;
+            this.backFinalizationBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.backFinalizationBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.backFinalizationBtn.Depth = 0;
+            this.backFinalizationBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.backFinalizationBtn.HighEmphasis = true;
+            this.backFinalizationBtn.Icon = null;
+            this.backFinalizationBtn.Location = new System.Drawing.Point(1487, 895);
+            this.backFinalizationBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.backFinalizationBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.backFinalizationBtn.Name = "backFinalizationBtn";
+            this.backFinalizationBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.backFinalizationBtn.Size = new System.Drawing.Size(64, 36);
+            this.backFinalizationBtn.TabIndex = 22;
+            this.backFinalizationBtn.Text = "BACK";
+            this.backFinalizationBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.backFinalizationBtn.UseAccentColor = true;
+            this.backFinalizationBtn.UseMnemonic = false;
+            this.backFinalizationBtn.UseVisualStyleBackColor = false;
+            this.backFinalizationBtn.Click += new System.EventHandler(this.backFinalizationBtn_Click);
             // 
             // finalizeAllBtn
             // 
@@ -6415,7 +6416,7 @@
         private System.Windows.Forms.Panel panel3;
         private MaterialSkin.Controls.MaterialCard materialCard6;
         private MaterialSkin.Controls.MaterialCard gradesAverageCard;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton backFinalizationBtn;
         private MaterialSkin.Controls.MaterialButton finalizeAllBtn;
         private MaterialSkin.Controls.MaterialLabel materialLabel127;
         private System.Windows.Forms.PictureBox pictureBox1;

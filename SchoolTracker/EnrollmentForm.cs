@@ -1284,6 +1284,20 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FUNCTIONS FOR FINALIZE AND BACK BUTTONS
+
+        private void backFinalizationBtn_Click(object sender, EventArgs e)
+        {
+            // Calculate the index of the previous tab to be displayed.
+            int nextTabIndex = enrollmentTab.SelectedIndex - 1;
+
+            enrollmentTab.Selecting -= enrollmentTab_Selecting;
+            enrollmentTab.SelectedIndex = nextTabIndex;
+            enrollmentTab.Selecting += enrollmentTab_Selecting;
+        }
+
+        #endregion
+
         #endregion
 
         #region GENERAL FUNCTIONS FOR ENROLLMENT FORM
@@ -1354,6 +1368,5 @@ namespace SchoolTracker
         #endregion
 
         #endregion
-
     }
 }
