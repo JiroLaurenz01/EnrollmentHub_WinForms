@@ -1222,8 +1222,46 @@ namespace SchoolTracker
 
         private void saveQrBtn_Click(object sender, EventArgs e)
         {
-            functions.Alert("Thirdly: Understand the READ ME", AlertForm.Type.Info);
+            // Get the image from the qrCodeBox control.
+            Image imageToSave = qrCodeBox.Image;
+
+            // Using a SaveFileDialog to prompt the user for the save location and filename.
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                // Set the initial directory to the My Pictures folder.
+                saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+
+                // Set the default filename for the saved image, including student data.
+                // Filter the file types that can be saved (JPEG images in this case).
+                saveFileDialog.FileName = $"PUPSIS_{studentData.LastName}.jpg";
+                saveFileDialog.Filter = "JPEG Image|*.jpg";
+.
+                DialogResult result = saveFileDialog.ShowDialog();
+
+                // Check if the user clicked the OK button in the SaveFileDialog.
+                if (result == DialogResult.OK)
+                {
+                    try
+                    {
+                        // Get the chosen save path and filename.
+                        string savePath = saveFileDialog.FileName;
+
+                        // Save the image to the specified path.
+                        imageToSave.Save(savePath);
+
+                        functions.Alert("Image saved successfully!", AlertForm.Type.Success);
+                        functions.Alert("Thirdly: Understand the READ ME", AlertForm.Type.Info);
+
+                        understandBtn.Enabled = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error saving image: {ex.Message}", "School Admin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
         }
+
 
         private void understandBtn_Click(object sender, EventArgs e)
         {
