@@ -133,6 +133,9 @@ namespace SchoolTracker
         public string SecondSem11Avg { get; set; }
         public string FirstSem12Avg { get; set; }
         public string SecondSem12Avg { get; set; }
+
+        public string EnroleeNumber { get; set; }
+        public string TemporaryPassword { get; set; }
     }
 
     class MotherData : PersonData { }
