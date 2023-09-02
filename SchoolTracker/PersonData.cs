@@ -129,7 +129,10 @@ namespace SchoolTracker
         public string FourthCourse { get; set; }
         public string FifthCourse { get; set; }
 
-        public string ApprovedCourse { get; set; }
+        public string FirstSem11Avg { get; set; }
+        public string SecondSem11Avg { get; set; }
+        public string FirstSem12Avg { get; set; }
+        public string SecondSem12Avg { get; set; }
     }
 
     class MotherData : PersonData { }
