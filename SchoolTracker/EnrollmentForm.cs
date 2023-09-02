@@ -1243,7 +1243,7 @@ namespace SchoolTracker
                 // Filter the file types that can be saved (JPEG images in this case).
                 saveFileDialog.FileName = $"PUPSIS_{studentData.LastName}.jpg";
                 saveFileDialog.Filter = "JPEG Image|*.jpg";
-.
+
                 DialogResult result = saveFileDialog.ShowDialog();
 
                 // Check if the user clicked the OK button in the SaveFileDialog.
