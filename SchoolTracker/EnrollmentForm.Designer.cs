@@ -4314,7 +4314,7 @@
             this.coursesTab.Location = new System.Drawing.Point(4, 22);
             this.coursesTab.Name = "coursesTab";
             this.coursesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.coursesTab.Size = new System.Drawing.Size(1372, 735);
+            this.coursesTab.Size = new System.Drawing.Size(1776, 957);
             this.coursesTab.TabIndex = 2;
             this.coursesTab.Text = "COURSES";
             this.coursesTab.UseVisualStyleBackColor = true;
@@ -4329,9 +4329,9 @@
             this.panel1.Controls.Add(this.userLabel);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(-200, 3);
+            this.panel1.Location = new System.Drawing.Point(204, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1569, 729);
+            this.panel1.Size = new System.Drawing.Size(1569, 951);
             this.panel1.TabIndex = 0;
             // 
             // coursesBackBtn
