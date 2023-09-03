@@ -408,7 +408,7 @@
             this.enrollmentTab.Multiline = true;
             this.enrollmentTab.Name = "enrollmentTab";
             this.enrollmentTab.SelectedIndex = 0;
-            this.enrollmentTab.Size = new System.Drawing.Size(1380, 761);
+            this.enrollmentTab.Size = new System.Drawing.Size(1784, 983);
             this.enrollmentTab.TabIndex = 0;
             this.enrollmentTab.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.enrollmentTab_Selecting);
             // 
@@ -531,7 +531,7 @@
             this.basicInfoTab.Location = new System.Drawing.Point(4, 22);
             this.basicInfoTab.Name = "basicInfoTab";
             this.basicInfoTab.Padding = new System.Windows.Forms.Padding(3);
-            this.basicInfoTab.Size = new System.Drawing.Size(1372, 735);
+            this.basicInfoTab.Size = new System.Drawing.Size(1776, 957);
             this.basicInfoTab.TabIndex = 0;
             this.basicInfoTab.Text = "BASIC INFORMATION";
             // 
@@ -5884,7 +5884,7 @@
             this.materialCard29.Depth = 0;
             this.materialCard29.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.materialCard29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard29.Location = new System.Drawing.Point(3, 755);
+            this.materialCard29.Location = new System.Drawing.Point(3, 977);
             this.materialCard29.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard29.MaximumSize = new System.Drawing.Size(1784, 30);
             this.materialCard29.MinimumSize = new System.Drawing.Size(1784, 30);
@@ -6045,7 +6045,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1790, 1010);
             this.Controls.Add(this.thSwitch);
             this.Controls.Add(this.materialCard29);
             this.Controls.Add(this.enrollmentTab);
@@ -6059,7 +6059,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1790, 1010);
-            this.MinimumSize = new System.Drawing.Size(1364, 766);
+            this.MinimumSize = new System.Drawing.Size(1790, 1010);
             this.Name = "EnrollmentForm";
             this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
