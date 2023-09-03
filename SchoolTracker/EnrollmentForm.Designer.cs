@@ -408,7 +408,7 @@
             this.enrollmentTab.Multiline = true;
             this.enrollmentTab.Name = "enrollmentTab";
             this.enrollmentTab.SelectedIndex = 0;
-            this.enrollmentTab.Size = new System.Drawing.Size(1380, 761);
+            this.enrollmentTab.Size = new System.Drawing.Size(1784, 983);
             this.enrollmentTab.TabIndex = 0;
             this.enrollmentTab.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.enrollmentTab_Selecting);
             // 
@@ -531,7 +531,7 @@
             this.basicInfoTab.Location = new System.Drawing.Point(4, 22);
             this.basicInfoTab.Name = "basicInfoTab";
             this.basicInfoTab.Padding = new System.Windows.Forms.Padding(3);
-            this.basicInfoTab.Size = new System.Drawing.Size(1372, 735);
+            this.basicInfoTab.Size = new System.Drawing.Size(1776, 957);
             this.basicInfoTab.TabIndex = 0;
             this.basicInfoTab.Text = "BASIC INFORMATION";
             // 
@@ -2643,7 +2643,7 @@
             this.basicInfoRevTab.Location = new System.Drawing.Point(4, 22);
             this.basicInfoRevTab.Name = "basicInfoRevTab";
             this.basicInfoRevTab.Padding = new System.Windows.Forms.Padding(3);
-            this.basicInfoRevTab.Size = new System.Drawing.Size(1776, 957);
+            this.basicInfoRevTab.Size = new System.Drawing.Size(1372, 735);
             this.basicInfoRevTab.TabIndex = 1;
             this.basicInfoRevTab.Text = "INFORMATION REVIEW";
             // 
@@ -4314,7 +4314,7 @@
             this.coursesTab.Location = new System.Drawing.Point(4, 22);
             this.coursesTab.Name = "coursesTab";
             this.coursesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.coursesTab.Size = new System.Drawing.Size(1776, 957);
+            this.coursesTab.Size = new System.Drawing.Size(1372, 735);
             this.coursesTab.TabIndex = 2;
             this.coursesTab.Text = "COURSES";
             this.coursesTab.UseVisualStyleBackColor = true;
@@ -4329,9 +4329,9 @@
             this.panel1.Controls.Add(this.userLabel);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(204, 3);
+            this.panel1.Location = new System.Drawing.Point(-200, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1569, 951);
+            this.panel1.Size = new System.Drawing.Size(1569, 729);
             this.panel1.TabIndex = 0;
             // 
             // coursesBackBtn
@@ -4897,7 +4897,7 @@
             this.coursesRevTab.Controls.Add(this.panel2);
             this.coursesRevTab.Location = new System.Drawing.Point(4, 22);
             this.coursesRevTab.Name = "coursesRevTab";
-            this.coursesRevTab.Size = new System.Drawing.Size(1776, 957);
+            this.coursesRevTab.Size = new System.Drawing.Size(1372, 735);
             this.coursesRevTab.TabIndex = 3;
             this.coursesRevTab.Text = "COURSES REVIEW";
             this.coursesRevTab.UseVisualStyleBackColor = true;
@@ -4912,9 +4912,9 @@
             this.panel2.Controls.Add(this.materialLabel119);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(207, 0);
+            this.panel2.Location = new System.Drawing.Point(-197, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1569, 957);
+            this.panel2.Size = new System.Drawing.Size(1569, 735);
             this.panel2.TabIndex = 1;
             // 
             // materialLabel118
@@ -5212,7 +5212,7 @@
             this.finalizationTab.Controls.Add(this.panel3);
             this.finalizationTab.Location = new System.Drawing.Point(4, 22);
             this.finalizationTab.Name = "finalizationTab";
-            this.finalizationTab.Size = new System.Drawing.Size(1776, 957);
+            this.finalizationTab.Size = new System.Drawing.Size(1372, 735);
             this.finalizationTab.TabIndex = 4;
             this.finalizationTab.Text = "FINALIZATION";
             // 
@@ -5227,9 +5227,9 @@
             this.panel3.Controls.Add(this.materialLabel127);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(207, 0);
+            this.panel3.Location = new System.Drawing.Point(-197, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1569, 957);
+            this.panel3.Size = new System.Drawing.Size(1569, 735);
             this.panel3.TabIndex = 2;
             // 
             // materialDivider21
@@ -5865,7 +5865,7 @@
             // 
             this.backBtn.Location = new System.Drawing.Point(4, 22);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(1776, 957);
+            this.backBtn.Size = new System.Drawing.Size(1372, 735);
             this.backBtn.TabIndex = 5;
             this.backBtn.Text = "BACK TO FRONT PAGE";
             this.backBtn.UseVisualStyleBackColor = true;
@@ -5884,7 +5884,7 @@
             this.materialCard29.Depth = 0;
             this.materialCard29.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.materialCard29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard29.Location = new System.Drawing.Point(3, 755);
+            this.materialCard29.Location = new System.Drawing.Point(3, 977);
             this.materialCard29.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard29.MaximumSize = new System.Drawing.Size(1784, 30);
             this.materialCard29.MinimumSize = new System.Drawing.Size(1784, 30);
@@ -6045,7 +6045,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1790, 1010);
             this.Controls.Add(this.thSwitch);
             this.Controls.Add(this.materialCard29);
             this.Controls.Add(this.enrollmentTab);
