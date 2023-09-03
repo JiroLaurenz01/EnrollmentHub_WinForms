@@ -59,9 +59,11 @@ namespace SchoolTracker
             this.userLabel.Location = new System.Drawing.Point(0, 238);
             this.userLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(428, 41);
+          
+            this.userLabel.Size = new System.Drawing.Size(427, 41);
             this.userLabel.TabIndex = 4;
-            this.userLabel.Text = "Student-Information Tracker";
+            this.userLabel.Text = "Student Information Tracker";
+          
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // studentCard
