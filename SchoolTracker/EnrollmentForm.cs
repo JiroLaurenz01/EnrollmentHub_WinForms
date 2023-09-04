@@ -35,6 +35,7 @@ namespace SchoolTracker
 
         int previousTab = 0;
         bool ifLoaded = false;
+        bool ifFilled = false;
 
         #region FIELDS FOR DEPARTMENTS AND COURSES SELECTION
 
@@ -1117,7 +1118,9 @@ namespace SchoolTracker
             {
                 functions.Alert("Finalized successfully", AlertForm.Type.Success);
 
-                functions.Alert("Firstly: Complete the Averages", AlertForm.Type.Info);
+                if (!ifFilled)
+                    functions.Alert("Firstly: Complete the Averages", AlertForm.Type.Info);
+
                 // Calculate the index of the next tab to be displayed.
                 int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
@@ -1171,6 +1174,7 @@ namespace SchoolTracker
                     // and an alert type of "Error".
                     functions.Alert("Complete the Requirements", AlertForm.Type.Error);
 
+                    ifFilled = false;
                     // Exit the loop and return from this method.
                     return;
                 }
@@ -1182,6 +1186,7 @@ namespace SchoolTracker
             studentData.FirstSem12Avg = firstSem12Box.Text;
             studentData.SecondSem12Avg = secondSem12Box.Text;
 
+            ifFilled = true;
             // Load the QR code image and the text boxes for enrolee number and password.
             EnroleeAccountQRLoad();
         }
@@ -1294,6 +1299,11 @@ namespace SchoolTracker
             enrollmentTab.Selecting -= enrollmentTab_Selecting;
             enrollmentTab.SelectedIndex = nextTabIndex;
             enrollmentTab.Selecting += enrollmentTab_Selecting;
+        }
+
+        private void finalizeAllBtn_Click(object sender, EventArgs e)
+        {
+
         }
 
         #endregion

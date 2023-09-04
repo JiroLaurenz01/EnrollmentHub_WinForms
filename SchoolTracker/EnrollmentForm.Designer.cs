@@ -2643,7 +2643,7 @@
             this.basicInfoRevTab.Location = new System.Drawing.Point(4, 22);
             this.basicInfoRevTab.Name = "basicInfoRevTab";
             this.basicInfoRevTab.Padding = new System.Windows.Forms.Padding(3);
-            this.basicInfoRevTab.Size = new System.Drawing.Size(1372, 735);
+            this.basicInfoRevTab.Size = new System.Drawing.Size(1776, 957);
             this.basicInfoRevTab.TabIndex = 1;
             this.basicInfoRevTab.Text = "INFORMATION REVIEW";
             // 
@@ -4897,7 +4897,7 @@
             this.coursesRevTab.Controls.Add(this.panel2);
             this.coursesRevTab.Location = new System.Drawing.Point(4, 22);
             this.coursesRevTab.Name = "coursesRevTab";
-            this.coursesRevTab.Size = new System.Drawing.Size(1372, 735);
+            this.coursesRevTab.Size = new System.Drawing.Size(1776, 957);
             this.coursesRevTab.TabIndex = 3;
             this.coursesRevTab.Text = "COURSES REVIEW";
             this.coursesRevTab.UseVisualStyleBackColor = true;
@@ -4912,9 +4912,9 @@
             this.panel2.Controls.Add(this.materialLabel119);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(-197, 0);
+            this.panel2.Location = new System.Drawing.Point(207, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1569, 735);
+            this.panel2.Size = new System.Drawing.Size(1569, 957);
             this.panel2.TabIndex = 1;
             // 
             // materialLabel118
@@ -5212,7 +5212,7 @@
             this.finalizationTab.Controls.Add(this.panel3);
             this.finalizationTab.Location = new System.Drawing.Point(4, 22);
             this.finalizationTab.Name = "finalizationTab";
-            this.finalizationTab.Size = new System.Drawing.Size(1372, 735);
+            this.finalizationTab.Size = new System.Drawing.Size(1776, 957);
             this.finalizationTab.TabIndex = 4;
             this.finalizationTab.Text = "FINALIZATION";
             // 
@@ -5227,9 +5227,9 @@
             this.panel3.Controls.Add(this.materialLabel127);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(-197, 0);
+            this.panel3.Location = new System.Drawing.Point(207, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1569, 735);
+            this.panel3.Size = new System.Drawing.Size(1569, 957);
             this.panel3.TabIndex = 2;
             // 
             // materialDivider21
@@ -5835,6 +5835,7 @@
             this.finalizeAllBtn.UseAccentColor = false;
             this.finalizeAllBtn.UseMnemonic = false;
             this.finalizeAllBtn.UseVisualStyleBackColor = false;
+            this.finalizeAllBtn.Click += new System.EventHandler(this.finalizeAllBtn_Click);
             // 
             // materialLabel127
             // 
@@ -5865,7 +5866,7 @@
             // 
             this.backBtn.Location = new System.Drawing.Point(4, 22);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(1372, 735);
+            this.backBtn.Size = new System.Drawing.Size(1776, 957);
             this.backBtn.TabIndex = 5;
             this.backBtn.Text = "BACK TO FRONT PAGE";
             this.backBtn.UseVisualStyleBackColor = true;
