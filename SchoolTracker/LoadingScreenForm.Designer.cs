@@ -71,13 +71,12 @@
             // 
             this.progressBar.BackColor = System.Drawing.Color.Transparent;
             this.progressBar.BorderColor = System.Drawing.Color.Transparent;
-            this.progressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progressBar.Location = new System.Drawing.Point(3, 309);
+            this.progressBar.Location = new System.Drawing.Point(0, 312);
             this.progressBar.Name = "progressBar";
             this.progressBar.ProgressColor = System.Drawing.Color.Maroon;
             this.progressBar.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.progressBar.ShadowDecoration.BorderRadius = 1;
-            this.progressBar.Size = new System.Drawing.Size(534, 10);
+            this.progressBar.Size = new System.Drawing.Size(540, 10);
             this.progressBar.TabIndex = 8;
             this.progressBar.Text = "guna2ProgressBar1";
             this.progressBar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
