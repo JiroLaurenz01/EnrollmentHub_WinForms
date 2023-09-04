@@ -185,8 +185,11 @@
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(332, 379);
+            this.MinimumSize = new System.Drawing.Size(332, 379);
             this.Name = "FrontForm";
             this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "School Tracker";
             this.TopMost = true;
