@@ -30,11 +30,13 @@ namespace SchoolTracker
 
         Functionality functions = new Functionality();
 
+
         #endregion
 
         #region FIELDS
 
         int previousTab = 0;
+        int nums = 0;
         bool ifLoaded = false;
         bool ifFilled = false;
 
@@ -346,32 +348,22 @@ namespace SchoolTracker
         private void submitInfoBtn_Click(object sender, EventArgs e)
         {
             //If the information is validated(all checks pass), the user will be directed to the next tab.
-            //if (ValidateInformation())
-            //{
-            //    functions.Alert("Submitted Successfully", AlertForm.Type.Success);
+            if (ValidateInformation())
+            {
+                functions.Alert("Submitted Successfully", AlertForm.Type.Success);
 
-            //    RetrievingInformation();
+                RetrievingInformation();
 
-            //    // Calculate the index of the next tab to be displayed.
-            //    int nextTabIndex = enrollmentTab.SelectedIndex + 1;
+                // Calculate the index of the next tab to be displayed.
+                int nextTabIndex = enrollmentTab.SelectedIndex + 1;
 
-            //    // Temporarily remove the event handler "enrollmentTab_Selecting".
-            //    // Set the selected index of the tab control to the calculated nextTabIndex.
-            //    // Add back the event handler "enrollmentTab_Selecting".
-            //    enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            //    enrollmentTab.SelectedIndex = nextTabIndex;
-            //    enrollmentTab.Selecting += enrollmentTab_Selecting;
-            //}
-
-            // Calculate the index of the next tab to be displayed.
-            int nextTabIndex = enrollmentTab.SelectedIndex + 1;
-
-            // Temporarily remove the event handler "enrollmentTab_Selecting".
-            // Set the selected index of the tab control to the calculated nextTabIndex.
-            // Add back the event handler "enrollmentTab_Selecting".
-            enrollmentTab.Selecting -= enrollmentTab_Selecting;
-            enrollmentTab.SelectedIndex = nextTabIndex;
-            enrollmentTab.Selecting += enrollmentTab_Selecting;
+                // Temporarily remove the event handler "enrollmentTab_Selecting".
+                // Set the selected index of the tab control to the calculated nextTabIndex.
+                // Add back the event handler "enrollmentTab_Selecting".
+                enrollmentTab.Selecting -= enrollmentTab_Selecting;
+                enrollmentTab.SelectedIndex = nextTabIndex;
+                enrollmentTab.Selecting += enrollmentTab_Selecting;
+            }
         }
 
         #region FUNCTION FOR INFORMATION'S VALIDATION
@@ -1228,7 +1220,7 @@ namespace SchoolTracker
             tempPassBox.Enabled = true;
 
             // Generate an enrollment number and a temporary password using custom functions and store them in variables.
-            string enroleeNumber = functions.GenerateEnroleeNumber();
+            string enroleeNumber = functions.GenerateEnroleeNumber(ref nums);
             string enroleePassword = functions.GenerateRandomPassword();
 
             enroleeNumBox.Text = enroleeNumber;
@@ -1320,14 +1312,100 @@ namespace SchoolTracker
         private void finalizeAllBtn_Click(object sender, EventArgs e)
         {
             functions.Alert("Finalizing Everything....", AlertForm.Type.Info);
+
+            DatabaseAccess();
+
             finalizeAllBtn.Enabled = false;
         }
 
         #region FUNCTION TO ACCESS THE DATABASE AND STORE THE ENROLEE'S INFORMATION
 
+        DBAccess objDBAccess = new DBAccess(); // Create an instance of the DBAccess class for database operations.
+
         private void DatabaseAccess()
         {
+            // Create a SQL command for inserting data into the database.
+            SqlCommand insertCommand = new SqlCommand("insert into ApplicantData(LastName,FirstName,MiddleName,ExtName,BirtthDate,BirthPlace,Age,Gender,TelNumber,ContactNumber,Email,FacebookLink,StreetNum,StreetName,Barangay,City,Province,PStreetNum,PStreetName,PBarangay,PCity,PProvince,MLName,MFName,MMName,MConNum,FLName,FFName,FMName,FExtName,FConNum,GLName,GFName,GMName,GExtName,GConNum,SHighSchool,JHighSchool,ElemSchool,LRN,FPS,IP,FirstCourse,SecondCourse,ThirdCourse,FourthCourse,FifthCourse,ElevenGrade,TwelveGrade,UserPhoto,EnroleeNumber,Password, Approved) values(@LastName,@FirstName,@MiddleName,@ExtName,@BirtthDate,@BirthPlace,@Age,@Gender,@TelNumber,@ContactNumber,@Email,@FacebookLink,@StreetNum,@StreetName,@Barangay,@City,@Province,@PStreetNum,@PStreetName,@PBarangay,@PCity,@PProvince,@MLName,@MFName,@MMName,@MConNum,@FLName,@FFName,@FMName,@FExtName,@FConNum,@GLName,@GFName,@GMName,@GExtName,@GConNum,@SHighSchool,@JHighSchool,@ElemSchool,@LRN,@FPS,@IP,@FirstCourse,@SecondCourse,@ThirdCourse,@FourthCourse,@FifthCourse,@ElevenGrade,@TwelveGrade,@UserPhoto,@EnroleeNumber,@Password, @Approved)");
 
+            // Add parameters to the insert command with values from studentData, motherData, fatherData, etc.
+            // Parameters are placeholders for data that will be inserted into the database.
+            insertCommand.Parameters.AddWithValue("@LastName", studentData.LastName);
+            insertCommand.Parameters.AddWithValue("@FirstName", studentData.FirstName);
+            insertCommand.Parameters.AddWithValue("@MiddleName", studentData.MiddleName);
+            insertCommand.Parameters.AddWithValue("@ExtName", studentData.ExtensionName);
+            insertCommand.Parameters.AddWithValue("@BirtthDate", studentData.BirthDate);
+            insertCommand.Parameters.AddWithValue("@BirthPlace", studentData.BirthPlace);
+            insertCommand.Parameters.AddWithValue("@Age", studentData.Age);
+            insertCommand.Parameters.AddWithValue("@Gender", studentData.Gender);
+            insertCommand.Parameters.AddWithValue("@TelNumber", studentData.LandlineNumber);
+            insertCommand.Parameters.AddWithValue("@ContactNumber", studentData.ContactNumber);
+            insertCommand.Parameters.AddWithValue("@Email", studentData.GmailAddress);
+            insertCommand.Parameters.AddWithValue("@FacebookLink", studentData.FacebookLink);
+            insertCommand.Parameters.AddWithValue("@StreetNum", studentData.StreetNumber);
+            insertCommand.Parameters.AddWithValue("@StreetName", studentData.StreetName);
+            insertCommand.Parameters.AddWithValue("@Barangay", studentData.Barangay);
+            insertCommand.Parameters.AddWithValue("@City", studentData.City);
+            insertCommand.Parameters.AddWithValue("@Province", studentData.Province);
+            insertCommand.Parameters.AddWithValue("@PStreetNum", studentData.PStreetNumber);
+            insertCommand.Parameters.AddWithValue("@PStreetName", studentData.PStreetName);
+            insertCommand.Parameters.AddWithValue("@PBarangay", studentData.PBarangay);
+            insertCommand.Parameters.AddWithValue("@PCity", studentData.PCity);
+            insertCommand.Parameters.AddWithValue("@PProvince", studentData.PProvince);
+            insertCommand.Parameters.AddWithValue("@MLName", motherData.LastName);
+            insertCommand.Parameters.AddWithValue("@MFName", motherData.FirstName);
+            insertCommand.Parameters.AddWithValue("@MMName", motherData.MiddleName);
+            insertCommand.Parameters.AddWithValue("@MConNum", motherData.ContactNumber);
+            insertCommand.Parameters.AddWithValue("@FLName", fatherData.LastName);
+            insertCommand.Parameters.AddWithValue("@FFName", fatherData.FirstName);
+            insertCommand.Parameters.AddWithValue("@FMName", fatherData.MiddleName);
+            insertCommand.Parameters.AddWithValue("@FExtName", fatherData.ExtensionName);
+            insertCommand.Parameters.AddWithValue("@FConNum", fatherData.ContactNumber);
+            insertCommand.Parameters.AddWithValue("@GLName", guardianData.LastName);
+            insertCommand.Parameters.AddWithValue("@GFName", guardianData.FirstName);
+            insertCommand.Parameters.AddWithValue("@GMName", guardianData.MiddleName);
+            insertCommand.Parameters.AddWithValue("@GExtName", guardianData.ExtensionName);
+            insertCommand.Parameters.AddWithValue("@GConNum", guardianData.ContactNumber);
+            insertCommand.Parameters.AddWithValue("@SHighSchool", studentData.SeniorHighSchool);
+            insertCommand.Parameters.AddWithValue("@JHighSchool", studentData.HighSchool);
+            insertCommand.Parameters.AddWithValue("@ElemSchool", studentData.ElementarySchool);
+            insertCommand.Parameters.AddWithValue("@LRN", studentData.LRN);
+            insertCommand.Parameters.AddWithValue("@FPS", studentData.FPSNumber);
+            insertCommand.Parameters.AddWithValue("@IP", studentData.IPCommunity);
+            insertCommand.Parameters.AddWithValue("@FirstCourse", studentData.FirstCourse);
+            insertCommand.Parameters.AddWithValue("@SecondCourse", studentData.SecondCourse);
+            insertCommand.Parameters.AddWithValue("@ThirdCourse", studentData.ThirdCourse);
+            insertCommand.Parameters.AddWithValue("@FourthCourse", studentData.FourthCourse);
+            insertCommand.Parameters.AddWithValue("@FifthCourse", studentData.FifthCourse);
+            insertCommand.Parameters.AddWithValue("@ElevenGrade", studentData.SecondSem11Avg);
+            insertCommand.Parameters.AddWithValue("@TwelveGrade", studentData.SecondSem12Avg);
+            insertCommand.Parameters.AddWithValue("@UserPhoto", functions.getPhoto(studentData.Image));
+            insertCommand.Parameters.AddWithValue("@EnroleeNumber", studentData.EnroleeNumber);
+            insertCommand.Parameters.AddWithValue("@Password", studentData.TemporaryPassword);
+            insertCommand.Parameters.AddWithValue("@Approved", false);
+
+            // Execute the insert command to insert data into the database.
+            int row = objDBAccess.executeQuery(insertCommand);
+
+            if (row == 1)
+            {
+                // If the insertion was successful, display a success message.
+                functions.Alert("Finalized Successfully", AlertForm.Type.Success);
+
+                // Update the ApplicantNumber in the database.
+                string query = "Update ApplicantNumber SET Number = '" + @nums + "'";
+
+                SqlCommand updateCommand = new SqlCommand(query);
+                updateCommand.Parameters.AddWithValue("@nums", @nums);
+
+                objDBAccess.executeQuery(updateCommand);
+
+                this.Hide();
+                var ELoginForm = new ELoginForm();
+                ELoginForm.FormClosed += (s, args) => this.Close();
+                ELoginForm.Show();
+            }
+            else // If the insertion failed, display an error message.
+                functions.Alert("Error Occured. Try Again!", AlertForm.Type.Error);
         }
 
         #endregion
