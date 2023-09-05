@@ -34,7 +34,7 @@ namespace SchoolTracker
         private void facultyBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var FLoginForm = new FLoginForm();
+            var FLoginForm = new ELoginForm();
             FLoginForm.FormClosed += (s, args) => this.Close();
             FLoginForm.Show();
         }
