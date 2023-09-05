@@ -1269,7 +1269,7 @@ namespace SchoolTracker
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error saving image: {ex.Message}", "School Admin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show($"Error saving image: {ex.Message}", "PUP-SIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -1277,14 +1277,19 @@ namespace SchoolTracker
 
         private void understandBtn_Click(object sender, EventArgs e)
         {
-            // Set the EnroleeNumber property of the studentData object to the text in enroleeNumBox.
-            // Set the TemporaryPassword property of the studentData object to the text in tempPassBox.
-            studentData.EnroleeNumber = enroleeNumBox.Text;
-            studentData.TemporaryPassword = tempPassBox.Text;
+            DialogResult dr = MessageBox.Show("Do you really understand?", "PUP-SIS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            finalizeAllBtn.Enabled = true;
+            if (dr == DialogResult.Yes)
+            {
+                // Set the EnroleeNumber property of the studentData object to the text in enroleeNumBox.
+                // Set the TemporaryPassword property of the studentData object to the text in tempPassBox.
+                studentData.EnroleeNumber = enroleeNumBox.Text;
+                studentData.TemporaryPassword = tempPassBox.Text;
 
-            functions.Alert("Lastly: Finalize the Enrollment", AlertForm.Type.Info);
+                finalizeAllBtn.Enabled = true;
+
+                functions.Alert("Lastly: Finalize the Enrollment", AlertForm.Type.Info);
+            }
         }
 
         #endregion
