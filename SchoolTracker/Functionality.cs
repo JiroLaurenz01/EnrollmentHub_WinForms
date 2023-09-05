@@ -128,12 +128,12 @@ namespace SchoolTracker
         static DataTable appNumber = new DataTable();  // Creates a DataTable to hold the ApplicantNumber data.
 
         // Method to generate an enrolee number.
-        public string GenerateEnroleeNumber()
+        public string GenerateEnroleeNumber(ref int num)
         {
             string query = "Select * from ApplicantNumber"; // SQL query to select data from the 'ApplicantNumber' table.
             objDBAccess.readDatathroughAdapter(query, appNumber); // Reads data from the database into the 'appNumber' DataTable.
 
-            int num = Convert.ToInt32(appNumber.Rows[0]["Number"]) + 1; // Extracts the 'Number' column value and increments it by 1.
+            num = Convert.ToInt32(appNumber.Rows[0]["Number"]) + 1; // Extracts the 'Number' column value and increments it by 1.
 
             // Generates an enrollment number with the format: <Year>-<PaddedNumber>-E.
             string enroleeNumber = $"{DateTime.Now.Year}-{num.ToString("D5")}-E";
@@ -157,20 +157,21 @@ namespace SchoolTracker
 
         #endregion
 
-        StudentData studentData = new StudentData();
+        #region FUNCTION TO CONVERT THE IMAGE INTO BYTE ARRAY
 
         // This method retrieves the byte array representation of a student's image.
-        private byte[] getPhoto()
+        public byte[] getPhoto(Image studentImage)
         {
             // Create a new memory stream to store the image data.
             MemoryStream stream = new MemoryStream();
 
             // Save the student's image to the memory stream using the original image format.
-            studentData.Image.Save(stream, studentData.Image.RawFormat);
+            studentImage.Save(stream, studentImage.RawFormat);
 
             // Get the byte array representation of the image data from the memory stream.
             return stream.GetBuffer();
         }
 
+        #endregion
     }
 }
