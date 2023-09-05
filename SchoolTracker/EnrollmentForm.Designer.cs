@@ -6065,7 +6065,7 @@
             this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "School Tracker";
+            this.Text = "PUP Enrollment Hub";
             this.enrollmentTab.ResumeLayout(false);
             this.basicInfoTab.ResumeLayout(false);
             this.basicInfoTab.PerformLayout();
