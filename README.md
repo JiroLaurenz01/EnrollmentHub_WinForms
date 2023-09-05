@@ -1,11 +1,11 @@
-# SchoolTracker_WinForms - School Management System
+# EnrollmentHub_WinForms - School Management System
 
-SchoolTracker_WinForms is a basic School Management System built using WinForms and integrated with Microsoft SQL Server 2014. This application allows students to enroll, and provides teachers with the ability to view their student's information.
+EnrollmentHub_WinForms is a basic School Management System built using WinForms and integrated with Microsoft SQL Server 2014. This application allows students to enroll, and provides enrolees with the capability to easily check their admission's status.
 
 ## Features
 
 - Student Enrollment: Students can enroll in the system by providing their details and necessary information. The data is stored in Microsoft SQL Server 2014 database.
-- Teacher Dashboard: Teachers can access a dashboard to view their students' information and track their academic progress.
+- Student Daily Updates: Future students can easily check the status of their enrollment. The status will be retrieved in Microsoft SQL Server 2014 database.
 
 ## Technologies Used
 
@@ -31,7 +31,7 @@ SchoolTracker_WinForms is a basic School Management System built using WinForms 
 
 1. Launch the application.
 2. As a student, click on the "Enroll" button and provide your details. Your information will be stored in the Microsoft SQL Server 2014 database.
-3. As a teacher, log in to access the dashboard and view your students' information.
+3. As a future student, log in to access the daily updates for your admissions's status.
 
 ## Contributing
 
