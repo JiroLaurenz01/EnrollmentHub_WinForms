@@ -30,6 +30,7 @@ namespace SchoolTracker
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ELoginForm));
             this.userLabel = new MaterialSkin.Controls.MaterialLabel();
             this.studentCard = new MaterialSkin.Controls.MaterialCard();
             this.resetBtn = new MaterialSkin.Controls.MaterialButton();
@@ -454,6 +455,7 @@ namespace SchoolTracker
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(427, 650);
             this.MinimumSize = new System.Drawing.Size(427, 650);
@@ -462,8 +464,7 @@ namespace SchoolTracker
             this.Sizable = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PUPSIS";
-            this.TopMost = true;
+            this.Text = "PUP Enrollment Hub";
             this.studentCard.ResumeLayout(false);
             this.studentCard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

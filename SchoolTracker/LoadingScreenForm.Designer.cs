@@ -122,7 +122,7 @@
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoadingScreenForm";
+            this.Text = "PUP Enrollment Hub";
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.SystemColors.Desktop;
             this.Load += new System.EventHandler(this.LoadingScreenForm_Load);
