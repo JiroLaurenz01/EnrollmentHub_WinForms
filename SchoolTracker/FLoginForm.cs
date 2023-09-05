@@ -119,6 +119,9 @@ namespace SchoolTracker
 
         #region OTHER FEATURES
 
+        #region FUNCTIONS FOR BACK AND RESET BUTTONS
+
+        // This event handler is called when the "backBtn" button is clicked.
         private void backBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -127,28 +130,39 @@ namespace SchoolTracker
             FrontForm.Show();
         }
 
-        private void facPassBox_TrailingIconClick(object sender, EventArgs e)
-        {
-            if (!facPassBox.Password)
-            {
-                facPassBox.TrailingIcon = Properties.Resources.hide;
-                facPassBox.Password = true;
-            }
-            else
-            {
-                facPassBox.TrailingIcon = Properties.Resources.show;
-                facPassBox.Password = false;
-            }
-        }
-
         private void resetBtn_Click(object sender, EventArgs e)
         {
+            // Clear the text in various input controls and reset dropdown selections.
             facNumBox.Text = "";
             facPassBox.Text = "";
             bMonthComBox.SelectedIndex = 0;
             bDayComBox.SelectedIndex = 0;
             bYearComBox.SelectedIndex = 0;
         }
+
+        #endregion
+
+        #region FUNCTION FOR HIDE AND SHOW PASSWORD BUTTON
+
+        // This event handler is called when the trailing icon of "facPassBox" is clicked.
+        private void facPassBox_TrailingIconClick(object sender, EventArgs e)
+        {
+            // Check if the "facPassBox" is currently in password mode.
+            if (!facPassBox.Password)
+            {
+                // If not in password mode, switch to password mode.
+                facPassBox.TrailingIcon = Properties.Resources.hide; // Change the trailing icon to "hide".
+                facPassBox.Password = true; // Set the "Password" property to true to hide the password characters.
+            }
+            else
+            {
+                // If already in password mode, switch to text mode.
+                facPassBox.TrailingIcon = Properties.Resources.show; // Change the trailing icon to "show".
+                facPassBox.Password = false; // Set the "Password" property to false to show the password characters.
+            }
+        }
+
+        #endregion
 
         #endregion
     }
