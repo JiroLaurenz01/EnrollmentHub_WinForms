@@ -56,7 +56,7 @@ namespace SchoolTracker
             this.userLabel.Depth = 0;
             this.userLabel.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.userLabel.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.userLabel.Location = new System.Drawing.Point(0, 238);
+            this.userLabel.Location = new System.Drawing.Point(23, 238);
             this.userLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(427, 41);
