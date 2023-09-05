@@ -6060,7 +6060,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1790, 1010);
-            this.MinimumSize = new System.Drawing.Size(1364, 766);
+            this.MinimumSize = new System.Drawing.Size(1790, 1010);
             this.Name = "EnrollmentForm";
             this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
