@@ -156,5 +156,21 @@ namespace SchoolTracker
         }
 
         #endregion
+
+        StudentData studentData = new StudentData();
+
+        // This method retrieves the byte array representation of a student's image.
+        private byte[] getPhoto()
+        {
+            // Create a new memory stream to store the image data.
+            MemoryStream stream = new MemoryStream();
+
+            // Save the student's image to the memory stream using the original image format.
+            studentData.Image.Save(stream, studentData.Image.RawFormat);
+
+            // Get the byte array representation of the image data from the memory stream.
+            return stream.GetBuffer();
+        }
+
     }
 }
