@@ -48,11 +48,11 @@
             // 
             this.loadingPercent.BackColor = System.Drawing.SystemColors.Desktop;
             this.loadingPercent.Enabled = false;
-            this.loadingPercent.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadingPercent.Font = new System.Drawing.Font("Bahnschrift Light", 18F);
             this.loadingPercent.ForeColor = System.Drawing.Color.White;
-            this.loadingPercent.Location = new System.Drawing.Point(231, 108);
+            this.loadingPercent.Location = new System.Drawing.Point(337, 272);
             this.loadingPercent.Name = "loadingPercent";
-            this.loadingPercent.Size = new System.Drawing.Size(31, 25);
+            this.loadingPercent.Size = new System.Drawing.Size(38, 31);
             this.loadingPercent.TabIndex = 10;
             this.loadingPercent.Text = "0 %";
             // 
@@ -60,11 +60,11 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.SystemColors.Desktop;
             this.guna2HtmlLabel2.Enabled = false;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Bahnschrift Light", 19.1F);
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(114, 61);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(198, 173);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(304, 21);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(480, 32);
             this.guna2HtmlLabel2.TabIndex = 9;
             this.guna2HtmlLabel2.Text = "POWERED BY JIRO LAURENZ SAMIA AGAD";
             // 
@@ -72,12 +72,12 @@
             // 
             this.progressBar.BackColor = System.Drawing.Color.Transparent;
             this.progressBar.BorderColor = System.Drawing.Color.Transparent;
-            this.progressBar.Location = new System.Drawing.Point(8, 139);
+            this.progressBar.Location = new System.Drawing.Point(15, 309);
             this.progressBar.Name = "progressBar";
             this.progressBar.ProgressColor = System.Drawing.Color.Maroon;
             this.progressBar.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.progressBar.ShadowDecoration.BorderRadius = 1;
-            this.progressBar.Size = new System.Drawing.Size(477, 10);
+            this.progressBar.Size = new System.Drawing.Size(683, 10);
             this.progressBar.TabIndex = 8;
             this.progressBar.Text = "guna2ProgressBar1";
             this.progressBar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -86,22 +86,22 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.SystemColors.Desktop;
             this.guna2HtmlLabel1.Enabled = false;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Bahnschrift Condensed", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Bahnschrift Condensed", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(114, 22);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(198, 88);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(369, 44);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(497, 79);
             this.guna2HtmlLabel1.TabIndex = 7;
-            this.guna2HtmlLabel1.Text = "STUDENT INFORMATION TRACKER";
+            this.guna2HtmlLabel1.Text = "PUP - ENROLLMENT HUB";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SchoolTracker.Properties.Resources.pngkey_com_phillies_logo_png_528919;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 4);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(100, 100);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(100, 100);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 64);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(175, 175);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(175, 175);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(175, 175);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -115,7 +115,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(492, 156);
+            this.ClientSize = new System.Drawing.Size(713, 341);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.loadingPercent);
             this.Controls.Add(this.guna2HtmlLabel2);
@@ -129,6 +129,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoadingScreenForm";
+            this.TopMost = true;
             this.TransparencyKey = System.Drawing.SystemColors.Desktop;
             this.Load += new System.EventHandler(this.LoadingScreenForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
