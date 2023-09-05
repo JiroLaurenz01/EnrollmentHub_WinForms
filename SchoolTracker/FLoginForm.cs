@@ -42,28 +42,6 @@ namespace SchoolTracker
             }
         }
 
-        private void UnvisibleWarning()
-        {
-            snWarning.Visible = false;
-            bdWarning.Visible = false;
-            passWarning.Visible = false;
-
-            bMonthComBox.Location = new Point(bMonthComBox.Location.X, 89);
-            bDayComBox.Location = new Point(bDayComBox.Location.X, 89);
-            bYearComBox.Location = new Point(bYearComBox.Location.X, 89);
-            facPassBox.Location = new Point(facPassBox.Location.X, 156);
-            signInBtn.Location = new Point(signInBtn.Location.X, 227);
-            resetBtn.Location = new Point(resetBtn.Location.X, 227);
-
-            bdWarning.Location = new Point(bdWarning.Location.X, 142);
-            passWarning.Location = new Point(passWarning.Location.X, 206);
-
-            studentCard.Size = new Size(studentCard.Size.Width, 277);
-            forgotPassBtn.Location = new Point(forgotPassBtn.Location.X, 608);
-
-            this.Size = new Size(this.Size.Width, 650);
-        }
-
         private Boolean IfWarning()
         {
             bool userNBox, bDayBox, userPBox;
@@ -80,10 +58,44 @@ namespace SchoolTracker
             return userNBox || bDayBox || userPBox;
         }
 
-        private void ChangeLocSize(int numBox) //NEVER TOUCH THIS!
+        #endregion
+
+        #region FUNCTIONS TO HANDLE THE RESPONSIVENESS OF VALIDATION - DO NOT TOUCH THESE.
+
+        // This method is used to hide warning labels and adjust the positions and sizes of various UI elements.
+        private void UnvisibleWarning()
+        {
+            // Hide the warning labels.
+            snWarning.Visible = false;
+            bdWarning.Visible = false;
+            passWarning.Visible = false;
+
+            // Adjust the Y positions of input controls and buttons.
+            bMonthComBox.Location = new Point(bMonthComBox.Location.X, 89);
+            bDayComBox.Location = new Point(bDayComBox.Location.X, 89);
+            bYearComBox.Location = new Point(bYearComBox.Location.X, 89);
+            facPassBox.Location = new Point(facPassBox.Location.X, 156);
+            signInBtn.Location = new Point(signInBtn.Location.X, 227);
+            resetBtn.Location = new Point(resetBtn.Location.X, 227);
+
+            // Adjust the Y positions of warning labels.
+            bdWarning.Location = new Point(bdWarning.Location.X, 142);
+            passWarning.Location = new Point(passWarning.Location.X, 206);
+
+            // Adjust the height of the "studentCard" panel and the position of "forgotPassBtn".
+            studentCard.Size = new Size(studentCard.Size.Width, 277);
+            forgotPassBtn.Location = new Point(forgotPassBtn.Location.X, 608);
+
+            // Adjust the form's height.
+            this.Size = new Size(this.Size.Width, 650);
+        }
+
+        // This method is used to change the positions and sizes of UI elements based on the number of input boxes.
+        private void ChangeLocSize(int numBox)
         {
             if (numBox == 3)
             {
+                // If there are three input boxes, show the corresponding warning label and adjust positions.
                 snWarning.Visible = true;
                 bMonthComBox.Location = new Point(bMonthComBox.Location.X, bMonthComBox.Location.Y + 27);
                 bDayComBox.Location = new Point(bDayComBox.Location.X, bDayComBox.Location.Y + 27);
@@ -96,15 +108,18 @@ namespace SchoolTracker
 
             if (numBox == 2)
             {
+                // If there are two input boxes, show the corresponding warning label and adjust positions.
                 bdWarning.Visible = true;
                 facPassBox.Location = new Point(facPassBox.Location.X, facPassBox.Location.Y + 27);
 
                 passWarning.Location = new Point(passWarning.Location.X, passWarning.Location.Y + 28);
             }
 
+            // If there is one input box, show the corresponding warning label.
             if (numBox == 1)
                 passWarning.Visible = true;
 
+            // Adjust the positions of buttons, panel, and form height.
             signInBtn.Location = new Point(signInBtn.Location.X, signInBtn.Location.Y + 27);
             resetBtn.Location = new Point(resetBtn.Location.X, resetBtn.Location.Y + 27);
 
@@ -114,6 +129,7 @@ namespace SchoolTracker
             this.MaximumSize = new Size(this.Size.Width, this.Size.Height + 27);
             this.Size = new Size(this.Size.Width, this.Size.Height + 27);
         }
+
 
         #endregion
 
