@@ -14,8 +14,6 @@ namespace SchoolTracker
 {
     public partial class FLoginForm : MaterialForm
     {
-        bool ifShow = false;
-
         public FLoginForm()
         {
             InitializeComponent();
@@ -131,17 +129,15 @@ namespace SchoolTracker
 
         private void facPassBox_TrailingIconClick(object sender, EventArgs e)
         {
-            if (!ifShow)
+            if (!facPassBox.Password)
             {
                 facPassBox.TrailingIcon = Properties.Resources.hide;
                 facPassBox.Password = true;
-                ifShow = true;
             }
             else
             {
                 facPassBox.TrailingIcon = Properties.Resources.show;
                 facPassBox.Password = false;
-                ifShow = false;
             }
         }
 
