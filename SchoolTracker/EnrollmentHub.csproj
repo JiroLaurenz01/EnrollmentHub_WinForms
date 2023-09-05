@@ -77,11 +77,11 @@
     <Compile Include="EnrollmentForm.Designer.cs">
       <DependentUpon>EnrollmentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLoginForm.cs">
+    <Compile Include="ELoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLoginForm.Designer.cs">
-      <DependentUpon>FLoginForm.cs</DependentUpon>
+    <Compile Include="ELoginForm.Designer.cs">
+      <DependentUpon>ELoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontForm.cs">
       <SubType>Form</SubType>
@@ -105,8 +105,8 @@
     <EmbeddedResource Include="EnrollmentForm.resx">
       <DependentUpon>EnrollmentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLoginForm.resx">
-      <DependentUpon>FLoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="ELoginForm.resx">
+      <DependentUpon>ELoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontForm.resx">
       <DependentUpon>FrontForm.cs</DependentUpon>

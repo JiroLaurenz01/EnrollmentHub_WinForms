@@ -2,7 +2,7 @@
 
 namespace SchoolTracker
 {
-    partial class FLoginForm
+    partial class ELoginForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -56,12 +56,12 @@ namespace SchoolTracker
             this.userLabel.Depth = 0;
             this.userLabel.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.userLabel.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.userLabel.Location = new System.Drawing.Point(0, 238);
+            this.userLabel.Location = new System.Drawing.Point(60, 238);
             this.userLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(427, 41);
+            this.userLabel.Size = new System.Drawing.Size(306, 41);
             this.userLabel.TabIndex = 4;
-            this.userLabel.Text = "Student Information Tracker";
+            this.userLabel.Text = "PUP Enrollment Hub";
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // studentCard
@@ -190,7 +190,7 @@ namespace SchoolTracker
             this.snWarning.NoAccentTextColor = System.Drawing.Color.Empty;
             this.snWarning.Size = new System.Drawing.Size(314, 36);
             this.snWarning.TabIndex = 9;
-            this.snWarning.Text = "Please provide your faculty number.";
+            this.snWarning.Text = "Please provide your enrolee number.";
             this.snWarning.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.snWarning.UseAccentColor = true;
             this.snWarning.UseMnemonic = false;
@@ -362,7 +362,7 @@ namespace SchoolTracker
             this.facNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.facNumBox.Depth = 0;
             this.facNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.facNumBox.Hint = "Faculty Number";
+            this.facNumBox.Hint = "Enrolee Number";
             this.facNumBox.LeadingIcon = null;
             this.facNumBox.Location = new System.Drawing.Point(14, 24);
             this.facNumBox.MaxLength = 50;
@@ -441,7 +441,7 @@ namespace SchoolTracker
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // FLoginForm
+            // ELoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -457,7 +457,7 @@ namespace SchoolTracker
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(427, 650);
             this.MinimumSize = new System.Drawing.Size(427, 650);
-            this.Name = "FLoginForm";
+            this.Name = "ELoginForm";
             this.Padding = new System.Windows.Forms.Padding(3, 21, 3, 3);
             this.Sizable = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

@@ -62,12 +62,12 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
-            this.materialLabel1.Location = new System.Drawing.Point(69, 176);
+            this.materialLabel1.Location = new System.Drawing.Point(96, 176);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(153, 14);
+            this.materialLabel1.Size = new System.Drawing.Size(104, 14);
             this.materialLabel1.TabIndex = 6;
-            this.materialLabel1.Text = "Student Information Tracker";
+            this.materialLabel1.Text = "ENROLLMENT HUB";
             this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // materialCard1
@@ -96,14 +96,14 @@
             this.enroleeBtn.Depth = 0;
             this.enroleeBtn.HighEmphasis = true;
             this.enroleeBtn.Icon = null;
-            this.enroleeBtn.Location = new System.Drawing.Point(50, 227);
+            this.enroleeBtn.Location = new System.Drawing.Point(54, 217);
             this.enroleeBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.enroleeBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.enroleeBtn.Name = "enroleeBtn";
             this.enroleeBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.enroleeBtn.Size = new System.Drawing.Size(85, 36);
+            this.enroleeBtn.Size = new System.Drawing.Size(91, 36);
             this.enroleeBtn.TabIndex = 1;
-            this.enroleeBtn.Text = "ENROLEE";
+            this.enroleeBtn.Text = "   JOIN US!   ";
             this.enroleeBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.enroleeBtn.UseAccentColor = false;
             this.enroleeBtn.UseVisualStyleBackColor = true;
@@ -116,14 +116,14 @@
             this.facultyBtn.Depth = 0;
             this.facultyBtn.HighEmphasis = true;
             this.facultyBtn.Icon = null;
-            this.facultyBtn.Location = new System.Drawing.Point(160, 227);
+            this.facultyBtn.Location = new System.Drawing.Point(153, 217);
             this.facultyBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.facultyBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.facultyBtn.Name = "facultyBtn";
             this.facultyBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.facultyBtn.Size = new System.Drawing.Size(84, 36);
+            this.facultyBtn.Size = new System.Drawing.Size(90, 36);
             this.facultyBtn.TabIndex = 0;
-            this.facultyBtn.Text = "FACULTY";
+            this.facultyBtn.Text = "CHECK IT!";
             this.facultyBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.facultyBtn.UseAccentColor = false;
             this.facultyBtn.UseVisualStyleBackColor = true;
@@ -132,7 +132,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SchoolTracker.Properties.Resources.pngkey_com_phillies_logo_png_528919;
-            this.pictureBox1.Location = new System.Drawing.Point(87, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(88, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

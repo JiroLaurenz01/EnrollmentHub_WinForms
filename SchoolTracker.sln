@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolTracker", "SchoolTracker\SchoolTracker.csproj", "{B6E3DE8F-878A-405D-9B11-443ED8E6AD23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnrollmentHub", "SchoolTracker\EnrollmentHub.csproj", "{B6E3DE8F-878A-405D-9B11-443ED8E6AD23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

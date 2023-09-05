@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace SchoolTracker
 {
-    public partial class FLoginForm : MaterialForm
+    public partial class ELoginForm : MaterialForm
     {
-        public FLoginForm()
+        public ELoginForm()
         {
             InitializeComponent();
             var skin = MaterialSkinManager.Instance;
