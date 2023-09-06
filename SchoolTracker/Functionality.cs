@@ -133,6 +133,7 @@ namespace SchoolTracker
             query += (ifStudent) ? "StudentNumber" : "ApplicantNumber"; // Selects the table name based on the ifStudent boolean.
 
             objDBAccess.readDatathroughAdapter(query, number); // Reads data from the selected table into the 'number' DataTable.
+            objDBAccess.closeConn(); // Close the database connection.
 
             num = Convert.ToInt32(number.Rows[0]["Number"]) + 1; // Increments the number retrieved from the table by 1.
 

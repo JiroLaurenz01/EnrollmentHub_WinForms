@@ -41,8 +41,8 @@ namespace SchoolTracker
             this.bYearComBox = new MaterialSkin.Controls.MaterialComboBox();
             this.bDayComBox = new MaterialSkin.Controls.MaterialComboBox();
             this.bMonthComBox = new MaterialSkin.Controls.MaterialComboBox();
-            this.facPassBox = new MaterialSkin.Controls.MaterialTextBox();
-            this.facNumBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.enroleePasswordBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.enroleeNumberBox = new MaterialSkin.Controls.MaterialTextBox();
             this.forgotPassBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -76,8 +76,8 @@ namespace SchoolTracker
             this.studentCard.Controls.Add(this.bYearComBox);
             this.studentCard.Controls.Add(this.bDayComBox);
             this.studentCard.Controls.Add(this.bMonthComBox);
-            this.studentCard.Controls.Add(this.facPassBox);
-            this.studentCard.Controls.Add(this.facNumBox);
+            this.studentCard.Controls.Add(this.enroleePasswordBox);
+            this.studentCard.Controls.Add(this.enroleeNumberBox);
             this.studentCard.Depth = 0;
             this.studentCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.studentCard.Location = new System.Drawing.Point(7, 324);
@@ -337,43 +337,43 @@ namespace SchoolTracker
             this.bMonthComBox.StartIndex = 0;
             this.bMonthComBox.TabIndex = 1;
             // 
-            // facPassBox
+            // enroleePasswordBox
             // 
-            this.facPassBox.AnimateReadOnly = false;
-            this.facPassBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.facPassBox.Depth = 0;
-            this.facPassBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.facPassBox.Hint = "Password";
-            this.facPassBox.LeadingIcon = null;
-            this.facPassBox.Location = new System.Drawing.Point(14, 156);
-            this.facPassBox.MaxLength = 50;
-            this.facPassBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.facPassBox.Multiline = false;
-            this.facPassBox.Name = "facPassBox";
-            this.facPassBox.Password = true;
-            this.facPassBox.Size = new System.Drawing.Size(388, 50);
-            this.facPassBox.TabIndex = 4;
-            this.facPassBox.Text = "";
-            this.facPassBox.TrailingIcon = global::SchoolTracker.Properties.Resources.hide;
-            this.facPassBox.TrailingIconClick += new System.EventHandler(this.facPassBox_TrailingIconClick);
+            this.enroleePasswordBox.AnimateReadOnly = false;
+            this.enroleePasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.enroleePasswordBox.Depth = 0;
+            this.enroleePasswordBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.enroleePasswordBox.Hint = "Password";
+            this.enroleePasswordBox.LeadingIcon = null;
+            this.enroleePasswordBox.Location = new System.Drawing.Point(14, 156);
+            this.enroleePasswordBox.MaxLength = 50;
+            this.enroleePasswordBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.enroleePasswordBox.Multiline = false;
+            this.enroleePasswordBox.Name = "enroleePasswordBox";
+            this.enroleePasswordBox.Password = true;
+            this.enroleePasswordBox.Size = new System.Drawing.Size(388, 50);
+            this.enroleePasswordBox.TabIndex = 4;
+            this.enroleePasswordBox.Text = "";
+            this.enroleePasswordBox.TrailingIcon = global::SchoolTracker.Properties.Resources.hide;
+            this.enroleePasswordBox.TrailingIconClick += new System.EventHandler(this.facPassBox_TrailingIconClick);
             // 
-            // facNumBox
+            // enroleeNumberBox
             // 
-            this.facNumBox.AnimateReadOnly = false;
-            this.facNumBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.facNumBox.Depth = 0;
-            this.facNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.facNumBox.Hint = "Enrolee Number";
-            this.facNumBox.LeadingIcon = null;
-            this.facNumBox.Location = new System.Drawing.Point(14, 24);
-            this.facNumBox.MaxLength = 50;
-            this.facNumBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.facNumBox.Multiline = false;
-            this.facNumBox.Name = "facNumBox";
-            this.facNumBox.Size = new System.Drawing.Size(388, 50);
-            this.facNumBox.TabIndex = 0;
-            this.facNumBox.Text = "";
-            this.facNumBox.TrailingIcon = global::SchoolTracker.Properties.Resources.user;
+            this.enroleeNumberBox.AnimateReadOnly = false;
+            this.enroleeNumberBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.enroleeNumberBox.Depth = 0;
+            this.enroleeNumberBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.enroleeNumberBox.Hint = "Enrolee Number";
+            this.enroleeNumberBox.LeadingIcon = null;
+            this.enroleeNumberBox.Location = new System.Drawing.Point(14, 24);
+            this.enroleeNumberBox.MaxLength = 50;
+            this.enroleeNumberBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.enroleeNumberBox.Multiline = false;
+            this.enroleeNumberBox.Name = "enroleeNumberBox";
+            this.enroleeNumberBox.Size = new System.Drawing.Size(388, 50);
+            this.enroleeNumberBox.TabIndex = 0;
+            this.enroleeNumberBox.Text = "";
+            this.enroleeNumberBox.TrailingIcon = global::SchoolTracker.Properties.Resources.user;
             // 
             // forgotPassBtn
             // 
@@ -478,8 +478,8 @@ namespace SchoolTracker
         private PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialLabel userLabel;
         private MaterialSkin.Controls.MaterialCard studentCard;
-        private MaterialSkin.Controls.MaterialTextBox facPassBox;
-        private MaterialSkin.Controls.MaterialTextBox facNumBox;
+        private MaterialSkin.Controls.MaterialTextBox enroleePasswordBox;
+        private MaterialSkin.Controls.MaterialTextBox enroleeNumberBox;
         private MaterialSkin.Controls.MaterialComboBox bMonthComBox;
         private MaterialSkin.Controls.MaterialComboBox bDayComBox;
         private MaterialSkin.Controls.MaterialComboBox bYearComBox;
