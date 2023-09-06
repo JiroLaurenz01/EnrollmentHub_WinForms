@@ -14,6 +14,8 @@ namespace SchoolTracker
 {
     public partial class EnroleeApprovalForm : MaterialForm
     {
+        Functionality functions = new Functionality();
+
         public EnroleeApprovalForm()
         {
             InitializeComponent();
@@ -27,6 +29,10 @@ namespace SchoolTracker
                     Accent.Red200,
                     TextShade.WHITE
                 );
+        }
+
+        private void EnroleeApprovalForm_Load(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -34,10 +34,10 @@
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.studentNumBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.studentNumberBox = new MaterialSkin.Controls.MaterialTextBox();
             this.label = new MaterialSkin.Controls.MaterialLabel();
             this.label1 = new MaterialSkin.Controls.MaterialLabel();
-            this.passBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.passwordBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.saveQrBtn = new MaterialSkin.Controls.MaterialButton();
@@ -113,10 +113,10 @@
             // materialCard2
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.studentNumBox);
+            this.materialCard2.Controls.Add(this.studentNumberBox);
             this.materialCard2.Controls.Add(this.label);
             this.materialCard2.Controls.Add(this.label1);
-            this.materialCard2.Controls.Add(this.passBox);
+            this.materialCard2.Controls.Add(this.passwordBox);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard2.Location = new System.Drawing.Point(21, 138);
@@ -127,25 +127,25 @@
             this.materialCard2.Size = new System.Drawing.Size(306, 226);
             this.materialCard2.TabIndex = 4;
             // 
-            // studentNumBox
+            // studentNumberBox
             // 
-            this.studentNumBox.AnimateReadOnly = false;
-            this.studentNumBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.studentNumBox.Depth = 0;
-            this.studentNumBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.studentNumBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.studentNumBox.LeadingIcon = null;
-            this.studentNumBox.Location = new System.Drawing.Point(28, 30);
-            this.studentNumBox.MaxLength = 50;
-            this.studentNumBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.studentNumBox.Multiline = false;
-            this.studentNumBox.Name = "studentNumBox";
-            this.studentNumBox.ReadOnly = true;
-            this.studentNumBox.Size = new System.Drawing.Size(249, 50);
-            this.studentNumBox.TabIndex = 68;
-            this.studentNumBox.Tag = "";
-            this.studentNumBox.Text = "";
-            this.studentNumBox.TrailingIcon = null;
+            this.studentNumberBox.AnimateReadOnly = false;
+            this.studentNumberBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.studentNumberBox.Depth = 0;
+            this.studentNumberBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.studentNumberBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.studentNumberBox.LeadingIcon = null;
+            this.studentNumberBox.Location = new System.Drawing.Point(28, 30);
+            this.studentNumberBox.MaxLength = 50;
+            this.studentNumberBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.studentNumberBox.Multiline = false;
+            this.studentNumberBox.Name = "studentNumberBox";
+            this.studentNumberBox.ReadOnly = true;
+            this.studentNumberBox.Size = new System.Drawing.Size(249, 50);
+            this.studentNumberBox.TabIndex = 68;
+            this.studentNumberBox.Tag = "";
+            this.studentNumberBox.Text = "";
+            this.studentNumberBox.TrailingIcon = null;
             // 
             // label
             // 
@@ -177,25 +177,25 @@
             this.label1.Text = "PASSWORD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // passBox
+            // passwordBox
             // 
-            this.passBox.AnimateReadOnly = false;
-            this.passBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passBox.Depth = 0;
-            this.passBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.passBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.passBox.LeadingIcon = null;
-            this.passBox.Location = new System.Drawing.Point(28, 124);
-            this.passBox.MaxLength = 50;
-            this.passBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.passBox.Multiline = false;
-            this.passBox.Name = "passBox";
-            this.passBox.ReadOnly = true;
-            this.passBox.Size = new System.Drawing.Size(249, 50);
-            this.passBox.TabIndex = 70;
-            this.passBox.Tag = "";
-            this.passBox.Text = "";
-            this.passBox.TrailingIcon = null;
+            this.passwordBox.AnimateReadOnly = false;
+            this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordBox.Depth = 0;
+            this.passwordBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.passwordBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.passwordBox.LeadingIcon = null;
+            this.passwordBox.Location = new System.Drawing.Point(28, 124);
+            this.passwordBox.MaxLength = 50;
+            this.passwordBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.passwordBox.Multiline = false;
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.ReadOnly = true;
+            this.passwordBox.Size = new System.Drawing.Size(249, 50);
+            this.passwordBox.TabIndex = 70;
+            this.passwordBox.Tag = "";
+            this.passwordBox.Text = "";
+            this.passwordBox.TrailingIcon = null;
             // 
             // materialDivider1
             // 
@@ -346,6 +346,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PUP Enrolee Hub";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.EnroleeApprovalForm_Load);
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
             this.materialCard2.ResumeLayout(false);
@@ -366,10 +367,10 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialTextBox studentNumBox;
+        private MaterialSkin.Controls.MaterialTextBox studentNumberBox;
         private MaterialSkin.Controls.MaterialLabel label;
         private MaterialSkin.Controls.MaterialLabel label1;
-        private MaterialSkin.Controls.MaterialTextBox passBox;
+        private MaterialSkin.Controls.MaterialTextBox passwordBox;
         private MaterialSkin.Controls.MaterialButton saveQrBtn;
         private MaterialSkin.Controls.MaterialCard materialCard3;
         private System.Windows.Forms.PictureBox qrCodeBox;

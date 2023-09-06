@@ -125,20 +125,21 @@ namespace SchoolTracker
         #region FUNCTION TO GENERATE TEMPORARY ENROLEE ACCOUNT
 
         static DBAccess objDBAccess = new DBAccess(); // Creates an instance of the DBAccess class for database operations.
-        static DataTable appNumber = new DataTable();  // Creates a DataTable to hold the ApplicantNumber data.
+        static DataTable number = new DataTable();  // Creates a DataTable to hold the ApplicantNumber or StudentNumber data.
 
-        // Method to generate an enrolee number.
-        public string GenerateEnroleeNumber(ref int num)
+        public string GenerateEnroleeNumber(bool ifStudent, ref int num)
         {
-            string query = "Select * from ApplicantNumber"; // SQL query to select data from the 'ApplicantNumber' table.
-            objDBAccess.readDatathroughAdapter(query, appNumber); // Reads data from the database into the 'appNumber' DataTable.
+            string query = "Select * from ";
+            query += (ifStudent) ? "StudentNumber" : "ApplicantNumber"; // Selects the table name based on the ifStudent boolean.
 
-            num = Convert.ToInt32(appNumber.Rows[0]["Number"]) + 1; // Extracts the 'Number' column value and increments it by 1.
+            objDBAccess.readDatathroughAdapter(query, number); // Reads data from the selected table into the 'number' DataTable.
 
-            // Generates an enrollment number with the format: <Year>-<PaddedNumber>-E.
-            string enroleeNumber = $"{DateTime.Now.Year}-{num.ToString("D5")}-E";
+            num = Convert.ToInt32(number.Rows[0]["Number"]) + 1; // Increments the number retrieved from the table by 1.
 
-            return enroleeNumber; // Returns the generated enrollment number.
+            // Construct the 'enroleeNumber' string based on the current year, incremented number, and ifStudent condition.
+            string enroleeNumber = $"{DateTime.Now.Year}-{num.ToString("D5")}-{(ifStudent ? "MN-0" : "E")}";
+
+            return enroleeNumber;
         }
 
         // Method to generate a random password.
