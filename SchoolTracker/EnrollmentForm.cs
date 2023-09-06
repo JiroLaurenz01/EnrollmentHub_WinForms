@@ -1210,6 +1210,9 @@ namespace SchoolTracker
 
         private void EnroleeAccountQRLoad()
         {
+            FlashingScreenForm flashingScreenForm = new FlashingScreenForm();
+            flashingScreenForm.ShowDialog();
+
             // Display an informational alert message with the text "Secondly: Save the QR Code".
             functions.Alert("Secondly: Save the QR Code", AlertForm.Type.Info);
 
@@ -1312,6 +1315,9 @@ namespace SchoolTracker
         {
             functions.Alert("Finalizing Everything....", AlertForm.Type.Info);
 
+            FlashingScreenForm flashingScreenForm = new FlashingScreenForm();
+            flashingScreenForm.ShowDialog();
+
             DatabaseAccess();
 
             finalizeAllBtn.Enabled = false;
@@ -1319,10 +1325,10 @@ namespace SchoolTracker
 
         #region FUNCTION TO ACCESS THE DATABASE AND STORE THE ENROLEE'S INFORMATION
 
-        DBAccess objDBAccess = new DBAccess(); // Create an instance of the DBAccess class for database operations.
-
         private void DatabaseAccess()
         {
+            DBAccess objDBAccess = new DBAccess(); // Create an instance of the DBAccess class for database operations.
+
             // Create a SQL command for inserting data into the database.
             SqlCommand insertCommand = new SqlCommand("insert into ApplicantData(LastName,FirstName,MiddleName,ExtName,BirtthDate,BirthPlace,Age,Gender,TelNumber,ContactNumber,Email,FacebookLink,StreetNum,StreetName,Barangay,City,Province,PStreetNum,PStreetName,PBarangay,PCity,PProvince,MLName,MFName,MMName,MConNum,FLName,FFName,FMName,FExtName,FConNum,GLName,GFName,GMName,GExtName,GConNum,SHighSchool,JHighSchool,ElemSchool,LRN,FPS,IP,FirstCourse,SecondCourse,ThirdCourse,FourthCourse,FifthCourse,ElevenGrade,TwelveGrade,UserPhoto,EnroleeNumber,Password, Approved) values(@LastName,@FirstName,@MiddleName,@ExtName,@BirtthDate,@BirthPlace,@Age,@Gender,@TelNumber,@ContactNumber,@Email,@FacebookLink,@StreetNum,@StreetName,@Barangay,@City,@Province,@PStreetNum,@PStreetName,@PBarangay,@PCity,@PProvince,@MLName,@MFName,@MMName,@MConNum,@FLName,@FFName,@FMName,@FExtName,@FConNum,@GLName,@GFName,@GMName,@GExtName,@GConNum,@SHighSchool,@JHighSchool,@ElemSchool,@LRN,@FPS,@IP,@FirstCourse,@SecondCourse,@ThirdCourse,@FourthCourse,@FifthCourse,@ElevenGrade,@TwelveGrade,@UserPhoto,@EnroleeNumber,@Password, @Approved)");
 
@@ -1405,8 +1411,11 @@ namespace SchoolTracker
                 ELoginForm.FormClosed += (s, args) => this.Close();
                 ELoginForm.Show();
             }
-            else // If the insertion failed, display an error message.
+            else // If the insertion failed, display an error message and enable the finalizeAllBtn.
+            { 
                 functions.Alert("Error Occured. Try Again!", AlertForm.Type.Error);
+                finalizeAllBtn.Enabled = true;
+            }                
         }
 
         #endregion
