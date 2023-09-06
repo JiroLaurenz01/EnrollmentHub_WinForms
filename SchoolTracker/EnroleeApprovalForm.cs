@@ -139,7 +139,12 @@ namespace SchoolTracker
         {
             DialogResult dr = MessageBox.Show("Do you really understand?", "PUP-SIS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
+            {
+                FlashingScreenForm flashingScreenForm = new FlashingScreenForm();
+                flashingScreenForm.ShowDialog();
+
                 PassInformationInDatabase(); // If the user confirms understanding, call PassInformationInDatabase method.
+            }
         }
 
         #region FUNCTION TO PASS THE STUDENT INFORMATION IN DATABASE

@@ -1313,14 +1313,19 @@ namespace SchoolTracker
 
         private void finalizeAllBtn_Click(object sender, EventArgs e)
         {
-            functions.Alert("Finalizing Everything....", AlertForm.Type.Info);
+            DialogResult dr = MessageBox.Show("Do you really want to finalize?", "PUP-SIS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            FlashingScreenForm flashingScreenForm = new FlashingScreenForm();
-            flashingScreenForm.ShowDialog();
+            if (dr == DialogResult.Yes)
+            {
+                functions.Alert("Finalizing Everything....", AlertForm.Type.Info);
 
-            DatabaseAccess();
+                FlashingScreenForm flashingScreenForm = new FlashingScreenForm();
+                flashingScreenForm.ShowDialog();
 
-            finalizeAllBtn.Enabled = false;
+                DatabaseAccess();
+
+                finalizeAllBtn.Enabled = false;
+            }
         }
 
         #region FUNCTION TO ACCESS THE DATABASE AND STORE THE ENROLEE'S INFORMATION
