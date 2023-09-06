@@ -58,6 +58,9 @@ namespace SchoolTracker
                 return;
             }
 
+            FlashingScreenForm flashingScreenForm = new FlashingScreenForm();
+            flashingScreenForm.ShowDialog();
+
             SignInDatabase();
         }
 
