@@ -25,6 +25,9 @@ namespace SchoolTracker
         #region FIELDS
 
         DataTable enroleeInfo = new DataTable();
+        DataTable enrolledCourse = new DataTable();
+
+        string id, pass, bDay, birthDate;
 
         #endregion
 
@@ -64,8 +67,6 @@ namespace SchoolTracker
 
         private void SignInDatabase()
         {
-            string id, pass, bDay, birthDate;
-
             id = enroleeNumberBox.Text;
             pass = enroleePasswordBox.Text;
 
@@ -105,8 +106,10 @@ namespace SchoolTracker
                 }
                 else
                 {
+                    FindEnrolledCourse();
+
                     this.Hide();
-                    var EnroleeApprovalForm = new EnroleeApprovalForm();
+                    var EnroleeApprovalForm = new EnroleeApprovalForm(enroleeInfo, enrolledCourse.Rows[0]["SelectedCourse"].ToString());
                     EnroleeApprovalForm.FormClosed += (s, args) => this.Close();
                     EnroleeApprovalForm.Show();
                 }
@@ -130,6 +133,33 @@ namespace SchoolTracker
 
             return userNBox || bDayBox || userPBox;
         }
+
+        #endregion
+
+        #region FUNCTION TO EASILY ACCESS THE ENROLLED COURSE IN DATABASE
+
+        private void FindEnrolledCourse()
+        {
+            // Define a SQL query that selects courses with '1' at the end, based on EnroleeNumber, Password and BirthDate.
+            string query = @"
+                SELECT 
+                    CASE 
+                        WHEN FirstCourse LIKE '%1' THEN FirstCourse
+                        WHEN SecondCourse LIKE '%1' THEN SecondCourse
+                        WHEN ThirdCourse LIKE '%1' THEN ThirdCourse
+                        WHEN FourthCourse LIKE '%1' THEN FourthCourse
+                        WHEN FifthCourse LIKE '%1' THEN FifthCourse
+                    END AS SelectedCourse
+                FROM ApplicantData
+                WHERE EnroleeNumber = '" + id + "' AND Password = '" + pass + "' AND BirtthDate = '" + birthDate + "'";          
+
+            // Execute the SQL query and store the result in the 'enrolledCourse' DataTable.
+            objDBAccess.readDatathroughAdapter(query, enrolledCourse);
+
+            // Close the database connection.
+            objDBAccess.closeConn();
+        }
+
 
         #endregion
 
