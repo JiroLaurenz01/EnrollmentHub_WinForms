@@ -22,6 +22,12 @@ namespace SchoolTracker
 
         #endregion
 
+        #region FIELDS
+
+        DataTable enroleeInfo = new DataTable();
+
+        #endregion
+
         public ELoginForm()
         {
             InitializeComponent();
@@ -48,23 +54,78 @@ namespace SchoolTracker
                 functions.Alert("Complete the Requirements", AlertForm.Type.Info);
                 return;
             }
+
+            SignInDatabase();
         }
 
         #endregion
 
-        #region FUNCTION FOR SIGN-IN VALIDATION
+        #region FUNCTIONS FOR SIGN-IN VALIDATION AND DATABASE ACCESS
+
+        private void SignInDatabase()
+        {
+            string id, pass, bDay, birthDate;
+
+            id = enroleeNumberBox.Text;
+            pass = enroleePasswordBox.Text;
+
+            // Format the birthDay to have leading zero if less than 10.
+            bDay = (Convert.ToInt16(bDayComBox.Text) < 10) ? $"0{bDayComBox.Text}" : bDayComBox.Text;
+
+            // Format the full birthDate string.
+            birthDate = $"{bMonthComBox.Text} {bDay}, {bYearComBox.Text}";
+
+            // Create a SQL query to check if the user exists in the database.
+            string query = "Select * from ApplicantData Where EnroleeNumber = '" + id + "' AND Password = '" + pass + "' AND BirtthDate = '" + birthDate + "'";
+
+            // Execute the SQL query and store the result in the enroleeInfo DataTable.
+            objDBAccess.readDatathroughAdapter(query, enroleeInfo);
+
+            // Check if a single user was found (should be unique).
+            if (enroleeInfo.Rows.Count == 1)
+            {
+                functions.Alert("Logged-In Successfully", AlertForm.Type.Success);
+
+                // Check if the user is approved.
+                bool ifApproved = Convert.ToBoolean(enroleeInfo.Rows[0]["Approved"]);
+
+                enroleeNumberBox.Clear();
+                enroleePasswordBox.Clear();
+
+                // Close the database connection.
+                objDBAccess.closeConn();
+
+                // Redirect to the appropriate form based on approval status.
+                if (!ifApproved)
+                {
+                    this.Hide();
+                    var EnroleeWaitingForm = new EnroleeWaitingForm();
+                    EnroleeWaitingForm.FormClosed += (s, args) => this.Close();
+                    EnroleeWaitingForm.Show();
+                }
+                else
+                {
+                    this.Hide();
+                    var EnroleeApprovalForm = new EnroleeApprovalForm();
+                    EnroleeApprovalForm.FormClosed += (s, args) => this.Close();
+                    EnroleeApprovalForm.Show();
+                }
+            }
+            else
+                functions.Alert("Incorrect Input", AlertForm.Type.Error);
+        }
 
         private Boolean IfWarning()
         {
             bool userNBox, bDayBox, userPBox;
 
-            if (userNBox = (String.IsNullOrEmpty(facNumBox.Text)))
+            if (userNBox = (String.IsNullOrEmpty(enroleeNumberBox.Text)))
                 ChangeLocSize(3);
 
             if (bDayBox = (bMonthComBox.SelectedIndex == 0 || bDayComBox.SelectedIndex == 0 || bYearComBox.SelectedIndex == 0))
                 ChangeLocSize(2);
 
-            if (userPBox = (String.IsNullOrEmpty(facPassBox.Text)))
+            if (userPBox = (String.IsNullOrEmpty(enroleePasswordBox.Text)))
                 ChangeLocSize(1);
 
             return userNBox || bDayBox || userPBox;
@@ -88,7 +149,7 @@ namespace SchoolTracker
             bMonthComBox.Location = new Point(bMonthComBox.Location.X, 89);
             bDayComBox.Location = new Point(bDayComBox.Location.X, 89);
             bYearComBox.Location = new Point(bYearComBox.Location.X, 89);
-            facPassBox.Location = new Point(facPassBox.Location.X, 156);
+            enroleePasswordBox.Location = new Point(enroleePasswordBox.Location.X, 156);
             signInBtn.Location = new Point(signInBtn.Location.X, 227);
             resetBtn.Location = new Point(resetBtn.Location.X, 227);
 
@@ -114,7 +175,7 @@ namespace SchoolTracker
                 bMonthComBox.Location = new Point(bMonthComBox.Location.X, bMonthComBox.Location.Y + 27);
                 bDayComBox.Location = new Point(bDayComBox.Location.X, bDayComBox.Location.Y + 27);
                 bYearComBox.Location = new Point(bYearComBox.Location.X, bYearComBox.Location.Y + 27);
-                facPassBox.Location = new Point(facPassBox.Location.X, facPassBox.Location.Y + 27);
+                enroleePasswordBox.Location = new Point(enroleePasswordBox.Location.X, enroleePasswordBox.Location.Y + 27);
 
                 bdWarning.Location = new Point(bdWarning.Location.X, bdWarning.Location.Y + 27);
                 passWarning.Location = new Point(passWarning.Location.X, passWarning.Location.Y + 28);
@@ -124,7 +185,7 @@ namespace SchoolTracker
             {
                 // If there are two input boxes, show the corresponding warning label and adjust positions.
                 bdWarning.Visible = true;
-                facPassBox.Location = new Point(facPassBox.Location.X, facPassBox.Location.Y + 27);
+                enroleePasswordBox.Location = new Point(enroleePasswordBox.Location.X, enroleePasswordBox.Location.Y + 27);
 
                 passWarning.Location = new Point(passWarning.Location.X, passWarning.Location.Y + 28);
             }
@@ -161,8 +222,8 @@ namespace SchoolTracker
         private void resetBtn_Click(object sender, EventArgs e)
         {
             // Clear the text in various input controls and reset dropdown selections.
-            facNumBox.Text = "";
-            facPassBox.Text = "";
+            enroleeNumberBox.Text = "";
+            enroleePasswordBox.Text = "";
             bMonthComBox.SelectedIndex = 0;
             bDayComBox.SelectedIndex = 0;
             bYearComBox.SelectedIndex = 0;
@@ -176,17 +237,17 @@ namespace SchoolTracker
         private void facPassBox_TrailingIconClick(object sender, EventArgs e)
         {
             // Check if the "facPassBox" is currently in password mode.
-            if (!facPassBox.Password)
+            if (!enroleePasswordBox.Password)
             {
                 // If not in password mode, switch to password mode.
-                facPassBox.TrailingIcon = Properties.Resources.hide; // Change the trailing icon to "hide".
-                facPassBox.Password = true; // Set the "Password" property to true to hide the password characters.
+                enroleePasswordBox.TrailingIcon = Properties.Resources.hide; // Change the trailing icon to "hide".
+                enroleePasswordBox.Password = true; // Set the "Password" property to true to hide the password characters.
             }
             else
             {
                 // If already in password mode, switch to text mode.
-                facPassBox.TrailingIcon = Properties.Resources.show; // Change the trailing icon to "show".
-                facPassBox.Password = false; // Set the "Password" property to false to show the password characters.
+                enroleePasswordBox.TrailingIcon = Properties.Resources.show; // Change the trailing icon to "show".
+                enroleePasswordBox.Password = false; // Set the "Password" property to false to show the password characters.
             }
         }
 

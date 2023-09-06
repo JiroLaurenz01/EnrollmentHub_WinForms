@@ -1389,6 +1389,7 @@ namespace SchoolTracker
             {
                 // If the insertion was successful, display a success message.
                 functions.Alert("Finalized Successfully", AlertForm.Type.Success);
+                objDBAccess.closeConn(); // Close the database connection.
 
                 // Update the ApplicantNumber in the database.
                 string query = "Update ApplicantNumber SET Number = '" + @nums + "'";
@@ -1397,6 +1398,7 @@ namespace SchoolTracker
                 updateCommand.Parameters.AddWithValue("@nums", @nums);
 
                 objDBAccess.executeQuery(updateCommand);
+                objDBAccess.closeConn(); // Close the database connection.
 
                 this.Hide();
                 var ELoginForm = new ELoginForm();
