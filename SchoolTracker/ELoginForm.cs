@@ -14,6 +14,14 @@ namespace SchoolTracker
 {
     public partial class ELoginForm : MaterialForm
     {
+        #region CLASSES
+        
+        DBAccess objDBAccess = new DBAccess();
+
+        Functionality functions = new Functionality();
+
+        #endregion
+
         public ELoginForm()
         {
             InitializeComponent();
@@ -29,7 +37,7 @@ namespace SchoolTracker
                 );
         }
 
-        #region SIGN-IN VALIDATIONS
+        #region FUNCTION FOR SIGN-IN ACTION
 
         private void signInBtn_Click(object sender, EventArgs e)
         {
@@ -37,10 +45,14 @@ namespace SchoolTracker
 
             if (IfWarning())
             {
-                MessageBox.Show("There are items that require your attention", "PUPSIS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                functions.Alert("Complete the Requirements", AlertForm.Type.Info);
                 return;
             }
         }
+
+        #endregion
+
+        #region FUNCTION FOR SIGN-IN VALIDATION
 
         private Boolean IfWarning()
         {
@@ -59,6 +71,8 @@ namespace SchoolTracker
         }
 
         #endregion
+
+        #region FEATURES
 
         #region FUNCTIONS TO HANDLE THE RESPONSIVENESS OF VALIDATION - DO NOT TOUCH THESE.
 
@@ -132,8 +146,6 @@ namespace SchoolTracker
 
 
         #endregion
-
-        #region OTHER FEATURES
 
         #region FUNCTIONS FOR BACK AND RESET BUTTONS
 

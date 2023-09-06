@@ -30,7 +30,6 @@ namespace SchoolTracker
 
         Functionality functions = new Functionality();
 
-
         #endregion
 
         #region FIELDS
