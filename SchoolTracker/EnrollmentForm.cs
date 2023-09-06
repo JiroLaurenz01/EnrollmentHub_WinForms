@@ -1220,7 +1220,7 @@ namespace SchoolTracker
             tempPassBox.Enabled = true;
 
             // Generate an enrollment number and a temporary password using custom functions and store them in variables.
-            string enroleeNumber = functions.GenerateEnroleeNumber(ref nums);
+            string enroleeNumber = functions.GenerateEnroleeNumber(false, ref nums);
             string enroleePassword = functions.GenerateRandomPassword();
 
             enroleeNumBox.Text = enroleeNumber;
