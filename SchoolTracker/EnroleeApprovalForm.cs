@@ -15,8 +15,18 @@ namespace SchoolTracker
 {
     public partial class EnroleeApprovalForm : MaterialForm
     {
+        #region CLASSES
+
         StudentData studentData = new StudentData();
         Functionality functions = new Functionality();
+
+        #endregion
+
+        #region FIELDS
+
+        int number = 0;
+
+        #endregion
 
         public EnroleeApprovalForm()
         {
@@ -35,7 +45,29 @@ namespace SchoolTracker
 
         private void EnroleeApprovalForm_Load(object sender, EventArgs e)
         {
+            EnroleeAccountQRLoad();
         }
+
+        #region FUNCTION TO LOAD THE QR CODE AND ENROLEE ACCOUNT
+
+        private void EnroleeAccountQRLoad()
+        {
+            // Generate an student number and a random password using custom functions and store them in variables.
+            string studentNumber = functions.GenerateEnroleeNumber(true, ref number);
+            string studentPassword = functions.GenerateRandomPassword();
+
+            studentNumberBox.Text = studentNumber;
+            passwordBox.Text = studentPassword;
+
+            string qrText = $"Student Number: {studentNumber}\nPassword: {studentPassword}";
+
+            // Generate a QR code image using the "GetCode" function and the "qrText" as data, then display it in the "qrCodeBox" control.
+            qrCodeBox.Image = functions.GetCode(qrText);
+        }
+
+        #endregion
+
+        #region FUNCTION TO SAVE THE QR CODE IMAGE
 
         private void saveQRBtn_Click(object sender, EventArgs e)
         {
@@ -78,6 +110,7 @@ namespace SchoolTracker
             }
         }
 
+        #endregion
 
     }
 }
