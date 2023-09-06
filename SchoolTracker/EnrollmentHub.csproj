@@ -71,6 +71,12 @@
       <DependentUpon>AlertForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DBAccess.cs" />
+    <Compile Include="EnroleeWaitingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnroleeWaitingForm.Designer.cs">
+      <DependentUpon>EnroleeWaitingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnrollmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="PersonData.cs" />
     <EmbeddedResource Include="AlertForm.resx">
       <DependentUpon>AlertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnroleeWaitingForm.resx">
+      <DependentUpon>EnroleeWaitingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EnrollmentForm.resx">
       <DependentUpon>EnrollmentForm.cs</DependentUpon>
