@@ -28,5 +28,21 @@ namespace SchoolTracker
                     TextShade.WHITE
                 );
         }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Do you really want to logout?", "PUP-SIS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.Yes)
+            {
+                Functionality functions = new Functionality();
+                functions.Alert("Logout Successfully", AlertForm.Type.Success);
+
+                this.Hide();
+                var ELoginForm = new ELoginForm();
+                ELoginForm.FormClosed += (s, args) => this.Close();
+                ELoginForm.Show();
+            }
+        }
     }
 }

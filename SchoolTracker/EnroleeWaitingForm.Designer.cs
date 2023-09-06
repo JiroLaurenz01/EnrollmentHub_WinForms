@@ -64,6 +64,7 @@
             this.logoutBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.logoutBtn.UseAccentColor = false;
             this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // materialCard1
             // 
