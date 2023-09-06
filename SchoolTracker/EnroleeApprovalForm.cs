@@ -49,14 +49,20 @@ namespace SchoolTracker
             selectedCourse = SelectedCourse;
         }
 
+        #region FUNCTION TO LOAD THIS FORM
+
         private void EnroleeApprovalForm_Load(object sender, EventArgs e)
         {
             EnroleeAccountQRLoad();
+            ApprovedCourseLoad();
         }
+
+        #endregion
 
         #region FUNCTION TO LOAD THE APPROVED COURSE
 
-        private void ApprovedCourseLoad() => enrolledCourse.Text = selectedCourse.Substring(0, selectedCourse.Length - 2);
+        // Truncates the last 4 characters from 'selectedCourse' and assigns the result to 'enrolledCourse.Text'.
+        private void ApprovedCourseLoad() => enrolledCourse.Text = selectedCourse.Substring(0, selectedCourse.Length - 4);
 
         #endregion
 
