@@ -290,6 +290,7 @@
             this.understandBtn.UseAccentColor = false;
             this.understandBtn.UseMnemonic = false;
             this.understandBtn.UseVisualStyleBackColor = false;
+            this.understandBtn.Click += new System.EventHandler(this.understandBtn_Click);
             // 
             // enrolledCourse
             // 
