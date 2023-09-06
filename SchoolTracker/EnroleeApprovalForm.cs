@@ -26,9 +26,12 @@ namespace SchoolTracker
 
         int number = 0;
 
+        DataTable studentDataTable = new DataTable();
+        String selectedCourse = "";
+
         #endregion
 
-        public EnroleeApprovalForm()
+        public EnroleeApprovalForm(DataTable StudentDataTable, String SelectedCourse)
         {
             InitializeComponent();
             var skin = MaterialSkinManager.Instance;
@@ -41,12 +44,21 @@ namespace SchoolTracker
                     Accent.Red200,
                     TextShade.WHITE
                 );
+
+            studentDataTable = StudentDataTable;
+            selectedCourse = SelectedCourse;
         }
 
         private void EnroleeApprovalForm_Load(object sender, EventArgs e)
         {
             EnroleeAccountQRLoad();
         }
+
+        #region FUNCTION TO LOAD THE APPROVED COURSE
+
+        private void ApprovedCourseLoad() => enrolledCourse.Text = selectedCourse.Substring(0, selectedCourse.Length - 2);
+
+        #endregion
 
         #region FUNCTION TO LOAD THE QR CODE AND ENROLEE ACCOUNT
 
