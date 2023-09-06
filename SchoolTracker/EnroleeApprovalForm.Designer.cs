@@ -40,7 +40,7 @@
             this.passwordBox = new MaterialSkin.Controls.MaterialTextBox();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.saveQrBtn = new MaterialSkin.Controls.MaterialButton();
+            this.saveQRBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.qrCodeBox = new System.Windows.Forms.PictureBox();
             this.understandBtn = new MaterialSkin.Controls.MaterialButton();
@@ -221,32 +221,33 @@
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "YOU ARE OFFICIALY ENROLLED!";
             // 
-            // saveQrBtn
+            // saveQRBtn
             // 
-            this.saveQrBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.saveQrBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.saveQrBtn.Depth = 0;
-            this.saveQrBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.saveQrBtn.HighEmphasis = true;
-            this.saveQrBtn.Icon = null;
-            this.saveQrBtn.Location = new System.Drawing.Point(124, 335);
-            this.saveQrBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.saveQrBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.saveQrBtn.Name = "saveQrBtn";
-            this.saveQrBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.saveQrBtn.Size = new System.Drawing.Size(83, 36);
-            this.saveQrBtn.TabIndex = 71;
-            this.saveQrBtn.Text = "SAVE ME";
-            this.saveQrBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.saveQrBtn.UseAccentColor = false;
-            this.saveQrBtn.UseMnemonic = false;
-            this.saveQrBtn.UseVisualStyleBackColor = false;
+            this.saveQRBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.saveQRBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.saveQRBtn.Depth = 0;
+            this.saveQRBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.saveQRBtn.HighEmphasis = true;
+            this.saveQRBtn.Icon = null;
+            this.saveQRBtn.Location = new System.Drawing.Point(124, 335);
+            this.saveQRBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.saveQRBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.saveQRBtn.Name = "saveQRBtn";
+            this.saveQRBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.saveQRBtn.Size = new System.Drawing.Size(83, 36);
+            this.saveQRBtn.TabIndex = 71;
+            this.saveQRBtn.Text = "SAVE ME";
+            this.saveQRBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.saveQRBtn.UseAccentColor = false;
+            this.saveQRBtn.UseMnemonic = false;
+            this.saveQRBtn.UseVisualStyleBackColor = false;
+            this.saveQRBtn.Click += new System.EventHandler(this.saveQRBtn_Click);
             // 
             // materialCard3
             // 
             this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard3.Controls.Add(this.qrCodeBox);
-            this.materialCard3.Controls.Add(this.saveQrBtn);
+            this.materialCard3.Controls.Add(this.saveQRBtn);
             this.materialCard3.Depth = 0;
             this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard3.Location = new System.Drawing.Point(387, 39);
@@ -371,7 +372,7 @@
         private MaterialSkin.Controls.MaterialLabel label;
         private MaterialSkin.Controls.MaterialLabel label1;
         private MaterialSkin.Controls.MaterialTextBox passwordBox;
-        private MaterialSkin.Controls.MaterialButton saveQrBtn;
+        private MaterialSkin.Controls.MaterialButton saveQRBtn;
         private MaterialSkin.Controls.MaterialCard materialCard3;
         private System.Windows.Forms.PictureBox qrCodeBox;
         private MaterialSkin.Controls.MaterialButton understandBtn;
