@@ -131,28 +131,28 @@ namespace SchoolTracker
             switch (type)
             {
                 case Type.Success:
-                    pictureBox1.Image = SchoolTracker.Properties.Resources.success;
+                    pictureBox1.Image = SchoolTracker.Properties.Resources.successLogo;
                     noticeLabel.Text = "SUCCESSFUL";
-                    containerControl.FillColor = Color.ForestGreen;
-                    BackColor = Color.LimeGreen;
+                    containerControl.FillColor = Color.FromArgb(94, 172, 36);
+                    BackColor = Color.FromArgb(150, 201, 112);
                     break;
                 case Type.Error:
-                    pictureBox1.Image = SchoolTracker.Properties.Resources.error;
+                    pictureBox1.Image = SchoolTracker.Properties.Resources.errorLogo;
                     noticeLabel.Text = "ERROR";
-                    containerControl.FillColor = Color.IndianRed;
-                    BackColor = Color.LightCoral;
+                    containerControl.FillColor = Color.FromArgb(146, 9, 45);
+                    BackColor = Color.FromArgb(198, 35, 71);
                     break;
                 case Type.Info:
-                    pictureBox1.Image = SchoolTracker.Properties.Resources.info;
+                    pictureBox1.Image = SchoolTracker.Properties.Resources.informationLogo;
                     noticeLabel.Text = "INFORMATION";
-                    containerControl.FillColor = Color.MidnightBlue;
-                    BackColor = Color.RoyalBlue;
+                    containerControl.FillColor = Color.FromArgb(47, 118, 236);
+                    BackColor = Color.FromArgb(82, 171, 247);
                     break;
                 case Type.Warning:
-                    pictureBox1.Image = SchoolTracker.Properties.Resources.warning;
+                    pictureBox1.Image = SchoolTracker.Properties.Resources.warningLogo;
                     noticeLabel.Text = "WARNING";
-                    containerControl.FillColor = Color.DarkOrange;
-                    BackColor = Color.Orange;
+                    containerControl.FillColor = Color.FromArgb(254, 74, 69);
+                    BackColor = Color.FromArgb(255, 91, 66);
                     break;
             }
 

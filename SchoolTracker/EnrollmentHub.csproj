@@ -179,6 +179,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="education.ico" />
+    <None Include="Resources\successLogo.png" />
+    <None Include="Resources\warningLogo.png" />
+    <None Include="Resources\informationLogo.png" />
+    <None Include="Resources\errorLogo.png" />
+    <None Include="Resources\checkedLogo.png" />
     <None Include="Resources\warning.png" />
     <None Include="Resources\success.png" />
     <None Include="Resources\info.png" />
