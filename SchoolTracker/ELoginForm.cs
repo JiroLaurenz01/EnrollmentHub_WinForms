@@ -29,6 +29,8 @@ namespace SchoolTracker
 
         string id, pass, bDay, birthDate;
 
+        bool enroleeBoxState = false, bDateBoxState = false, passBoxState = false;
+
         #endregion
 
         public ELoginForm()
@@ -50,17 +52,20 @@ namespace SchoolTracker
 
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            UnvisibleWarning();
-
+            // Check if there are any warnings (empty fields)
             if (IfWarning())
             {
+                // Display an informational alert and return from the method
                 functions.Alert("Complete the Requirements", AlertForm.Type.Info);
                 return;
             }
 
             FlashingScreenForm flashingScreenForm = new FlashingScreenForm();
+
+            // Show the FlashingScreenForm as a modal dialog (blocks interaction with the main form)
             flashingScreenForm.ShowDialog();
 
+            // Call the SignInDatabase method
             SignInDatabase();
         }
 
@@ -125,15 +130,28 @@ namespace SchoolTracker
         {
             bool userNBox, bDayBox, userPBox;
 
-            if (userNBox = (String.IsNullOrEmpty(enroleeNumberBox.Text)))
-                ChangeLocSize(3);
+            userNBox = String.IsNullOrEmpty(enroleeNumberBox.Text);
+            bDayBox = (bMonthComBox.SelectedIndex == 0 || bDayComBox.SelectedIndex == 0 || bYearComBox.SelectedIndex == 0);
+            userPBox = String.IsNullOrEmpty(enroleePasswordBox.Text);
 
-            if (bDayBox = (bMonthComBox.SelectedIndex == 0 || bDayComBox.SelectedIndex == 0 || bYearComBox.SelectedIndex == 0))
-                ChangeLocSize(2);
+            // Compare the current and previous empty boxes.
+            // If they are different, then the location of every boxes will be changed.
+            if (CheckTheCurrentEmpty())
+            {
+                // If there was a previous warning, hide it
+                UnvisibleWarning();
 
-            if (userPBox = (String.IsNullOrEmpty(enroleePasswordBox.Text)))
-                ChangeLocSize(1);
+                if (userNBox)
+                    ChangeLocSize(3);
 
+                if (bDayBox)
+                    ChangeLocSize(2);
+
+                if (userPBox)
+                    ChangeLocSize(1); 
+            }
+
+            // Return true if any of the input fields are empty, otherwise return false
             return userNBox || bDayBox || userPBox;
         }
 
@@ -169,6 +187,32 @@ namespace SchoolTracker
         #region FEATURES
 
         #region FUNCTIONS TO HANDLE THE RESPONSIVENESS OF VALIDATION - DO NOT TOUCH THESE.
+
+        #region FUNCTION TO COMPARE THE CURRENT AND PREVIOUS BOXES
+
+        private bool CheckTheCurrentEmpty()
+        {
+            bool thisEnroleeBoxState, thisBDateBoxState, thisPassBoxState;
+
+            thisEnroleeBoxState = String.IsNullOrEmpty(enroleeNumberBox.Text);
+            thisBDateBoxState = (bMonthComBox.SelectedIndex == 0) || (bDayComBox.SelectedIndex == 0) || (bYearComBox.SelectedIndex == 0);
+            thisPassBoxState = String.IsNullOrEmpty(enroleePasswordBox.Text);
+
+            // Compare the current states with the previous states (stored in class-level variables)
+            // If they are all the same as before, return false (no change in the state)
+            if ((thisEnroleeBoxState == enroleeBoxState) && (thisBDateBoxState == bDateBoxState) && (thisPassBoxState == passBoxState))
+                return false;
+
+            // Update the class-level variables with the current states for the next comparison
+            enroleeBoxState = thisEnroleeBoxState;
+            bDateBoxState = thisBDateBoxState;
+            passBoxState = thisPassBoxState;
+
+            // Return true if there was a change in the state of any input field
+            return true;
+        }
+
+        #endregion
 
         // This method is used to hide warning labels and adjust the positions and sizes of various UI elements.
         private void UnvisibleWarning()
