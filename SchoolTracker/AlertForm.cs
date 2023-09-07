@@ -132,19 +132,23 @@ namespace SchoolTracker
             {
                 case Type.Success:
                     pictureBox1.Image = SchoolTracker.Properties.Resources.success;
-                    BackColor = Color.SeaGreen;
+                    containerControl.FillColor = Color.ForestGreen;
+                    BackColor = Color.LimeGreen;
                     break;
                 case Type.Error:
                     pictureBox1.Image = SchoolTracker.Properties.Resources.error;
-                    BackColor = Color.DarkRed;
+                    containerControl.FillColor = Color.IndianRed;
+                    BackColor = Color.LightCoral;
                     break;
                 case Type.Info:
                     pictureBox1.Image = SchoolTracker.Properties.Resources.info;
+                    containerControl.FillColor = Color.MidnightBlue;
                     BackColor = Color.RoyalBlue;
                     break;
                 case Type.Warning:
                     pictureBox1.Image = SchoolTracker.Properties.Resources.warning;
-                    BackColor = Color.DarkOrange;
+                    containerControl.FillColor = Color.DarkOrange;
+                    BackColor = Color.Orange;
                     break;
             }
 
