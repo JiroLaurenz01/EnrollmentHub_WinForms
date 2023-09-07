@@ -290,6 +290,8 @@ namespace SchoolTracker
         // This event handler is called when the "backBtn" button is clicked.
         private void backBtn_Click(object sender, EventArgs e)
         {
+            resetBtn_Click(sender, e);
+
             this.Hide();
             var FrontForm = new FrontForm();
             FrontForm.FormClosed += (s, args) => this.Close();
@@ -301,9 +303,13 @@ namespace SchoolTracker
             // Clear the text in various input controls and reset dropdown selections.
             enroleeNumberBox.Text = "";
             enroleePasswordBox.Text = "";
-            bMonthComBox.SelectedIndex = 0;
-            bDayComBox.SelectedIndex = 0;
-            bYearComBox.SelectedIndex = 0;
+
+            foreach (Control control in studentCard.Controls)
+                if (control is MaterialComboBox)
+                {
+                    (control as MaterialComboBox).SelectedIndex = 0;
+                    (control as MaterialComboBox).Refresh();
+                }
         }
 
         #endregion
