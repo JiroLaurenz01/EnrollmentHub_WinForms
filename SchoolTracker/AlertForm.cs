@@ -54,7 +54,7 @@ namespace SchoolTracker
             {
                 case Action.wait:
                     // If the action is "wait", set the timer interval to 5 seconds and change the action to "close".
-                    timer.Interval = 5000;
+                    timer.Interval = 2500;
                     action = Action.close;
                     break;
                 case Action.start:
@@ -132,21 +132,25 @@ namespace SchoolTracker
             {
                 case Type.Success:
                     pictureBox1.Image = SchoolTracker.Properties.Resources.success;
+                    noticeLabel.Text = "SUCCESSFUL";
                     containerControl.FillColor = Color.ForestGreen;
                     BackColor = Color.LimeGreen;
                     break;
                 case Type.Error:
                     pictureBox1.Image = SchoolTracker.Properties.Resources.error;
+                    noticeLabel.Text = "ERROR";
                     containerControl.FillColor = Color.IndianRed;
                     BackColor = Color.LightCoral;
                     break;
                 case Type.Info:
                     pictureBox1.Image = SchoolTracker.Properties.Resources.info;
+                    noticeLabel.Text = "INFORMATION";
                     containerControl.FillColor = Color.MidnightBlue;
                     BackColor = Color.RoyalBlue;
                     break;
                 case Type.Warning:
                     pictureBox1.Image = SchoolTracker.Properties.Resources.warning;
+                    noticeLabel.Text = "WARNING";
                     containerControl.FillColor = Color.DarkOrange;
                     BackColor = Color.Orange;
                     break;
