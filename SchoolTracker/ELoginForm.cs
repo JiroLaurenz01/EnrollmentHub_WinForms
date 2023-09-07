@@ -305,10 +305,10 @@ namespace SchoolTracker
             enroleePasswordBox.Text = "";
 
             foreach (Control control in studentCard.Controls)
-                if (control is MaterialComboBox)
+                if (control is MaterialComboBox comboBox)
                 {
-                    (control as MaterialComboBox).SelectedIndex = 0;
-                    (control as MaterialComboBox).Refresh();
+                    comboBox.SelectedIndex = 0;
+                    comboBox.Refresh();
                 }
         }
 
