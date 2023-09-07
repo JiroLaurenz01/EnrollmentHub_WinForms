@@ -7,7 +7,7 @@
     <ProjectGuid>{B6E3DE8F-878A-405D-9B11-443ED8E6AD23}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>SchoolTracker</RootNamespace>
-    <AssemblyName>School Tracker</AssemblyName>
+    <AssemblyName>PUP Enrollment Hub</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>education.ico</ApplicationIcon>
+    <ApplicationIcon>pngkey.com-phillies-logo-png-528919.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
@@ -179,6 +179,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="education.ico" />
+    <Content Include="pngkey.com-phillies-logo-png-528919.ico" />
     <None Include="Resources\successLogo.png" />
     <None Include="Resources\warningLogo.png" />
     <None Include="Resources\informationLogo.png" />
